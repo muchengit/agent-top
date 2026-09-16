@@ -5,7 +5,7 @@ validated_date: 2026-09-16
 
 # Labs
 
-Executable Labs are the primary hands-on format for Agent-Top. They run locally without API keys and use deterministic tests to make learning verifiable. The repository currently has 13 Labs and 28 tests.
+Executable Labs are the primary hands-on format for Agent-Top. They run locally without API keys and use deterministic tests to make learning verifiable. The repository currently has 14 Labs and 32 tests.
 
 ## Current Labs
 
@@ -28,6 +28,7 @@ Executable Labs are the primary hands-on format for Agent-Top. They run locally 
 
 - [`l3/rag_memory_observability`](l3/rag_memory_observability/README.md): RAG, memory, and observability skeleton.
 - [`l3/rag_evaluator`](l3/rag_evaluator/README.md): deterministic retrieval evaluation.
+- [`l3/multi_round_research_discussion`](l3/multi_round_research_discussion/README.md): multi-round evidence planning and discussion convergence.
 
 ### L4
 
