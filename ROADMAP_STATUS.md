@@ -22,7 +22,7 @@ validated_date: 2026-09-16
 | Production guides | Done | `docs/en/production/`, `docs/en/production/cost-stability-operations.md`, `docs/en/quick-reference/production-checklist.md` |
 | Case studies | Done | `docs/en/cases/` and `docs/zh/cases/`, including enterprise tool, collaboration, RAG, regression, and pattern-contribution cases |
 | Quick references | Done | `docs/en/quick-reference/`, including Chinese index |
-| Agent skills | Done | `docs/en/skills/README.md`, `docs/zh/skills/Agent技能矩阵.md`, `templates/agent-skill-card-template.md` |
+| Agent skills | Done | `docs/en/skills/README.md`, `docs/zh/skills/Agent技能指南.md`, `templates/agent-skill-card-template.md` |
 | Community governance | Done | `GOVERNANCE.md`, `CONTRIBUTING.md`, `CONTRIBUTING.zh-CN.md`, `docs/en/community/` |
 | Bilingual metadata | Done | frontmatter key and sync checks in `scripts/check_repository.py` |
 | Community operations | Done | rhythm, labels, maintainer rotation, translation workflow |

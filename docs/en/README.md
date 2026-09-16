@@ -57,7 +57,7 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 ## Skills
 
 - [`skills/README.md`](skills/README.md)
-- [`../zh/skills/Agent技能矩阵.md`](../zh/skills/Agent技能矩阵.md)
+- [`../zh/skills/Agent技能指南.md`](../zh/skills/Agent技能指南.md)
 - [`../../templates/agent-skill-card-template.md`](../../templates/agent-skill-card-template.md)
 
 ## Case Studies
