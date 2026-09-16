@@ -38,3 +38,19 @@ A curated set of prompts, expected outcomes, and scoring criteria used to measur
 ## Postmortem
 
 A structured review of a production incident focused on root cause and prevention.
+
+## Contract
+
+A documented input, output, failure mode, and verification agreement for an Agent or tool.
+
+## Handoff
+
+Passing task state, evidence, and next responsibility between agents or stages.
+
+## Guardrail
+
+A rule, check, or approval step that prevents unsafe or irreversible behavior.
+
+## Verifier
+
+A component or agent that checks evidence and recommendations before the final answer.
