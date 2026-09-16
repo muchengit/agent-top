@@ -58,5 +58,6 @@ flowchart LR
 ## 相关页面
 
 - 实施手册：[`核心Agent实施手册.md`](核心Agent实施手册.md)
+- 设计模板：[`../../../templates/agent-design-template.md`](../../../templates/agent-design-template.md)
 - 审查清单：[`Agent设计审查清单.md`](Agent设计审查清单.md)
 - 生产清单：[`../quick-reference/生产清单.md`](../quick-reference/生产清单.md)

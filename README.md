@@ -173,6 +173,8 @@ agent-top/
 ├── templates/
 │   ├── agent-design-template.md
 │   ├── article-template.md
+│   ├── Agent设计审查Workshop模板.md
+│   ├── Agent设计审查范例.md
 │   ├── community-lab-template.md
 │   ├── interview-question-template.md
 │   ├── lab-template.md

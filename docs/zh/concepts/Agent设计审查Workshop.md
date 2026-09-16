@@ -64,5 +64,7 @@ last-synced: 2026-09-17
 ## 相关页面
 
 - 审查清单：[`Agent设计审查清单.md`](Agent设计审查清单.md)
+- Workshop 模板：[`../../../templates/Agent设计审查Workshop模板.md`](../../../templates/Agent设计审查Workshop模板.md)
+- 审查范例：[`../../../templates/Agent设计审查范例.md`](../../../templates/Agent设计审查范例.md)
 - 实施手册：[`核心Agent实施手册.md`](核心Agent实施手册.md)
 - 系统蓝图：[`Agent系统蓝图.md`](Agent系统蓝图.md)

@@ -112,7 +112,7 @@ agent-top/
 │   └── README.md
 ├── scripts/
 │   └── check_repository.py           # Markdown、链接、双语、Lab 结构检查
-├── templates/                        # 文章、Lab、面试、postmortem 等贡献模板
+├── templates/                        # 文章、Lab、面试、postmortem、设计审查等贡献模板
 ├── docs-site/                        # 轻量文档站入口
 ├── README.md                         # 英文项目概览和仓库地图
 ├── README.zh-CN.md                   # 中文项目概览和仓库地图

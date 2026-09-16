@@ -64,5 +64,7 @@ Use this workshop to review one Agent idea in about 45 minutes.
 ## Related Pages
 
 - Checklist: [`design-review-checklist.md`](design-review-checklist.md)
+- Workshop template: [`../../../templates/design-review-workshop-template.md`](../../../templates/design-review-workshop-template.md)
+- Review example: [`../../../templates/design-review-example.md`](../../../templates/design-review-example.md)
 - Implementation guide: [`implementation-guide.md`](implementation-guide.md)
 - System blueprint: [`agent-system-blueprint.md`](agent-system-blueprint.md)

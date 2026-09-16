@@ -58,5 +58,6 @@ flowchart LR
 ## Related Pages
 
 - Implementation guide: [`implementation-guide.md`](implementation-guide.md)
+- Agent design template: [`../../../templates/agent-design-template.md`](../../../templates/agent-design-template.md)
 - Design checklist: [`design-review-checklist.md`](design-review-checklist.md)
 - Production checklist: [`../quick-reference/production-checklist.md`](../quick-reference/production-checklist.md)

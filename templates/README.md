@@ -14,6 +14,10 @@ Templates define the standard structure for Agent-Top contributions.
 - [`interview-question-template.md`](interview-question-template.md)
 - [`postmortem-template.md`](postmortem-template.md)
 - [`agent-design-template.md`](agent-design-template.md)
+- [`design-review-workshop-template.md`](design-review-workshop-template.md)
+- [`design-review-example.md`](design-review-example.md)
+- [`Agent设计审查Workshop模板.md`](Agent设计审查Workshop模板.md)
+- [`Agent设计审查范例.md`](Agent设计审查范例.md)
 - [`monthly-contributor-report.md`](monthly-contributor-report.md)
 - [`community-lab-template.md`](community-lab-template.md)
 
@@ -24,6 +28,8 @@ Templates define the standard structure for Agent-Top contributions.
 - **Interview question**: concept, implementation, debugging, or design question.
 - **Postmortem**: production or learning incident with action items.
 - **Agent design**: reusable one-page design review and interview artifact.
+- **Design review workshop**: structured group review notes with decision record.
+- **Design review example**: completed review output for customer refund assistant.
 - **Community Lab**: group session notes and follow-up artifacts.
 - **Monthly contributor report**: contribution review and recognition.
 
