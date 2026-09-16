@@ -66,6 +66,7 @@ python -m unittest discover -s labs -p "test_*.py"
 - Templates: [`templates`](templates)
 - Governance: [`GOVERNANCE.md`](GOVERNANCE.md)
 - Contributing: [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- Roadmap status: [`ROADMAP_STATUS.md`](ROADMAP_STATUS.md)
 
 ## Documentation
 

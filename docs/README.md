@@ -12,3 +12,7 @@ validated_date: 2026-09-16
 - [`frameworks/framework-map.md`](frameworks/framework-map.md)
 - [`interviews/interview-framework.md`](interviews/interview-framework.md)
 - [`community/glossary.md`](community/glossary.md)
+- [`en/l0-first-llm-call.md`](en/l0-first-llm-call.md)
+- [`en/l1-minimal-react-agent.md`](en/l1-minimal-react-agent.md)
+- [`zh/l0-first-llm-call.md`](zh/l0-first-llm-call.md)
+- [`zh/l1-minimal-react-agent.md`](zh/l1-minimal-react-agent.md)
