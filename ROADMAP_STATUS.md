@@ -20,7 +20,7 @@ validated_date: 2026-09-16
 | Interview assets | Done | `docs/en/interviews/interview-framework.md`, `docs/en/interviews/questions/`, `docs/en/interviews/interview-answer-framework.md` |
 | Portfolio tracks | Done | `docs/en/portfolio/projects.md`, `docs/en/portfolio/personal-agent-portfolio.md`, `docs/en/portfolio/open-source-impact-guide.md` |
 | Production guides | Done | `docs/en/production/`, `docs/en/production/cost-stability-operations.md`, `docs/en/quick-reference/production-checklist.md` |
-| Case studies | Done | `docs/en/cases/`, including Chinese index |
+| Case studies | Done | `docs/en/cases/` and `docs/zh/cases/`, including enterprise tool, collaboration, RAG, regression, and pattern-contribution cases |
 | Quick references | Done | `docs/en/quick-reference/`, including Chinese index |
 | Community governance | Done | `GOVERNANCE.md`, `CONTRIBUTING.md`, `CONTRIBUTING.zh-CN.md`, `docs/en/community/` |
 | Bilingual metadata | Done | frontmatter key and sync checks in `scripts/check_repository.py` |
