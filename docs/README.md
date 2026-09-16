@@ -27,3 +27,7 @@ validated_date: 2026-09-16
 - [`zh/l3-rag-memory-observability.md`](zh/l3-rag-memory-observability.md)
 - [`zh/l4-production.md`](zh/l4-production.md)
 - [`zh/l5-custom-patterns.md`](zh/l5-custom-patterns.md)
+- [`community/README.md`](community/README.md)
+- [`community/translation-workflow.md`](community/translation-workflow.md)
+- [`community/contributor-of-the-month.md`](community/contributor-of-the-month.md)
+- [`community/maintainer-rotation.md`](community/maintainer-rotation.md)
