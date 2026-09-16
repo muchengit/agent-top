@@ -28,9 +28,10 @@ jobs:
           python -m compileall -q labs scripts
           python -m ruff check .
 
-      - name: Clean Python bytecode
+      - name: Clean local caches
         run: |
           find . -type d -name "__pycache__" -print0 | while read -r -d "" dir; do
             find "$dir" -maxdepth 1 -type f -delete
             rmdir "$dir"
           done
+          rm -rf .ruff_cache

@@ -44,6 +44,13 @@ FRONTMATTER_PATTERN = re.compile(r"^---\n(.*?)\n---\n", re.DOTALL)
 DATE_PATTERN = re.compile(r"validated_date:\s*([0-9]{4}-[0-9]{2}-[0-9]{2})")
 TESTED_PATTERN = re.compile(r"tested_against:\s*([^\n]+)")
 RELATIVE_LINK_PATTERN = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+LAB_README_REQUIRED_SECTIONS = (
+    "## Goal",
+    "## Prerequisites",
+    "## Run",
+    "## Common Pitfalls",
+    "## Self-Check",
+)
 LABEL_NAMES = {
     "good first issue",
     "docs-only",
@@ -169,6 +176,27 @@ def check_bilingual_frontmatter(markdown_paths: list[Path]) -> None:
         fail("bilingual frontmatter missing: " + ", ".join(bad))
 
 
+
+def check_lab_readmes(markdown_paths: list[Path]) -> None:
+    lab_readmes = [
+        path
+        for path in markdown_paths
+        if path.name == "README.md"
+        and path.relative_to(ROOT).parts[0] == "labs"
+        and len(path.relative_to(ROOT).parts) == 4
+    ]
+    if not lab_readmes:
+        fail("no lab README files found")
+    bad: list[str] = []
+    for path in lab_readmes:
+        text = path.read_text(encoding="utf-8")
+        missing = [section for section in LAB_README_REQUIRED_SECTIONS if section not in text]
+        if missing:
+            bad.append(str(path.relative_to(ROOT)) + ": " + ", ".join(missing))
+    if bad:
+        fail("lab README sections missing: " + "; ".join(bad))
+
+
 def main() -> None:
     check_required_paths()
     markdown_paths = iter_markdown()
@@ -176,6 +204,7 @@ def main() -> None:
     check_version_anchors(markdown_paths)
     check_relative_links(markdown_paths)
     check_bilingual_frontmatter(markdown_paths)
+    check_lab_readmes(markdown_paths)
     print(f"Repository checks passed: {len(markdown_paths)} Markdown files checked.")
 
 
