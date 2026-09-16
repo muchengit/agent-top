@@ -190,4 +190,4 @@ python -m unittest labs.l2.single_agent_mcp.test_lab
 
 ## 下一步
 
-继续 [`L3 RAG、记忆与可观测`](l3-rag-memory-observability.md)，组合检索、记忆和 trace。
+继续 [`L3 RAG、记忆与可观测`](L3-RAG-记忆与可观测.md)，组合检索、记忆和 trace。
