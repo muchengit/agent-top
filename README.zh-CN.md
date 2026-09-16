@@ -77,7 +77,7 @@ agent-top/
 │   │   ├── production/               # 评估、安全、维护、回滚
 │   │   ├── quick-reference/          # 术语、命令、架构、生产速查表
 │   │   ├── skills/                   # Agent 技能体系
-│   │   ├── tutorials/                # 外部教程、开源项目灵感、学习路径、快速导航、练习手册
+│   │   ├── tutorials/                # 外部教程、开源项目灵感、学习路径、快速导航、练习手册、练习手册
 │   │   ├── l0-l5 tutorials           # L0-L5 详细教程
 │   │   ├── README.md                 # 英文文档索引
 │   │   └── agent-top-concrete-framework.md
@@ -139,7 +139,7 @@ agent-top/
 
 - `docs/en/`：所有双语文档的英文主源。
 - `docs/zh/`：中文镜像，目录结构与 `docs/en` 对齐。
-- `examples/`：无需 API key 的 Agent 决策练习材料。
+- `examples/`：无需 API key 的 Agent 决策练习和 RAG 证据练习材料。
 - `labs/`：可运行、确定性、无需 API key 的练习。
 - `templates/`：可复用贡献模板，方便 reviewer 检查一致性。
 - `scripts/`：本地校验链接、frontmatter、版本锚点和 Lab 完整性。

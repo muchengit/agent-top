@@ -231,6 +231,23 @@ def check_executable_labs() -> None:
         fail("labs missing executable code or tests: " + ", ".join(bad))
 
 
+def check_examples_jsonl() -> None:
+    examples_root = ROOT / "examples"
+    if not examples_root.is_dir():
+        return
+    jsonl_paths = sorted(examples_root.rglob("*.jsonl"))
+    if not jsonl_paths:
+        fail("no example JSONL files found under examples/")
+    for path in jsonl_paths:
+        for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+            if not line.strip():
+                continue
+            try:
+                json.loads(line)
+            except json.JSONDecodeError as exc:
+                fail(f"{path.relative_to(ROOT)}:{number} is not valid JSONL: {exc}")
+
+
 def main() -> None:
     check_required_paths()
     markdown_paths = iter_markdown()
@@ -241,6 +258,7 @@ def main() -> None:
     check_bilingual_pairs(markdown_paths)
     check_lab_readmes(markdown_paths)
     check_executable_labs()
+    check_examples_jsonl()
     print(f"Repository checks passed: {len(markdown_paths)} Markdown files checked.")
 
 
