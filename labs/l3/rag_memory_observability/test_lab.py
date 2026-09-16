@@ -1,6 +1,10 @@
 import unittest
 
-from .agent_top_labs_l3_rag_memory_observability import InMemoryStore, SessionMemory, answer_with_trace
+from .agent_top_labs_l3_rag_memory_observability import (
+    InMemoryStore,
+    SessionMemory,
+    answer_with_trace,
+)
 
 
 class RagMemoryObservabilityTest(unittest.TestCase):

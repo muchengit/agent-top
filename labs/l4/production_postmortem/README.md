@@ -9,17 +9,36 @@ tested_against: "python 3.10+"
 
 ## Goal
 
-Turn a failure story into root cause, prevention, and measurable action items.
+Turn a production failure into a structured postmortem with root causes, measurable action items, evaluation coverage, safety controls, and rollback planning.
+
+## Prerequisites
+
+- L0 through L3 completed.
+- Basic understanding of evaluation, observability, and rollback.
+- Python 3.10+.
+
+## Run
+
+```bash
+python -m unittest labs.l4.production_postmortem.test_lab
+```
+
+## Production Checklist
+
+- Auth and permissions.
+- Rate limits.
+- Cost guardrails.
+- Evaluation set.
+- Observability traces.
+- Rollback plan.
+
+## What This Lab Teaches
+
+- A postmortem must name root causes, not just summarize symptoms.
+- Action items need owners, due dates, and type labels.
+- Rollback, evaluation, and safety controls are part of production readiness.
+- Missing coverage should be surfaced explicitly.
 
 ## Reference Template
 
 See [`../../../templates/postmortem-template.md`](../../../templates/postmortem-template.md).
-
-## Production Checklist
-
-- Auth and permissions
-- Rate limits
-- Cost guardrails
-- Evaluation set
-- Observability traces
-- Rollback plan

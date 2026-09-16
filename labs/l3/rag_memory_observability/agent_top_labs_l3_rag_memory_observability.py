@@ -30,7 +30,11 @@ class SessionMemory:
         return self.turns[-limit:]
 
 
-def answer_with_trace(query: str, store: InMemoryStore, memory: SessionMemory) -> tuple[str, list[Trace]]:
+def answer_with_trace(
+    query: str,
+    store: InMemoryStore,
+    memory: SessionMemory,
+) -> tuple[str, list[Trace]]:
     memory.remember(query)
     retrieved = store.retrieve(query)
     traces = [

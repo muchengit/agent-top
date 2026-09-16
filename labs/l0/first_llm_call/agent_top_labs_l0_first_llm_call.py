@@ -15,7 +15,10 @@ class FakeModel:
         return f"[{system_prompt}] I received {len(prompt.split())} prompt tokens: {prompt}"
 
 
-def first_llm_call(system_prompt: str = "You are helpful.", prompt: str = "Explain agents simply.") -> str:
+def first_llm_call(
+    system_prompt: str = "You are helpful.",
+    prompt: str = "Explain agents simply.",
+) -> str:
     model = FakeModel()
     return model.complete(system_prompt, prompt)
 

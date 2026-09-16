@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import re
 import sys
-from datetime import date, datetime, timezone
+from datetime import date, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -69,7 +69,11 @@ def iter_markdown() -> list[Path]:
 
 
 def check_required_paths() -> None:
-    missing = [str((ROOT / path).relative_to(ROOT)) for path in REQUIRED_PATHS if not (ROOT / path).exists()]
+    missing = [
+        str((ROOT / path).relative_to(ROOT))
+        for path in REQUIRED_PATHS
+        if not (ROOT / path).exists()
+    ]
     if missing:
         fail("missing required paths: " + ", ".join(missing))
 
