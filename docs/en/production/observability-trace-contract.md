@@ -65,7 +65,7 @@ Use stable event names so traces can be filtered and compared over time:
 - `answer.generated`
 - `answer.delivered`
 - `error.raised`
-- `incident.opened`
+- `release.gate.checked`
 
 ## Required Fields
 
@@ -117,7 +117,7 @@ Use trace fields to route incidents quickly:
 | Wrong memory preference | Memory lifecycle | `memory.read`, `memory.write` |
 | Prompt regression | Prompt owner | `prompt_version`, eval fixture result |
 | Cost spike | Runtime or planner | `tokens`, `cost`, `plan.selected` |
-| Unsafe answer | Guardrail owner | `guardrail.checked`, `answer.text` |
+| Missing release evidence | Release owner | `release.gate.checked`, CI SHA, dataset version, rollback plan |
 
 ## Release Gate
 

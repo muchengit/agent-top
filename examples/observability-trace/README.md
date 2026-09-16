@@ -7,7 +7,7 @@ Goal: complete the trace, identify missing evidence, route the failure to an own
 ## Files
 
 - [`trace-events.jsonl`](trace-events.jsonl): a partial trace.
-- [`trace-template.jsonl`](trace-template.jsonl): start your completion here.
+- [`release-gates.jsonl`](release-gates.jsonl): CI-first release evidence and gate decisions.
 
 ## Steps
 
@@ -18,7 +18,8 @@ Goal: complete the trace, identify missing evidence, route the failure to an own
    - `owner`: `prompt`, `tool`, `retrieval`, `memory`, `guardrail`, or `runtime`.
    - `next_action`: `eval`, `guardrail`, `trace_field`, `rollback`, or `postmortem`.
 3. Compare with the answer key below.
-4. Change one rule: traces must redact private data before storage. Which fields must change?
+4. Add a `release.gate.checked` event for one gate. Decide whether it blocks release.
+5. Change one rule: traces must redact private data before storage. Which fields must change?
 
 ## Answer Key
 
@@ -27,14 +28,14 @@ Goal: complete the trace, identify missing evidence, route the failure to an own
 | Final answer has no citations | retrieval | trace_field + eval |
 | Tool call lacks approval evidence | guardrail | guardrail + rollback rule |
 | Cost spike not captured per request | runtime | trace_field |
-| User data appears unredacted | privacy | redaction policy + postmortem |
+| Release evidence lacks CI SHA | runtime | release gate + trace_field |
 
 ## Learning Outcomes
 
 - A trace is a contract, not a console log.
 - Missing fields are release blockers when they prevent diagnosis.
 - Good traces route incidents to owners instead of debating who was right.
-- Private data needs redaction and retention rules before it becomes evidence.
+- CI evidence should point to the exact commit being evaluated, not just a branch name.
 
 ## Related Reading
 

@@ -65,7 +65,7 @@ Demo 只需要给出答案。生产 Agent 要能回答、解释、验证、恢�
 - `answer.generated`
 - `answer.delivered`
 - `error.raised`
-- `incident.opened`
+- `release.gate.checked`
 
 ## 必需字段
 
@@ -117,7 +117,7 @@ Demo 只需要给出答案。生产 Agent 要能回答、解释、验证、恢�
 | memory preference 错 | Memory lifecycle | `memory.read`、`memory.write` |
 | prompt regression | Prompt owner | `prompt_version`、eval fixture result |
 | cost spike | Runtime 或 planner | `tokens`、`cost`、`plan.selected` |
-| unsafe answer | Guardrail owner | `guardrail.checked`、`answer.text` |
+| 缺少发布证据 | Release owner | `release.gate.checked`、CI commit SHA、dataset version、rollback plan |
 
 ## 发布门禁
 

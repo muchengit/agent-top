@@ -24,7 +24,19 @@ tested_against: "JSONL + local docs review"
 
 ## Evidence
 
-| Source ID | Type | Freshness | Permission state | Used in answer |
+## Release Gate Evidence
+
+| Evidence | Source | Result | Owner | Release decision |
+| --- | --- | --- | --- | --- |
+
+## CI First Evidence
+
+- CI commit SHA:
+- Required checks status:
+- Dataset / fixture version:
+- Regression diff reviewed:
+- Owner approval:
+- Rollback plan:
 | --- | --- | --- | --- | --- |
 
 ## Tool Calls

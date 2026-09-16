@@ -24,7 +24,19 @@ tested_against: "JSONL + 本地文档审查"
 
 ## 证据
 
-| Source ID | 类型 | Freshness | Permission state | 是否进入答案 |
+## 发布证据与门禁
+
+| Evidence | Source | Result | Owner | 发布决策 |
+| --- | --- | --- | --- | --- |
+
+## CI-first 证据
+
+- CI commit SHA:
+- Required checks status:
+- Dataset / fixture version:
+- Regression diff reviewed:
+- Owner approval:
+- Rollback plan:
 | --- | --- | --- | --- | --- |
 
 ## Tool Calls
