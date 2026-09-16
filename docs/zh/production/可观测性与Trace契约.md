@@ -66,6 +66,7 @@ Demo 只需要给出答案。生产 Agent 要能回答、解释、验证、恢�
 - `answer.delivered`
 - `error.raised`
 - `release.gate.checked`
+- `runtime.evidence.checked`
 
 ## 必需字段
 
@@ -118,6 +119,31 @@ Demo 只需要给出答案。生产 Agent 要能回答、解释、验证、恢�
 | prompt regression | Prompt owner | `prompt_version`、eval fixture result |
 | cost spike | Runtime 或 planner | `tokens`、`cost`、`plan.selected` |
 | 缺少发布证据 | Release owner | `release.gate.checked`、CI commit SHA、dataset version、rollback plan |
+| Runtime evidence missing | Runtime 或 release owner | `runtime.evidence.checked`、tool version、artifact SHA、decision |
+
+
+## Runtime Evidence（运行时证据）
+
+`runtime.evidence.checked` 把发布和事故证据从原始 telemetry 中独立出来，但仍绑定到同一个 trace。当 release gate 依赖 lint、profiling、dependency lock、workflow provenance 或 error grouping 时使用。
+
+Required fields:
+
+```json
+{
+  "event": "runtime.evidence.checked",
+  "trace_id": "stable request id",
+  "source": "lint|profile|lockfile|workflow|error-group|ci",
+  "tool": "tool name",
+  "tool_version": "exact version or commit",
+  "artifact_sha": "artifact, lockfile, profile, or run id",
+  "release_sha": "commit being released",
+  "finding": "finding or metric summary",
+  "decision": "release|block|warn|route",
+  "owner": "runtime|release|prompt|tool|retrieval|memory|guardrail"
+}
+```
+
+用它回答：这个 release 能否用同一工具链复现？这个 incident 能否和相似事故分组？这个 cost 或 latency hotspot 能否绑定到 commit、tool 或 workflow step？
 
 ## 发布门禁
 

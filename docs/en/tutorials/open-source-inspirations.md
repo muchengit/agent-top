@@ -13,6 +13,7 @@ A 2026-09-17 coding-agent pass added research watch entries. They are treated as
 A 2026-09-17 data-ingestion pass added web scraping, browser-use, vector ingestion, and evaluation platform research watch entries. They are also discovery signals until maintainers verify repository URLs and licenses.
 A second 2026-09-17 open-source scan verified SSH reachability for promptfoo, Google ADK, Instructor, DSPy, Open Interpreter, OpenHands, and E2B, while HTTPS cloning timed out for some of those repositories. Agent-Top treats SSH reachability as discovery evidence only, not maintainer verification of licenses or API stability.
 A 2026-09-17 GitHub-native pass re-verified several GitHub CLI, GitHub REST API, GitHub MCP Server, and Copilot coding-agent style projects with `git ls-remote`. These entries absorb repository review workflows, PR review patterns, CI-first validation, and platform-native tool boundaries.
+A 2026-09-17 runtime-evidence pass checked reachable public repositories with `git ls-remote`: Sentry, Grafana Pyroscope, Ruff, uv, and Dapr. These entries are learning signals for incident grouping, profiling, deterministic lint gates, lockfile evidence, and workflow provenance; they are not authoritative setup guides.
 
 ## Project-to-Topic Map
 
@@ -77,6 +78,11 @@ A 2026-09-17 GitHub-native pass re-verified several GitHub CLI, GitHub REST API,
 | GitHub REST API | platform automation contract | issues, pull requests, checks, code search, status checks, and rate-limited workflow automation |
 | GitHub MCP Server | MCP platform tools | repository tools, issue tools, PR tools, search tools, and permission-bound GitHub workflows |
 | GitHub Copilot coding-agent style projects | code execution and review agents | PR-oriented work items, review loops, command boundaries, and CI-gated code changes |
+| Sentry-style error monitoring | incident grouping and release-aware errors | issue fingerprinting, release association, error grouping, alert routing, and blameless root-cause evidence |
+| Grafana Pyroscope-style continuous profiling | runtime hotspots and resource evidence | sampling or continuous profiling, service/resource labels, hotspot routes, and cost diagnosis without full traces |
+| Ruff-style deterministic linters | local quality gates | fast deterministic checks, explicit rule output, CI pass/fail evidence, and small reviewable diffs |
+| uv-style Python package manager | dependency and tool lock evidence | lockfile reproducibility, pinned tool versions, isolated environments, and release evidence for package resolution |
+| Dapr-style distributed application runtime | workflow provenance and operation boundaries | activity/workflow boundaries, component boundaries, retry/dead-letter patterns, and distributed operation provenance |
 
 ## Absorbable Patterns
 
@@ -103,6 +109,11 @@ A 2026-09-17 GitHub-native pass re-verified several GitHub CLI, GitHub REST API,
 - **Structured output validation**: define JSON schema, retry policy, invalid-output escalation, and validation failures before business logic.
 - **Sandboxed execution boundary**: treat shell, filesystem, network, and credentials as separate execution permissions.
 - **Eval gate discipline**: a prompt, tool, or model change ships only when dataset version, pass rate, regression diff, and owner approval are recorded.
+- **Error grouping evidence**: classify runtime failures by fingerprint, release SHA, route, owner, recurrence, and severity so postmortems can aggregate repeats instead of debating single traces.
+- **Runtime hotspot evidence**: bind latency, CPU/memory, token cost, and tool hotspots to commit, release, model, prompt, tool, and dataset versions.
+- **Deterministic lint gate**: require a fast deterministic formatter/linter result with tool version and exact findings before treating style or safety issues as resolved.
+- **Tool and dependency lock evidence**: preserve lockfile/tool versions for Python, CLI, Agent, and MCP dependencies so a release can be replayed with the same toolchain.
+- **Workflow provenance**: record workflow/activity id, input event id, retry attempt, dead-letter state, and owner so distributed Agent workflows can be traced across services.
 
 ## Contributor Workflow
 
@@ -132,6 +143,11 @@ When adding another open-source project, submit in this order:
 | Evaluation gate and regression evidence | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../examples/agent-eval-regression/README.md`](../../../examples/agent-eval-regression/README.md) |
 | GitHub-native review workflow | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../../examples/github-agent-review/README.md`](../../../examples/github-agent-review/README.md) |
 | Code execution sandboxing | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
+| Error grouping and incident routing | [`../production/observability-trace-contract.md`](../production/observability-trace-contract.md), [`../../examples/observability-trace/README.md`](../../../examples/observability-trace/README.md) |
+| Runtime profiling and cost hotspots | [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md), [`../../examples/observability-trace/README.md`](../../../examples/observability-trace/README.md) |
+| Deterministic lint gate | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../examples/observability-trace/README.md`](../../../examples/observability-trace/README.md) |
+| Tool and dependency lock evidence | [`../l4-production.md`](../l4-production.md), [`../../examples/observability-trace/README.md`](../../../examples/observability-trace/README.md) |
+| Workflow provenance | [`../concepts/multi-agent-scheduling.md`](../concepts/multi-agent-scheduling.md), [`../production/observability-trace-contract.md`](../production/observability-trace-contract.md) |
 
 ## Maintenance Rule
 

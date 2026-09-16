@@ -29,6 +29,15 @@ tested_against: "JSONL + local docs review"
 | Evidence | Source | Result | Owner | Release decision |
 | --- | --- | --- | --- | --- |
 
+
+## Runtime Evidence
+
+| Source | Tool | Tool version | Artifact / SHA | Release SHA | Finding | Decision | Owner |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `lint` / `profile` / `lockfile` / `workflow` / `error-group` / `ci` |  |  |  |  |  | `release` / `block` / `warn` / `route` |  |
+
+Runtime evidence should answer whether the release can be replayed with the same tools, whether cost or latency hotspots can be tied to a commit, and whether similar incidents can be grouped into one route.
+
 ## CI First Evidence
 
 - CI commit SHA:

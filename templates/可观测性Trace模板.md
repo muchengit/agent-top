@@ -29,6 +29,15 @@ tested_against: "JSONL + 本地文档审查"
 | Evidence | Source | Result | Owner | 发布决策 |
 | --- | --- | --- | --- | --- |
 
+
+## 运行时证据
+
+| Source | Tool | Tool version | Artifact / SHA | Release SHA | Finding | Decision | Owner |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `lint` / `profile` / `lockfile` / `workflow` / `error-group` / `ci` |  |  |  |  |  | `release` / `block` / `warn` / `route` |  |
+
+运行时证据应说明：发布是否能在同一工具链下复现，成本或延迟热点是否能绑定到 commit，相似事故是否能聚合到同一 owner。
+
 ## CI-first 证据
 
 - CI commit SHA:

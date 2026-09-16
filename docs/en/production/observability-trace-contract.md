@@ -66,6 +66,7 @@ Use stable event names so traces can be filtered and compared over time:
 - `answer.delivered`
 - `error.raised`
 - `release.gate.checked`
+- `runtime.evidence.checked`
 
 ## Required Fields
 
@@ -118,6 +119,31 @@ Use trace fields to route incidents quickly:
 | Prompt regression | Prompt owner | `prompt_version`, eval fixture result |
 | Cost spike | Runtime or planner | `tokens`, `cost`, `plan.selected` |
 | Missing release evidence | Release owner | `release.gate.checked`, CI SHA, dataset version, rollback plan |
+| Runtime evidence missing | Runtime or release owner | `runtime.evidence.checked`, tool version, artifact SHA, decision |
+
+
+## Runtime Evidence
+
+`runtime.evidence.checked` keeps release and incident evidence separate from raw telemetry, but still tied to one trace. Use it when a release gate depends on lint, profiling, dependency lock, workflow provenance, or error grouping.
+
+Required fields:
+
+```json
+{
+  "event": "runtime.evidence.checked",
+  "trace_id": "stable request id",
+  "source": "lint|profile|lockfile|workflow|error-group|ci",
+  "tool": "tool name",
+  "tool_version": "exact version or commit",
+  "artifact_sha": "artifact, lockfile, profile, or run id",
+  "release_sha": "commit being released",
+  "finding": "finding or metric summary",
+  "decision": "release|block|warn|route",
+  "owner": "runtime|release|prompt|tool|retrieval|memory|guardrail"
+}
+```
+
+Use the evidence to answer: can this release be replayed with the same tools? Can this incident be grouped with similar incidents? Can this cost or latency hotspot be tied to a commit, tool, or workflow step?
 
 ## Release Gate
 
