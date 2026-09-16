@@ -55,6 +55,7 @@ Run the repository checks:
 ```bash
 python scripts/check_repository.py
 python -m unittest discover -s labs -p "test_*.py"
+python -m compileall -q labs scripts
 ```
 
 ## Repository Map
@@ -64,6 +65,7 @@ python -m unittest discover -s labs -p "test_*.py"
 - Interview framework: [`docs/interviews/interview-framework.md`](docs/interviews/interview-framework.md)
 - Labs: [`labs`](labs)
 - Templates: [`templates`](templates)
+- Documentation index: [`docs/README.md`](docs/README.md)
 - Governance: [`GOVERNANCE.md`](GOVERNANCE.md)
 - Contributing: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 - Roadmap status: [`ROADMAP_STATUS.md`](ROADMAP_STATUS.md)

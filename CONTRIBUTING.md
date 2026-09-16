@@ -23,12 +23,8 @@ Run the repository checker before opening a pull request:
 
 ```bash
 python scripts/check_repository.py
-```
-
-For executable Python Labs:
-
-```bash
-python -m unittest discover labs
+python -m unittest discover -s labs -p "test_*.py"
+python -m compileall -q labs scripts
 ```
 
 ## Documentation Standards

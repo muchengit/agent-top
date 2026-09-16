@@ -23,3 +23,10 @@ jobs:
           python scripts/check_repository.py
           python -m unittest discover -s labs -p "test_*.py"
           python -m compileall -q labs scripts
+
+      - name: Clean Python bytecode
+        run: |
+          find . -type d -name "__pycache__" -print0 | while read -r -d "" dir; do
+            find "$dir" -maxdepth 1 -type f -delete
+            rmdir "$dir"
+          done
