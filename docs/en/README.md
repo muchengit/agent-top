@@ -41,6 +41,11 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`concepts/multi-round-research-discussion.md`](concepts/multi-round-research-discussion.md)
 - [`concepts/agent-system-architecture.md`](concepts/agent-system-architecture.md)
 - [`concepts/design-review-checklist.md`](concepts/design-review-checklist.md)
+- [`concepts/mcp.md`](concepts/mcp.md)
+- [`concepts/multi-agent-scheduling.md`](concepts/multi-agent-scheduling.md)
+- [`concepts/long-term-memory.md`](concepts/long-term-memory.md)
+- [`concepts/model-hallucination.md`](concepts/model-hallucination.md)
+- [`concepts/plan-decision-making.md`](concepts/plan-decision-making.md)
 
 ## Tutorial Reference Map
 
