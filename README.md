@@ -114,7 +114,10 @@ agent-top/
 │   │   │   ├── lab-command-cheatsheet.md
 │   │   │   └── production-checklist.md
 │   │   ├── tutorials/
-│   │   │   └── reference-map.md
+│   │   │   ├── learning-paths.md
+│   │   │   ├── open-source-inspirations.md
+│   │   │   ├── reference-map.md
+│   │   │   └── search-supplements.md
 │   │   ├── agent-top-concrete-framework.md
 │   │   ├── l0-first-llm-call.md
 │   │   ├── l1-minimal-react-agent.md
@@ -171,6 +174,8 @@ agent-top/
 ├── ROADMAP_STATUS.zh-CN.md
 ├── SECURITY.md
 ├── SECURITY.zh-CN.md
+├── STYLE.md
+├── STYLE.zh-CN.md
 ├── agent-top-roadmap.md
 ├── agent-top-roadmap.zh-CN.md
 ├── LICENSE
@@ -201,11 +206,13 @@ python -m ruff check .
 
 - Concepts: [`docs/en/concepts`](docs/en/concepts)
 - Framework map: [`docs/en/frameworks/framework-map.md`](docs/en/frameworks/framework-map.md)
+- Open-source inspirations: [`docs/en/tutorials/open-source-inspirations.md`](docs/en/tutorials/open-source-inspirations.md)
 - Interview framework: [`docs/en/interviews/interview-framework.md`](docs/en/interviews/interview-framework.md)
 - Labs: [`labs`](labs)
 - Templates: [`templates`](templates)
 - Documentation index: [`docs/en/README.md`](docs/en/README.md)
 - Governance: [`GOVERNANCE.md`](GOVERNANCE.md)
+- Style guide: [`STYLE.md`](STYLE.md)
 - Contributing: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 - Chinese contribution guide: [`CONTRIBUTING.zh-CN.md`](CONTRIBUTING.zh-CN.md)
 - Community: [`docs/en/community/README.md`](docs/en/community/README.md)

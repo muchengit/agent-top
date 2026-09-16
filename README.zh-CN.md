@@ -72,7 +72,7 @@ agent-top/
 │   │   ├── portfolio/                # 作品集项目路径
 │   │   ├── production/               # 评估、安全、维护、回滚
 │   │   ├── quick-reference/          # 术语、命令、架构、生产速查表
-│   │   ├── tutorials/                # 外部教程到 Agent-Top 的映射
+│   │   ├── tutorials/                # 外部教程、开源项目灵感、学习路径映射
 │   │   └── l0-l5 tutorials           # L0-L5 详细教程
 │   └── zh/
 │       └── ...                       # 中文镜像，目录结构与 docs/en 对齐
@@ -100,6 +100,8 @@ agent-top/
 ├── ROADMAP_STATUS.zh-CN.md           # 中文路线状态
 ├── SECURITY.md                       # 英文安全策略
 ├── SECURITY.zh-CN.md                 # 中文安全策略
+├── STYLE.md                          # 英文风格规范
+├── STYLE.zh-CN.md                    # 中文风格规范
 ├── agent-top-roadmap.md              # 路线图
 ├── agent-top-roadmap.zh-CN.md        # 中文路线图
 ├── LICENSE
@@ -117,15 +119,30 @@ agent-top/
 
 ## 仓库地图
 
+- 核心概念：[`docs/zh/concepts`](docs/zh/concepts)
+- 框架地图：[`docs/zh/frameworks/framework-map.md`](docs/zh/frameworks/framework-map.md)
+- 面试框架：[`docs/zh/interviews/interview-framework.md`](docs/zh/interviews/interview-framework.md)
+- 学习路径：[`docs/zh/tutorials/learning-paths.md`](docs/zh/tutorials/learning-paths.md)
+- 开源项目灵感目录：[`docs/zh/tutorials/open-source-inspirations.md`](docs/zh/tutorials/open-source-inspirations.md)
+- 可执行 Lab：[`labs`](labs)
+- 内容模板：[`templates`](templates)
+- 中文文档索引：[`docs/zh/README.md`](docs/zh/README.md)
+- 治理规范：[`GOVERNANCE.zh-CN.md`](GOVERNANCE.zh-CN.md)
+- 贡献指南：[`CONTRIBUTING.zh-CN.md`](CONTRIBUTING.zh-CN.md)
+- 风格规范：[`STYLE.zh-CN.md`](STYLE.zh-CN.md)
+- 社区：[`docs/zh/community/README.md`](docs/zh/community/README.md)
+- 安全：[`SECURITY.zh-CN.md`](SECURITY.zh-CN.md)
+- 路线状态：[`ROADMAP_STATUS.zh-CN.md`](ROADMAP_STATUS.zh-CN.md)
+
 ## 文档
 
 具体框架见：
 
-- [`docs/en/agent-top-concrete-framework.md`](docs/en/agent-top-concrete-framework.md)
+- [`docs/zh/agent-top-concrete-framework.md`](docs/zh/agent-top-concrete-framework.md)
 
 配套路线图：
 
-- [`agent-top-roadmap.md`](agent-top-roadmap.md)
+- [`agent-top-roadmap.zh-CN.md`](agent-top-roadmap.zh-CN.md)
 
 ## 贡献方式
 

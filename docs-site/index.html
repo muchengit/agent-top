@@ -17,18 +17,28 @@
   <ul>
     <li><a href="../README.md">English README</a></li>
     <li><a href="../README.zh-CN.md">中文 README</a></li>
-    <li><a href="../docs/README.md">Documentation Index</a></li>
+    <li><a href="../docs/en/README.md">English Documentation Index</a></li>
+    <li><a href="../docs/zh/README.md">中文文档索引</a></li>
+    <li><a href="../docs/en/tutorials/open-source-inspirations.md">Open-Source Inspirations</a></li>
+    <li><a href="../docs/zh/tutorials/open-source-inspirations.md">开源项目灵感目录</a></li>
     <li><a href="../labs/README.md">Labs Index</a></li>
-    <li><a href="../docs/community/README.md">Community Index</a></li>
-    <li><a href="../ROADMAP_STATUS.md">Roadmap Status</a></li>
-    <li><a href="../CONTRIBUTING.md">Contributing Guide</a></li>
-    <li><a href="../SECURITY.md">Security Policy</a></li>
+    <li><a href="../docs/en/community/README.md">English Community Index</a></li>
+    <li><a href="../docs/zh/community/README.md">中文社区索引</a></li>
+    <li><a href="../ROADMAP_STATUS.md">English Roadmap Status</a></li>
+    <li><a href="../ROADMAP_STATUS.zh-CN.md">中文路线状态</a></li>
+    <li><a href="../CONTRIBUTING.md">English Contributing Guide</a></li>
+    <li><a href="../CONTRIBUTING.zh-CN.md">中文贡献指南</a></li>
+    <li><a href="../STYLE.md">English Style Guide</a></li>
+    <li><a href="../STYLE.zh-CN.md">中文风格规范</a></li>
+    <li><a href="../SECURITY.md">English Security Policy</a></li>
+    <li><a href="../SECURITY.zh-CN.md">中文安全策略</a></li>
     <li><a href="../.github/labels.yml">GitHub Labels</a></li>
   </ul>
   <h2>Local Checks</h2>
   <p>Run:</p>
   <pre><code>python scripts/check_repository.py
 python -m unittest discover -s labs -p "test_*.py"
-python -m compileall -q labs scripts</code></pre>
+python -m compileall -q labs scripts
+python -m ruff check .</code></pre>
 </body>
 </html>

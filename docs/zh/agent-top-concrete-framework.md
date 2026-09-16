@@ -6,7 +6,7 @@ validated_date: 2026-09-16
 
 # Agent-Top 具体框架
 
-本文件是 Agent-Top 的中文核心框架说明。英文源文件见 [`../en/agent-top-concrete-framework.md`](./agent-top-concrete-framework.md)。
+本文件是 Agent-Top 的中文核心框架说明；英文对照页见 [`../en/agent-top-concrete-framework.md`](../en/agent-top-concrete-framework.md)。
 
 ## 目标
 

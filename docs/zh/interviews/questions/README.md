@@ -26,3 +26,13 @@ Agent-Top 题库按能力层和问题深度组织。
 - 至少一个 follow-up。
 - 生产或 trade-off 角度。
 
+
+## 题目到作品集映射
+
+| 层级 | 题库 | 作品集证据 |
+| --- | --- | --- |
+| L1 | [`l1-components.md`](l1-components.md) | Minimal ReAct Agent 运行结果 |
+| L2 | [`l2-framework-mcp.md`](l2-framework-mcp.md) | Enterprise Multi-Tool Agent |
+| L3 | [`l3-system-design.md`](l3-system-design.md) | Personal Knowledge Base 或 Multi-Agent Collaboration |
+| L4 | [`l4-production.md`](l4-production.md) | Production postmortem 和 release gate |
+| L5 | [`l5-patterns.md`](l5-patterns.md) | Custom Framework or Pattern |

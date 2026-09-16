@@ -43,3 +43,14 @@ A good Agent-Top interview question should make a strong candidate explain:
 - How it is measured.
 - How it is rolled back.
 - What trade-off was accepted.
+
+
+## Question-to-Portfolio Mapping
+
+| Level | Question Set | Portfolio Evidence |
+| --- | --- | --- |
+| L1 | [`l1-components.md`](l1-components.md) | Minimal ReAct Agent run |
+| L2 | [`l2-framework-mcp.md`](l2-framework-mcp.md) | Enterprise Multi-Tool Agent |
+| L3 | [`l3-system-design.md`](l3-system-design.md) | Personal Knowledge Base or Multi-Agent Collaboration |
+| L4 | [`l4-production.md`](l4-production.md) | Production postmortem and release gate |
+| L5 | [`l5-patterns.md`](l5-patterns.md) | Custom Framework or Pattern |
