@@ -154,6 +154,10 @@ Weight:
 - 15% contribution evidence.
 - 10% mentorship or standard-setting.
 
+## Answer Framework
+
+See [`interview-answer-framework.md`](interview-answer-framework.md) for candidate-facing response structure and examples.
+
 ## STAR Template
 
 - Situation: context, constraints, users affected, and system boundaries.
@@ -187,3 +191,4 @@ Ask candidates to map each claim to one of four project gradients:
 - [`questions/l3-system-design.md`](questions/l3-system-design.md)
 - [`questions/l4-production.md`](questions/l4-production.md)
 - [`questions/l5-patterns.md`](questions/l5-patterns.md)
+- [`interview-answer-framework.md`](interview-answer-framework.md)
