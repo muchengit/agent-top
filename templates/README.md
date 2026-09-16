@@ -11,3 +11,4 @@ Templates define the standard structure for Agent-Top contributions.
 - [`lab-template.md`](lab-template.md)
 - [`interview-question-template.md`](interview-question-template.md)
 - [`postmortem-template.md`](postmortem-template.md)
+- [`monthly-contributor-report.md`](monthly-contributor-report.md)

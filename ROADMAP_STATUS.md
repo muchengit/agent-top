@@ -18,7 +18,9 @@ validated_date: 2026-09-16
 | Portfolio tracks | Done | `docs/portfolio/projects.md` |
 | Production guides | Done | `docs/production/` |
 | Community governance | Done | `GOVERNANCE.md`, `CONTRIBUTING.md`, `docs/community/` |
-| Bilingual seed | Done | `docs/en/`, `docs/zh/` |
+| Bilingual seed | Done | `docs/en/`, `docs/zh/` through L5 |
+| Community operations | Done | `docs/community/community-rhythm.md`, `docs/community/labels.md` |
+| Maintenance process | Done | `docs/production/quarterly-maintenance.md`, `templates/monthly-contributor-report.md` |
 | CI checks | Done | `.github/workflows/ci.yml` |
 
 ## Health Targets
