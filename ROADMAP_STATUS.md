@@ -17,9 +17,9 @@ validated_date: 2026-09-16
 | Detailed tutorials | Done | `docs/en/` and `docs/zh/` through L5 |
 | Tutorial reference map | Done | `docs/en/tutorials/reference-map.md`, `docs/zh/tutorials/reference-map.md` |
 | Chinese tutorial filenames | Done | Chinese names under `docs/zh/` |
-| Interview assets | Done | `docs/en/interviews/interview-framework.md`, `docs/en/interviews/questions/` |
-| Portfolio tracks | Done | `docs/en/portfolio/projects.md` |
-| Production guides | Done | `docs/en/production/`, `docs/en/quick-reference/production-checklist.md` |
+| Interview assets | Done | `docs/en/interviews/interview-framework.md`, `docs/en/interviews/questions/`, `docs/en/interviews/interview-answer-framework.md` |
+| Portfolio tracks | Done | `docs/en/portfolio/projects.md`, `docs/en/portfolio/personal-agent-portfolio.md`, `docs/en/portfolio/open-source-impact-guide.md` |
+| Production guides | Done | `docs/en/production/`, `docs/en/production/cost-stability-operations.md`, `docs/en/quick-reference/production-checklist.md` |
 | Case studies | Done | `docs/en/cases/`, including Chinese index |
 | Quick references | Done | `docs/en/quick-reference/`, including Chinese index |
 | Community governance | Done | `GOVERNANCE.md`, `CONTRIBUTING.md`, `CONTRIBUTING.zh-CN.md`, `docs/en/community/` |
@@ -30,6 +30,7 @@ validated_date: 2026-09-16
 | Security policy | Done | `SECURITY.md` |
 | Maintenance process | Done | `docs/en/production/quarterly-maintenance.md`, `templates/monthly-contributor-report.md` |
 | CI checks | Done | `.github/workflows/ci.yml` |
+| Reusable templates | Done | `templates/`, including Agent design and postmortem templates |
 
 ## Health Targets
 
@@ -40,7 +41,7 @@ validated_date: 2026-09-16
 | Framework example freshness | reviewed before stale threshold |
 | Review coverage | >= 2 backups per active module |
 | Tutorial coverage | L0-L5 EN and ZH present |
-| Lab test coverage | 35 deterministic Lab tests pass locally |
+| Lab test coverage | 39 deterministic Lab tests pass locally |
 
 ## Next Priority
 
@@ -48,4 +49,4 @@ Continue improving coverage with more real-world examples, maintain bilingual SL
 
 ## Completion Notes
 
-The repository now includes the core learning framework, runnable Labs, bilingual L0-L5 tutorials, interview question banks, portfolio tracks, production guides, community operations, governance, and CI checks.
+The repository now includes the core learning framework, runnable Labs, bilingual L0-L5 tutorials, interview question banks, interview answer examples, portfolio tracks, open-source impact guidance, production guides, reusable design templates, community operations, governance, and CI checks.

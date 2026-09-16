@@ -92,6 +92,7 @@ agent-top/
 │   │   ├── frameworks/
 │   │   │   └── framework-map.md
 │   │   ├── interviews/
+│   │   │   ├── interview-answer-framework.md
 │   │   │   ├── interview-framework.md
 │   │   │   └── questions/
 │   │   │       ├── README.md
@@ -102,6 +103,8 @@ agent-top/
 │   │   │       └── l5-patterns.md
 │   │   ├── portfolio/
 │   │   │   ├── README.md
+│   │   │   ├── open-source-impact-guide.md
+│   │   │   ├── personal-agent-portfolio.md
 │   │   │   └── projects.md
 │   │   ├── production/
 │   │   │   ├── README.md
@@ -244,7 +247,7 @@ Agent-Top welcomes contributions through:
 - Translating content
 - Reviewing documentation
 - Maintaining examples
-- Adding interview questions or portfolio projects
+- Adding interview questions, portfolio projects, interview examples, or reusable design templates
 
 Good starting labels:
 

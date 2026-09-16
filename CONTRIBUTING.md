@@ -9,7 +9,7 @@ Thanks for helping improve Agent-Top. This repository prefers clear, small, revi
 - Reviewing documentation
 - Maintaining examples
 - Adding interview questions
-- Adding portfolio project tracks
+- Adding portfolio project tracks, interview answer examples, design templates, or open-source impact guides
 
 Start with one of these labels:
 
