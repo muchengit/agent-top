@@ -12,6 +12,7 @@ Portfolio projects should prove that you can build, test, and explain Agent syst
 ## Tracks
 
 - [`projects.md`](projects.md): full portfolio project tracks.
+- [`personal-agent-portfolio.md`](personal-agent-portfolio.md): turn Agent projects into portfolio artifacts.
 
 ## Four Project Gradients
 

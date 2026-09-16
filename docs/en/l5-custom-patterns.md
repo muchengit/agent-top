@@ -216,4 +216,6 @@ A strong L5 artifact is usually at least a level 3 pattern.
 - [`../../labs/l5/custom_pattern_lab/README.md`](../../labs/l5/custom_pattern_lab/README.md)
 - [`../../templates/article-template.md`](../../templates/article-template.md)
 - [`../../templates/lab-template.md`](../../templates/lab-template.md)
+- [`portfolio/personal-agent-portfolio.md`](portfolio/personal-agent-portfolio.md)
+- [`portfolio/open-source-impact-guide.md`](portfolio/open-source-impact-guide.md)
 - [`agent-top-concrete-framework.md`](agent-top-concrete-framework.md)

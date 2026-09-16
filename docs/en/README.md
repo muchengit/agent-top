@@ -92,6 +92,7 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 
 - [`portfolio/README.md`](portfolio/README.md)
 - [`portfolio/projects.md`](portfolio/projects.md)
+- [`portfolio/personal-agent-portfolio.md`](portfolio/personal-agent-portfolio.md)
 
 ## Community
 
