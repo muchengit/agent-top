@@ -12,6 +12,7 @@ This page uses GitHub project discoveries verified on 2026-09-16. External links
 A 2026-09-17 coding-agent pass added research watch entries. They are treated as discovery signals, not authoritative documentation, until maintainers verify repository URLs and licenses.
 A 2026-09-17 data-ingestion pass added web scraping, browser-use, vector ingestion, and evaluation platform research watch entries. They are also discovery signals until maintainers verify repository URLs and licenses.
 A second 2026-09-17 open-source scan verified SSH reachability for promptfoo, Google ADK, Instructor, DSPy, Open Interpreter, OpenHands, and E2B, while HTTPS cloning timed out for some of those repositories. Agent-Top treats SSH reachability as discovery evidence only, not maintainer verification of licenses or API stability.
+A 2026-09-17 GitHub-native pass re-verified several GitHub CLI, GitHub REST API, GitHub MCP Server, and Copilot coding-agent style projects with `git ls-remote`. These entries absorb repository review workflows, PR review patterns, CI-first validation, and platform-native tool boundaries.
 
 ## Project-to-Topic Map
 
@@ -72,6 +73,10 @@ A second 2026-09-17 open-source scan verified SSH reachability for promptfoo, Go
 | Open Interpreter / terminal coding agents | code execution agents | local execution boundaries, command confirmation, shell safety, and test evidence |
 | OpenHands / task execution agents | task-oriented Agent runtime | event-driven Agent history, file/terminal tools, rollbackable plans, execution environment isolation |
 | E2B / AI sandbox projects | code execution sandboxing | isolated execution environments, filesystem boundaries, resource limits, and command approval patterns |
+| GitHub CLI (`gh`) | repository-native Agent commands | issue, PR, Actions, code search, and review flows directly from the repository platform |
+| GitHub REST API | platform automation contract | issues, pull requests, checks, code search, status checks, and rate-limited workflow automation |
+| GitHub MCP Server | MCP platform tools | repository tools, issue tools, PR tools, search tools, and permission-bound GitHub workflows |
+| GitHub Copilot coding-agent style projects | code execution and review agents | PR-oriented work items, review loops, command boundaries, and CI-gated code changes |
 
 ## Absorbable Patterns
 
@@ -125,6 +130,7 @@ When adding another open-source project, submit in this order:
 | Data-source ingestion safety | [`../concepts/rag-memory-mcp-flow.md`](../concepts/rag-memory-mcp-flow.md), [`../../examples/data-source-policy/README.md`](../../../examples/data-source-policy/README.md) |
 | Browser or desktop action safety | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
 | Evaluation gate and regression evidence | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../examples/agent-eval-regression/README.md`](../../../examples/agent-eval-regression/README.md) |
+| GitHub-native review workflow | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../../examples/github-agent-review/README.md`](../../../examples/github-agent-review/README.md) |
 | Code execution sandboxing | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
 
 ## Maintenance Rule

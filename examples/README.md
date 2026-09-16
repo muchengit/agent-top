@@ -13,6 +13,7 @@ Agent-Top examples are fictional, local, and do not require API keys, external s
 | Data Source Policy | [`data-source-policy/README.md`](data-source-policy/README.md) | Crawling, parsing, storage, retrieval, citation, ignore, block, stale-source, and prompt-injection decisions |
 | Coding Task Navigation | [`coding-task-navigation/README.md`](coding-task-navigation/README.md) | Request-to-artifact mapping, expected verification, stop conditions, and task-first learning path selection |
 | Agent Eval Regression | [`agent-eval-regression/README.md`](agent-eval-regression/README.md) | Prompt version comparison, fixture-based grading, regression gates, and launch/rollback decisions |
+| GitHub Agent Review | [`github-agent-review/README.md`](github-agent-review/README.md) | PR review order, CI gating, diff-based review notes, and platform-native tool boundaries |
 
 ## How To Use These Exercises
 

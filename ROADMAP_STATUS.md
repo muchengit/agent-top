@@ -14,12 +14,12 @@ validated_date: 2026-09-16
 | Concepts | Done | `docs/en/concepts/`, including architecture, MCP, multi-agent scheduling, long-term memory, hallucination, plan decisions, deep-dive sources, and the implementation guide |
 | Framework map | Done | `docs/en/frameworks/framework-map.md` |
 | Executable Labs | Done | `labs/l0` through `labs/l5`, including supplementary labs |
-| Task-first onboarding | Done | `docs/en/tutorials/quick-navigation.md`, `docs/zh/tutorials/快速导航卡.md`, `examples/README.md`, `examples/agent-decision-trace/`, `examples/rag-evidence-refusal/`, `examples/memory-vs-evidence/`, `examples/coding-workspace-safety/`, `examples/data-source-policy/`, `examples/coding-task-navigation/`, and `examples/agent-eval-regression/` |
+| Task-first onboarding | Done | `docs/en/tutorials/quick-navigation.md`, `docs/zh/tutorials/快速导航卡.md`, `examples/README.md`, `examples/agent-decision-trace/`, `examples/rag-evidence-refusal/`, `examples/memory-vs-evidence/`, `examples/coding-workspace-safety/`, `examples/data-source-policy/`, `examples/coding-task-navigation/`, `examples/agent-eval-regression/`, and `examples/github-agent-review/` |
 | Design review assets | Done | `docs/en/concepts/design-review-workshop.md` and `docs/en/concepts/agent-system-blueprint.md` plus Chinese mirrors |
 | Practice handbook | Done | `docs/en/tutorials/practice-handbook.md` plus Chinese mirror |
 | Contribution assets | Done | Case study templates, contribution checklist, and enhanced PR template |
 | Evaluation playbook | Done | `docs/en/production/evals-playbook.md` and Chinese mirror plus eval report template |
-| Open-source pattern matrix | Done | `docs/en/tutorials/open-source-pattern-matrix.md`, Chinese mirror, `examples/memory-vs-evidence/`, `examples/coding-workspace-safety/`, `examples/data-source-policy/`, `examples/coding-task-navigation/`, and `examples/agent-eval-regression/` |
+| Open-source pattern matrix | Done | `docs/en/tutorials/open-source-pattern-matrix.md`, Chinese mirror, `examples/memory-vs-evidence/`, `examples/coding-workspace-safety/`, `examples/data-source-policy/`, `examples/coding-task-navigation/`, `examples/agent-eval-regression/`, and `examples/github-agent-review/` |
 | Detailed tutorials | Done | `docs/en/` and `docs/zh/` through L5 |
 | Tutorial reference map | Done | `docs/en/tutorials/reference-map.md`, `docs/zh/tutorials/reference-map.md` |
 | Chinese tutorial filenames | Done | Chinese names under `docs/zh/` |

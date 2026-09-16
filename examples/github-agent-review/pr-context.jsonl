@@ -1,0 +1,3 @@
+{"pr_id":"pr_1","issue":"Fix rate-limit parser bug","ci":"running","diff_scope":"small parser change","tests":"not yet reported","risk":"unknown until checks finish"}
+{"pr_id":"pr_2","issue":"Add cache key normalization","ci":"passing","diff_scope":"auth middleware behavior changed","tests":"unit tests pass","risk":"scope drift toward security-sensitive code"}
+{"pr_id":"pr_3","issue":"Fix empty prompt fallback","ci":"passing","diff_scope":"one fallback branch","tests":"regression test added","risk":"low; diff matches issue and tests cover it"}

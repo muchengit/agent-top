@@ -53,6 +53,7 @@ This matrix distills Agent-Top's open-source inspiration into reusable patterns.
 
 ## Candidate Next Additions
 
+- A GitHub-native PR review example covering issue → checks → diff → review comment order.
 - A browser-use safety example using MCP policy-proxy principles.
 - A memory lifecycle exercise covering expiry, deletion, and conflicting preferences.
 - A structured-output validation Lab for schema retry and escalation.
