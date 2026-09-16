@@ -67,7 +67,7 @@ agent-top/
 │   │   ├── production/       # Evals, safety, observability, rollback, maintenance
 │   │   ├── quick-reference/  # Glossary, commands, architecture and production checklists
 │   │   ├── tutorials/        # External tutorial-to-Agent-Top reference map
-│   │   └── l0-l5 tutorials   # Detailed bilingual-tied learning tutorials
+│   │   ├── l0-first-llm-call.md        # L0 tutorial
 │   └── zh/                   # Chinese mirror documentation, same directory shape as docs/en
 ├── labs/                     # Deterministic executable Labs, no API key required
 │   ├── l0/                   # First LLM call shape
