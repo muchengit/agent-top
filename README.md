@@ -57,6 +57,16 @@ python scripts/check_repository.py
 python -m unittest discover -s labs -p "test_*.py"
 ```
 
+## Repository Map
+
+- Concepts: [`docs/concepts`](docs/concepts)
+- Framework map: [`docs/frameworks/framework-map.md`](docs/frameworks/framework-map.md)
+- Interview framework: [`docs/interviews/interview-framework.md`](docs/interviews/interview-framework.md)
+- Labs: [`labs`](labs)
+- Templates: [`templates`](templates)
+- Governance: [`GOVERNANCE.md`](GOVERNANCE.md)
+- Contributing: [`CONTRIBUTING.md`](CONTRIBUTING.md)
+
 ## Documentation
 
 See the concrete framework:
@@ -85,4 +95,4 @@ Good starting labels:
 
 ## License
 
-TBD
+MIT License. See [`LICENSE`](LICENSE).

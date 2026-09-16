@@ -48,6 +48,16 @@ Agent-Top 是一个面向 LLM Agent 开发的开源学习框架。
 | L4 | 完成生产化：评估、安全、部署、成本与 Postmortem |
 | L5 | 形成原创模式、开源贡献和真实影响力 |
 
+## 仓库地图
+
+- 核心概念：[`docs/concepts`](docs/concepts)
+- 框架地图：[`docs/frameworks/framework-map.md`](docs/frameworks/framework-map.md)
+- 面试框架：[`docs/interviews/interview-framework.md`](docs/interviews/interview-framework.md)
+- 可执行 Lab：[`labs`](labs)
+- 内容模板：[`templates`](templates)
+- 治理规范：[`GOVERNANCE.md`](GOVERNANCE.md)
+- 贡献指南：[`CONTRIBUTING.md`](CONTRIBUTING.md)
+
 ## 文档
 
 具体框架见：
@@ -76,4 +86,4 @@ Agent-Top 欢迎以下贡献路径：
 
 ## License
 
-TBD
+MIT License，详见 [`LICENSE`](LICENSE)。
