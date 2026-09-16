@@ -54,6 +54,7 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 ## Tutorial Reference Map
 
 - [`tutorials/quick-navigation.md`](tutorials/quick-navigation.md): task-first entry for learners, engineers, interview candidates, and contributors
+- [`tutorials/practice-handbook.md`](tutorials/practice-handbook.md): how to combine Examples and Labs with evidence
 - [`tutorials/reference-map.md`](tutorials/reference-map.md)
 - [`tutorials/learning-paths.md`](tutorials/learning-paths.md)
 - [`tutorials/search-supplements.md`](tutorials/search-supplements.md)

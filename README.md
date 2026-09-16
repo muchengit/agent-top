@@ -130,6 +130,7 @@ agent-top/
 │   │   ├── tutorials/
 │   │   │   ├── learning-paths.md
 │   │   │   ├── open-source-inspirations.md
+│   │   │   ├── practice-handbook.md
 │   │   │   ├── quick-navigation.md
 │   │   │   ├── reference-map.md
 │   │   │   └── search-supplements.md
@@ -231,6 +232,7 @@ python -m ruff check .
 - Agent system blueprint: [`docs/en/concepts/agent-system-blueprint.md`](docs/en/concepts/agent-system-blueprint.md)
 - Quick navigation: [`docs/en/tutorials/quick-navigation.md`](docs/en/tutorials/quick-navigation.md)
 - No-API-key examples: [`examples/README.md`](examples/README.md)
+- Practice handbook: [`docs/en/tutorials/practice-handbook.md`](docs/en/tutorials/practice-handbook.md)
 - Concepts: [`docs/en/concepts`](docs/en/concepts)
 - Framework map: [`docs/en/frameworks/framework-map.md`](docs/en/frameworks/framework-map.md)
 - Design review checklist: [`docs/en/concepts/design-review-checklist.md`](docs/en/concepts/design-review-checklist.md)

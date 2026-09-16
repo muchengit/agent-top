@@ -77,7 +77,7 @@ agent-top/
 │   │   ├── production/               # 评估、安全、维护、回滚
 │   │   ├── quick-reference/          # 术语、命令、架构、生产速查表
 │   │   ├── skills/                   # Agent 技能体系
-│   │   ├── tutorials/                # 外部教程、开源项目灵感、学习路径、快速导航
+│   │   ├── tutorials/                # 外部教程、开源项目灵感、学习路径、快速导航、练习手册
 │   │   ├── l0-l5 tutorials           # L0-L5 详细教程
 │   │   ├── README.md                 # 英文文档索引
 │   │   └── agent-top-concrete-framework.md
@@ -152,6 +152,7 @@ agent-top/
 - 快速导航：[`docs/en/tutorials/quick-navigation.md`](docs/en/tutorials/quick-navigation.md)
 - 中文快速导航：[`docs/zh/tutorials/快速导航卡.md`](docs/zh/tutorials/快速导航卡.md)
 - 本地练习：[`examples/README.md`](examples/README.md)
+- 练习手册：[`docs/en/tutorials/practice-handbook.md`](docs/en/tutorials/practice-handbook.md)
 - 核心概念：[`docs/zh/concepts`](docs/zh/concepts)
 - 框架地图：[`docs/zh/frameworks/框架地图.md`](docs/zh/frameworks/框架地图.md)
 - 面试框架：[`docs/zh/interviews/面试框架.md`](docs/zh/interviews/面试框架.md)

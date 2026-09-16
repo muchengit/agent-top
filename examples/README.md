@@ -18,4 +18,4 @@ Agent-Top examples are fictional, local, and do not require API keys, external s
 
 ## Relationship To Labs
 
-Examples are paper exercises and design practice. Runnable deterministic code lives in [`../labs/README.md`](../labs/README.md).
+Examples are paper exercises and design practice. Runnable deterministic code lives in [`../labs/README.md`](../labs/README.md). For how to combine them, see [`../docs/en/tutorials/practice-handbook.md`](../docs/en/tutorials/practice-handbook.md).

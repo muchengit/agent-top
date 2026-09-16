@@ -41,6 +41,7 @@ A task is complete only when all three are true:
 
 ## Related Pages
 
+- Practice handbook: [`practice-handbook.md`](practice-handbook.md)
 - Learning paths: [`learning-paths.md`](learning-paths.md)
 - Core implementation guide: [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md)
 - Open-source inspirations: [`open-source-inspirations.md`](open-source-inspirations.md)
