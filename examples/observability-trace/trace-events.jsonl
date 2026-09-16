@@ -1,0 +1,5 @@
+{"event":"request.received","trace_id":"trace_1001","session_id":"session_2002","tenant_id":"team_demo","request":"Refund the customer using the latest policy.","prompt_version":"p_v7","model":"fictional-small"}
+{"event":"retrieval.results","source_id":"policy_v6","freshness":"stale","permission":"internal","excerpt":"Old policy allows refund under 300."}
+{"event":"tool.called","tool":"refund_api","risk":"write","parameters":{"amount":250},"approval":"missing"}
+{"event":"answer.generated","answer":"Refund completed for 250.","citations":[]}
+{"event":"runtime","latency_ms":920,"tokens":{"input":410,"output":38},"cost":{"unit":"usd","value":0.0021}}

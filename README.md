@@ -117,6 +117,7 @@ agent-top/
 │   │   │   ├── cost-stability-operations.md
 │   │   │   ├── evals-checklist.md
 │   │   │   ├── evals-playbook.md
+│   │   │   ├── observability-trace-contract.md
 │   │   │   ├── quarterly-maintenance.md
 │   │   │   └── safety-checklist.md
 │   │   ├── quick-reference/
@@ -157,6 +158,7 @@ agent-top/
 │   ├── coding-task-navigation/
 │   ├── agent-eval-regression/
 │   ├── github-agent-review/
+│   ├── observability-trace/
 │   └── rag-evidence-refusal/
 ├── labs/
 │   ├── l0/

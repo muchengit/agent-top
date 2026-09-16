@@ -25,7 +25,7 @@ validated_date: 2026-09-16
 | Chinese tutorial filenames | Done | Chinese names under `docs/zh/` |
 | Interview assets | Done | `docs/en/interviews/interview-framework.md`, `docs/en/interviews/questions/`, `docs/en/interviews/interview-answer-framework.md` |
 | Portfolio tracks | Done | `docs/en/portfolio/projects.md`, `docs/en/portfolio/personal-agent-portfolio.md`, `docs/en/portfolio/open-source-impact-guide.md` |
-| Production guides | Done | `docs/en/production/`, `docs/en/production/cost-stability-operations.md`, `docs/en/production/evals-playbook.md`, `docs/en/quick-reference/production-checklist.md` |
+| Production guides | Done | `docs/en/production/`, `docs/en/production/cost-stability-operations.md`, `docs/en/production/evals-playbook.md`, `docs/en/production/observability-trace-contract.md`, `docs/en/quick-reference/production-checklist.md`, and `examples/observability-trace/` |
 | Case studies | Done | `docs/en/cases/` and `docs/zh/cases/`, including enterprise tool, collaboration, RAG, regression, and pattern-contribution cases |
 | Quick references | Done | `docs/en/quick-reference/`, including Chinese index |
 | Agent skills | Done | `docs/en/skills/README.md`, `docs/zh/skills/Agent技能指南.md`, `templates/agent-skill-card-template.md` |

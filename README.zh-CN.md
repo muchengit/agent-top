@@ -108,6 +108,7 @@ agent-top/
 │   ├── coding-task-navigation/       # Coding task-first navigation 练习
 │   ├── agent-eval-regression/        # Agent 评估回归练习
 │   ├── github-agent-review/          # GitHub Agent review 练习
+│   ├── observability-trace/          # 可观测性与 trace 契约练习
 │   └── rag-evidence-refusal/         # RAG 证据与拒绝回答练习
 ├── labs/
 │   ├── l0/                           # 第一次 LLM 调用
