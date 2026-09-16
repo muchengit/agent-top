@@ -152,6 +152,7 @@ agent-top/
 │   ├── README.md
 │   ├── agent-decision-trace/
 │   ├── memory-vs-evidence/
+│   ├── coding-workspace-safety/
 │   └── rag-evidence-refusal/
 ├── labs/
 │   ├── l0/

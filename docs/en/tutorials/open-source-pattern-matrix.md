@@ -33,6 +33,9 @@ This matrix distills Agent-Top's open-source inspiration into reusable patterns.
 | Runtime guardrails | Safety only lives in the final prompt | Intercept unsafe inputs, outputs, and tool calls before side effects | [`../production/safety-checklist.md`](../production/safety-checklist.md) | Black-box jailbreak datasets |
 | 12-factor operations | Local demos fail in production | Treat config, state, logs, scaling, and release as architecture concerns | [`../l4-production.md`](../l4-production.md) | Generic devops boilerplate |
 | Postmortem learning | Incidents repeat | Convert incidents into eval, guardrail, trace field, rollback note, or action item | [`../production/quarterly-maintenance.md`](../production/quarterly-maintenance.md), [`../../../templates/postmortem-template.md`](../../../templates/postmortem-template.md) | Company-specific incident templates |
+| Coding workspace boundary | Coding Agents mutate repositories unexpectedly | Separate repository context, command execution, file writes, tests, and rollback state | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) | Whole editor plugin internals |
+| Patch-first editing | Hard-to-review direct mutations | Produce a reviewable patch before applying code changes | [`../concepts/design-review-checklist.md`](../concepts/design-review-checklist.md), [`../../../templates/contribution-checklist.md`](../../../templates/contribution-checklist.md) | Vendor diff UI |
+| Test-driven Agent validation | Code Agent changes are unproven | Tie every code-changing action to the smallest deterministic verification command | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) | Full CI suite boilerplate |
 
 ## Decision Rules
 
@@ -48,8 +51,7 @@ This matrix distills Agent-Top's open-source inspiration into reusable patterns.
 - A memory lifecycle exercise covering expiry, deletion, and conflicting preferences.
 - A structured-output validation Lab for schema retry and escalation.
 - A prompt optimization case with versioned prompts and eval report.
-- A structured-output validation Lab for schema retry and escalation.
-- A prompt optimization case with versioned prompts and eval report.
+- A coding Agent evaluation case using deterministic tests and code diff correctness checks.
 
 ## Related Pages
 

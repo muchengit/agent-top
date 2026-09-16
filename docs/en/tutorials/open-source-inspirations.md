@@ -9,6 +9,7 @@ validated_date: 2026-09-16
 This page turns verified GitHub Agent projects into learning themes. Agent-Top does not copy external code or prose. It absorbs stable patterns and maps them to local concepts, Labs, cases, and maintenance workflow. For a distilled decision matrix, use [`open-source-pattern-matrix.md`](open-source-pattern-matrix.md).
 
 This page uses GitHub project discoveries verified on 2026-09-16. External links are maintainer-verified learning signals, not authoritative framework documentation.
+A 2026-09-17 coding-agent pass added research watch entries. They are treated as discovery signals, not authoritative documentation, until maintainers verify repository URLs and licenses.
 
 ## Project-to-Topic Map
 
@@ -59,6 +60,10 @@ This page uses GitHub project discoveries verified on 2026-09-16. External links
 | ELK / Elasticsearch / Kibana-like tooling | production observability | structured logs, trace visualization, alerting |
 | Postmortem templates and incident-response repos | incident learning | blameless review, action ownership, recurrence prevention |
 | Awesome LLM / Agent lists | community discovery | topic discovery, taxonomy, contribution routing |
+| Aider / Continue.dev / Cline | coding Agent assistants | repository-aware edits, command boundaries, editable diffs, permissioned file writes |
+| OpenHands / SWE-agent / Open Interpreter | task-oriented coding agents | plan-act-verify loops, terminal/file tools, rollbackable patches, test-driven validation |
+| AIDABench / CodeBench-style benchmarks | coding Agent evaluation | benchmark task taxonomy, deterministic failure cases, code diff correctness checks |
+| Copilot / Cursor / Trae / Bolt-style ecosystems | editor and app-generation Agents | editor context boundaries, suggestion acceptance rates, workspace safety, user confirmation for side effects |
 
 ## Absorbable Patterns
 
@@ -74,6 +79,10 @@ This page uses GitHub project discoveries verified on 2026-09-16. External links
 - **Prompt optimization loop**: version prompts, generate candidates, evaluate on datasets, and promote only measurable wins.
 - **MCP policy proxy**: keep permissions, audit, mutation gates, PII redaction, and rate limits close to tool execution.
 - **12-factor operating discipline**: treat environment, scaling, state, logs, and release strategy as Agent architecture concerns.
+- **Coding Agent workspace boundary**: separate repository context, command execution, file writes, tests, and rollback state.
+- **Patch-first editing**: prefer reviewable diffs over direct mutation when the Agent changes code.
+- **Test-driven Agent validation**: every code-changing Agent step should identify the smallest command that proves the change.
+- **Suggestion acceptance workflow**: distinguish recommendation, approval, execution, and post-check for user-facing coding tools.
 
 ## Contributor Workflow
 
@@ -96,6 +105,8 @@ When adding another open-source project, submit in this order:
 | Cost and stability guardrails | [`../../labs/l4/cost_and_stability_guardrails/README.md`](../../../labs/l4/cost_and_stability_guardrails/README.md) |
 | Cost and stability operations | [`../l4-production.md`](../l4-production.md), [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md) |
 | Original patterns | [`../l5-custom-patterns.md`](../l5-custom-patterns.md), [`../../labs/l5/pattern_catalog/README.md`](../../../labs/l5/pattern_catalog/README.md) |
+| Coding Agent workspace safety | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
+| Coding Agent eval design | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) |
 
 ## Maintenance Rule
 
