@@ -9,12 +9,14 @@ It helps learners and engineers build practical Agent skills from first LLM call
 - L0–L5 capability model
 - API basics and prompt engineering
 - Core Agent components: perception, tool use, planning, and memory
+- Multi-turn state and context compression
 - Mainstream Agent frameworks with version-anchored Labs
 - MCP integration
-- RAG pipelines
+- RAG pipelines and retrieval evaluation
 - Long-term memory with Mem0 / Letta
 - Multi-agent communication and orchestration
 - Evaluation, observability, safety guardrails, deployment, and cost optimization
+- Release gates and production regression checks
 - Production postmortems and trade-off thinking
 - Interview questions and portfolio project tracks
 
@@ -56,6 +58,7 @@ Run the repository checks:
 python scripts/check_repository.py
 python -m unittest discover -s labs -p "test_*.py"
 python -m compileall -q labs scripts
+python -m ruff check .
 ```
 
 ## Repository Map

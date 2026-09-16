@@ -9,12 +9,14 @@ Agent-Top 是一个面向 LLM Agent 开发的开源学习框架。
 - L0–L5 能力模型
 - API 基础与 Prompt 工程
 - Agent 核心组件：感知、工具调用、规划、记忆
+- 多轮状态与上下文压缩
 - 主流 Agent 框架与版本锚定 Lab
 - MCP 接入
-- RAG pipeline
+- RAG pipeline 与检索评估
 - 长期记忆（Mem0 / Letta）
 - 多 Agent 通信与编排
 - 评估、可观测、安全护栏、部署与成本优化
+- 发布门禁与生产回归检查
 - 生产 Postmortem 与 Trade-off 思维
 - 面试题库与作品集项目路径
 

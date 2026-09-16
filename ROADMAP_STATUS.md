@@ -13,7 +13,7 @@ validated_date: 2026-09-16
 | Concrete framework | Done | `docs/agent-top-concrete-framework.md` |
 | Concepts | Done | `docs/concepts/` |
 | Framework map | Done | `docs/frameworks/framework-map.md` |
-| Executable Labs | Done | `labs/l0` through `labs/l5` |
+| Executable Labs | Done | `labs/l0` through `labs/l5`, including supplementary labs |
 | Detailed tutorials | Done | `docs/en/` and `docs/zh/` through L5 |
 | Chinese tutorial filenames | Done | Chinese names under `docs/zh/` |
 | Interview assets | Done | `docs/interviews/interview-framework.md`, `docs/interviews/questions/` |
@@ -37,11 +37,11 @@ validated_date: 2026-09-16
 | Framework example freshness | reviewed before stale threshold |
 | Review coverage | >= 2 backups per active module |
 | Tutorial coverage | L0-L5 EN and ZH present |
-| Lab test coverage | all executable labs pass locally |
+| Lab test coverage | 28 deterministic Lab tests pass locally |
 
 ## Next Priority
 
-Continue improving community throughput: add more real-world examples, keep translations within SLA, and maintain framework examples through `sync-required` when APIs change.
+Continue improving coverage with more real-world examples, maintain bilingual SLA, and keep framework examples fresh through `sync-required` when APIs change.
 
 ## Completion Notes
 
