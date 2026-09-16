@@ -8,7 +8,7 @@ validated_date: 2026-09-16
 
 本页基于常见 GitHub 开源 Agent 项目提炼主题。Agent-Top 不复制外部代码或正文；只把稳定学习主题映射到本地文档、Lab 和案例。
 
-由于当前环境无法实时访问 GitHub，项目名作为维护者灵感索引；提交外部链接前请核对仓库地址和 license。
+本页使用 2026-09-16 的 GitHub 联网核验项目；外部链接只作为维护者核验过的学习信号，不作为框架权威文档。
 
 ## 项目主题映射
 
@@ -16,29 +16,38 @@ validated_date: 2026-09-16
 | --- | --- | --- |
 | langchain | LLM application framework | tool calling、chains、memory、structured outputs |
 | LangGraph | stateful graph workflows | explicit state、cycles、checkpointing、human-in-the-loop |
+| MetaGPT | 软件公司式多 Agent 模式 | 角色分工、共享产物、软件开发 workflow |
 | LlamaIndex | RAG and data framework | retrieval、chunking、indexing、evaluation |
 | Haystack | search and RAG pipeline | document pipelines、rankers、retriever boundaries |
 | AutoGen | conversational multi-agent | message passing、role boundaries、group chat |
 | CrewAI | role-based agent teams | task delegation、role prompts、workflows |
 | smolagents | minimal agent examples | code-first actions、readability、small tool surfaces |
 | Agno | lightweight agent runtime | fast iteration、agent state、tool integration |
+| Mastra | TypeScript Agent 平台 | workflow、evals、MCP、web-first Agent 应用结构 |
 | Pydantic AI | typed agents | schema-first validation、structured outputs、typed tools |
-| Instructor | structured output extraction | JSON schema, validation, retry on extraction failures |
+| Instructor | structured output extraction | JSON schema、validation、retry on extraction failures |
 | DSPy | programmatic prompt optimization | signatures、metrics、optimizers、eval-driven tuning |
 | OpenAI Agents SDK | model and agent tools | tool definitions、handoffs、guardrails、tracing |
 | Claude Agent SDK / tool use patterns | tool-using assistant | tool execution loops、structured tool results、safety boundaries |
 | Google ADK | application development kit | multi-agent app structure、workflow composition、platform tools |
 | Semantic Kernel | enterprise plugins and orchestration | plugin governance、enterprise plugins、process integration |
 | MCP ecosystem / modelcontextprotocol | tool and context protocol | tool discovery、resource exposure、protocol boundaries |
+| FastMCP | 快速 MCP server/client SDK | 轻量 tool server、client/server 边界、开发体验 |
+| GitHub MCP Server | 官方平台工具边界 | code/issue tools、仓库 workflow 集成、权限模型 |
+| Playwright MCP | 浏览器自动化 MCP | browser action traces、视觉 workflow、web interaction 安全边界 |
 | Letta / MemGPT | agent memory | memory layers、summarization、long-term context |
 | Mem0 | memory platform | memory extraction、deduplication、privacy considerations |
+| TencentDB Agent Memory | 团队级 Agent 记忆中枢 | 共享记忆治理、code graph memory、复用与访问控制 |
 | Langfuse / OpenTelemetry GenAI patterns | tracing and observability | span naming、prompt/model/tool traces、cost and latency |
-| Ragas / DeepEval / Arize Phoenix | RAG and LLM eval | faithfulness、answer relevance、hallucination, guardrail evals |
-| DSPy / promptfoo / eval-driven examples | evaluation and regression | eval datasets、prompt regression, safety checks |
-| SuperAGI / AgentOps-like projects | agent platforms | mission/task modeling, dashboarding, lifecycle observability |
-| ELK / Elasticsearch / Kibana-like tooling | production observability | structured logs, trace visualization, alerting |
+| MLflow | AI 工程平台 | 实验跟踪、evaluation、monitoring、模型部署边界 |
+| Opik | LLM 观测与评估 | trace、自动评估、dashboard、agentic workflow monitoring |
+| AI-Infra-Guard | AI red teaming 与安全扫描 | MCP/tool safety scans、jailbreak evals、agent 安全风险分类 |
+| Ragas / DeepEval / Arize Phoenix | RAG and LLM eval | faithfulness、answer relevance、hallucination、guardrail evals |
+| DSPy / promptfoo / eval-driven examples | evaluation and regression | eval datasets、prompt regression、safety checks |
+| SuperAGI / AgentOps-like projects | agent platforms | mission/task modeling、dashboarding、lifecycle observability |
+| ELK / Elasticsearch / Kibana-like tooling | production observability | structured logs、trace visualization、alerting |
 | Postmortem templates and incident-response repos | incident learning | blameless review、action ownership、recurrence prevention |
-| Awesome LLM / Agent lists | community discovery | topic discovery, taxonomy, contribution routing |
+| Awesome LLM / Agent lists | community discovery | topic discovery、taxonomy、contribution routing |
 
 ## 可吸纳模式
 
@@ -49,6 +58,7 @@ validated_date: 2026-09-16
 - **RAG evaluation**：检索质量、答案相关性、证据忠实度分开评估。
 - **Memory lifecycle**：抽取、去重、过期、删除都要有策略。
 - **Observability contract**：每轮记录 prompt、tool、retrieval、guardrail、cost、latency。
+- **Security red-team**：prompt、tool、MCP、agent workflow 都要有对抗测试。
 - **Incident learning**：事故必须转成 eval、guardrail、trace 或 rollback action。
 
 ## 贡献者提示
@@ -59,4 +69,4 @@ validated_date: 2026-09-16
 2. 稳定模式分析。
 3. 框架特定细节放入 Lab 或对比表。
 4. 对应 Agent-Top 本地 Lab 或案例。
-5. 后续维护者需要核验的外部链接。
+5. 后续维护者需要核验的外部链接和 license。

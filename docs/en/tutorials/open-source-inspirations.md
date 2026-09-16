@@ -6,9 +6,9 @@ validated_date: 2026-09-16
 
 # Open-Source Inspirations Directory
 
-This page turns common GitHub Agent projects into learning themes. Agent-Top does not copy external code or prose. It absorbs stable patterns and maps them to local concepts, Labs, cases, and maintenance workflow.
+This page turns verified GitHub Agent projects into learning themes. Agent-Top does not copy external code or prose. It absorbs stable patterns and maps them to local concepts, Labs, cases, and maintenance workflow.
 
-Because GitHub access can be transient in offline or restricted environments, contributors should verify repository URLs and licenses before adding external links.
+This page uses GitHub project discoveries verified on 2026-09-16. External links are maintainer-verified learning signals, not authoritative framework documentation.
 
 ## Project-to-Topic Map
 
@@ -16,12 +16,14 @@ Because GitHub access can be transient in offline or restricted environments, co
 | --- | --- | --- |
 | langchain | LLM application framework | tool calling, chains, memory, structured outputs |
 | LangGraph | stateful graph workflows | explicit state, cycles, checkpointing, human-in-the-loop |
+| MetaGPT | software-company multi-agent pattern | role specialization, shared artifacts, software development workflows |
 | LlamaIndex | RAG and data framework | retrieval, chunking, indexing, evaluation |
 | Haystack | search and RAG pipeline | document pipelines, rankers, retriever boundaries |
 | AutoGen | conversational multi-agent systems | message passing, role boundaries, group chat |
 | CrewAI | role-based agent teams | task delegation, role prompts, workflows |
 | smolagents | minimal agent examples | code-first actions, readability, small tool surfaces |
 | Agno | lightweight agent runtime | fast iteration, agent state, tool integration |
+| Mastra | TypeScript Agent platform | workflows, evals, MCP, web-first Agent app structure |
 | Pydantic AI | typed agents | schema-first validation, structured outputs, typed tools |
 | Instructor | structured output extraction | JSON schema, validation, retry on extraction failures |
 | DSPy | programmatic prompt optimization | signatures, metrics, optimizers, eval-driven tuning |
@@ -30,9 +32,16 @@ Because GitHub access can be transient in offline or restricted environments, co
 | Google ADK | application development kit | multi-agent app structure, workflow composition, platform tools |
 | Semantic Kernel | enterprise plugins and orchestration | plugin governance, enterprise plugins, process integration |
 | MCP ecosystem / modelcontextprotocol | tool and context protocol | tool discovery, resource exposure, protocol boundaries |
+| FastMCP | fast MCP server/client SDK | lightweight tool servers, client-server boundaries, developer ergonomics |
+| GitHub MCP Server | official platform tool boundary | code and issue tools, repository workflow integration, permissions model |
+| Playwright MCP | browser automation MCP | browser action traces, visual workflows, safe web interaction boundaries |
 | Letta / MemGPT | agent memory | memory layers, summarization, long-term context |
 | Mem0 | memory platform | memory extraction, deduplication, privacy considerations |
+| TencentDB Agent Memory | team-level Agent memory hub | shared memory governance, code graph memory, reuse and access control |
 | Langfuse / OpenTelemetry GenAI patterns | tracing and observability | span naming, prompt/model/tool traces, cost and latency |
+| MLflow | AI engineering platform | experiment tracking, evaluation, monitoring, model serving boundaries |
+| Opik | LLM observability and evaluation | traces, automated evaluation, dashboards, agentic workflow monitoring |
+| AI-Infra-Guard | AI red teaming and security scanning | MCP/tool safety scans, jailbreak evals, agent security risk taxonomy |
 | Ragas / DeepEval / Arize Phoenix | RAG and LLM eval | faithfulness, answer relevance, hallucination checks, guardrail evals |
 | DSPy / promptfoo / eval-driven examples | evaluation and regression | eval datasets, prompt regression, safety checks |
 | SuperAGI / AgentOps-like projects | agent platforms | mission/task modeling, dashboarding, lifecycle observability |
@@ -49,6 +58,7 @@ Because GitHub access can be transient in offline or restricted environments, co
 - **RAG evaluation**: evaluate retrieval quality, answer relevance, and evidence faithfulness separately.
 - **Memory lifecycle**: define extraction, deduplication, expiry, and deletion policies.
 - **Observability contract**: record prompts, tools, retrieval, guardrails, cost, and latency for every turn.
+- **Security red-team**: adversarially test prompts, tools, MCP boundaries, and agent workflows.
 - **Incident learning**: convert incidents into evals, guardrails, traces, or rollback actions.
 
 ## Contributor Workflow
