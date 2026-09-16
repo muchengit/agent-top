@@ -7,6 +7,8 @@ last-synced: 2026-09-16
 
 # Production Checklist
 
+Use this checklist before release, during incidents, and after postmortems.
+
 ## Before Release
 
 - [ ] Auth and permissions are defined.
@@ -18,6 +20,11 @@ last-synced: 2026-09-16
 - [ ] Rollback plan is documented.
 - [ ] Cost and latency budgets are set.
 - [ ] Incident owner is named.
+- [ ] PII handling and data retention are documented.
+- [ ] Rate limits and retry budgets are defined.
+- [ ] Model/provider failure fallback is tested.
+- [ ] Regression gate blocks safety and eval failures.
+- [ ] Human escalation path is documented.
 
 ## During Incident
 
@@ -27,6 +34,9 @@ last-synced: 2026-09-16
 - [ ] Identify root cause.
 - [ ] Add regression eval.
 - [ ] Document postmortem.
+- [ ] Notify stakeholders with blast radius.
+- [ ] Capture before/after evidence from traces and logs.
+- [ ] Confirm rollback or mitigation is effective.
 
 ## After Incident
 
@@ -35,3 +45,5 @@ last-synced: 2026-09-16
 - [ ] Evals updated.
 - [ ] Documentation updated.
 - [ ] Follow-up monitored.
+- [ ] Preventive guardrail added.
+- [ ] Action items linked from postmortem.
