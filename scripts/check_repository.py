@@ -205,7 +205,7 @@ def check_executable_labs() -> None:
         if not level_dir.is_dir():
             continue
         for lab_dir in sorted(level_dir.iterdir()):
-            if not lab_dir.is_dir():
+            if not lab_dir.is_dir() or lab_dir.name == "__pycache__":
                 continue
             code = list(lab_dir.glob("agent_top_labs_*.py"))
             tests = list(lab_dir.glob("test_*.py"))
@@ -223,6 +223,7 @@ def main() -> None:
     check_relative_links(markdown_paths)
     check_bilingual_frontmatter(markdown_paths)
     check_lab_readmes(markdown_paths)
+    check_executable_labs()
     print(f"Repository checks passed: {len(markdown_paths)} Markdown files checked.")
 
 

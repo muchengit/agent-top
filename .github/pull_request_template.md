@@ -14,6 +14,7 @@ What does this PR change?
 ## Checklist
 
 - [ ] I ran `python scripts/check_repository.py`
+- [ ] I ran `python -m ruff check .`
 - [ ] I ran `python -m unittest discover -s labs -p "test_*.py"` when changing Labs
 - [ ] I updated version anchors when changing framework-sensitive content
 - [ ] I avoided duplicating code between prose and Labs

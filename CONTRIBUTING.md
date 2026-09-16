@@ -25,6 +25,7 @@ Run the repository checker before opening a pull request:
 python scripts/check_repository.py
 python -m unittest discover -s labs -p "test_*.py"
 python -m compileall -q labs scripts
+python -m ruff check .
 ```
 
 ## Documentation Standards
@@ -33,12 +34,12 @@ Every article or Lab should include:
 
 - Goal
 - Prerequisites with capability level
-- Steps
+- Steps or Run command
 - Version anchors when code is framework-specific
 - Common pitfalls
 - Self-check questions
 
-Use Markdown and executable Labs as the primary content format.
+Use Markdown and executable Labs as the primary content format. For concrete Labs, keep code and tests in the same Lab directory and document the run command in the README.
 
 ## Bilingual Workflow
 
