@@ -88,7 +88,9 @@ agent-top/
 │   │   │   └── translation-workflow.md
 │   │   ├── concepts/
 │   │   │   ├── agent-system-architecture.md
+│   │   │   ├── agent-system-blueprint.md
 │   │   │   ├── design-review-checklist.md
+│   │   │   ├── design-review-workshop.md
 │   │   │   ├── multi-round-research-discussion.md
 │   │   │   ├── overview.md
 │   │   │   ├── rag-memory-mcp-flow.md
@@ -222,6 +224,8 @@ python -m ruff check .
 
 ## Repository Map
 
+- Design review workshop: [`docs/en/concepts/design-review-workshop.md`](docs/en/concepts/design-review-workshop.md)
+- Agent system blueprint: [`docs/en/concepts/agent-system-blueprint.md`](docs/en/concepts/agent-system-blueprint.md)
 - Quick navigation: [`docs/en/tutorials/quick-navigation.md`](docs/en/tutorials/quick-navigation.md)
 - No-API-key exercise: [`examples/agent-decision-trace/README.md`](examples/agent-decision-trace/README.md)
 - Concepts: [`docs/en/concepts`](docs/en/concepts)

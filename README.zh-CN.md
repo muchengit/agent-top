@@ -70,7 +70,7 @@ agent-top/
 │   ├── en/                           # 英文主源，模块结构完整展开
 │   │   ├── cases/                    # 案例研究
 │   │   ├── community/                # 社区运营、翻译、活动、治理支持
-│   │   ├── concepts/                 # Agent 稳定概念与架构模式
+│   │   ├── concepts/                 # Agent 稳定概念、架构蓝图、设计审查
 │   │   ├── frameworks/               # 框架对比与选型
 │   │   ├── interviews/               # 面试框架与 L1-L5 题库
 │   │   ├── portfolio/                # 作品集项目路径
@@ -146,6 +146,8 @@ agent-top/
 
 ## 仓库地图
 
+- 设计审查 Workshop：[`docs/en/concepts/design-review-workshop.md`](docs/en/concepts/design-review-workshop.md)
+- 系统蓝图：[`docs/en/concepts/agent-system-blueprint.md`](docs/en/concepts/agent-system-blueprint.md)
 - 快速导航：[`docs/en/tutorials/quick-navigation.md`](docs/en/tutorials/quick-navigation.md)
 - 中文快速导航：[`docs/zh/tutorials/快速导航卡.md`](docs/zh/tutorials/快速导航卡.md)
 - 本地练习：[`examples/agent-decision-trace/README.md`](examples/agent-decision-trace/README.md)

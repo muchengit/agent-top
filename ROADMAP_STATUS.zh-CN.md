@@ -15,6 +15,7 @@ validated_date: 2026-09-16
 | 框架地图 | Done | `docs/en/frameworks/framework-map.md` |
 | 可执行 Lab | Done | `labs/l0` 到 `labs/l5`，包括补充 Lab |
 | 任务优先入口 | Done | `docs/en/tutorials/quick-navigation.md`、`docs/zh/tutorials/快速导航卡.md`、`examples/agent-decision-trace/` |
+| 设计审查资产 | Done | `docs/en/concepts/design-review-workshop.md`、`docs/en/concepts/agent-system-blueprint.md` 及中文镜像 |
 | 详细教程 | Done | `docs/en/` 和 `docs/zh/` 覆盖 L0-L5 |
 | 中文教程文件名 | Done | `docs/zh/` 下的中文镜像 |
 | 面试资产 | Done | `docs/en/interviews/`, `docs/zh/interviews/`, 含 STAR 回答范例 |
