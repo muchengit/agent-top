@@ -145,6 +145,7 @@ agent-top/
 - 可执行 Lab：[`labs`](labs)
 - 内容模板：[`templates`](templates)
 - 中文文档索引：[`docs/zh/文档索引.md`](docs/zh/文档索引.md)
+- Agent 技能矩阵：[`docs/zh/skills/Agent技能矩阵.md`](docs/zh/skills/Agent技能矩阵.md)
 - 治理规范：[`GOVERNANCE.zh-CN.md`](GOVERNANCE.zh-CN.md)
 - 贡献指南：[`CONTRIBUTING.zh-CN.md`](CONTRIBUTING.zh-CN.md)
 - 风格规范：[`STYLE.zh-CN.md`](STYLE.zh-CN.md)

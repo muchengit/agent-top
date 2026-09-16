@@ -21,6 +21,7 @@ validated_date: 2026-09-16
 | 生产指南 | Done | `docs/en/production/`、成本稳定性运行手册、生产速查表 |
 | 案例研究 | Done | `docs/en/cases/` |
 | 速查表 | Done | `docs/en/quick-reference/` |
+| Agent 技能体系 | Done | `docs/en/skills/README.md`、`docs/zh/skills/Agent技能矩阵.md`、`templates/agent-skill-card-template.md` |
 | 双语文档结构 | Done | `docs/en/` + `docs/zh/` |
 | 社区治理 | Done | `GOVERNANCE.md`, `CONTRIBUTING.md`, `CONTRIBUTING.zh-CN.md`, `docs/en/community/` |
 | GitHub 标签配置 | Done | `.github/labels.yml` |

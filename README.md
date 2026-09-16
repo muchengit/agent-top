@@ -219,6 +219,7 @@ python -m ruff check .
 - Labs: [`labs`](labs)
 - Templates: [`templates`](templates)
 - Documentation index: [`docs/en/README.md`](docs/en/README.md)
+- Agent skills: [`docs/en/skills/README.md`](docs/en/skills/README.md)
 - Governance: [`GOVERNANCE.md`](GOVERNANCE.md)
 - Style guide: [`STYLE.md`](STYLE.md)
 - Contributing: [`CONTRIBUTING.md`](CONTRIBUTING.md)
