@@ -18,11 +18,12 @@ validated_date: 2026-09-16
 | 设计审查资产 | Done | `docs/en/concepts/design-review-workshop.md`、`docs/en/concepts/agent-system-blueprint.md` 及中文镜像 |
 | 练习手册 | Done | `docs/en/tutorials/practice-handbook.md` 及中文镜像 |
 | 贡献资产 | Done | 案例研究模板、贡献自查清单和增强 PR 模板 |
+| 评估 Playbook | Done | `docs/en/production/evals-playbook.md`、中文镜像和 eval report 模板 |
 | 详细教程 | Done | `docs/en/` 和 `docs/zh/` 覆盖 L0-L5 |
 | 中文教程文件名 | Done | `docs/zh/` 下的中文镜像 |
 | 面试资产 | Done | `docs/en/interviews/`, `docs/zh/interviews/`, 含 STAR 回答范例 |
 | 作品集路径 | Done | `docs/en/portfolio/projects.md`、个人 Agent 作品集、开源影响力指南 |
-| 生产指南 | Done | `docs/en/production/`、成本稳定性运行手册、生产速查表 |
+| 生产指南 | Done | `docs/en/production/`、成本稳定性运行手册、评估与回归 Playbook、生产速查表 |
 | 案例研究 | Done | `docs/en/cases/` |
 | 速查表 | Done | `docs/en/quick-reference/` |
 | Agent 技能体系 | Done | `docs/en/skills/README.md`、`docs/zh/skills/Agent技能指南.md`、`templates/agent-skill-card-template.md` |

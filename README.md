@@ -116,6 +116,7 @@ agent-top/
 │   │   │   ├── README.md
 │   │   │   ├── cost-stability-operations.md
 │   │   │   ├── evals-checklist.md
+│   │   │   ├── evals-playbook.md
 │   │   │   ├── quarterly-maintenance.md
 │   │   │   └── safety-checklist.md
 │   │   ├── quick-reference/
@@ -143,6 +144,8 @@ agent-top/
 │   │   ├── l5-custom-patterns.md
 │   │   └── README.md
 │   └── zh/
+│       ├── 文档索引.md              # Chinese documentation index
+│       ├── tutorials/               # 学习路径、快速导航、练习手册、开源项目灵感
 │       └── ...                     # Chinese mirror with the same directory shape as docs/en
 ├── examples/
 │   ├── README.md
@@ -181,6 +184,7 @@ agent-top/
 │   ├── case-study-template.md
 │   ├── case-study-writing-guide.md
 │   ├── contribution-checklist.md
+│   ├── eval-report-template.md
 │   ├── 案例研究模板.md
 │   ├── 案例研究写作指南.md
 │   ├── community-lab-template.md
@@ -239,6 +243,7 @@ python -m ruff check .
 - Quick navigation: [`docs/en/tutorials/quick-navigation.md`](docs/en/tutorials/quick-navigation.md)
 - No-API-key examples: [`examples/README.md`](examples/README.md)
 - Practice handbook: [`docs/en/tutorials/practice-handbook.md`](docs/en/tutorials/practice-handbook.md)
+- Eval playbook: [`docs/en/production/evals-playbook.md`](docs/en/production/evals-playbook.md)
 - Concepts: [`docs/en/concepts`](docs/en/concepts)
 - Framework map: [`docs/en/frameworks/framework-map.md`](docs/en/frameworks/framework-map.md)
 - Design review checklist: [`docs/en/concepts/design-review-checklist.md`](docs/en/concepts/design-review-checklist.md)

@@ -92,6 +92,7 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 
 - [`production/README.md`](production/README.md)
 - [`production/evals-checklist.md`](production/evals-checklist.md)
+- [`production/evals-playbook.md`](production/evals-playbook.md)
 - [`production/safety-checklist.md`](production/safety-checklist.md)
 - [`production/quarterly-maintenance.md`](production/quarterly-maintenance.md)
 

@@ -12,6 +12,7 @@ Production guides are the readiness layer for Agent systems.
 ## Guides
 
 - [`evals-checklist.md`](evals-checklist.md)
+- [`evals-playbook.md`](evals-playbook.md)
 - [`safety-checklist.md`](safety-checklist.md)
 - [`quarterly-maintenance.md`](quarterly-maintenance.md)
 - [`cost-stability-operations.md`](cost-stability-operations.md)
@@ -24,6 +25,7 @@ Before release, confirm:
 - Tool allowlist and risk classification exist.
 - Destructive actions require confirmation or approval.
 - Safety evals pass.
+- A regression matrix covers golden, missing-evidence, stale-source, tool-failure, injection, destructive-action, ambiguous-request, and cost/latency cases.
 - Trace schema includes request, tool, retrieval, and final-answer fields.
 - Rollback plan is documented and tested.
 - Cost and latency budgets are defined.

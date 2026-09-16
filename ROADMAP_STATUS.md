@@ -18,12 +18,13 @@ validated_date: 2026-09-16
 | Design review assets | Done | `docs/en/concepts/design-review-workshop.md` and `docs/en/concepts/agent-system-blueprint.md` plus Chinese mirrors |
 | Practice handbook | Done | `docs/en/tutorials/practice-handbook.md` plus Chinese mirror |
 | Contribution assets | Done | Case study templates, contribution checklist, and enhanced PR template |
+| Evaluation playbook | Done | `docs/en/production/evals-playbook.md` and Chinese mirror plus eval report template |
 | Detailed tutorials | Done | `docs/en/` and `docs/zh/` through L5 |
 | Tutorial reference map | Done | `docs/en/tutorials/reference-map.md`, `docs/zh/tutorials/reference-map.md` |
 | Chinese tutorial filenames | Done | Chinese names under `docs/zh/` |
 | Interview assets | Done | `docs/en/interviews/interview-framework.md`, `docs/en/interviews/questions/`, `docs/en/interviews/interview-answer-framework.md` |
 | Portfolio tracks | Done | `docs/en/portfolio/projects.md`, `docs/en/portfolio/personal-agent-portfolio.md`, `docs/en/portfolio/open-source-impact-guide.md` |
-| Production guides | Done | `docs/en/production/`, `docs/en/production/cost-stability-operations.md`, `docs/en/quick-reference/production-checklist.md` |
+| Production guides | Done | `docs/en/production/`, `docs/en/production/cost-stability-operations.md`, `docs/en/production/evals-playbook.md`, `docs/en/quick-reference/production-checklist.md` |
 | Case studies | Done | `docs/en/cases/` and `docs/zh/cases/`, including enterprise tool, collaboration, RAG, regression, and pattern-contribution cases |
 | Quick references | Done | `docs/en/quick-reference/`, including Chinese index |
 | Agent skills | Done | `docs/en/skills/README.md`, `docs/zh/skills/Agent技能指南.md`, `templates/agent-skill-card-template.md` |

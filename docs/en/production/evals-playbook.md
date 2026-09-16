@@ -1,0 +1,132 @@
+---
+title: Agent Evaluation And Regression Playbook
+validated_date: 2026-09-17
+i18n-key: production-evals-playbook
+last-synced: 2026-09-17
+---
+
+# Agent Evaluation And Regression Playbook
+
+Use this playbook to turn a change into a measurable release decision.
+
+## When To Use
+
+Use it before changing prompts, models, tools, retrieval, memory, routing, guardrails, or production release logic.
+
+## 1. Define The Change Surface
+
+List what changed and what could break.
+
+| Change | Risk Area | Eval Needed | Owner |
+| --- | --- | --- | --- |
+| Prompt | answer quality, refusal, citations | golden prompts + safety |  |
+| Model | format drift, latency, cost | golden prompts + latency/cost |  |
+| Tool schema | invalid args, denied tools | tool usage |  |
+| Retrieval | missing/stale sources | citation and refusal |  |
+| Memory | stale preferences | conflict and expiry |  |
+| Router | wrong specialist | route decision |  |
+| Guardrail | false block/miss | safety and usability |  |
+
+## 2. Build A Minimal Eval Matrix
+
+Every Agent change needs at least these rows:
+
+| Eval Class | Example Case | Expected Result | Blocking? |
+| --- | --- | --- | --- |
+| Golden path | Core user task | Answer with required evidence | Yes |
+| Missing evidence | Source not retrieved | Refuse or ask clarification | Yes |
+| Stale source | Old policy source | Do not answer from stale source | Yes |
+| Tool failure | Tool timeout/error | Safe fallback or escalation | Yes |
+| Destructive action | Delete/refund/request | Require approval before execution | Yes |
+| Prompt injection | Retrieved doc tries to change policy | Ignore injected instruction | Yes |
+| Ambiguous request | Missing user identity/intent | Clarify | No |
+| Cost/latency | Long tool loop | Respect budget or degrade | Yes if over gate |
+
+## 3. Write Cases
+
+Each eval case should include:
+
+- `id`: stable name.
+- `input`: user request.
+- `context`: sources, memory, tool availability.
+- `expected_action`: answer, clarify, refuse, tool, escalate.
+- `expected_evidence`: source IDs, tool result, or trace fields.
+- `blocking`: whether failure blocks release.
+
+## 4. Run And Record
+
+Use the L4 regression gate Lab as the deterministic baseline:
+
+```bash
+python -m unittest labs.l4.regression_gate.test_lab
+```
+
+Record:
+
+- Total cases.
+- Pass/fail by class.
+- Blocking failures.
+- Cost and latency budget status.
+- Rollback availability.
+- Trace completeness.
+
+## 5. Release Decision
+
+Ship only when all blocking gates pass.
+
+| Decision | Use When |
+| --- | --- |
+| Ship | No blocking failures; budgets pass; rollback ready |
+| Canary | Non-blocking issues exist but risk is bounded |
+| Block | Any critical safety, destructive action, missing trace, or missing rollback issue |
+| Rollback | Production evidence shows unacceptable regression |
+
+## 6. Failure Action
+
+Every failure must become one of:
+
+- A new eval case.
+- A guardrail change.
+- A trace field.
+- A rollback note.
+- A product decision.
+- A postmortem action item.
+
+## 7. Report Template
+
+Use [`../../../templates/eval-report-template.md`](../../../templates/eval-report-template.md) for a copyable report. Example structure:
+
+```markdown
+# Eval Report
+
+- Change:
+- Date:
+- Owner:
+- Eval matrix version:
+
+## Results
+- Cases passed:
+- Cases failed:
+- Blocking failures:
+- Safety failures:
+- Tool failures:
+- Retrieval failures:
+- Cost status:
+- Latency status:
+- Trace completeness:
+- Rollback ready:
+
+## Decision
+Ship / canary / block / rollback
+
+## Follow-Up
+- Owner:
+- Due date:
+- Regression case added:
+```
+
+## Related Pages
+
+- Eval checklist: [`evals-checklist.md`](evals-checklist.md)
+- Production checklist: [`../quick-reference/production-checklist.md`](../quick-reference/production-checklist.md)
+- Regression gate Lab: [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md)
