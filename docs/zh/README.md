@@ -28,7 +28,8 @@ validated_date: 2026-09-16
 - [`portfolio/`](portfolio/)：作品集路径
 - [`community/`](community/)：社区运营
 - [`quick-reference/`](quick-reference/)：速查表
-- [`tutorials/`](tutorials/)：教程参考和搜索补充
+- [`tutorials/`](tutorials/)：教程参考、搜索补充和学习路径
+- [`tutorials/learning-paths.md`](tutorials/learning-paths.md)：学习路径
 
 ## 中文镜像说明
 

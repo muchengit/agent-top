@@ -24,3 +24,11 @@ validated_date: 2026-09-16
 - 失败模式。
 - 评估或生产证据。
 - 后续学习。
+
+## 案例到 Lab 映射
+
+| 案例 | 支持 Lab | 证明什么 |
+| --- | --- | --- |
+| [`customer-support-multi-agent.md`](customer-support-multi-agent.md) | [`../../../labs/l3/multi_agent_supervisor/README.md`](../../../labs/l3/multi_agent_supervisor/README.md) | Supervisor routing 和 verification |
+| [`personal-knowledge-rag.md`](personal-knowledge-rag.md) | [`../../../labs/l3/rag_evaluator/README.md`](../../../labs/l3/rag_evaluator/README.md) | Retrieval evidence 和 refusal |
+| [`production-regression-gate.md`](production-regression-gate.md) | [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) | Release gates 和 regression checks |

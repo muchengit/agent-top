@@ -15,3 +15,23 @@ last-synced: 2026-09-16
 - [`architecture-patterns.md`](architecture-patterns.md)：架构模式地图。
 - [`lab-command-cheatsheet.md`](lab-command-cheatsheet.md)：本地命令和 Lab 导航。
 - [`production-checklist.md`](production-checklist.md)：生产发布检查清单。
+
+## 适用场景
+
+- 面试准备。
+- 实现前审查 Agent 设计。
+- 新贡献者快速查命令。
+- 发布前检查 Lab 或生产改动是否就绪。
+
+## 推荐阅读顺序
+
+1. 先读 [`agent-glossary.md`](agent-glossary.md) 建立术语。
+2. 用 [`architecture-patterns.md`](architecture-patterns.md) 选择模式。
+3. 用 [`lab-command-cheatsheet.md`](lab-command-cheatsheet.md) 运行示例。
+4. 发布前使用 [`production-checklist.md`](production-checklist.md)。
+
+## 相关模块
+
+- 概念：[`../concepts/`](../concepts/)
+- 生产：[`../production/`](../production/)
+- Lab：[`labs`](../../../labs/README.md)

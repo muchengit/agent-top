@@ -25,3 +25,11 @@ Each case should include:
 - Failure modes.
 - Evaluation or production evidence.
 - Follow-up learning.
+
+## Case-to-Lab Mapping
+
+| Case | Supporting Lab | What It Proves |
+| --- | --- | --- |
+| [`customer-support-multi-agent.md`](customer-support-multi-agent.md) | [`../../../labs/l3/multi_agent_supervisor/README.md`](../../../labs/l3/multi_agent_supervisor/README.md) | Supervisor routing and verification |
+| [`personal-knowledge-rag.md`](personal-knowledge-rag.md) | [`../../../labs/l3/rag_evaluator/README.md`](../../../labs/l3/rag_evaluator/README.md) | Retrieval evidence and refusal |
+| [`production-regression-gate.md`](production-regression-gate.md) | [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) | Release gates and regression checks |
