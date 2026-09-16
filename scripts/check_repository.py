@@ -197,6 +197,24 @@ def check_lab_readmes(markdown_paths: list[Path]) -> None:
         fail("lab README sections missing: " + "; ".join(bad))
 
 
+
+def check_executable_labs() -> None:
+    labs_root = ROOT / "labs"
+    bad: list[str] = []
+    for level_dir in sorted(labs_root.glob("l*")):
+        if not level_dir.is_dir():
+            continue
+        for lab_dir in sorted(level_dir.iterdir()):
+            if not lab_dir.is_dir():
+                continue
+            code = list(lab_dir.glob("agent_top_labs_*.py"))
+            tests = list(lab_dir.glob("test_*.py"))
+            if not code or not tests:
+                bad.append(str(lab_dir.relative_to(ROOT)))
+    if bad:
+        fail("labs missing executable code or tests: " + ", ".join(bad))
+
+
 def main() -> None:
     check_required_paths()
     markdown_paths = iter_markdown()
