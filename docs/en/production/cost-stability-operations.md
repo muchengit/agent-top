@@ -63,6 +63,23 @@ Common modes:
 
 Degradation must never bypass auth, tool safety, or audit logging.
 
+## Gateway Evidence
+
+When Agents call models through a model gateway, inference server, or self-hosted runtime, cost stability includes routing decisions, not just spend.
+
+Record for each model call:
+
+- `route`: the gateway route or policy chosen.
+- `provider_model`: actual provider/model hit.
+- `fallback_used`: whether fallback was triggered.
+- `retry_count`: number of retries.
+- `budget_decision`: `continue`, `degrade`, or `block`.
+- `rate_limit_reason`: reason when throttled.
+- `latency_ms`: end-to-end and serving runtime latency.
+- `throughput_tokens_per_s`: throughput evidence from gateway or runtime.
+
+Use these fields to answer: why was this model chosen, why did cost rise, and can the system safely rollback or degrade?
+
 ## Guardrail Decision
 
 A runtime guardrail should decide one of:

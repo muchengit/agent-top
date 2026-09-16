@@ -92,6 +92,28 @@ python -m unittest labs.l4.regression_gate.test_lab
 - Product decision。
 - Postmortem action item。
 
+## CI 评估门禁
+
+把评估当作 CI gate，而不是发布后抽查：
+
+- 每个 prompt/model/tool/retrieval 变更必须绑定 dataset version。
+- 每个 blocking case 必须有 pass/fail rule。
+- 每次 release 决策必须记录 Ship / Canary / Block / Rollback。
+- 每个失败必须转成 eval case、guardrail、trace field、rollback note 或 postmortem action。
+
+最小报告字段：
+
+```text
+dataset_version:
+matrix_version:
+blocking_failures:
+cost_status:
+latency_status:
+trace_completeness:
+decision:
+follow_up_owner:
+```
+
 ## 7. 报告模板
 
 可复制模板见 [`../../../templates/eval-report-template.md`](../../../templates/eval-report-template.md)。结构示例：

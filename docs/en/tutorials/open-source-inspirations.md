@@ -14,6 +14,7 @@ A 2026-09-17 data-ingestion pass added web scraping, browser-use, vector ingesti
 A second 2026-09-17 open-source scan verified SSH reachability for promptfoo, Google ADK, Instructor, DSPy, Open Interpreter, OpenHands, and E2B, while HTTPS cloning timed out for some of those repositories. Agent-Top treats SSH reachability as discovery evidence only, not maintainer verification of licenses or API stability.
 A 2026-09-17 GitHub-native pass re-verified several GitHub CLI, GitHub REST API, GitHub MCP Server, and Copilot coding-agent style projects with `git ls-remote`. These entries absorb repository review workflows, PR review patterns, CI-first validation, and platform-native tool boundaries.
 A 2026-09-17 runtime-evidence pass checked reachable public repositories with `git ls-remote`: Sentry, Grafana Pyroscope, Ruff, uv, and Dapr. These entries are learning signals for incident grouping, profiling, deterministic lint gates, lockfile evidence, and workflow provenance; they are not authoritative setup guides.
+A 2026-09-17 platform-evidence pass checked reachable public repositories with `git ls-remote`: OpenTelemetry semantic conventions, OpenTelemetry Python, OpenTelemetry Python contrib, Arize Phoenix, promptfoo, LiteLLM, Dify, Agno, Traceloop OpenLLMetry, vLLM, and open-webui. These entries are learning signals for GenAI telemetry, eval-as-CI, model gateway boundaries, platform portals, and inference runtime metrics; they are not authoritative setup guides.
 
 ## Project-to-Topic Map
 
@@ -78,6 +79,16 @@ A 2026-09-17 runtime-evidence pass checked reachable public repositories with `g
 | GitHub REST API | platform automation contract | issues, pull requests, checks, code search, status checks, and rate-limited workflow automation |
 | GitHub MCP Server | MCP platform tools | repository tools, issue tools, PR tools, search tools, and permission-bound GitHub workflows |
 | GitHub Copilot coding-agent style projects | code execution and review agents | PR-oriented work items, review loops, command boundaries, and CI-gated code changes |
+| OpenTelemetry semantic conventions / GenAI attributes | portable trace vocabulary | stable span/event naming, provider-neutral attributes, vendor-agnostic cost and token fields |
+| OpenTelemetry Python SDK / contrib | instrumentation discipline | deterministic instrumentation, resource labels, exporters, and trace-context propagation boundaries |
+| Arize Phoenix-style LLM observability | eval and trace analysis | trace-to-eval linking, dataset curation from production traces, reviewer workflow evidence |
+| promptfoo-style prompt evaluation | eval-as-CI | declarative test matrices, pass/fail assertions, prompt comparisons, and regression gates |
+| LiteLLM-style model gateways | provider-neutral model routing | fallback, retry, budget, rate limit, spend tracking, and model routing decision evidence |
+| Dify-style LLM application platforms | app and workflow boundaries | workflow nodes, knowledge sources, app config, environment variables, and permissioned human review |
+| Agno-style Agent runtimes | agent runtime state and toolkits | lightweight toolkits, run/session state, memory, and production-ready Agent composition |
+| Traceloop OpenLLMetry-style integrations | LLM framework instrumentation | library-specific traces, model-call spans, retrieval spans, and prompt/tool telemetry |
+| vLLM-style inference runtimes | serving runtime metrics | throughput, batching, KV cache pressure, timeout behavior, and local/self-hosted deployment boundaries |
+| open-webui-style Agent portals | user-facing Agent application layer | chat UI boundaries, document tools, web tools, permissioned sharing, and user-facing action evidence |
 | Sentry-style error monitoring | incident grouping and release-aware errors | issue fingerprinting, release association, error grouping, alert routing, and blameless root-cause evidence |
 | Grafana Pyroscope-style continuous profiling | runtime hotspots and resource evidence | sampling or continuous profiling, service/resource labels, hotspot routes, and cost diagnosis without full traces |
 | Ruff-style deterministic linters | local quality gates | fast deterministic checks, explicit rule output, CI pass/fail evidence, and small reviewable diffs |
@@ -114,6 +125,11 @@ A 2026-09-17 runtime-evidence pass checked reachable public repositories with `g
 - **Deterministic lint gate**: require a fast deterministic formatter/linter result with tool version and exact findings before treating style or safety issues as resolved.
 - **Tool and dependency lock evidence**: preserve lockfile/tool versions for Python, CLI, Agent, and MCP dependencies so a release can be replayed with the same toolchain.
 - **Workflow provenance**: record workflow/activity id, input event id, retry attempt, dead-letter state, and owner so distributed Agent workflows can be traced across services.
+- **GenAI telemetry vocabulary**: standardize span names, event names, model/provider attributes, token counts, cost units, and tenant/workflow labels so traces stay comparable across vendors.
+- **Eval-as-CI**: represent prompt, model, tool, and retrieval tests as repeatable matrices with pass/fail assertions and release decisions.
+- **Model gateway evidence**: record route, provider/model, fallback used, retry count, budget decision, rate-limit reason, and final response status before the Agent decides to continue.
+- **Inference runtime metrics**: capture throughput, latency percentile, timeout, concurrency, batching, and resource pressure for self-hosted or gateway-managed inference.
+- **Platform app boundary**: separate user chat surface, app workflow, tool calls, knowledge sources, permissions, and audit trail in production Agent portals.
 
 ## Contributor Workflow
 
@@ -148,6 +164,11 @@ When adding another open-source project, submit in this order:
 | Deterministic lint gate | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../examples/observability-trace/README.md`](../../../examples/observability-trace/README.md) |
 | Tool and dependency lock evidence | [`../l4-production.md`](../l4-production.md), [`../../examples/observability-trace/README.md`](../../../examples/observability-trace/README.md) |
 | Workflow provenance | [`../concepts/multi-agent-scheduling.md`](../concepts/multi-agent-scheduling.md), [`../production/observability-trace-contract.md`](../production/observability-trace-contract.md) |
+| GenAI telemetry vocabulary | [`../production/observability-trace-contract.md`](../production/observability-trace-contract.md), [`../../examples/observability-trace/README.md`](../../../examples/observability-trace/README.md) |
+| Eval-as-CI | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../examples/agent-eval-regression/README.md`](../../../examples/agent-eval-regression/README.md) |
+| Model gateway evidence | [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md), [`../../examples/model-gateway/README.md`](../../../examples/model-gateway/README.md) |
+| Inference runtime metrics | [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md), [`../../examples/model-gateway/README.md`](../../../examples/model-gateway/README.md) |
+| Platform app boundary | [`../concepts/agent-system-architecture.md`](../concepts/agent-system-architecture.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
 
 ## Maintenance Rule
 

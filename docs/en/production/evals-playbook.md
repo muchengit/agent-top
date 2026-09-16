@@ -92,6 +92,28 @@ Every failure must become one of:
 - A product decision.
 - A postmortem action item.
 
+## Eval-as-CI
+
+Treat evaluation as a CI gate, not a post-release audit:
+
+- Bind every prompt/model/tool/retrieval change to a dataset version.
+- Require pass/fail rules for every blocking case.
+- Record the release decision as Ship, Canary, Block, or Rollback.
+- Convert every failure into an eval case, guardrail, trace field, rollback note, or postmortem action.
+
+Minimum report fields:
+
+```text
+dataset_version:
+matrix_version:
+blocking_failures:
+cost_status:
+latency_status:
+trace_completeness:
+decision:
+follow_up_owner:
+```
+
 ## 7. Report Template
 
 Use [`../../../templates/eval-report-template.md`](../../../templates/eval-report-template.md) for a copyable report. Example structure:
