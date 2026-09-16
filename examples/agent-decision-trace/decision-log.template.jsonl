@@ -1,0 +1,6 @@
+{"id":"read_user_profile","decision":"","risk":"","reason":"","required_evidence":""}
+{"id":"delete_user_account","decision":"","risk":"","reason":"","required_evidence":""}
+{"id":"send_email_unknown_sender","decision":"","risk":"","reason":"","required_evidence":""}
+{"id":"refund_large_order","decision":"","risk":"","reason":"","required_evidence":""}
+{"id":"update_status_ticket","decision":"","risk":"","reason":"","required_evidence":""}
+{"id":"summarize_docs_no_source","decision":"","risk":"","reason":"","required_evidence":""}

@@ -46,6 +46,7 @@ This page uses GitHub project discoveries verified on 2026-09-16. External links
 | MLflow | AI engineering platform | experiment tracking, evaluation, monitoring, model serving boundaries |
 | LangWatch | LLM evaluation and Agent testing | prompt comparisons, regression suites, Agent testing workflows |
 | OpenLit | OpenTelemetry Agent observability | traces, prompt/tool spans, cost telemetry, runtime visibility |
+| KimYx0207/AI-Coding-Guide-Zh | task-first tutorial structure | task-to-output navigation cards, local exercise materials, staged learning paths, and explicit environment/version guidance |
 | Future-AGI | Agent evaluation and simulation platform | simulations, datasets, gateway guardrails, improvement loops |
 | Opik | LLM observability and evaluation | traces, automated evaluation, dashboards, agentic workflow monitoring |
 | AI-Infra-Guard | AI red teaming and security scanning | MCP/tool safety scans, jailbreak evals, agent security risk taxonomy |

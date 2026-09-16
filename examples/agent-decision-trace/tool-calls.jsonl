@@ -1,0 +1,6 @@
+{"id":"read_user_profile","tool":"user.read_profile","args":{"actor":"assistant","user_id":"u_123","fields":["name","email"]},"evidence":"read-only profile request"}
+{"id":"delete_user_account","tool":"user.delete_account","args":{"actor":"assistant","user_id":"u_123","confirm":false},"evidence":"destructive account removal"}
+{"id":"send_email_unknown_sender","tool":"mail.send_email","args":{"recipient":"team@example.invalid","subject":"Update","sender":null},"evidence":"email send without sender confirmation"}
+{"id":"refund_large_order","tool":"billing.refund","args":{"order_id":"o_999","amount":1200.00},"evidence":"high-value refund"}
+{"id":"update_status_ticket","tool":"ticket.update_status","args":{"ticket_id":"t_42","status":"open","actor":"assistant"},"evidence":"idempotent status write"}
+{"id":"summarize_docs_no_source","tool":"docs.summarize","args":{"query":"policy update","include_source":false},"evidence":"summary request without citation requirement"}

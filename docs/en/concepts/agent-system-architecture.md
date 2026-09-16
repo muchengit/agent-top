@@ -30,7 +30,7 @@ What to learn:
 
 Related tutorial:
 
-- [`../en/l0-first-llm-call.md`](../../en/l0-first-llm-call.md)
+- [`../l0-first-llm-call.md`](../l0-first-llm-call.md)
 
 
 ## From First LLM Call to Multi-Round Agent
@@ -130,7 +130,7 @@ What to learn:
 Related tutorials and Labs:
 
 - [`multi-round-research-discussion.md`](multi-round-research-discussion.md)
-- [`../en/l3-rag-memory-observability.md`](../../en/l3-rag-memory-observability.md)
+- [`../l3-rag-memory-observability.md`](../l3-rag-memory-observability.md)
 - [`../../labs/l3/rag_evaluator/README.md`](../../../labs/l3/rag_evaluator/README.md)
 
 ## 5. Memory-Augmented Agent

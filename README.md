@@ -4,6 +4,10 @@ Agent-Top is an open-source learning framework for LLM Agent development.
 
 It helps learners and engineers build practical Agent skills from first LLM calls to production-grade multi-agent systems.
 
+## Quick Start
+
+Start here: [`docs/en/tutorials/quick-navigation.md`](docs/en/tutorials/quick-navigation.md) and [`examples/agent-decision-trace/README.md`](examples/agent-decision-trace/README.md).
+
 ## What This Project Covers
 
 - L0–L5 capability model
@@ -124,6 +128,7 @@ agent-top/
 │   │   ├── tutorials/
 │   │   │   ├── learning-paths.md
 │   │   │   ├── open-source-inspirations.md
+│   │   │   ├── quick-navigation.md
 │   │   │   ├── reference-map.md
 │   │   │   └── search-supplements.md
 │   │   ├── agent-top-concrete-framework.md
@@ -136,6 +141,8 @@ agent-top/
 │   │   └── README.md
 │   └── zh/
 │       └── ...                     # Chinese mirror with the same directory shape as docs/en
+├── examples/
+│   └── agent-decision-trace/
 ├── labs/
 │   ├── l0/
 │   │   └── first_llm_call/
@@ -196,6 +203,7 @@ agent-top/
 
 - `docs/en/`: primary English source for all bilingual documentation.
 - `docs/zh/`: Chinese mirror with the same module structure as `docs/en`.
+- `examples/`: fictional, no-API-key practice materials for Agent decisions and evidence.
 - `labs/`: runnable, deterministic exercises that prove each capability level.
 - `templates/`: reusable contribution formats so reviewers can check consistency.
 - `scripts/`: local validation for links, frontmatter, version anchors, and Lab completeness.
@@ -214,6 +222,8 @@ python -m ruff check .
 
 ## Repository Map
 
+- Quick navigation: [`docs/en/tutorials/quick-navigation.md`](docs/en/tutorials/quick-navigation.md)
+- No-API-key exercise: [`examples/agent-decision-trace/README.md`](examples/agent-decision-trace/README.md)
 - Concepts: [`docs/en/concepts`](docs/en/concepts)
 - Framework map: [`docs/en/frameworks/framework-map.md`](docs/en/frameworks/framework-map.md)
 - Design review checklist: [`docs/en/concepts/design-review-checklist.md`](docs/en/concepts/design-review-checklist.md)

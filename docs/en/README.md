@@ -47,9 +47,11 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`concepts/model-hallucination.md`](concepts/model-hallucination.md)
 - [`concepts/plan-decision-making.md`](concepts/plan-decision-making.md)
 - [`concepts/deep-dive-sources.md`](concepts/deep-dive-sources.md)
+- [`concepts/implementation-guide.md`](concepts/implementation-guide.md)
 
 ## Tutorial Reference Map
 
+- [`tutorials/quick-navigation.md`](tutorials/quick-navigation.md): task-first entry for learners, engineers, interview candidates, and contributors
 - [`tutorials/reference-map.md`](tutorials/reference-map.md)
 - [`tutorials/learning-paths.md`](tutorials/learning-paths.md)
 - [`tutorials/search-supplements.md`](tutorials/search-supplements.md)

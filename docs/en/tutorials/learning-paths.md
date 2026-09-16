@@ -6,7 +6,7 @@ validated_date: 2026-09-16
 
 # Learning Paths
 
-Learning paths connect Agent-Top tutorials, Labs, cases, quick references, and portfolio evidence.
+Learning paths connect Agent-Top tutorials, Labs, cases, quick references, and portfolio evidence. If you want to complete one concrete task before choosing a route, start with [`quick-navigation.md`](quick-navigation.md).
 
 ## Beginner Path: From First Call to One Agent
 
