@@ -42,6 +42,7 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 ## Tutorial Reference Map
 
 - [`tutorials/reference-map.md`](tutorials/reference-map.md)
+- [`tutorials/reference-map.zh.md`](tutorials/reference-map.zh.md)
 
 ## Frameworks
 

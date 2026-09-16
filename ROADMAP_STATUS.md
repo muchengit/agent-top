@@ -15,7 +15,7 @@ validated_date: 2026-09-16
 | Framework map | Done | `docs/frameworks/framework-map.md` |
 | Executable Labs | Done | `labs/l0` through `labs/l5`, including supplementary labs |
 | Detailed tutorials | Done | `docs/en/` and `docs/zh/` through L5 |
-| Tutorial reference map | Done | `docs/tutorials/reference-map.md` |
+| Tutorial reference map | Done | `docs/tutorials/reference-map.md`, `docs/tutorials/reference-map.zh.md` |
 | Chinese tutorial filenames | Done | Chinese names under `docs/zh/` |
 | Interview assets | Done | `docs/interviews/interview-framework.md`, `docs/interviews/questions/` |
 | Portfolio tracks | Done | `docs/portfolio/projects.md` |
