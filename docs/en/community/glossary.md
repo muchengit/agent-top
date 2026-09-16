@@ -17,7 +17,7 @@ The maximum amount of text a model can process in one request, measured in token
 
 ## MCP
 
-Model Context Protocol, a protocol for exposing tools and data sources to LLM applications.
+Model Context Protocol. A standard way for LLM applications to connect to MCP servers that expose tools, resources, prompts, schemas, and external context.
 
 ## ReAct
 

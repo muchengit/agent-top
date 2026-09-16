@@ -20,7 +20,7 @@ Use this glossary when choosing terms for docs, Labs, interviews, and production
 | Observation | Evidence returned from a tool, retrieval, model, or environment. |
 | ReAct | A loop that interleaves reasoning and action. |
 | Tool | An external function or action with typed inputs and outputs. |
-| MCP | A protocol-style boundary for exposing tools and resources. |
+| MCP | A standard protocol for connecting LLM apps to MCP servers that expose tools, resources, prompts, schemas, and context. |
 | RAG | Retrieval-augmented generation using retrieved sources. |
 | Memory | Context stored across turns or sessions. |
 | Guardrail | A rule that prevents unsafe behavior. |

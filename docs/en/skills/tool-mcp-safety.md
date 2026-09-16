@@ -34,7 +34,8 @@ Help engineers expose external actions through a controlled boundary, including 
 
 - Tool contracts: inputs, outputs, errors, and side effects.
 - Read/write/destructive risk classification.
-- MCP-style boundaries: schema, transport, auth, and audit.
+- MCP boundaries: host/client/server model, tools/resources/prompts, schemas, transport, auth, and audit.
+- MCP is not a permission system by itself; permissions and audit belong in your gateway, server, or policy layer.
 - Confirmation and human-in-the-loop routes.
 - Idempotency, retries, and rollback.
 

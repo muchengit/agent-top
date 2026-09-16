@@ -34,7 +34,8 @@ last-synced: 2026-09-16
 
 - Tool contract：inputs、outputs、errors、side effects。
 - read/write/destructive 风险分类。
-- MCP-style boundary：schema、transport、auth、audit。
+- MCP 边界：host/client/server 模型、tools/resources/prompts、schemas、transport、auth、audit。
+- MCP 本身不是权限系统；permissions 和 audit 应在 gateway、server 或 policy layer 里实现。
 - Confirmation 和 human-in-the-loop routes。
 - Idempotency、retries、rollback。
 

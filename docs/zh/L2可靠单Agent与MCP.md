@@ -25,6 +25,50 @@ last-synced: 2026-09-16
 - 工具结果应在成为最终答案前再次检查。
 - Guardrail 应阻止空输入、过长输入或高风险请求。
 
+## MCP 到底是什么？
+
+MCP，即 Model Context Protocol，是一种让 LLM 应用与外部工具、数据源和上下文提供者交互的标准方式。
+
+实践中，MCP host 是运行 Agent 的应用；MCP client 连接 MCP server；MCP server 暴露能力，例如：
+
+- tools：Agent 可以调用的动作，例如 `search_docs`、`create_ticket`、`read_file`。
+- resources：可读数据源，例如文件、URL、数据库记录。
+- prompts：server 提供的可复用 prompt 模板。
+- tool metadata：工具名、描述、输入 schema、权限和错误行为。
+
+```mermaid
+flowchart QR
+  App[LLM App / Agent Host] --> Client[MCP Client]
+  Client --> Server[MCP Server]
+  Server --> Tools[Tools]
+  Server --> Resources[Resources]
+  Server --> External[External Systems]
+```
+
+MCP 不会让 LLM 自动变安全。它给 Agent 提供一个更清晰、可检查的边界，用来说明：
+
+- 有哪些能力可用；
+- 每个能力接受什么输入；
+- 谁可以调用；
+- 返回了什么证据或错误；
+- 怎么审计这次调用。
+
+## MCP 和 Function Calling 的区别
+
+Function calling 是模型能力：模型请求调用某个工具，并提供名称和 JSON 参数。
+
+MCP 是围绕这些调用建立的系统边界。
+
+| 层 | 回答什么问题 | 例子 |
+| --- | --- | --- |
+| Function calling | 模型应该请求哪个 tool call？ | `search_docs({"query": "refund policy"})` |
+| Tool schema | 哪些参数合法？ | `query` 必须是非空字符串 |
+| MCP server | 有哪些 tools 或 resources 可用？ | `search_docs`、`read_file`、`policy_index` |
+| Tool gateway | 这次调用是否允许，是否审计？ | actor、tenant、permissions、logs |
+| Agent runtime | 工具结果如何影响下一步？ | answer、retry、clarify、escalate |
+
+所以 MCP 是 function calling 的补充，不是替代模型、Agent loop 或生产 guardrails。
+
 ## 为什么需要工具边界
 
 工具边界是 Agent 请求另一个系统执行工作的地方。在 MCP 风格设计中，这个边界应该显式。
@@ -180,7 +224,7 @@ OK
 
 ## 关联 Lab
 
-阅读 Lab README：[`../../labs/l2/single_agent_mcp/README.md`../labs/l2/single_agent_mcp/README.md)。
+阅读 Lab README：[`../../labs/l2/single_agent_mcp/README.md`](../../labs/l2/single_agent_mcp/README.md)。
 
 运行 Lab 测试：
 

@@ -25,6 +25,50 @@ Build a reliable single Agent that calls tools through a clear MCP-style boundar
 - Tool results should be checked before becoming final answers.
 - Guardrails should block empty, oversized, or unsafe requests.
 
+## What MCP Actually Is
+
+MCP, or Model Context Protocol, is a standard way for an LLM application to talk to external tools, data sources, and context providers.
+
+In practice, an MCP host is the app that runs the Agent. An MCP client connects to an MCP server. The server exposes capabilities such as:
+
+- tools: actions the Agent can call, such as `search_docs`, `create_ticket`, or `read_file`.
+- resources: readable data sources such as files, URLs, or database records.
+- prompts: reusable prompt templates offered by the server.
+- tool metadata: names, descriptions, input schemas, permissions, and error behavior.
+
+```mermaid
+flowchart LR
+  App[LLM App / Agent Host] --> Client[MCP Client]
+  Client --> Server[MCP Server]
+  Server --> Tools[Tools]
+  Server --> Resources[Resources]
+  Server --> External[External Systems]
+```
+
+MCP does not make the LLM magically safe. It gives the Agent a cleaner, inspectable boundary for saying:
+
+- what capabilities exist;
+- what input a capability expects;
+- who may call it;
+- what evidence or error came back;
+- how to audit the call.
+
+## MCP vs Function Calling
+
+Function calling is a model capability: the model asks for a tool call with a name and JSON arguments.
+
+MCP is a system boundary around those calls.
+
+| Layer | Question It Answers | Example |
+| --- | --- | --- |
+| Function calling | What tool call should the model request? | `search_docs({"query": "refund policy"})` |
+| Tool schema | What are valid arguments? | `query` must be a non-empty string |
+| MCP server | What tools or resources are available? | `search_docs`, `read_file`, `policy_index` |
+| Tool gateway | Is this call allowed and audited? | actor, tenant, permissions, logs |
+| Agent runtime | How should the result affect the next step? | answer, retry, clarify, escalate |
+
+So MCP complements function calling. It does not replace the model, the Agent loop, or production guardrails.
+
 ## Why Tool Boundaries Matter
 
 A tool boundary is the place where an Agent asks another system to do work. In an MCP-style design, this boundary should be explicit.

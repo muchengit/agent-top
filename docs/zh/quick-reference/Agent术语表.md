@@ -19,7 +19,7 @@ validated_date: 2026-09-16
 | Observation | 工具、检索、模型或环境返回的证据 |
 | ReAct | 推理和动作交替的循环 |
 | Tool | 有类型化输入输出的外部函数或动作 |
-| MCP | 暴露工具和资源的协议风格边界 |
+| MCP | 连接 LLM app 和 MCP server 的标准协议；MCP server 可暴露 tools、resources、prompts、schemas 和 context |
 | RAG | 使用检索源的生成 |
 | 记忆 | 跨轮或跨会话存储的 context |
 | Guardrail | 防止不安全行为的规则 |
