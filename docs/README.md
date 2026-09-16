@@ -43,6 +43,21 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 
 - [`frameworks/framework-map.md`](frameworks/framework-map.md)
 
+## Case Studies
+
+- [`cases/README.md`](cases/README.md)
+- [`cases/customer-support-multi-agent.md`](cases/customer-support-multi-agent.md)
+- [`cases/personal-knowledge-rag.md`](cases/personal-knowledge-rag.md)
+- [`cases/production-regression-gate.md`](cases/production-regression-gate.md)
+
+## Quick Reference
+
+- [`quick-reference/README.md`](quick-reference/README.md)
+- [`quick-reference/agent-glossary.md`](quick-reference/agent-glossary.md)
+- [`quick-reference/architecture-patterns.md`](quick-reference/architecture-patterns.md)
+- [`quick-reference/lab-command-cheatsheet.md`](quick-reference/lab-command-cheatsheet.md)
+- [`quick-reference/production-checklist.md`](quick-reference/production-checklist.md)
+
 ## Production
 
 - [`production/README.md`](production/README.md)

@@ -18,7 +18,9 @@ validated_date: 2026-09-16
 | Chinese tutorial filenames | Done | Chinese names under `docs/zh/` |
 | Interview assets | Done | `docs/interviews/interview-framework.md`, `docs/interviews/questions/` |
 | Portfolio tracks | Done | `docs/portfolio/projects.md` |
-| Production guides | Done | `docs/production/` |
+| Production guides | Done | `docs/production/`, `docs/quick-reference/production-checklist.md` |
+| Case studies | Done | `docs/cases/` |
+| Quick references | Done | `docs/quick-reference/` |
 | Community governance | Done | `GOVERNANCE.md`, `CONTRIBUTING.md`, `CONTRIBUTING.zh-CN.md`, `docs/community/` |
 | Bilingual metadata | Done | frontmatter key and sync checks in `scripts/check_repository.py` |
 | Community operations | Done | rhythm, labels, maintainer rotation, translation workflow |
