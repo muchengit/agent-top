@@ -67,6 +67,10 @@ This page turns the L0-L5 capability model into concrete skills, knowledge areas
    - Pattern catalog Lab.
    - Open-source contribution or design article.
 
+## Example Skill Cards
+
+- [`tool-mcp-safety.md`](tool-mcp-safety.md): L2-L4 Tool and MCP safety boundary skill card.
+
 ## Contribution Guide
 
 When adding a new skill:
