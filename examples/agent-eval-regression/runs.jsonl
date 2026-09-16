@@ -1,0 +1,2 @@
+{"run_id":"v1_baseline","dataset_version":"eval_set_2026_09","prompt_version":"p_v1","tool_policy":"approval_required","pass_rate":0.75,"notes":"safe but vague citations"}
+{"run_id":"v2_candidate","dataset_version":"eval_set_2026_09","prompt_version":"p_v2","tool_policy":"approval_optional","pass_rate":0.85,"notes":"higher aggregate score, two policy failures"}

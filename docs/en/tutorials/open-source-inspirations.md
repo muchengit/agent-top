@@ -11,6 +11,7 @@ This page turns verified GitHub Agent projects into learning themes. Agent-Top d
 This page uses GitHub project discoveries verified on 2026-09-16. External links are maintainer-verified learning signals, not authoritative framework documentation.
 A 2026-09-17 coding-agent pass added research watch entries. They are treated as discovery signals, not authoritative documentation, until maintainers verify repository URLs and licenses.
 A 2026-09-17 data-ingestion pass added web scraping, browser-use, vector ingestion, and evaluation platform research watch entries. They are also discovery signals until maintainers verify repository URLs and licenses.
+A second 2026-09-17 open-source scan verified SSH reachability for promptfoo, Google ADK, Instructor, DSPy, Open Interpreter, OpenHands, and E2B, while HTTPS cloning timed out for some of those repositories. Agent-Top treats SSH reachability as discovery evidence only, not maintainer verification of licenses or API stability.
 
 ## Project-to-Topic Map
 
@@ -31,7 +32,6 @@ A 2026-09-17 data-ingestion pass added web scraping, browser-use, vector ingesti
 | DSPy | programmatic prompt optimization | signatures, metrics, optimizers, eval-driven tuning |
 | OpenAI Agents SDK | model and agent tools | tool definitions, handoffs, guardrails, tracing |
 | Claude Agent SDK / tool use patterns | tool-using assistant | tool execution loops, structured tool results, safety boundaries |
-| Google ADK | application development kit | multi-agent app structure, workflow composition, platform tools |
 | Semantic Kernel | enterprise plugins and orchestration | plugin governance, enterprise plugins, process integration |
 | MCP ecosystem / modelcontextprotocol | tool and context protocol | tool discovery, resource exposure, protocol boundaries |
 | FastMCP | fast MCP server/client SDK | lightweight tool servers, client-server boundaries, developer ergonomics |
@@ -62,13 +62,16 @@ A 2026-09-17 data-ingestion pass added web scraping, browser-use, vector ingesti
 | Postmortem templates and incident-response repos | incident learning | blameless review, action ownership, recurrence prevention |
 | Awesome LLM / Agent lists | community discovery | topic discovery, taxonomy, contribution routing |
 | Aider / Continue.dev / Cline | coding Agent assistants | repository-aware edits, command boundaries, editable diffs, permissioned file writes |
-| OpenHands / SWE-agent / Open Interpreter | task-oriented coding agents | plan-act-verify loops, terminal/file tools, rollbackable patches, test-driven validation |
 | AIDABench / CodeBench-style benchmarks | coding Agent evaluation | benchmark task taxonomy, deterministic failure cases, code diff correctness checks |
 | Copilot / Cursor / Trae / Bolt-style ecosystems | editor and app-generation Agents | editor context boundaries, suggestion acceptance rates, workspace safety, user confirmation for side effects |
 | Unstructured / Firecrawl / Scrapling-style projects | data ingestion and web extraction | source allowlists, crawler permissions, parser boundaries, chunking rules, freshness metadata, and ingestion failure handling |
 | browser-use / Playwright / desktop-Agent projects | browser and computer-use Agents | visual grounding, action traces, sandboxing, retry budgets, and rollback for noisy UI states |
 | Vector / embedding / local-store projects | local retrieval and ingestion | namespace isolation, deletion propagation, embedding refresh, source provenance, and index drift detection |
 | Phoenix / DeepEval / promptfoo-style projects | evaluation and regression tooling | dataset design, metric definitions, prompt regression, guardrail checks, and eval-report evidence |
+| Promptfoo / prompt evaluation style projects | AI evaluation and regression | YAML-like test cases, prompt comparisons, guardrail assertions, CI-style pass/fail evidence |
+| Open Interpreter / terminal coding agents | code execution agents | local execution boundaries, command confirmation, shell safety, and test evidence |
+| OpenHands / task execution agents | task-oriented Agent runtime | event-driven Agent history, file/terminal tools, rollbackable plans, execution environment isolation |
+| E2B / AI sandbox projects | code execution sandboxing | isolated execution environments, filesystem boundaries, resource limits, and command approval patterns |
 
 ## Absorbable Patterns
 
@@ -92,6 +95,9 @@ A 2026-09-17 data-ingestion pass added web scraping, browser-use, vector ingesti
 - **Ingestion metadata contract**: preserve source URL, crawl time, freshness, permission state, parser version, and deletion state.
 - **Browser action trace**: record visible context, action intent, screenshot or DOM summary, and rollback state for UI-changing actions.
 - **Eval dataset discipline**: keep datasets versioned and tie every metric to a clear pass/fail rule.
+- **Structured output validation**: define JSON schema, retry policy, invalid-output escalation, and validation failures before business logic.
+- **Sandboxed execution boundary**: treat shell, filesystem, network, and credentials as separate execution permissions.
+- **Eval gate discipline**: a prompt, tool, or model change ships only when dataset version, pass rate, regression diff, and owner approval are recorded.
 
 ## Contributor Workflow
 
@@ -118,6 +124,8 @@ When adding another open-source project, submit in this order:
 | Coding Agent eval design | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) |
 | Data-source ingestion safety | [`../concepts/rag-memory-mcp-flow.md`](../concepts/rag-memory-mcp-flow.md), [`../../examples/data-source-policy/README.md`](../../../examples/data-source-policy/README.md) |
 | Browser or desktop action safety | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
+| Evaluation gate and regression evidence | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../examples/agent-eval-regression/README.md`](../../../examples/agent-eval-regression/README.md) |
+| Code execution sandboxing | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
 
 ## Maintenance Rule
 

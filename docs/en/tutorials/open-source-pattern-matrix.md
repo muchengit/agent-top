@@ -39,6 +39,9 @@ This matrix distills Agent-Top's open-source inspiration into reusable patterns.
 | Source policy boundary | Agents over-collect or over-retrieve | Treat crawl, parse, store, retrieve, cite, ignore, and block as separate decisions | [`../concepts/rag-memory-mcp-flow.md`](../concepts/rag-memory-mcp-flow.md), [`../../../examples/data-source-policy/README.md`](../../../examples/data-source-policy/README.md) | Vendor crawler internals |
 | Ingestion metadata contract | Retrieval evidence cannot be explained | Preserve source URL, crawl time, freshness, permission state, parser version, and deletion state | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../concepts/long-term-memory.md`](../concepts/long-term-memory.md) | Full vector store schema |
 | Browser action trace | UI actions are invisible and hard to roll back | Record visible context, action intent, screenshot or DOM summary, and rollback state | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) | Provider-specific browser automation code |
+| Structured output validation | Schemaless outputs break downstream systems | Add schema validation, retry budget, invalid-output escalation, and failure logging | [`../concepts/agent-system-architecture.md`](../concepts/agent-system-architecture.md), [`../production/evals-playbook.md`](../production/evals-playbook.md) | Provider-specific JSON mode code |
+| Sandboxed execution boundary | Code Agents can run unsafe commands | Separate shell, filesystem, network, credentials, and approval gates before execution | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) | Full sandbox runtime |
+| Eval gate discipline | Prompt, tool, or model changes regress silently | Require dataset version, pass rate, regression diff, owner approval, and rollback plan | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../../examples/agent-eval-regression/README.md`](../../../examples/agent-eval-regression/README.md) | Vendor dashboard setup |
 
 ## Decision Rules
 
@@ -50,10 +53,6 @@ This matrix distills Agent-Top's open-source inspiration into reusable patterns.
 
 ## Candidate Next Additions
 
-- A browser-use safety example using MCP policy-proxy principles.
-- A memory lifecycle exercise covering expiry, deletion, and conflicting preferences.
-- A structured-output validation Lab for schema retry and escalation.
-- A prompt optimization case with versioned prompts and eval report.
 - A browser-use safety example using MCP policy-proxy principles.
 - A memory lifecycle exercise covering expiry, deletion, and conflicting preferences.
 - A structured-output validation Lab for schema retry and escalation.
