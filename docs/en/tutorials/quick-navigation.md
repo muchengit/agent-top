@@ -14,6 +14,7 @@ Use this page when you already know what you want to accomplish. Pick one task, 
 | Your task | Follow this path | Expected output |
 | --- | --- | --- |
 | Run a local Agent trace without an API key | [`examples/agent-decision-trace/README.md`](../../../examples/agent-decision-trace/README.md) | A local trace file showing why destructive or ambiguous tool calls are blocked |
+| Practice RAG evidence and refusal | [`examples/rag-evidence-refusal/README.md`](../../../examples/rag-evidence-refusal/README.md) | An answer log showing citations, refusal, stale-source handling, and conflict resolution |
 | Understand the delivery flow for a real Agent | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md) | A system contract, tool risk table, release gate, and postmortem checklist |
 | Build the first minimal ReAct Agent | [`../l1-minimal-react-agent.md`](../l1-minimal-react-agent.md) -> [`../../../labs/l1/minimal_react_agent/README.md`](../../../labs/l1/minimal_react_agent/README.md) | A working loop plus an explanation of perception, tools, planning, and memory |
 | Practice MCP-style tool boundaries | [`../l2-single-agent-mcp.md`](../l2-single-agent-mcp.md) -> [`../../../labs/l2/single_agent_mcp/README.md`](../../../labs/l2/single_agent_mcp/README.md) | A tool allowlist with read/write/destructive risk classes |
@@ -43,4 +44,4 @@ A task is complete only when all three are true:
 - Learning paths: [`learning-paths.md`](learning-paths.md)
 - Core implementation guide: [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md)
 - Open-source inspirations: [`open-source-inspirations.md`](open-source-inspirations.md)
-- Local exercise: [`../../../examples/agent-decision-trace/README.md`](../../../examples/agent-decision-trace/README.md)
+- Local examples: [`../../../examples/README.md`](../../../examples/README.md)

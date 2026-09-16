@@ -144,7 +144,8 @@ agent-top/
 │   └── zh/
 │       └── ...                     # Chinese mirror with the same directory shape as docs/en
 ├── examples/
-│   └── agent-decision-trace/
+│   ├── agent-decision-trace/
+│   └── rag-evidence-refusal/
 ├── labs/
 │   ├── l0/
 │   │   └── first_llm_call/
@@ -229,7 +230,7 @@ python -m ruff check .
 - Design review workshop: [`docs/en/concepts/design-review-workshop.md`](docs/en/concepts/design-review-workshop.md)
 - Agent system blueprint: [`docs/en/concepts/agent-system-blueprint.md`](docs/en/concepts/agent-system-blueprint.md)
 - Quick navigation: [`docs/en/tutorials/quick-navigation.md`](docs/en/tutorials/quick-navigation.md)
-- No-API-key exercise: [`examples/agent-decision-trace/README.md`](examples/agent-decision-trace/README.md)
+- No-API-key examples: [`examples/README.md`](examples/README.md)
 - Concepts: [`docs/en/concepts`](docs/en/concepts)
 - Framework map: [`docs/en/frameworks/framework-map.md`](docs/en/frameworks/framework-map.md)
 - Design review checklist: [`docs/en/concepts/design-review-checklist.md`](docs/en/concepts/design-review-checklist.md)

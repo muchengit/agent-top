@@ -101,7 +101,8 @@ agent-top/
 │       ├── skills/                   # 中文 Agent 技能体系
 │       └── tutorials/                # 中文教程与开源项目灵感
 ├── examples/
-│   └── agent-decision-trace/         # 无需 API key 的 Agent 决策练习
+│   ├── agent-decision-trace/         # 无需 API key 的 Agent 决策练习
+│   └── rag-evidence-refusal/         # RAG 证据与拒绝回答练习
 ├── labs/
 │   ├── l0/                           # 第一次 LLM 调用
 │   ├── l1/                           # ReAct、guardrails、多轮状态
@@ -150,7 +151,7 @@ agent-top/
 - 系统蓝图：[`docs/en/concepts/agent-system-blueprint.md`](docs/en/concepts/agent-system-blueprint.md)
 - 快速导航：[`docs/en/tutorials/quick-navigation.md`](docs/en/tutorials/quick-navigation.md)
 - 中文快速导航：[`docs/zh/tutorials/快速导航卡.md`](docs/zh/tutorials/快速导航卡.md)
-- 本地练习：[`examples/agent-decision-trace/README.md`](examples/agent-decision-trace/README.md)
+- 本地练习：[`examples/README.md`](examples/README.md)
 - 核心概念：[`docs/zh/concepts`](docs/zh/concepts)
 - 框架地图：[`docs/zh/frameworks/框架地图.md`](docs/zh/frameworks/框架地图.md)
 - 面试框架：[`docs/zh/interviews/面试框架.md`](docs/zh/interviews/面试框架.md)

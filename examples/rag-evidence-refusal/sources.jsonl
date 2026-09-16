@@ -1,0 +1,6 @@
+{"id":"s1_current_shipping","fresh":true,"date":"2026-09-10","text":"Orders placed before 3pm are shipped the same business day."}
+{"id":"s2_old_refund","fresh":false,"date":"2025-01-15","text":"Refunds must be requested within 30 days."}
+{"id":"s3_discount_policy","fresh":true,"date":"2026-09-12","text":"Seasonal discounts require manager approval before checkout."}
+{"id":"s4_discount_exception","fresh":true,"date":"2026-09-14","text":"Seasonal discounts can be applied automatically for loyalty tier 3 customers."}
+{"id":"s5_return_window","fresh":true,"date":"2026-09-11","text":"Unopened electronics may be returned within 14 days."}
+{"id":"s6_security_claim","fresh":true,"date":"2026-09-11","text":"Refunds are reviewed by the order team."}

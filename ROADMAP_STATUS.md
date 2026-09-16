@@ -14,7 +14,7 @@ validated_date: 2026-09-16
 | Concepts | Done | `docs/en/concepts/`, including architecture, MCP, multi-agent scheduling, long-term memory, hallucination, plan decisions, deep-dive sources, and the implementation guide |
 | Framework map | Done | `docs/en/frameworks/framework-map.md` |
 | Executable Labs | Done | `labs/l0` through `labs/l5`, including supplementary labs |
-| Task-first onboarding | Done | `docs/en/tutorials/quick-navigation.md`, `docs/zh/tutorials/快速导航卡.md`, and `examples/agent-decision-trace/` |
+| Task-first onboarding | Done | `docs/en/tutorials/quick-navigation.md`, `docs/zh/tutorials/快速导航卡.md`, `examples/README.md`, `examples/agent-decision-trace/`, and `examples/rag-evidence-refusal/` |
 | Design review assets | Done | `docs/en/concepts/design-review-workshop.md` and `docs/en/concepts/agent-system-blueprint.md` plus Chinese mirrors |
 | Detailed tutorials | Done | `docs/en/` and `docs/zh/` through L5 |
 | Tutorial reference map | Done | `docs/en/tutorials/reference-map.md`, `docs/zh/tutorials/reference-map.md` |

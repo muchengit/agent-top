@@ -1,0 +1,5 @@
+{"id":"shipping_policy_current","prompt":"When are orders shipped if placed before 3pm?"}
+{"id":"old_refund_deadline","prompt":"How many days do customers have to request a refund?"}
+{"id":"contradictory_discount","prompt":"Can seasonal discounts be applied automatically?"}
+{"id":"unsupported_security_claim","prompt":"Is all refund information encrypted at rest?"}
+{"id":"supported_return_window","prompt":"Can unopened electronics be returned within 14 days?"}
