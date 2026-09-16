@@ -1,7 +1,7 @@
 ---
 i18n-key: tutorials-open-source-inspirations
-last-synced: 2026-09-16
-validated_date: 2026-09-16
+last-synced: 2026-09-17
+validated_date: 2026-09-17
 ---
 
 # Open-Source Inspirations Directory
@@ -10,6 +10,7 @@ This page turns verified GitHub Agent projects into learning themes. Agent-Top d
 
 This page uses GitHub project discoveries verified on 2026-09-16. External links are maintainer-verified learning signals, not authoritative framework documentation.
 A 2026-09-17 coding-agent pass added research watch entries. They are treated as discovery signals, not authoritative documentation, until maintainers verify repository URLs and licenses.
+A 2026-09-17 data-ingestion pass added web scraping, browser-use, vector ingestion, and evaluation platform research watch entries. They are also discovery signals until maintainers verify repository URLs and licenses.
 
 ## Project-to-Topic Map
 
@@ -64,6 +65,10 @@ A 2026-09-17 coding-agent pass added research watch entries. They are treated as
 | OpenHands / SWE-agent / Open Interpreter | task-oriented coding agents | plan-act-verify loops, terminal/file tools, rollbackable patches, test-driven validation |
 | AIDABench / CodeBench-style benchmarks | coding Agent evaluation | benchmark task taxonomy, deterministic failure cases, code diff correctness checks |
 | Copilot / Cursor / Trae / Bolt-style ecosystems | editor and app-generation Agents | editor context boundaries, suggestion acceptance rates, workspace safety, user confirmation for side effects |
+| Unstructured / Firecrawl / Scrapling-style projects | data ingestion and web extraction | source allowlists, crawler permissions, parser boundaries, chunking rules, freshness metadata, and ingestion failure handling |
+| browser-use / Playwright / desktop-Agent projects | browser and computer-use Agents | visual grounding, action traces, sandboxing, retry budgets, and rollback for noisy UI states |
+| Vector / embedding / local-store projects | local retrieval and ingestion | namespace isolation, deletion propagation, embedding refresh, source provenance, and index drift detection |
+| Phoenix / DeepEval / promptfoo-style projects | evaluation and regression tooling | dataset design, metric definitions, prompt regression, guardrail checks, and eval-report evidence |
 
 ## Absorbable Patterns
 
@@ -83,6 +88,10 @@ A 2026-09-17 coding-agent pass added research watch entries. They are treated as
 - **Patch-first editing**: prefer reviewable diffs over direct mutation when the Agent changes code.
 - **Test-driven Agent validation**: every code-changing Agent step should identify the smallest command that proves the change.
 - **Suggestion acceptance workflow**: distinguish recommendation, approval, execution, and post-check for user-facing coding tools.
+- **Source policy boundary**: treat crawling, parsing, storage, retrieval, and citation as separate authorization decisions.
+- **Ingestion metadata contract**: preserve source URL, crawl time, freshness, permission state, parser version, and deletion state.
+- **Browser action trace**: record visible context, action intent, screenshot or DOM summary, and rollback state for UI-changing actions.
+- **Eval dataset discipline**: keep datasets versioned and tie every metric to a clear pass/fail rule.
 
 ## Contributor Workflow
 
@@ -107,6 +116,8 @@ When adding another open-source project, submit in this order:
 | Original patterns | [`../l5-custom-patterns.md`](../l5-custom-patterns.md), [`../../labs/l5/pattern_catalog/README.md`](../../../labs/l5/pattern_catalog/README.md) |
 | Coding Agent workspace safety | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
 | Coding Agent eval design | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) |
+| Data-source ingestion safety | [`../concepts/rag-memory-mcp-flow.md`](../concepts/rag-memory-mcp-flow.md), [`../../examples/data-source-policy/README.md`](../../../examples/data-source-policy/README.md) |
+| Browser or desktop action safety | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
 
 ## Maintenance Rule
 

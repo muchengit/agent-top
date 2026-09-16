@@ -36,6 +36,9 @@ This matrix distills Agent-Top's open-source inspiration into reusable patterns.
 | Coding workspace boundary | Coding Agents mutate repositories unexpectedly | Separate repository context, command execution, file writes, tests, and rollback state | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) | Whole editor plugin internals |
 | Patch-first editing | Hard-to-review direct mutations | Produce a reviewable patch before applying code changes | [`../concepts/design-review-checklist.md`](../concepts/design-review-checklist.md), [`../../../templates/contribution-checklist.md`](../../../templates/contribution-checklist.md) | Vendor diff UI |
 | Test-driven Agent validation | Code Agent changes are unproven | Tie every code-changing action to the smallest deterministic verification command | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) | Full CI suite boilerplate |
+| Source policy boundary | Agents over-collect or over-retrieve | Treat crawl, parse, store, retrieve, cite, ignore, and block as separate decisions | [`../concepts/rag-memory-mcp-flow.md`](../concepts/rag-memory-mcp-flow.md), [`../../../examples/data-source-policy/README.md`](../../../examples/data-source-policy/README.md) | Vendor crawler internals |
+| Ingestion metadata contract | Retrieval evidence cannot be explained | Preserve source URL, crawl time, freshness, permission state, parser version, and deletion state | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../concepts/long-term-memory.md`](../concepts/long-term-memory.md) | Full vector store schema |
+| Browser action trace | UI actions are invisible and hard to roll back | Record visible context, action intent, screenshot or DOM summary, and rollback state | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) | Provider-specific browser automation code |
 
 ## Decision Rules
 
@@ -47,6 +50,10 @@ This matrix distills Agent-Top's open-source inspiration into reusable patterns.
 
 ## Candidate Next Additions
 
+- A browser-use safety example using MCP policy-proxy principles.
+- A memory lifecycle exercise covering expiry, deletion, and conflicting preferences.
+- A structured-output validation Lab for schema retry and escalation.
+- A prompt optimization case with versioned prompts and eval report.
 - A browser-use safety example using MCP policy-proxy principles.
 - A memory lifecycle exercise covering expiry, deletion, and conflicting preferences.
 - A structured-output validation Lab for schema retry and escalation.

@@ -104,6 +104,8 @@ agent-top/
 │   ├── agent-decision-trace/         # 无需 API key 的 Agent 决策练习
 │   ├── memory-vs-evidence/           # Memory 与 Evidence 决策练习
 │   ├── coding-workspace-safety/      # Coding workspace safety 练习
+│   ├── data-source-policy/           # 数据源策略练习
+│   ├── coding-task-navigation/       # Coding task-first navigation 练习
 │   └── rag-evidence-refusal/         # RAG 证据与拒绝回答练习
 ├── labs/
 │   ├── l0/                           # 第一次 LLM 调用
