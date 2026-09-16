@@ -14,6 +14,7 @@ Executable Labs are the primary hands-on format for Agent-Top.
 - [`l2/single_agent_mcp`](l2/single_agent_mcp/README.md): single Agent with MCP-style tool boundary and guardrails.
 - [`l3/rag_memory_observability`](l3/rag_memory_observability/README.md): RAG, memory, and observability skeleton.
 - [`l4/production_postmortem`](l4/production_postmortem/README.md): production postmortem structure and checklist.
+- [`l5/custom_pattern_lab`](l5/custom_pattern_lab/README.md): reusable custom pattern with safety and verification.
 
 ## Run All Tests
 
