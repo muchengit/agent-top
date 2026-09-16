@@ -122,6 +122,7 @@ Read the checklist in this repository:
 - [`production/evals-checklist.md`](production/evals-checklist.md)
 - [`production/safety-checklist.md`](production/safety-checklist.md)
 - [`production/quarterly-maintenance.md`](production/quarterly-maintenance.md)
+- [`production/cost-stability-operations.md`](production/cost-stability-operations.md)
 
 For every checklist item, write one of three values:
 
@@ -319,3 +320,4 @@ A good L4 portfolio project shows at least level 3.
 - [`production/quarterly-maintenance.md`](production/quarterly-maintenance.md)
 - [`../../templates/postmortem-template.md`](../../templates/postmortem-template.md)
 - [`../../labs/l4/production_postmortem/README.md`](../../labs/l4/production_postmortem/README.md)
+- [`../../labs/l4/cost_and_stability_guardrails/README.md`](../../labs/l4/cost_and_stability_guardrails/README.md)

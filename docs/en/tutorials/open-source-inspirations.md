@@ -38,10 +38,20 @@ This page uses GitHub project discoveries verified on 2026-09-16. External links
 | Letta / MemGPT | agent memory | memory layers, summarization, long-term context |
 | Mem0 | memory platform | memory extraction, deduplication, privacy considerations |
 | TencentDB Agent Memory | team-level Agent memory hub | shared memory governance, code graph memory, reuse and access control |
+| nanobot | lightweight personal Agent framework | local-first Agent experience, tools, memory, chat apps |
+| 12-factor-agents | production Agent operating principles | deployment discipline, environment configuration, operational boundaries |
+| Agent-S | computer-use Agent framework | desktop/browser action traces, visual grounding, recovery under noisy UI |
+| Prompt optimization examples | prompt catalog and generate-evaluate-critique loops | prompt versioning, automated critique, eval-driven iteration |
 | Langfuse / OpenTelemetry GenAI patterns | tracing and observability | span naming, prompt/model/tool traces, cost and latency |
 | MLflow | AI engineering platform | experiment tracking, evaluation, monitoring, model serving boundaries |
+| LangWatch | LLM evaluation and Agent testing | prompt comparisons, regression suites, Agent testing workflows |
+| OpenLit | OpenTelemetry Agent observability | traces, prompt/tool spans, cost telemetry, runtime visibility |
+| Future-AGI | Agent evaluation and simulation platform | simulations, datasets, gateway guardrails, improvement loops |
 | Opik | LLM observability and evaluation | traces, automated evaluation, dashboards, agentic workflow monitoring |
 | AI-Infra-Guard | AI red teaming and security scanning | MCP/tool safety scans, jailbreak evals, agent security risk taxonomy |
+| Januscope | local-first MCP policy proxy | tool blocking, mutation gates, PII redaction, rate limits, audit logs |
+| AgentTrust / AgentLock patterns | pre-action Agent authorization | deny-by-default permissions, provenance checks, parameter gating |
+| Doberman-style runtime guards | input/output/tool-call runtime guardrails | unsafe action interception before execution |
 | Ragas / DeepEval / Arize Phoenix | RAG and LLM eval | faithfulness, answer relevance, hallucination checks, guardrail evals |
 | DSPy / promptfoo / eval-driven examples | evaluation and regression | eval datasets, prompt regression, safety checks |
 | SuperAGI / AgentOps-like projects | agent platforms | mission/task modeling, dashboarding, lifecycle observability |
@@ -60,6 +70,9 @@ This page uses GitHub project discoveries verified on 2026-09-16. External links
 - **Observability contract**: record prompts, tools, retrieval, guardrails, cost, and latency for every turn.
 - **Security red-team**: adversarially test prompts, tools, MCP boundaries, and agent workflows.
 - **Incident learning**: convert incidents into evals, guardrails, traces, or rollback actions.
+- **Prompt optimization loop**: version prompts, generate candidates, evaluate on datasets, and promote only measurable wins.
+- **MCP policy proxy**: keep permissions, audit, mutation gates, PII redaction, and rate limits close to tool execution.
+- **12-factor operating discipline**: treat environment, scaling, state, logs, and release strategy as Agent architecture concerns.
 
 ## Contributor Workflow
 
@@ -79,6 +92,8 @@ When adding another open-source project, submit in this order:
 | Supervisor routing | [`../../labs/l3/multi_agent_supervisor/README.md`](../../../labs/l3/multi_agent_supervisor/README.md) |
 | Release regression | [`../l4-production.md`](../l4-production.md), [`../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) |
 | Production postmortem | [`../../labs/l4/production_postmortem/README.md`](../../../labs/l4/production_postmortem/README.md) |
+| Cost and stability guardrails | [`../../labs/l4/cost_and_stability_guardrails/README.md`](../../../labs/l4/cost_and_stability_guardrails/README.md) |
+| Cost and stability operations | [`../l4-production.md`](../l4-production.md), [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md) |
 | Original patterns | [`../l5-custom-patterns.md`](../l5-custom-patterns.md), [`../../labs/l5/pattern_catalog/README.md`](../../../labs/l5/pattern_catalog/README.md) |
 
 ## Maintenance Rule

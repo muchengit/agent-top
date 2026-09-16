@@ -105,6 +105,7 @@ agent-top/
 │   │   │   └── projects.md
 │   │   ├── production/
 │   │   │   ├── README.md
+│   │   │   ├── cost-stability-operations.md
 │   │   │   ├── evals-checklist.md
 │   │   │   ├── quarterly-maintenance.md
 │   │   │   └── safety-checklist.md
@@ -145,6 +146,7 @@ agent-top/
 │   │   ├── rag_evaluator/
 │   │   └── rag_memory_observability/
 │   ├── l4/
+│   │   ├── cost_and_stability_guardrails/
 │   │   ├── production_postmortem/
 │   │   └── regression_gate/
 │   ├── l5/

@@ -99,7 +99,7 @@ agent-top/
 │   ├── l1/                           # ReAct、guardrails、多轮状态
 │   ├── l2/                           # 工具/MCP 边界与成本感知路由
 │   ├── l3/                           # RAG、多轮研究、多 Agent supervisor
-│   ├── l4/                           # 生产 postmortem 与回归门禁
+│   ├── l4/                           # 生产 postmortem、回归门禁与成本护栏
 │   ├── l5/                           # 可复用模式 Lab 与模式目录
 │   └── README.md
 ├── scripts/

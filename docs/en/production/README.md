@@ -14,6 +14,7 @@ Production guides are the readiness layer for Agent systems.
 - [`evals-checklist.md`](evals-checklist.md)
 - [`safety-checklist.md`](safety-checklist.md)
 - [`quarterly-maintenance.md`](quarterly-maintenance.md)
+- [`cost-stability-operations.md`](cost-stability-operations.md)
 
 ## Minimum Production Bar
 
