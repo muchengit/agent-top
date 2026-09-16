@@ -119,9 +119,9 @@ Rollback is not only reverting code. It may include:
 
 Read the checklist in this repository:
 
-- [`../production/evals-checklist.md`](../production/evals-checklist.md)
-- [`../production/safety-checklist.md`](../production/safety-checklist.md)
-- [`../production/quarterly-maintenance.md`](../production/quarterly-maintenance.md)
+- [`production/evals-checklist.md`](production/evals-checklist.md)
+- [`production/safety-checklist.md`](production/safety-checklist.md)
+- [`production/quarterly-maintenance.md`](production/quarterly-maintenance.md)
 
 For every checklist item, write one of three values:
 
@@ -314,8 +314,8 @@ A good L4 portfolio project shows at least level 3.
 
 ## Related Assets
 
-- [`../production/evals-checklist.md`](../production/evals-checklist.md)
-- [`../production/safety-checklist.md`](../production/safety-checklist.md)
-- [`../production/quarterly-maintenance.md`](../production/quarterly-maintenance.md)
+- [`production/evals-checklist.md`](production/evals-checklist.md)
+- [`production/safety-checklist.md`](production/safety-checklist.md)
+- [`production/quarterly-maintenance.md`](production/quarterly-maintenance.md)
 - [`../../templates/postmortem-template.md`](../../templates/postmortem-template.md)
 - [`../../labs/l4/production_postmortem/README.md`](../../labs/l4/production_postmortem/README.md)

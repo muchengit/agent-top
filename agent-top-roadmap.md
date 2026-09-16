@@ -1,6 +1,6 @@
 # Agent-Top Roadmap
 
-Agent-Top 的路线图用于定义高层学习路径、发布节奏和社区建设方向。具体执行细节见 [`docs/agent-top-concrete-framework.md`](docs/agent-top-concrete-framework.md)。
+Agent-Top 的路线图用于定义高层学习路径、发布节奏和社区建设方向。具体执行细节见 [`docs/en/agent-top-concrete-framework.md`](docs/en/agent-top-concrete-framework.md)。
 
 ## 目标
 
@@ -26,7 +26,7 @@ Agent-Top 的路线图用于定义高层学习路径、发布节奏和社区建�
 - `README.md`
 - `README.zh-CN.md`
 - `agent-top-roadmap.md`
-- `docs/agent-top-concrete-framework.md`
+- `docs/en/agent-top-concrete-framework.md`
 - 贡献入口与标签规范草案
 
 出口标准：新读者能在 10 分钟内理解项目定位、能力等级和贡献方式。

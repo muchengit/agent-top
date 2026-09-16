@@ -50,6 +50,54 @@ Each article or Lab follows a consistent structure:
 | L4 | Productionize Agent systems with evaluation, safety, deployment, cost, and postmortems |
 | L5 | Create original patterns, open-source contributions, and real-world influence |
 
+
+## Repository Structure
+
+```text
+agent-top/
+├── .github/                  # GitHub automation, labels, issue/PR templates
+├── docs/
+│   ├── en/                   # English source documentation
+│   │   ├── cases/            # Case studies for realistic Agent scenarios
+│   │   ├── community/        # Community operations, translation, labels, events
+│   │   ├── concepts/         # Stable Agent concepts and architecture patterns
+│   │   ├── frameworks/       # Framework comparison and selection notes
+│   │   ├── interviews/       # Interview framework and L1-L5 question sets
+│   │   ├── portfolio/        # Portfolio project tracks and evidence guides
+│   │   ├── production/       # Evals, safety, observability, rollback, maintenance
+│   │   ├── quick-reference/  # Glossary, commands, architecture and production checklists
+│   │   ├── tutorials/        # External tutorial-to-Agent-Top reference map
+│   │   └── l0-l5 tutorials   # Detailed bilingual-tied learning tutorials
+│   └── zh/                   # Chinese mirror documentation, same directory shape as docs/en
+├── labs/                     # Deterministic executable Labs, no API key required
+│   ├── l0/                   # First LLM call shape
+│   ├── l1/                   # ReAct, guardrails, multi-turn state
+│   ├── l2/                   # Tool/MCP boundaries and cost-aware routing
+│   ├── l3/                   # RAG, multi-round research, multi-agent supervisor
+│   ├── l4/                   # Production postmortems and regression gates
+│   └── l5/                   # Reusable pattern labs and pattern catalog
+├── scripts/                  # Repository validation scripts
+│   └── check_repository.py   # Markdown, link, bilingual, and Lab structure checks
+├── templates/                # Contribution templates for articles, Labs, interviews, postmortems
+├── docs-site/                # Lightweight static documentation landing page
+├── README.md                 # English project overview and repository map
+├── README.zh-CN.md           # Chinese project overview and repository map
+├── GOVERNANCE.md             # Maintainer roles, review policy, decision principles
+├── CONTRIBUTING.md           # English contribution guide
+├── CONTRIBUTING.zh-CN.md     # Chinese contribution guide
+├── ROADMAP_STATUS.md         # Current completion status and next priorities
+└── SECURITY.md               # Security reporting and safe Lab policy
+```
+
+## Directory Responsibilities
+
+- `docs/en/`: primary English source for all bilingual documentation.
+- `docs/zh/`: Chinese mirror with the same module structure as `docs/en`.
+- `labs/`: runnable, deterministic exercises that prove each capability level.
+- `templates/`: reusable contribution formats so reviewers can check consistency.
+- `scripts/`: local validation for links, frontmatter, version anchors, and Lab completeness.
+- `.github/`: CI workflow, labels, issue templates, and PR templates.
+
 ## Local Checks
 
 Run the repository checks:
@@ -63,15 +111,15 @@ python -m ruff check .
 
 ## Repository Map
 
-- Concepts: [`docs/concepts`](docs/concepts)
-- Framework map: [`docs/frameworks/framework-map.md`](docs/frameworks/framework-map.md)
-- Interview framework: [`docs/interviews/interview-framework.md`](docs/interviews/interview-framework.md)
+- Concepts: [`docs/en/concepts`](docs/en/concepts)
+- Framework map: [`docs/en/frameworks/framework-map.md`](docs/en/frameworks/framework-map.md)
+- Interview framework: [`docs/en/interviews/interview-framework.md`](docs/en/interviews/interview-framework.md)
 - Labs: [`labs`](labs)
 - Templates: [`templates`](templates)
-- Documentation index: [`docs/README.md`](docs/README.md)
+- Documentation index: [`docs/en/README.md`](docs/en/README.md)
 - Governance: [`GOVERNANCE.md`](GOVERNANCE.md)
 - Contributing: [`CONTRIBUTING.md`](CONTRIBUTING.md)
-- Community: [`docs/community/README.md`](docs/community/README.md)
+- Community: [`docs/en/community/README.md`](docs/en/community/README.md)
 - Security: [`SECURITY.md`](SECURITY.md)
 - Roadmap status: [`ROADMAP_STATUS.md`](ROADMAP_STATUS.md)
 
@@ -79,7 +127,7 @@ python -m ruff check .
 
 See the concrete framework:
 
-- [`docs/agent-top-concrete-framework.md`](docs/agent-top-concrete-framework.md)
+- [`docs/en/agent-top-concrete-framework.md`](docs/en/agent-top-concrete-framework.md)
 
 Related roadmap:
 

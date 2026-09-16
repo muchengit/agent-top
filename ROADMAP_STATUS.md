@@ -10,25 +10,25 @@ validated_date: 2026-09-16
 | Area | Status | Evidence |
 | --- | --- | --- |
 | Repository basics | Done | `README.md`, `README.zh-CN.md`, `LICENSE`, `.gitignore` |
-| Concrete framework | Done | `docs/agent-top-concrete-framework.md` |
-| Concepts | Done | `docs/concepts/`, including architecture and multi-round research flows |
-| Framework map | Done | `docs/frameworks/framework-map.md` |
+| Concrete framework | Done | `docs/en/agent-top-concrete-framework.md` |
+| Concepts | Done | `docs/en/concepts/`, including architecture and multi-round research flows |
+| Framework map | Done | `docs/en/frameworks/framework-map.md` |
 | Executable Labs | Done | `labs/l0` through `labs/l5`, including supplementary labs |
 | Detailed tutorials | Done | `docs/en/` and `docs/zh/` through L5 |
-| Tutorial reference map | Done | `docs/tutorials/reference-map.md`, `docs/tutorials/reference-map.zh.md` |
+| Tutorial reference map | Done | `docs/en/tutorials/reference-map.md`, `docs/zh/tutorials/reference-map.md` |
 | Chinese tutorial filenames | Done | Chinese names under `docs/zh/` |
-| Interview assets | Done | `docs/interviews/interview-framework.md`, `docs/interviews/questions/` |
-| Portfolio tracks | Done | `docs/portfolio/projects.md` |
-| Production guides | Done | `docs/production/`, `docs/quick-reference/production-checklist.md` |
-| Case studies | Done | `docs/cases/` |
-| Quick references | Done | `docs/quick-reference/` |
-| Community governance | Done | `GOVERNANCE.md`, `CONTRIBUTING.md`, `CONTRIBUTING.zh-CN.md`, `docs/community/` |
+| Interview assets | Done | `docs/en/interviews/interview-framework.md`, `docs/en/interviews/questions/` |
+| Portfolio tracks | Done | `docs/en/portfolio/projects.md` |
+| Production guides | Done | `docs/en/production/`, `docs/en/quick-reference/production-checklist.md` |
+| Case studies | Done | `docs/en/cases/`, including Chinese index |
+| Quick references | Done | `docs/en/quick-reference/`, including Chinese index |
+| Community governance | Done | `GOVERNANCE.md`, `CONTRIBUTING.md`, `CONTRIBUTING.zh-CN.md`, `docs/en/community/` |
 | Bilingual metadata | Done | frontmatter key and sync checks in `scripts/check_repository.py` |
 | Community operations | Done | rhythm, labels, maintainer rotation, translation workflow |
 | GitHub labels config | Done | `.github/labels.yml` |
-| Contributor onboarding | Done | `docs/community/contributor-onboarding.md` |
+| Contributor onboarding | Done | `docs/en/community/contributor-onboarding.md` |
 | Security policy | Done | `SECURITY.md` |
-| Maintenance process | Done | `docs/production/quarterly-maintenance.md`, `templates/monthly-contributor-report.md` |
+| Maintenance process | Done | `docs/en/production/quarterly-maintenance.md`, `templates/monthly-contributor-report.md` |
 | CI checks | Done | `.github/workflows/ci.yml` |
 
 ## Health Targets

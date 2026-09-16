@@ -52,9 +52,9 @@ Agent-Top 是一个面向 LLM Agent 开发的开源学习框架。
 
 ## 仓库地图
 
-- 核心概念：[`docs/concepts`](docs/concepts)
-- 框架地图：[`docs/frameworks/framework-map.md`](docs/frameworks/framework-map.md)
-- 面试框架：[`docs/interviews/interview-framework.md`](docs/interviews/interview-framework.md)
+- 核心概念：[`docs/en/concepts`](docs/en/concepts)
+- 框架地图：[`docs/en/frameworks/framework-map.md`](docs/en/frameworks/framework-map.md)
+- 面试框架：[`docs/en/interviews/interview-framework.md`](docs/en/interviews/interview-framework.md)
 - 可执行 Lab：[`labs`](labs)
 - 内容模板：[`templates`](templates)
 - 治理规范：[`GOVERNANCE.md`](GOVERNANCE.md)
@@ -65,7 +65,7 @@ Agent-Top 是一个面向 LLM Agent 开发的开源学习框架。
 
 具体框架见：
 
-- [`docs/agent-top-concrete-framework.md`](docs/agent-top-concrete-framework.md)
+- [`docs/en/agent-top-concrete-framework.md`](docs/en/agent-top-concrete-framework.md)
 
 配套路线图：
 

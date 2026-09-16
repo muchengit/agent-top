@@ -1,0 +1,219 @@
+---
+title: L5 原创模式
+validated_date: 2026-09-16
+tested_against: "python 3.10+"
+i18n-key: l5-custom-patterns
+last-synced: 2026-09-16
+---
+
+# L5 原创模式
+
+## 目标
+
+设计一个可复用 Agent 模式：具备稳定输入、输出、安全检查、验证机制，以及清晰的失败模式。
+
+## 为什么 L5 重要
+
+L4 证明你能运行生产系统；L5 证明你能改进其他团队构建系统的方式。
+
+L5 不是做更大的应用，而是提出一个更小、可重复采用的模式，让其他人在不复制脆弱实现细节的情况下受益。
+
+## 前置要求
+
+- 已完成 L0 到 L4。
+- 接触过至少一个生产级 Agent 系统。
+- 能本地运行 L5 Lab。
+- Python 3.10+。
+
+## 什么算 Pattern
+
+一个模式应能回答：
+
+- 它解决什么问题？
+- 需要哪些输入？
+- 保证哪些输出？
+- 执行前有哪些检查？
+- 执行后有哪些验证？
+- 如何安全失败？
+- 谁可以维护它？
+
+如果模式回答不了这些问题，它大概率只是项目专用代码。
+
+## 模式示例：Verifiable Action
+
+一个适合的 L5 起点是 `VerifiableActionPattern`。它把动作请求变成一个小计划，再让任何有副作用的工具执行。
+
+该模式有三阶段：
+
+1. `clarify`：验证请求形态和缺失字段。
+2. `execute`：通过受控 gateway 调用工具。
+3. `verify`：在报告成功前运行 eval probe 或验证步骤。
+
+如果请求命中安全规则，模式会在执行前停止。
+
+## 跟做步骤
+
+### Step 1: 看清模式边界
+
+阅读 Lab：
+
+- [`../../labs/l5/custom_pattern_lab/README.md`../labs/l5/custom_pattern_lab/README.md)
+- [`../../labs/l5/custom_pattern_lab/agent_top_labs_l5_custom_pattern_lab.py`../labs/l5/custom_pattern_lab/agent_top_labs_l5_custom_pattern_lab.py)
+
+Lab 定义了两个结果对象：
+
+- `PlanStep(intent, tool, rollback_hint)`。
+- `PatternResult(steps, stop_reason)`。
+
+它刻意保持很小。L5 模式应先能被轻松推理，而不是先强到变成框架。
+
+### Step 2: 运行 Lab
+
+在仓库根目录执行：
+
+```bash
+python -m unittest labs.l5.custom_pattern_lab.test_lab
+```
+
+期望结果：
+
+```text
+Ran 2 tests in ...
+OK
+```
+
+两个测试证明两个关键行为：
+
+- 安全请求会生成三步计划。
+- 命中安全规则的请求会以 `blocked_by_safety_rule` 停止。
+
+### Step 3: 理解安全通过路径
+
+安全路径返回：
+
+- `intent="clarify"`、`tool="validator"`、`rollback_hint="remove unclear fields"`。
+- `intent="execute"`、`tool="tool_gateway"`、`rollback_hint="restore previous state"`。
+- `intent="verify"`、`tool="eval_probe"`、`rollback_hint="disable path"`。
+
+关键点是：执行成功不等于任务完成。每个高风险动作都需要 rollback hint 和验证步骤。
+
+### Step 4: 理解阻断路径
+
+当请求包含配置的安全规则时，模式返回：
+
+```python
+PatternResult((), "blocked_by_safety_rule")
+```
+
+这很重要，因为阻断必须发生在工具执行前。破坏性动作之后的安全检查太晚。
+
+### Step 5: 定义你自己的 Pattern
+
+写一份一页模式规格：
+
+```markdown
+# Pattern Name
+
+## Problem
+一句话说明问题。
+
+## Inputs
+- 必需输入 1
+- 必需输入 2
+
+## Outputs
+- 保证输出 1
+- 失败输出
+
+## Safety Checks
+- 执行前检查
+
+## Execution
+- Step 1
+- Step 2
+
+## Verification
+- 执行后验证
+
+## Failure Modes
+- 失败模式和安全响应
+
+## When Not to Use
+- 不适合使用该模式的场景
+```
+
+好的模式有边界，也应该说明什么时候不要使用它。
+
+### Step 6: 验证 Pattern
+
+分享模式前，做这些检查：
+
+- 至少能跑通两个不同例子。
+- 至少有一条 blocked 或 failed path。
+- 每个步骤都有 owner。
+- 包含 rollback 或安全降级。
+- 包含验证，而不是只有生成。
+- 非作者贡献者也能维护。
+
+### Step 7: 准备开源贡献
+
+要把模式变成开源贡献：
+
+1. 添加带确定性测试的 Lab。
+2. 添加带预期输出的短教程。
+3. 用 `validated_date` 和 `tested_against` 标记版本锚。
+4. 除非模式明确框架相关，否则避免框架专用代码。
+5. 包含失败模式和常见误用。
+6. 把模式链接到 L0–L5 能力模型。
+
+当 reviewer 不需要读私有生产代码也能理解模式时，贡献才准备好 review。
+
+### Step 8: 运行完整仓库检查
+
+在仓库根目录执行：
+
+```bash
+python scripts/check_repository.py
+python -m unittest discover -s labs -p "test_*.py"
+python -m compileall -q labs scripts
+python -m ruff check .
+```
+
+所有检查都应通过，才能把模式作为文档或 Lab 内容提交。
+
+## 常见错误
+
+- 把框架 wrapper 当成 pattern。
+- 还没定义边界就急着命名模式。
+- 把失败模式藏在 happy path 后面。
+- 在破坏性执行之后才做安全检查。
+- 理解模式需要太多生产上下文。
+- 把验证做成可选项。
+- 不提供“不适合该模式”的例子。
+
+## Pattern 就绪评分
+
+给模式打 0 到 4 分：
+
+- 0：一次性 prompt 或脚本。
+- 1：可复用想法，但没有稳定 contract。
+- 2：有输入、输出和一个失败模式。
+- 3：有安全、验证、回滚和测试。
+- 4：至少两个例子采用，文档、测试和维护者都清楚。
+
+强的 L5 产出通常至少是 3 分模式。
+
+## 自测
+
+1. 可复用 Agent 模式的稳定边界是什么？
+2. 为什么安全检查必须发生在执行前？
+3. 另一个贡献者如何维护这个模式？
+4. 什么证据证明模式能跨项目复用？
+5. 什么时候模式应该升级为框架，而不是继续作为模式？
+
+## 关联资产
+
+- [`../../labs/l5/custom_pattern_lab/README.md`../labs/l5/custom_pattern_lab/README.md)
+- [`../../templates/article-template.md`](../../templates/article-template.md)
+- [`../../templates/lab-template.md`](../../templates/lab-template.md)
+- [`agent-top-concrete-framework.md`](agent-top-concrete-framework.md)
