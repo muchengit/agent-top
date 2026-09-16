@@ -23,10 +23,11 @@ Turn an Agent prototype into a production-ready system.
 - Evaluation set and regression suite.
 - Observability traces.
 - Rollback plan.
-- Postmortem template.
+- Postmortem template and executable Lab.
 
 ## Related Assets
 
 - [`../production/evals-checklist.md`](../production/evals-checklist.md)
 - [`../production/safety-checklist.md`](../production/safety-checklist.md)
 - [`../../templates/postmortem-template.md`](../../templates/postmortem-template.md)
+- [`../../labs/l4/production_postmortem/README.md`](../../labs/l4/production_postmortem/README.md)

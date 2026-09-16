@@ -23,10 +23,11 @@ last-synced: 2026-09-16
 - 评估集与回归测试。
 - 可观测 trace。
 - 回滚方案。
-- Postmortem 模板。
+- Postmortem 模板与可执行 Lab。
 
 ## 关联资产
 
 - [`../production/evals-checklist.md`](../production/evals-checklist.md)
 - [`../production/safety-checklist.md`](../production/safety-checklist.md)
 - [`../../templates/postmortem-template.md`](../../templates/postmortem-template.md)
+- [`../../labs/l4/production_postmortem/README.md`](../../labs/l4/production_postmortem/README.md)
