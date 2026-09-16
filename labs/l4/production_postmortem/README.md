@@ -42,3 +42,15 @@ python -m unittest labs.l4.production_postmortem.test_lab
 ## Reference Template
 
 See [`../../../templates/postmortem-template.md`](../../../templates/postmortem-template.md).
+
+## Common Pitfalls
+
+- Writing only a summary without root causes.
+- Creating action items without owners or due dates.
+- Skipping rollback, evaluation, or safety-control follow-up.
+
+## Self-Check
+
+1. What makes a postmortem actionable?
+2. What coverage is missing if action items have no owner?
+3. Why are rollback and evaluation plans part of production readiness?

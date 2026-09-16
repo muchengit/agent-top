@@ -22,3 +22,20 @@ python -m unittest labs.l2.single_agent_mcp.test_lab
 - Tool servers expose typed operations.
 - Agents should validate tool results.
 - Guardrails can reject unsafe or malformed requests.
+
+## Prerequisites
+
+- L1 completed.
+- Basic understanding of validation and guardrails.
+
+## Common Pitfalls
+
+- Calling tools without validating inputs first.
+- Trusting tool output without a response schema or sanity check.
+- Letting unsafe requests reach a tool boundary.
+
+## Self-Check
+
+1. Why should tool calls be explicitly typed?
+2. How should an Agent handle malformed tool arguments?
+3. What guardrail prevents empty requests?

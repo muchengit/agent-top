@@ -29,3 +29,15 @@ python -m unittest labs.l0.first_llm_call.test_lab
 - Tokens are not exactly equal to words.
 - A system prompt sets the assistant role.
 - Context window limits the total text the model can process.
+
+## Common Pitfalls
+
+- Treating tokens as words. Tokens are model-specific chunks of text.
+- Forgetting that empty prompts can produce undefined or unsafe behavior.
+- Assuming one prompt always means one deterministic answer.
+
+## Self-Check
+
+1. What is the role of a system prompt?
+2. Why are tokens not the same as words?
+3. What could go wrong if the prompt is empty?
