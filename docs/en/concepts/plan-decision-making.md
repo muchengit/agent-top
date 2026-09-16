@@ -78,3 +78,23 @@ flowchart TD
 3. What happens if it fails?
 4. What is the stop condition?
 5. Should this step be verified or human-approved first?
+
+## Deep Dive: Planning Patterns
+
+Useful Agent planning patterns include ReAct, plan-and-execute, search-tree planning, reflection, hierarchical planning, and human-in-loop planning. ReAct is simple and debuggable. Search-tree planning can improve decisions but adds token cost, latency, and complexity.
+
+## Decision Policy
+
+A decision policy defines what an Agent may do without asking. Examples: read-only retrieval may run automatically; write actions require schema validation; destructive actions require human approval; cross-tenant actions are denied by default; missing evidence should clarify rather than guess; repeated tool failure should stop or escalate.
+
+A good decision event includes reason, expected evidence, risk level, allowed tools, stop condition, and fallback.
+
+## Avoiding Plan Hallucination
+
+Plan hallucination happens when the Agent proposes impossible or unsafe next steps. Check whether the planned tool exists, whether the actor has permission, whether the action is reversible, whether the expected evidence is plausible, whether budget and stop conditions exist, and whether the same failed action has repeated.
+
+## Sources
+
+- LangGraph plan-and-execute tutorial: https://langchain-ai.github.io/langgraph/tutorials/plan-and-execute/plan-and-execute/
+- LlamaIndex planner documentation: https://developers.llamaindex.ai/python/framework/understanding/agent/agent_planner/
+- LangGraph multi-agent planning blog: https://www.langchain.com/blog/optimizing-multi-agent-planning-with-search-tree

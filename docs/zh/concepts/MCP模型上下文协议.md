@@ -42,6 +42,51 @@ flowchart QR
   Server --> Systems[External Systems]
 ```
 
+## 深入：MCP Capabilities
+
+当前 MCP specification 围绕一组 client 与 server 协商的能力构建。
+
+| Capability | Server 暴露什么 | Client / Host 应该做什么 |
+| --- | --- | --- |
+| Tools | 带 JSON schema 的 typed actions | validate、authorize、audit、处理 error |
+| Resources | 带 URI 的可读内容 | 当成 context/evidence，而不是 instruction authority |
+| Prompts | 可复用 prompt templates | 跟踪版本，避免行为漂移 |
+| Sampling | 请求 model completion | 用 policy gate；不要让 server 无约束触发模型使用 |
+| Roots | workspace roots 或 allowed paths | 强制执行 path boundaries 和 tenant isolation |
+| Elicitation | 请求缺失 human input | 作为 clarification 或 approval，而不是隐藏动作 |
+
+MCP 通过 JSON-RPC 风格 request/response 使用 stdio 或 streamable HTTP 等 transports。重点不是 transport 本身，而是 tools、resources、prompts、roots、sampling 变成显式 contracts，而不是 app-specific glue。
+
+## 深入：Security
+
+MCP 会扩展对 files、tools、databases、workflows 的访问。因此 host、server、gateway 必须防御：
+
+- tool poisoning：tool description 或 result 试图操纵 model；
+- resource content 里的 prompt injection；
+- confused deputy attacks：trusted host 调用了错误 server action；
+- over-broad resources 导致 data exfiltration；
+- lazy allowlists 导致 excessive permissions；
+- destructive tool calls 缺少 audit trails。
+
+实用控制：
+
+- 非必要的敏感数据不要放入 model context；
+- tool metadata 中保留 path、tenant、actor boundaries；
+- irreversible tools 需要 human approval；
+- 记录 schema validation、permission checks、server response、final action；
+- 生产使用前 pin 或 review MCP server 版本；
+- 用 hostile tool descriptions 和 poisoned resource content 做测试。
+
+## 深入：Operations
+
+生产 MCP 应该：
+
+- 把每个 server 当 service 管：owner、version、SLA、rollback path。
+- 监控 tool-call latency、failure rate、permission denials、schema errors。
+- MCP server 变更必须 review，因为 tool schemas 会影响 model behavior。
+- Server prompts 或 tool descriptions 变化时，评估 prompt/tool drift。
+- 为 unknown tool、invalid payload、denied permission、unreachable server 加 regression tests。
+
 ## MCP 和 Function Calling 的区别
 
 Function calling 是模型能力：模型提出一个 tool call，包含工具名和 JSON 参数。
@@ -98,3 +143,9 @@ Agent-Top 在 Labs 中使用 MCP-style ideas，但不要求真实 server：
 
 - Tool/MCP 安全技能卡：[`../skills/工具MCP安全技能卡.md`](../skills/工具MCP安全技能卡.md)
 - Lab：[`../../../labs/l2/single_agent_mcp/README.md`](../../../labs/l2/single_agent_mcp/README.md)
+
+
+## 来源
+
+- Model Context Protocol Specification 2025-06-18: https://modelcontextprotocol.io/specification/2026-07-29
+- MCP Security Best Practices: https://modelcontextprotocol.io/specification/2025-06-18/basic/security_best_practices

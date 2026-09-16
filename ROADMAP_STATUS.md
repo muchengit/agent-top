@@ -11,7 +11,7 @@ validated_date: 2026-09-16
 | --- | --- | --- |
 | Repository basics | Done | `README.md`, `README.zh-CN.md`, `LICENSE`, `.gitignore` |
 | Concrete framework | Done | `docs/en/agent-top-concrete-framework.md` |
-| Concepts | Done | `docs/en/concepts/`, including architecture, MCP, multi-agent scheduling, long-term memory, hallucination, and plan decisions |
+| Concepts | Done | `docs/en/concepts/`, including architecture, MCP, multi-agent scheduling, long-term memory, hallucination, plan decisions, and deep-dive sources |
 | Framework map | Done | `docs/en/frameworks/framework-map.md` |
 | Executable Labs | Done | `labs/l0` through `labs/l5`, including supplementary labs |
 | Detailed tutorials | Done | `docs/en/` and `docs/zh/` through L5 |

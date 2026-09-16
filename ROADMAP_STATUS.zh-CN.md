@@ -11,7 +11,7 @@ validated_date: 2026-09-16
 | --- | --- | --- |
 | 仓库基础 | Done | `README.md`, `README.zh-CN.md`, `LICENSE`, `.gitignore` |
 | 具体框架 | Done | `docs/en/agent-top-concrete-framework.md` |
-| 概念 | Done | `docs/en/concepts/`, 包括架构、MCP、多 Agent 调度、长期记忆、模型幻觉和 Plan 决策 |
+| 概念 | Done | `docs/en/concepts/`, 包括架构、MCP、多 Agent 调度、长期记忆、模型幻觉、Plan 决策和核心概念深挖来源 |
 | 框架地图 | Done | `docs/en/frameworks/framework-map.md` |
 | 可执行 Lab | Done | `labs/l0` 到 `labs/l5`，包括补充 Lab |
 | 详细教程 | Done | `docs/en/` 和 `docs/zh/` 覆盖 L0-L5 |

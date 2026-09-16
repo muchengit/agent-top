@@ -42,6 +42,51 @@ flowchart LR
   Server --> Systems[External Systems]
 ```
 
+## Deep Dive: MCP Capabilities
+
+The current MCP specification is built around a small set of capabilities that clients and servers negotiate.
+
+| Capability | Server Exposes | Client / Host Should Do |
+| --- | --- | --- |
+| Tools | Typed actions with JSON schemas | Validate, authorize, audit, and handle errors |
+| Resources | Readable content with URIs | Treat as context/evidence, not instruction authority |
+| Prompts | Reusable prompt templates | Track version and avoid silent behavior drift |
+| Sampling | Requests for model completion | Gate by policy; do not let servers trigger uncontrolled model use |
+| Roots | Workspace roots or allowed paths | Enforce path boundaries and tenant isolation |
+| Elicitation | Request for missing human input | Surface as clarification or approval, never as hidden action |
+
+MCP uses JSON-RPC-style request/response patterns over transports such as stdio or streamable HTTP. The important point is not the transport itself; it is that tools, resources, prompts, roots, and sampling become explicit contracts instead of ad-hoc app glue.
+
+## Security Deep Dive
+
+MCP expands access to files, tools, databases, and workflows. That means the host, server, and gateway must defend against:
+
+- tool poisoning: a tool description or result tries to steer the model;
+- prompt injection through resource content;
+- confused deputy attacks where a trusted host calls the wrong server action;
+- data exfiltration through over-broad resources;
+- excessive permissions through lazy allowlists;
+- missing audit trails for destructive tool calls.
+
+Practical controls:
+
+- keep sensitive data out of the model context unless needed;
+- use path, tenant, and actor boundaries in tool metadata;
+- require human approval for irreversible tools;
+- log schema validation, permission checks, server response, and final action;
+- pin or review MCP server versions before production use;
+- test with hostile tool descriptions and poisoned resource content.
+
+## Operational Deep Dive
+
+For production MCP:
+
+- Treat each server as a service with owner, version, SLA, and rollback path.
+- Monitor tool-call latency, failure rate, permission denials, and schema errors.
+- Keep MCP server changes behind review because tool schemas affect model behavior.
+- Evaluate prompt/tool drift when server prompts or tool descriptions change.
+- Add regression tests for unknown tool, invalid payload, denied permission, and unreachable server.
+
 ## MCP vs Function Calling
 
 Function calling is a model capability: the model proposes a tool call with a name and JSON arguments.
@@ -98,3 +143,9 @@ When MCP-style integration fails:
 
 - Tool/MCP safety skill card: [`../skills/tool-mcp-safety.md`](../skills/tool-mcp-safety.md)
 - Lab: [`../../labs/l2/single_agent_mcp/README.md`](../../../labs/l2/single_agent_mcp/README.md)
+
+
+## Sources
+
+- Model Context Protocol Specification 2025-06-18: https://modelcontextprotocol.io/specification/2026-07-29
+- MCP Security Best Practices: https://modelcontextprotocol.io/specification/2025-06-18/basic/security_best_practices

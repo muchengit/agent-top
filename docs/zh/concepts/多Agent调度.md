@@ -81,3 +81,22 @@ Scheduler 不应只靠模型偏好，还应考虑：
 - 每个 worker 是否有 stop condition？
 - 每个 evidence-heavy answer 是否有 verifier？
 - 成本是否有上限？
+
+## 深入：生产多 Agent 模式
+
+生产多 Agent 系统应该是显式 control graph，而不是很多 LLM 松散对话。只有当 Supervisor/router、sequential pipeline、hierarchical team、handoff、parallel fan-out/fan-in 或 human route 能提升 isolation、verification 或 clarity 时才使用。
+
+把 planning、execution、verification、governance 分开。Scheduler 应拥有 routing 和 state。Worker agents 应保持窄职责。Verifier output 应视为 evidence，不是 authority。
+
+每个 worker 应定义可读写 state、必须返回的 evidence、禁止推断的内容，以及冲突处理方式。
+
+## 状态和上下文隔离
+
+使用由 Supervisor 拥有的全局 task state。Worker scratch notes 保持 local。Durable facts 只能通过显式 tools 写入。Human approval 应作为 audit event 存储。
+
+每次运行都应记录原始 goal、scheduler decision、selected agent、allowed tools、tool results、verifier decision、final answer、cost、latency、retry count 和 escalation。
+
+## 来源
+
+- NVIDIA 12-Factor Agents: https://developer.nvidia.com/blog/12-factor-agents-a-cto-s-guide-to-production-ready-multi-agent-ai-systems/
+- Microsoft Azure Build multi-agentic systems with Azure AI Agent Service: https://learn.microsoft.com/en-us/azure/foundry/concepts/azure-ai-agent-service-multi-agent-build

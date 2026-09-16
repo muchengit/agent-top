@@ -82,3 +82,19 @@ Retrieved memory is context, not authority. A live system of record should win o
 - Are cross-tenant access paths tested?
 - Are memory writes auditable?
 - Does the final answer disclose important remembered context when needed?
+
+## Deep Dive: Memory Systems in Production
+
+Long-term memory needs lifecycle control: write, retrieve, update, resolve conflicts, delete, restrict access, and evaluate. A practical stack includes conversation history, session summary, user/entity memory, and a knowledge base with citations.
+
+A memory record should include owner/scope, source, timestamp, confidence, access policy, last accessed, last verified, and correction/deletion path. Source strength matters: tool results and confirmed user statements are stronger than model inferences.
+
+## Retrieval Strategy
+
+Scope retrieval before semantic search by tenant/user, role, recency, source type, confidence, verification status, and task relevance. If memory conflicts with live retrieval or a system of record, prefer the live source and flag the memory as stale.
+
+## Sources
+
+- Letta memory layers: https://docs.letta.com/concepts/memory/levels_of_memory
+- Letta long-term memory: https://docs.letta.com/concepts/memory/long-term_memory
+- Mem0 documentation: https://docs.mem0.ai/overview

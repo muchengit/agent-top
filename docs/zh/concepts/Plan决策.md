@@ -78,3 +78,23 @@ flowchart TD
 3. 失败时会发生什么？
 4. Stop condition 是什么？
 5. 这一步是否需要先 verify 或 human approval？
+
+## 深入：Planning 模式
+
+有用的 Agent planning patterns 包括 ReAct、plan-and-execute、search-tree planning、reflection、hierarchical planning 和 human-in-loop planning。ReAct 简单且可调试。Search-tree planning 可能提升决策质量，但会增加 token cost、latency 和 complexity。
+
+## 决策策略
+
+Decision policy 定义 Agent 可以不经询问执行什么。例如：read-only retrieval 可自动执行；write actions 需要 schema validation；destructive actions 需要 human approval；cross-tenant actions 默认拒绝；missing evidence 应 clarify 而不是 guess；repeated tool failure 应 stop 或 escalate。
+
+好的 decision event 应包含 reason、expected evidence、risk level、allowed tools、stop condition 和 fallback。
+
+## 避免 Plan Hallucination
+
+Plan hallucination 是 Agent 提出 impossible 或 unsafe next steps。检查 planned tool 是否存在、actor 是否有权限、action 是否 reversible、expected evidence 是否 plausible、是否有 budget 和 stop conditions，以及同一个失败动作是否已经重复。
+
+## 来源
+
+- LangGraph plan-and-execute tutorial: https://langchain-ai.github.io/langgraph/tutorials/plan-and-execute/plan-and-execute/
+- LlamaIndex planner documentation: https://developers.llamaindex.ai/python/framework/understanding/agent/agent_planner/
+- LangGraph multi-agent planning blog: https://www.langchain.com/blog/optimizing-multi-agent-planning-with-search-tree

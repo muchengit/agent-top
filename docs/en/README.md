@@ -46,6 +46,7 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`concepts/long-term-memory.md`](concepts/long-term-memory.md)
 - [`concepts/model-hallucination.md`](concepts/model-hallucination.md)
 - [`concepts/plan-decision-making.md`](concepts/plan-decision-making.md)
+- [`concepts/deep-dive-sources.md`](concepts/deep-dive-sources.md)
 
 ## Tutorial Reference Map
 

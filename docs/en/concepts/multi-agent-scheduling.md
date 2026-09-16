@@ -81,3 +81,22 @@ Use a single agent with tools unless multi-agent improves isolation, verificatio
 - Does every worker have a stop condition?
 - Does every evidence-heavy answer have a verifier?
 - Are costs bounded?
+
+## Deep Dive: Production Multi-Agent Patterns
+
+Production multi-agent systems are explicit control graphs, not many LLMs talking loosely. Use a supervisor/router, sequential pipeline, hierarchical team, handoff, parallel fan-out/fan-in, or human route only when the topology improves isolation, verification, or clarity.
+
+Separate planning, execution, verification, and governance. The scheduler should own routing and state. Worker agents should keep narrow responsibilities. Verifier output should be treated as evidence, not authority.
+
+For each worker, define what state it may read, what state it may write, what evidence it must return, what it may not infer, and what happens on conflict.
+
+## State and Context Isolation
+
+Use global task state owned by the supervisor. Keep worker scratch notes local. Write durable facts only through explicit tools. Store human approval as an audit event.
+
+For every run, log the original goal, scheduler decision, selected agent, allowed tools, tool results, verifier decision, final answer, cost, latency, retry count, and escalation.
+
+## Sources
+
+- NVIDIA 12-Factor Agents: https://developer.nvidia.com/blog/12-factor-agents-a-cto-s-guide-to-production-ready-multi-agent-ai-systems/
+- Microsoft Azure Build multi-agentic systems with Azure AI Agent Service: https://learn.microsoft.com/en-us/azure/foundry/concepts/azure-ai-agent-service-multi-agent-build

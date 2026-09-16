@@ -65,3 +65,18 @@ High-risk cases:
 - Add regression prompts for every hallucination incident.
 - Prefer refusal or clarification over confident guesswork.
 - Make evidence freshness visible in the final answer.
+
+## Deep Dive: Evaluating Hallucination
+
+Hallucination evaluation should measure unsupported claims, not fluent-sounding answers. Useful categories are factuality, citation correctness, abstention, overstatement, tool misuse, and stale knowledge.
+
+A minimal eval set should include questions with clear evidence, missing evidence, stale sources, contradictory sources, tool-result cases, and safety-sensitive cases. Score whether the answer cited the right source, avoided unsupported claims, refused when evidence was absent, changed when tool evidence changed, and blocked unsafe action.
+
+## Hallucination and Action
+
+The worst Agent hallucinations are hallucinations that trigger actions: calling a tool because the model believed it existed, updating a ticket with fabricated details, writing invented citations, or approving a risky action based on invented policy. These need action gates: schema validation, permission checks, evidence verification, human approval for irreversible steps, and regression evals.
+
+## Sources
+
+- Ragas hallucination guide: https://docs.ragas.io/en/v0.1.21/concepts/hallucinations/
+- Ragas FAQ on hallucinations: https://docs.ragas.io/en/latest/faq/faq.html
