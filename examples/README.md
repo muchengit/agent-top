@@ -15,6 +15,8 @@ Agent-Top examples are fictional, local, and do not require API keys, external s
 | Agent Eval Regression | [`agent-eval-regression/README.md`](agent-eval-regression/README.md) | Prompt version comparison, fixture-based grading, regression gates, and launch/rollback decisions |
 | GitHub Agent Review | [`github-agent-review/README.md`](github-agent-review/README.md) | PR review order, CI gating, diff-based review notes, and platform-native tool boundaries |
 | Observability Trace | [`observability-trace/README.md`](observability-trace/README.md) | Trace completeness, PII redaction, tool/retrieval/final-answer evidence, and postmortem readiness |
+| Model Gateway Evidence | [`model-gateway/README.md`](model-gateway/README.md) | Model routing evidence, fallback/retry visibility, budget decisions, and inference runtime checks |
+| Safety Eval Evidence | [`safety-eval/README.md`](safety-eval/README.md) | Injection, leakage, refusal, harm, hallucination, memory conflict, and guardrail evidence |
 
 ## How To Use These Exercises
 

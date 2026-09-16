@@ -15,6 +15,7 @@ A second 2026-09-17 open-source scan verified SSH reachability for promptfoo, Go
 A 2026-09-17 GitHub-native pass re-verified several GitHub CLI, GitHub REST API, GitHub MCP Server, and Copilot coding-agent style projects with `git ls-remote`. These entries absorb repository review workflows, PR review patterns, CI-first validation, and platform-native tool boundaries.
 A 2026-09-17 runtime-evidence pass checked reachable public repositories with `git ls-remote`: Sentry, Grafana Pyroscope, Ruff, uv, and Dapr. These entries are learning signals for incident grouping, profiling, deterministic lint gates, lockfile evidence, and workflow provenance; they are not authoritative setup guides.
 A 2026-09-17 platform-evidence pass checked reachable public repositories with `git ls-remote`: OpenTelemetry semantic conventions, OpenTelemetry Python, OpenTelemetry Python contrib, Arize Phoenix, promptfoo, LiteLLM, Dify, Agno, Traceloop OpenLLMetry, vLLM, and open-webui. These entries are learning signals for GenAI telemetry, eval-as-CI, model gateway boundaries, platform portals, and inference runtime metrics; they are not authoritative setup guides.
+A 2026-09-17 safety-evidence pass checked reachable public repositories with `git ls-remote`: Guardrails AI, OpenAI Evals, Langfuse, Mem0, Letta, Chroma, Ollama, Microsoft RAI Toolbox, Hugging Face Alignment Handbook, and MLflow. These entries are learning signals for output validation, safety eval batteries, trace datasets, memory governance, vector provenance, local model boundaries, responsible AI review, and experiment evidence; they are not authoritative setup guides.
 
 ## Project-to-Topic Map
 
@@ -89,6 +90,16 @@ A 2026-09-17 platform-evidence pass checked reachable public repositories with `
 | Traceloop OpenLLMetry-style integrations | LLM framework instrumentation | library-specific traces, model-call spans, retrieval spans, and prompt/tool telemetry |
 | vLLM-style inference runtimes | serving runtime metrics | throughput, batching, KV cache pressure, timeout behavior, and local/self-hosted deployment boundaries |
 | open-webui-style Agent portals | user-facing Agent application layer | chat UI boundaries, document tools, web tools, permissioned sharing, and user-facing action evidence |
+| Guardrails AI-style validation layers | output and tool validation | validator chains, retry/repair policy, fail-closed decisions, and validation evidence |
+| OpenAI Evals-style suites | eval suite structure | versioned tasks, graders, data assets, and comparison reports |
+| Langfuse-style LLM engineering observability | trace dataset and feedback loop | traces, datasets, annotation, prompt comparisons, and review workflow evidence |
+| Mem0-style memory layers | extracted memory lifecycle | memory extraction, deduplication, update/delete behavior, privacy scoping, and conflict visibility |
+| Letta-style stateful agent memory | agent state and memory tools | memory blocks, recall steps, archival memory, and stateful Agent boundaries |
+| Chroma-style local vector stores | vector evidence and namespaces | collection/namespace boundaries, deletion propagation, source ids, and local indexing evidence |
+| Ollama-style local model runtimes | local inference boundaries | model registry, local pull/run evidence, resource use, and offline/private runtime boundaries |
+| Microsoft RAI Toolbox-style review workflows | responsible AI review | fairness, toxicity, representativeness, bias, transparency, and mitigation review evidence |
+| Hugging Face Alignment Handbook-style guidance | alignment evaluation concepts | helpfulness, honesty, harmlessness, safety metrics, and evaluation methodology boundaries |
+| MLflow-style experiment tracking | experiment evidence | run id, parameters, metrics, artifacts, and comparison evidence |
 | Sentry-style error monitoring | incident grouping and release-aware errors | issue fingerprinting, release association, error grouping, alert routing, and blameless root-cause evidence |
 | Grafana Pyroscope-style continuous profiling | runtime hotspots and resource evidence | sampling or continuous profiling, service/resource labels, hotspot routes, and cost diagnosis without full traces |
 | Ruff-style deterministic linters | local quality gates | fast deterministic checks, explicit rule output, CI pass/fail evidence, and small reviewable diffs |
@@ -130,6 +141,12 @@ A 2026-09-17 platform-evidence pass checked reachable public repositories with `
 - **Model gateway evidence**: record route, provider/model, fallback used, retry count, budget decision, rate-limit reason, and final response status before the Agent decides to continue.
 - **Inference runtime metrics**: capture throughput, latency percentile, timeout, concurrency, batching, and resource pressure for self-hosted or gateway-managed inference.
 - **Platform app boundary**: separate user chat surface, app workflow, tool calls, knowledge sources, permissions, and audit trail in production Agent portals.
+- **Guardrail evidence**: record validator name, verdict, repair attempt, fail-closed decision, matched policy, and owner so safety checks are replayable.
+- **Safety eval battery**: maintain versioned tests for prompt injection, refusal, data leakage, toxicity/harm, hallucination, and safety-vs-usability tradeoffs.
+- **Trace dataset loop**: convert production traces into reviewed datasets, annotation labels, and eval cases without treating raw private prompts as golden fixtures.
+- **Memory governance evidence**: record memory source, confidence, owner, conflict, update/delete action, and privacy scope before using memory as evidence.
+- **Local model boundary**: separate local model registry, pull/run command, model id/version, resource limits, network policy, and trace fields for private inference.
+- **Experiment evidence**: bind prompt, model, tool, and dataset changes to run id, parameters, metrics, artifacts, and comparison decision.
 
 ## Contributor Workflow
 
@@ -169,6 +186,12 @@ When adding another open-source project, submit in this order:
 | Model gateway evidence | [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md), [`../../examples/model-gateway/README.md`](../../../examples/model-gateway/README.md) |
 | Inference runtime metrics | [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md), [`../../examples/model-gateway/README.md`](../../../examples/model-gateway/README.md) |
 | Platform app boundary | [`../concepts/agent-system-architecture.md`](../concepts/agent-system-architecture.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
+| Guardrail evidence | [`../production/safety-checklist.md`](../production/safety-checklist.md), [`../../examples/safety-eval/README.md`](../../../examples/safety-eval/README.md) |
+| Safety eval battery | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../examples/safety-eval/README.md`](../../../examples/safety-eval/README.md) |
+| Trace dataset loop | [`../production/observability-trace-contract.md`](../production/observability-trace-contract.md), [`../../examples/agent-eval-regression/README.md`](../../../examples/agent-eval-regression/README.md) |
+| Memory governance evidence | [`../concepts/long-term-memory.md`](../concepts/long-term-memory.md), [`../../examples/memory-vs-evidence/README.md`](../../../examples/memory-vs-evidence/README.md) |
+| Local model boundary | [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
+| Experiment evidence | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../production/observability-trace-contract.md`](../production/observability-trace-contract.md) |
 
 ## Maintenance Rule
 

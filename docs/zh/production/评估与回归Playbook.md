@@ -114,6 +114,29 @@ decision:
 follow_up_owner:
 ```
 
+
+## 实验证据
+
+把实验跟踪当证据，而不只是 dashboard：
+
+- 每个 prompt/model/tool/dataset 变更绑定 run id。
+- 每个 run 记录 parameters、metrics、artifacts、owner、decision。
+- 每个 comparison 明确 baseline 和 candidate。
+- 每个 release 只根据可回放实验证据决定是否 Ship / Canary / Block / Rollback。
+
+最小实验字段：
+
+```text
+run_id:
+baseline_run_id:
+candidate_run_id:
+parameters:
+metrics:
+artifacts:
+owner:
+decision:
+```
+
 ## 7. 报告模板
 
 可复制模板见 [`../../../templates/eval-report-template.md`](../../../templates/eval-report-template.md)。结构示例：

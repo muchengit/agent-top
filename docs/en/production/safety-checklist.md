@@ -60,6 +60,20 @@ Safety controls should protect users, data, and the Agent's ability to operate p
 - Redact secrets.
 - Preserve enough trace to reproduce incidents.
 
+
+## Guardrail Evidence
+
+Safety checks should not only say “passed”. Each guardrail decision should record replayable evidence:
+
+- `validator`: rule or model check name.
+- `verdict`: `pass`, `fail`, `repair`, or `block`.
+- `repair_attempt`: whether output repair was attempted and the repair budget.
+- `matched_policy`: policy name matched, without secrets.
+- `fail_closed`: whether uncertainty caused a fail-closed decision.
+- `owner`: prompt, tool, retrieval, memory, runtime, or release owner.
+
+Use these fields to answer: why did the system allow or block this action, and how will we prove similar issues are intercepted next time?
+
 ## Risk Classification
 
 | Risk | Example | Required Control |

@@ -114,6 +114,29 @@ decision:
 follow_up_owner:
 ```
 
+
+## Experiment Evidence
+
+Treat experiment tracking as evidence, not only as a dashboard:
+
+- Bind every prompt/model/tool/dataset change to a run id.
+- Record parameters, metrics, artifacts, owner, and decision for every run.
+- State the baseline and candidate for every comparison.
+- Decide Ship, Canary, Block, or Rollback from replayable experiment evidence.
+
+Minimum experiment fields:
+
+```text
+run_id:
+baseline_run_id:
+candidate_run_id:
+parameters:
+metrics:
+artifacts:
+owner:
+decision:
+```
+
 ## 7. Report Template
 
 Use [`../../../templates/eval-report-template.md`](../../../templates/eval-report-template.md) for a copyable report. Example structure:
