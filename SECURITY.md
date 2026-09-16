@@ -1,21 +1,36 @@
 # Security Policy
 
-## Supported Scope
+Agent-Top is a learning repository. Do not commit real secrets, tokens, production datasets, private traces, or customer data.
 
-Agent-Top supports the current `main` branch and released documentation examples.
+## Reporting Vulnerabilities
 
-## Reporting a Vulnerability
+Report sensitive issues privately through the repository security contact configured by maintainers. Do not open public issues for secrets, credential leaks, or exploit details.
 
-Please do not open a public issue for security-sensitive bugs. Use a private GitHub security advisory when available, or contact the maintainers privately.
+## Lab Safety
 
-## What to Include
+- Labs should run locally without API keys.
+- Tool examples should model side effects instead of calling real production systems.
+- Destructive examples must include confirmation or guardrail explanations.
+- Framework-specific code must include `validated_date` and `tested_against`.
 
-- Affected path or Lab.
-- Impact summary.
-- Steps to reproduce.
-- Suggested mitigation, if known.
-- Whether the issue affects user data, prompt safety, tool execution, or infrastructure.
+## Contributing Secure Examples
 
-## Response Expectations
+Include:
 
-Maintainers will acknowledge security reports as soon as possible and coordinate fixes privately before public disclosure when appropriate.
+- Auth or permission boundary.
+- Input validation.
+- Output validation where relevant.
+- Tool allowlist or classification.
+- Rate, cost, and token limits.
+- Rollback or recovery path.
+- Observability notes.
+- Redaction guidance for logs.
+
+## Incident Handling
+
+If an issue affects published guidance:
+
+1. Mark the affected content as risky.
+2. Add or update the correction.
+3. Add regression tests or eval notes where relevant.
+4. Record the follow-up in a postmortem-style issue or PR.

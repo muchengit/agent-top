@@ -40,3 +40,45 @@ Listen for:
 - Clear data flow.
 - Privacy boundaries.
 - Evaluation hooks.
+
+Follow-up:
+
+- How do you tell whether the final answer came from RAG, memory, or live tool state?
+
+## 3. When should a system use multi-agent versus single-agent?
+
+Expected answer:
+
+- Use multi-agent when decomposition improves clarity, isolation, or specialization.
+- Avoid multi-agent when it adds coordination cost without improving reliability.
+- Add verification agents only when independent checks add value.
+
+Listen for:
+
+- Simplicity first.
+- Coordination cost awareness.
+- Concrete failure modes.
+
+Follow-up:
+
+- What makes a multi-agent system unsafe?
+
+## 4. How do you evaluate a retrieval agent before launch?
+
+Expected answer:
+
+- Build a corpus and query set.
+- Measure relevance and recall for required facts.
+- Measure answer support and citation quality.
+- Include negative cases where no answer should be provided.
+- Track latency and retrieval cost.
+
+Listen for:
+
+- Eval design before tuning.
+- Negative and refusal cases.
+- Metrics tied to user harm.
+
+Follow-up:
+
+- What do you do when retrieval is correct but the answer is wrong?

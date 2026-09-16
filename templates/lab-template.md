@@ -24,10 +24,23 @@ Build and verify a small working Agent system.
 python -m unittest labs.lx.lab_name.test_lab
 ```
 
+## Expected Output
+
+```text
+Ran ... tests
+OK
+```
+
 ## Lab Files
 
 - `agent_top_labs_lx_lab_name.py`: executable Lab implementation.
 - `test_lab.py`: tests that verify the Lab behavior.
+
+## What This Lab Teaches
+
+- Stable pattern.
+- Failure mode.
+- Production boundary.
 
 ## Common Pitfalls
 
@@ -38,3 +51,7 @@ python -m unittest labs.lx.lab_name.test_lab
 1. Question?
 2. Question?
 3. Question?
+
+## Related Assets
+
+- Link to the tutorial this Lab supports.

@@ -10,18 +10,18 @@ validated_date: 2026-09-16
 | Area | Status | Evidence |
 | --- | --- | --- |
 | Repository basics | Done | `README.md`, `README.zh-CN.md`, `LICENSE`, `.gitignore` |
-| Framework docs | Done | `docs/agent-top-concrete-framework.md` |
+| Concrete framework | Done | `docs/agent-top-concrete-framework.md` |
 | Concepts | Done | `docs/concepts/` |
 | Framework map | Done | `docs/frameworks/framework-map.md` |
 | Executable Labs | Done | `labs/l0` through `labs/l5` |
-| Interview assets | Done | `docs/interviews/` |
+| Detailed tutorials | Done | `docs/en/` and `docs/zh/` through L5 |
+| Chinese tutorial filenames | Done | Chinese names under `docs/zh/` |
+| Interview assets | Done | `docs/interviews/interview-framework.md`, `docs/interviews/questions/` |
 | Portfolio tracks | Done | `docs/portfolio/projects.md` |
 | Production guides | Done | `docs/production/` |
-| Community governance | Done | `GOVERNANCE.md`, `CONTRIBUTING.md`, `docs/community/` |
-| Bilingual seed | Done | `docs/en/`, `docs/zh/` through L5 |
+| Community governance | Done | `GOVERNANCE.md`, `CONTRIBUTING.md`, `CONTRIBUTING.zh-CN.md`, `docs/community/` |
 | Bilingual metadata | Done | frontmatter key and sync checks in `scripts/check_repository.py` |
-| Community operations | Done | `docs/community/community-rhythm.md`, `docs/community/labels.md` |
-| Community closed loops | Done | `docs/community/translation-workflow.md`, `docs/community/contributor-of-the-month.md`, `docs/community/maintainer-rotation.md` |
+| Community operations | Done | rhythm, labels, maintainer rotation, translation workflow |
 | GitHub labels config | Done | `.github/labels.yml` |
 | Contributor onboarding | Done | `docs/community/contributor-onboarding.md` |
 | Security policy | Done | `SECURITY.md` |
@@ -36,7 +36,13 @@ validated_date: 2026-09-16
 | Bilingual sync | <= 14 days |
 | Framework example freshness | reviewed before stale threshold |
 | Review coverage | >= 2 backups per active module |
+| Tutorial coverage | L0-L5 EN and ZH present |
+| Lab test coverage | all executable labs pass locally |
 
 ## Next Priority
 
-Expand L2+ executable Labs with real framework integrations while keeping framework-specific code isolated.
+Continue improving community throughput: add more real-world examples, keep translations within SLA, and maintain framework examples through `sync-required` when APIs change.
+
+## Completion Notes
+
+The repository now includes the core learning framework, runnable Labs, bilingual L0-L5 tutorials, interview question banks, portfolio tracks, production guides, community operations, governance, and CI checks.
