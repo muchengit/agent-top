@@ -1,10 +1,40 @@
 ---
 i18n-key: readme
 last-synced: 2026-09-16
+validated_date: 2026-09-16
 ---
 
-# Documentation Index 中文镜像待完成
+# Agent-Top 中文文档索引
 
-本文件的英文源文件为：[`../en/README.md`](../en/README.md)。
+这里是 Agent-Top 的中文入口页。英文源文件仍保留在 `docs/en`；中文内容优先从这里进入。
 
-中文内容待贡献者认领并补齐。认领后请保留 `i18n-key`，并更新 `last-synced`。
+## L0-L5 中文教程
+
+- [`l0-first-llm-call.md`](l0-first-llm-call.md)：第一次 LLM 调用
+- [`l1-minimal-react-agent.md`](l1-minimal-react-agent.md)：最小 ReAct Agent
+- [`l2-single-agent-mcp.md`](l2-single-agent-mcp.md)：带 MCP 的可靠单 Agent
+- [`l3-rag-memory-observability.md`](l3-rag-memory-observability.md)：RAG、记忆与可观测
+- [`l4-production.md`](l4-production.md)：生产级 Agent 系统
+- [`l5-custom-patterns.md`](l5-custom-patterns.md)：原创模式
+
+## 中文模块
+
+- [`agent-top-concrete-framework.md`](agent-top-concrete-framework.md)：具体框架
+- [`concepts/`](concepts/)：概念与架构
+- [`frameworks/`](frameworks/)：框架地图
+- [`production/`](production/)：生产指南
+- [`cases/`](cases/)：案例研究
+- [`interviews/`](interviews/)：面试框架
+- [`portfolio/`](portfolio/)：作品集路径
+- [`community/`](community/)：社区运营
+- [`quick-reference/`](quick-reference/)：速查表
+- [`tutorials/`](tutorials/)：教程参考和搜索补充
+
+## 中文镜像说明
+
+当前许多 `docs/zh` 文件仍是占位镜像，指向英文源文件用于保持目录结构和链接稳定。新增或补全中文内容时：
+
+- 保留相同 `i18n-key`。
+- 更新 `last-synced`。
+- 中文页面内的下一步链接优先指向 `docs/zh` 同模块。
+- 只有在暂无中文版本时才保留英文源链接，并注明待翻译。

@@ -1,10 +1,34 @@
 ---
 i18n-key: quick-reference-lab-command-cheatsheet
 last-synced: 2026-09-16
+validated_date: 2026-09-16
 ---
 
-# Lab Command Cheatsheet 中文镜像待完成
+Lab 命令速查
 
-本文件的英文源文件为：[`../en/quick-reference/lab-command-cheatsheet.md`](../../en/quick-reference/lab-command-cheatsheet.md)。
+## 运行全部 Lab
 
-中文内容待贡献者认领并补齐。认领后请保留 `i18n-key`，并更新 `last-synced`。
+```bash
+python -m unittest discover -s labs -p "test_*.py"
+```
+
+## 运行仓库检查
+
+```bash
+python scripts/check_repository.py
+python -m compileall -q labs scripts
+python -m ruff check .
+```
+
+## 常用 Lab 命令
+
+```bash
+python -m unittest labs.l1.minimal_react_agent.test_lab
+python -m unittest labs.l1.multi_turn_state.test_lab
+python -m unittest labs.l2.cost_aware_router.test_lab
+python -m unittest labs.l3.rag_evaluator.test_lab
+python -m unittest labs.l3.multi_agent_supervisor.test_lab
+python -m unittest labs.l4.regression_gate.test_lab
+python -m unittest labs.l5.pattern_catalog.test_lab
+```
+

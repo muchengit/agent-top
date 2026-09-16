@@ -1,10 +1,50 @@
 ---
 i18n-key: interviews-interview-framework
 last-synced: 2026-09-16
+validated_date: 2026-09-16
 ---
 
-# Interview Framework 中文镜像待完成
+面试框架
 
-本文件的英文源文件为：[`../en/interviews/interview-framework.md`](../../en/interviews/interview-framework.md)。
+Agent 面试应测量候选人能否构建可靠 Agent 系统，而不是是否背诵框架名。
 
-中文内容待贡献者认领并补齐。认领后请保留 `i18n-key`，并更新 `last-synced`。
+## 设计原则
+
+- 测 trade-off，不测口号。
+- 从 concept 到 implementation、debugging、design。
+- 优先具体系统。
+- 要求证据：evals、traces、postmortems、follow-up。
+- 给假设空间。
+
+## Capability Matrix
+
+| Level | Concept | Implementation | Debugging | Design |
+| --- | --- | --- | --- | --- |
+| L1 | 组件理解 | minimal ReAct loop | failed tool loop | single-agent shape |
+| L2 | framework fit | guardrailed single Agent | MCP failure | tool routing |
+| L3 | RAG/记忆/MCP | end-to-end pipeline | retrieval misses | customer support |
+| L4 | evals/observability/safety | regression suite | incident triage | cost/latency/safety |
+| L5 | original patterns | framework/pattern design | cross-team failure | ecosystem strategy |
+
+## 题型
+
+- Concept：词汇和边界。
+- Implementation：把想法变成小系统。
+- Debugging：运营推理。
+- Design：架构判断。
+
+## STAR 模板
+
+- Situation：context、constraints、users affected、system boundaries。
+- Task：你负责什么。
+- Action：architecture、tools、evals、safety controls、rollout、rollback。
+- Result：metric、incident outcome、learning、follow-up。
+
+## Red Flags
+
+- 用框架名替代 reasoning。
+- 不提 failure 或 rollback。
+- Evals 是可选。
+- Safety checks 只在 final prompt。
+- Tool calls 默认可信。
+

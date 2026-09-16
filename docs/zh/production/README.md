@@ -1,10 +1,12 @@
 ---
 i18n-key: production-readme
 last-synced: 2026-09-16
+validated_date: 2026-09-16
 ---
 
-# Production Guides Index 中文镜像待完成
+生产指南
 
-本文件的英文源文件为：[`../en/production/README.md`](../../en/production/README.md)。
+- [`evals-checklist.md`](evals-checklist.md)
+- [`safety-checklist.md`](safety-checklist.md)
+- [`quarterly-maintenance.md`](quarterly-maintenance.md)
 
-中文内容待贡献者认领并补齐。认领后请保留 `i18n-key`，并更新 `last-synced`。

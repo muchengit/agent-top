@@ -1,0 +1,37 @@
+---
+i18n-key: tutorials-search-supplements
+last-synced: 2026-09-16
+validated_date: 2026-09-16
+i18n-key: tutorials-search-supplements
+---
+
+# Agent 教程搜索补充记录
+
+本页记录 20 轮 Agent 教程主题搜索。它不复制外部教程，而是把常见主题映射为 Agent-Top 可维护资产。
+
+| 轮次 | 搜索主题 | 补入 Agent-Top 的稳定想法 |
+| --- | --- | --- |
+| 1 | 第一次 LLM 调用到多轮 Agent | 从 request/response 过渡到 loop、state、tools、stop conditions |
+| 2 | Tool calling schema | 执行前校验参数；把工具结果视为 observation |
+| 3 | 长上下文与记忆 | 旧上下文摘要化，保留近期消息和关键证据 |
+| 4 | 结构化输出 | 工具参数和 Agent 决策优先使用 JSON/schema 边界 |
+| 5 | RAG | 不只是拼 prompt，而是 query planning、retrieval、answer validation、refusal |
+| 6 | 多 Agent 系统 | 只有在边界能证明收益时使用 supervisor/verifier/escalation |
+| 7 | MCP/工具安全 | 分类 side effects，使用权限和确认 |
+| 8 | Agent 评估 | 评估端到端任务、工具选择、refusal、trace |
+| 9 | 可观测性 | trace 记录 turn、tool call、retrieval source、guardrail decision |
+| 10 | 部署 | versioning、config、rate limits、cost limits、escalation |
+| 11 | Prompt injection 与安全 | 区分 trusted instructions、user text、tool output |
+| 12 | 面试题 | 考察 trade-off、failure mode、evidence，而不是框架名词 |
+| 13 | 个人知识库 RAG | 需要引用、refusal 和更新策略 |
+| 14 | 多轮研究 | 明确何时 search、ask、refine、stop |
+| 15 | 框架对比 | 把稳定模式和 LangGraph/CrewAI/AutoGen API 分开 |
+| 16 | 低成本 Agent | 简单确定性路径优先于重型 LLM loop |
+| 17 | 错误恢复 | tool failure、retrieval miss、guardrail block 都是一等状态 |
+| 18 | Postmortem | 事故应转成 eval、guardrail、trace、rollback 动作 |
+| 19 | 社区教程活动 | 产出 artifact 和 follow-up issue，而不只是讨论记录 |
+| 20 | 维护者综合 | 增加映射文档，避免框架变化污染稳定概念 |
+
+## 维护规则
+
+外部教程可以作为来源。Agent-Top 应保留稳定模式，把框架 API 放进 Lab，并通过原创练习或案例增加价值。

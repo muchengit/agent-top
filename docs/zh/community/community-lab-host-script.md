@@ -1,10 +1,49 @@
 ---
 i18n-key: community-community-lab-host-script
 last-synced: 2026-09-16
+validated_date: 2026-09-16
 ---
 
-# Community Lab Host Script 中文镜像待完成
+社区 Lab 主持脚本
 
-本文件的英文源文件为：[`../en/community/community-lab-host-script.md`](../../en/community/community-lab-host-script.md)。
+## 开场 5 分钟
 
-中文内容待贡献者认领并补齐。认领后请保留 `i18n-key`，并更新 `last-synced`。
+说明今天目标：理解一个 Agent pattern，并产出一个可运行或可审查 artifact。
+
+## 概念段 10-15 分钟
+
+提问：
+
+1. 这个模式解决什么问题？
+2. 输入是什么？
+3. 输出是什么？
+4. 什么会失败？
+5. 安全检查在哪里？
+
+## 动手段 20-35 分钟
+
+选择一种路径：
+
+- 运行 Lab 并解释输出。
+- 走读短代码示例。
+- 翻译或改进 docs section。
+- 增加面试题或 self-check。
+
+## Trade-off 段 10-15 分钟
+
+提问：
+
+- 为什么不用框架？
+- 为什么要多个 Agent？
+- 模型变化会怎样？
+- 证据缺什么？
+- rollback path 是什么？
+
+## 收尾 5 分钟
+
+确认：
+
+- artifact 存在。
+- follow-up 有 owner。
+- 下次主题已提出。
+

@@ -55,42 +55,126 @@ Each article or Lab follows a consistent structure:
 
 ```text
 agent-top/
-├── .github/                  # GitHub automation, labels, issue/PR templates
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── documentation_request.md
+│   ├── labels.yml
+│   ├── pull_request_template.md
+│   └── workflows/
+│       └── ci.yml
 ├── docs/
-│   ├── en/                   # English source documentation
-│   │   ├── cases/            # Case studies for realistic Agent scenarios
-│   │   ├── community/        # Community operations, translation, labels, events
-│   │   ├── concepts/         # Stable Agent concepts and architecture patterns
-│   │   ├── frameworks/       # Framework comparison and selection notes
-│   │   ├── interviews/       # Interview framework and L1-L5 question sets
-│   │   ├── portfolio/        # Portfolio project tracks and evidence guides
-│   │   ├── production/       # Evals, safety, observability, rollback, maintenance
-│   │   ├── quick-reference/  # Glossary, commands, architecture and production checklists
-│   │   ├── tutorials/        # External tutorial-to-Agent-Top reference map
-│   │   ├── l0-first-llm-call.md        # L0 tutorial
-│   └── zh/                   # Chinese mirror documentation, same directory shape as docs/en
-├── labs/                     # Deterministic executable Labs, no API key required
-│   ├── l0/                   # First LLM call shape
-│   ├── l1/                   # ReAct, guardrails, multi-turn state
-│   ├── l2/                   # Tool/MCP boundaries and cost-aware routing
-│   ├── l3/                   # RAG, multi-round research, multi-agent supervisor
-│   ├── l4/                   # Production postmortems and regression gates
-│   └── l5/                   # Reusable pattern labs and pattern catalog
-├── scripts/                  # Repository validation scripts
-│   └── check_repository.py   # Markdown, link, bilingual, and Lab structure checks
-├── templates/                # Contribution templates for articles, Labs, interviews, postmortems
-├── docs-site/                # Lightweight static documentation landing page
-├── README.md                 # English project overview and repository map
-├── README.zh-CN.md           # Chinese project overview and repository map
-├── GOVERNANCE.md             # Maintainer roles, review policy, decision principles
-├── CONTRIBUTING.md           # English contribution guide
-├── CONTRIBUTING.zh-CN.md     # Chinese contribution guide
-├── ROADMAP_STATUS.md         # Current completion status and next priorities
-├── ROADMAP_STATUS.zh-CN.md   # Chinese roadmap status
-├── SECURITY.md               # Security reporting and safe Lab policy
-├── SECURITY.zh-CN.md         # Chinese security policy
-├── CODE_OF_CONDUCT.zh-CN.md  # Chinese code of conduct
-└── agent-top-roadmap.zh-CN.md # Chinese roadmap
+│   ├── en/
+│   │   ├── cases/
+│   │   │   ├── README.md
+│   │   │   ├── customer-support-multi-agent.md
+│   │   │   ├── personal-knowledge-rag.md
+│   │   │   └── production-regression-gate.md
+│   │   ├── community/
+│   │   │   ├── README.md
+│   │   │   ├── agent-community-lab.md
+│   │   │   ├── community-lab-host-script.md
+│   │   │   ├── community-rhythm.md
+│   │   │   ├── contribution-paths.md
+│   │   │   ├── contributor-of-the-month.md
+│   │   │   ├── contributor-onboarding.md
+│   │   │   ├── glossary.md
+│   │   │   ├── labels.md
+│   │   │   ├── maintainer-rotation.md
+│   │   │   └── translation-workflow.md
+│   │   ├── concepts/
+│   │   │   ├── agent-system-architecture.md
+│   │   │   ├── multi-round-research-discussion.md
+│   │   │   ├── overview.md
+│   │   │   ├── rag-memory-mcp-flow.md
+│   │   │   └── react-pattern.md
+│   │   ├── frameworks/
+│   │   │   └── framework-map.md
+│   │   ├── interviews/
+│   │   │   ├── interview-framework.md
+│   │   │   └── questions/
+│   │   │       ├── README.md
+│   │   │       ├── l1-components.md
+│   │   │       ├── l2-framework-mcp.md
+│   │   │       ├── l3-system-design.md
+│   │   │       ├── l4-production.md
+│   │   │       └── l5-patterns.md
+│   │   ├── portfolio/
+│   │   │   ├── README.md
+│   │   │   └── projects.md
+│   │   ├── production/
+│   │   │   ├── README.md
+│   │   │   ├── evals-checklist.md
+│   │   │   ├── quarterly-maintenance.md
+│   │   │   └── safety-checklist.md
+│   │   ├── quick-reference/
+│   │   │   ├── README.md
+│   │   │   ├── agent-glossary.md
+│   │   │   ├── architecture-patterns.md
+│   │   │   ├── lab-command-cheatsheet.md
+│   │   │   └── production-checklist.md
+│   │   ├── tutorials/
+│   │   │   └── reference-map.md
+│   │   ├── agent-top-concrete-framework.md
+│   │   ├── l0-first-llm-call.md
+│   │   ├── l1-minimal-react-agent.md
+│   │   ├── l2-single-agent-mcp.md
+│   │   ├── l3-rag-memory-observability.md
+│   │   ├── l4-production.md
+│   │   ├── l5-custom-patterns.md
+│   │   └── README.md
+│   └── zh/
+│       └── ...                     # Chinese mirror with the same directory shape as docs/en
+├── labs/
+│   ├── l0/
+│   │   └── first_llm_call/
+│   ├── l1/
+│   │   ├── guardrail_helpers/
+│   │   ├── minimal_react_agent/
+│   │   └── multi_turn_state/
+│   ├── l2/
+│   │   ├── cost_aware_router/
+│   │   └── single_agent_mcp/
+│   ├── l3/
+│   │   ├── multi_agent_supervisor/
+│   │   ├── multi_round_research_discussion/
+│   │   ├── rag_evaluator/
+│   │   └── rag_memory_observability/
+│   ├── l4/
+│   │   ├── production_postmortem/
+│   │   └── regression_gate/
+│   ├── l5/
+│   │   ├── custom_pattern_lab/
+│   │   └── pattern_catalog/
+│   └── README.md
+├── scripts/
+│   └── check_repository.py
+├── templates/
+│   ├── article-template.md
+│   ├── community-lab-template.md
+│   ├── interview-question-template.md
+│   ├── lab-template.md
+│   ├── monthly-contributor-report.md
+│   ├── postmortem-template.md
+│   └── README.md
+├── docs-site/
+│   └── index.html
+├── README.md
+├── README.zh-CN.md
+├── CODE_OF_CONDUCT.md
+├── CODE_OF_CONDUCT.zh-CN.md
+├── CONTRIBUTING.md
+├── CONTRIBUTING.zh-CN.md
+├── GOVERNANCE.md
+├── GOVERNANCE.zh-CN.md
+├── ROADMAP_STATUS.md
+├── ROADMAP_STATUS.zh-CN.md
+├── SECURITY.md
+├── SECURITY.zh-CN.md
+├── agent-top-roadmap.md
+├── agent-top-roadmap.zh-CN.md
+├── LICENSE
+└── pyproject.toml
 ```
 
 ## Directory Responsibilities

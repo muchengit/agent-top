@@ -1,10 +1,14 @@
 ---
 i18n-key: portfolio-readme
 last-synced: 2026-09-16
+validated_date: 2026-09-16
 ---
 
-# Portfolio Tracks Index 中文镜像待完成
+作品集索引
 
-本文件的英文源文件为：[`../en/portfolio/README.md`](../../en/portfolio/README.md)。
+作品集应展示四个梯度：RAG 与记忆、工具编排、多 Agent 协作、抽象。
 
-中文内容待贡献者认领并补齐。认领后请保留 `i18n-key`，并更新 `last-synced`。
+## 路径
+
+- [`projects.md`](projects.md)
+

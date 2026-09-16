@@ -32,6 +32,21 @@ Related tutorial:
 
 - [`../en/l0-first-llm-call.md`](../../en/l0-first-llm-call.md)
 
+
+## From First LLM Call to Multi-Round Agent
+
+The first LLM call is useful for understanding requests, messages, context limits, and model behavior. The multi-round Agent adds state, tools, retries, observations, and stopping decisions around that model call.
+
+Useful distinction:
+
+| Stage | What Exists | What the Learner Should Prove |
+| --- | --- | --- |
+| First LLM call | Request, system prompt, user message, response | Can explain context and output shape |
+| Single loop | Tool, observation, next-step decision | Can stop and recover from tool results |
+| Multi-round Agent | History, memory, tools, verification, escalation | Can explain why each round exists |
+
+This is the bridge between tutorial-style examples and production Agent systems.
+
 ## 2. Single-Agent Loop
 
 A single Agent uses a loop: plan, act, observe, update, repeat.

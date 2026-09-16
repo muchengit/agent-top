@@ -1,10 +1,62 @@
 ---
 i18n-key: production-safety-checklist
 last-synced: 2026-09-16
+validated_date: 2026-09-16
 ---
 
-# Agent Safety Checklist 中文镜像待完成
+Agent 安全清单
 
-本文件的英文源文件为：[`../en/production/safety-checklist.md`](../../en/production/safety-checklist.md)。
+安全控制保护用户、数据和 Agent 的可预测运行。
 
-中文内容待贡献者认领并补齐。认领后请保留 `i18n-key`，并更新 `last-synced`。
+## 必需控制
+
+### Auth 和 Permissions
+
+- 识别用户或租户。
+- Retrieval 前检查授权。
+- Tool execution 前检查授权。
+- 不要只靠 prompt 做 access control。
+
+### Tool Safety
+
+- Tool allowlist。
+- Read-only、write、destructive 分类。
+- Destructive actions 要 approval。
+- Tool arguments 校验。
+- Tool call audit logs。
+
+### Input Validation
+
+- 拒绝 malformed inputs。
+- 检测 obvious prompt injection。
+- 限制输入大小。
+
+### Output Validation
+
+- Evidence required 时拒绝 unsupported claims。
+- 阻断 sensitive data leakage。
+- Missing critical evidence 时阻断最终回答。
+
+### 记忆 Safety
+
+- 记忆 按 user、tenant、purpose scoped。
+- 不存 secrets/credentials。
+- stale/conflicting memory 可见。
+- 支持 deletion/forgetting。
+
+### Rate 和 Cost Limits
+
+- 按 user/tenant 限制请求速率。
+- 限制每请求 tool-call count。
+- 限制每任务 token spend。
+- Stop escalation loops。
+
+## 风险分类
+
+| Risk | Example | Control |
+| --- | --- | --- |
+| Low | read-only lookup | auth、trace、timeout |
+| Medium | ticket comment、preference write | validation、rollback、audit |
+| High | billing、permission、deletion | approval、idempotency、postmortem |
+| Critical | data deletion、payment、credentials | human approval、full audit |
+

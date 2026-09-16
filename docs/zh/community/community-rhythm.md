@@ -1,10 +1,26 @@
 ---
 i18n-key: community-community-rhythm
 last-synced: 2026-09-16
+validated_date: 2026-09-16
 ---
 
-# Community Rhythm 中文镜像待完成
+社区节奏
 
-本文件的英文源文件为：[`../en/community/community-rhythm.md`](../../en/community/community-rhythm.md)。
+## 常规活动
 
-中文内容待贡献者认领并补齐。认领后请保留 `i18n-key`，并更新 `last-synced`。
+- 双周教程发布。
+- 月度面试题更新。
+- 季度路线图回顾。
+- 双周论文或教程共读。
+- 月度 showcase。
+- 季度 hackathon。
+- 双周 Agent Community Lab。
+
+## 活动规范
+
+- 每个活动小到可以由志愿者负责。
+- 每季度轮值 lead。
+- 避免同一人同时承担作者和双审。
+- 产出发布在主文档树，除非是可选附件。
+- 社区 Lab 应产出 notes、PR、docs patch 或 follow-up issue。
+

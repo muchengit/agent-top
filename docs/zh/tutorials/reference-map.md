@@ -32,7 +32,7 @@ last-synced: 2026-09-16
 | MCP-style tools | [`../frameworks/framework-map.md`](../frameworks/framework-map.md) | [`../../labs/l2/cost_aware_router/README.md`](../../../labs/l2/cost_aware_router/README.md) | 安全路由 tool call |
 | RAG | [`../concepts/rag-memory-mcp-flow.md`](../concepts/rag-memory-mcp-flow.md) | [`../../labs/l3/rag_evaluator/README.md`](../../../labs/l3/rag_evaluator/README.md) | 增加 refusal eval |
 | 多轮研究 | [`../concepts/multi-round-research-discussion.md`](../concepts/multi-round-research-discussion.md) | [`../../labs/l3/multi_round_research_discussion/README.md`](../../../labs/l3/multi_round_research_discussion/README.md) | 规划检索 query |
-| Memory | [`../concepts/overview.md`](../concepts/overview.md) | [`../../labs/l1/multi_turn_state/README.md`](../../../labs/l1/multi_turn_state/README.md) | 判断哪些内容该摘要 |
+| 记忆 | [`../concepts/overview.md`](../concepts/overview.md) | [`../../labs/l1/multi_turn_state/README.md`](../../../labs/l1/multi_turn_state/README.md) | 判断哪些内容该摘要 |
 | 多 Agent 编排 | [`../concepts/agent-system-architecture.md`](../concepts/agent-system-architecture.md) | [`../../labs/l3/multi_agent_supervisor/README.md`](../../../labs/l3/multi_agent_supervisor/README.md) | 分配 supervisor route |
 | LangGraph-style 状态 | [`../frameworks/framework-map.md`](../frameworks/framework-map.md) | [`../../labs/l1/multi_turn_state/README.md`](../../../labs/l1/multi_turn_state/README.md) | 解释状态归属 |
 | CrewAI/AutoGen-style roles | [`../frameworks/framework-map.md`](../frameworks/framework-map.md) | [`../../labs/l3/multi_agent_supervisor/README.md`](../../../labs/l3/multi_agent_supervisor/README.md) | 定义角色边界 |

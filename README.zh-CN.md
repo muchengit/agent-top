@@ -50,18 +50,72 @@ Agent-Top 是一个面向 LLM Agent 开发的开源学习框架。
 | L4 | 完成生产化：评估、安全、部署、成本与 Postmortem |
 | L5 | 形成原创模式、开源贡献和真实影响力 |
 
-## 仓库地图
+## 仓库结构
 
-- 核心概念：[`docs/en/concepts`](docs/en/concepts)
-- 框架地图：[`docs/en/frameworks/framework-map.md`](docs/en/frameworks/framework-map.md)
-- 面试框架：[`docs/en/interviews/interview-framework.md`](docs/en/interviews/interview-framework.md)
-- 可执行 Lab：[`labs`](labs)
-- 内容模板：[`templates`](templates)
-- 治理规范：[`GOVERNANCE.md`](GOVERNANCE.md)
-- 贡献指南：[`CONTRIBUTING.md`](CONTRIBUTING.md)
-- 中文贡献指南：[`CONTRIBUTING.zh-CN.md`](CONTRIBUTING.zh-CN.md)
-- 路线状态：[`ROADMAP_STATUS.md`](ROADMAP_STATUS.md)
-- 中文路线状态：[`ROADMAP_STATUS.zh-CN.md`](ROADMAP_STATUS.zh-CN.md)
+```text
+agent-top/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── documentation_request.md
+│   ├── labels.yml
+│   ├── pull_request_template.md
+│   └── workflows/
+│       └── ci.yml
+├── docs/
+│   ├── en/
+│   │   ├── cases/                    # 案例研究
+│   │   ├── community/                # 社区运营、翻译、活动、治理支持
+│   │   ├── concepts/                 # Agent 稳定概念与架构模式
+│   │   ├── frameworks/               # 框架对比与选型
+│   │   ├── interviews/               # 面试框架与 L1-L5 题库
+│   │   ├── portfolio/                # 作品集项目路径
+│   │   ├── production/               # 评估、安全、维护、回滚
+│   │   ├── quick-reference/          # 术语、命令、架构、生产速查表
+│   │   ├── tutorials/                # 外部教程到 Agent-Top 的映射
+│   │   └── l0-l5 tutorials           # L0-L5 详细教程
+│   └── zh/
+│       └── ...                       # 中文镜像，目录结构与 docs/en 对齐
+├── labs/
+│   ├── l0/                           # 第一次 LLM 调用
+│   ├── l1/                           # ReAct、guardrails、多轮状态
+│   ├── l2/                           # 工具/MCP 边界与成本感知路由
+│   ├── l3/                           # RAG、多轮研究、多 Agent supervisor
+│   ├── l4/                           # 生产 postmortem 与回归门禁
+│   ├── l5/                           # 可复用模式 Lab 与模式目录
+│   └── README.md
+├── scripts/
+│   └── check_repository.py           # Markdown、链接、双语、Lab 结构检查
+├── templates/                        # 文章、Lab、面试、postmortem 等贡献模板
+├── docs-site/                        # 轻量文档站入口
+├── README.md                         # 英文项目概览和仓库地图
+├── README.zh-CN.md                   # 中文项目概览和仓库地图
+├── CODE_OF_CONDUCT.md                # 英文行为准则
+├── CODE_OF_CONDUCT.zh-CN.md          # 中文行为准则
+├── CONTRIBUTING.md                   # 英文贡献指南
+├── CONTRIBUTING.zh-CN.md             # 中文贡献指南
+├── GOVERNANCE.md                     # 英文治理说明
+├── GOVERNANCE.zh-CN.md               # 中文治理说明
+├── ROADMAP_STATUS.md                 # 英文路线状态
+├── ROADMAP_STATUS.zh-CN.md           # 中文路线状态
+├── SECURITY.md                       # 英文安全策略
+├── SECURITY.zh-CN.md                 # 中文安全策略
+├── agent-top-roadmap.md              # 路线图
+├── agent-top-roadmap.zh-CN.md        # 中文路线图
+├── LICENSE
+└── pyproject.toml
+```
+
+## 目录职责
+
+- `docs/en/`：所有双语文档的英文主源。
+- `docs/zh/`：中文镜像，目录结构与 `docs/en` 对齐。
+- `labs/`：可运行、确定性、无需 API key 的练习。
+- `templates/`：可复用贡献模板，方便 reviewer 检查一致性。
+- `scripts/`：本地校验链接、frontmatter、版本锚点和 Lab 完整性。
+- `.github/`：CI、标签、Issue 模板和 PR 模板。
+
+## 仓库地图
 
 ## 文档
 
