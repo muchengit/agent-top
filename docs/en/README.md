@@ -59,6 +59,7 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`tutorials/learning-paths.md`](tutorials/learning-paths.md)
 - [`tutorials/search-supplements.md`](tutorials/search-supplements.md)
 - [`tutorials/open-source-inspirations.md`](tutorials/open-source-inspirations.md): open-source projects and patterns to absorb
+- [`tutorials/open-source-pattern-matrix.md`](tutorials/open-source-pattern-matrix.md): distilled patterns from open-source Agent projects
 - [`../zh/tutorials/教程参考地图.md`](../zh/tutorials/教程参考地图.md)
 
 ## Frameworks

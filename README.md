@@ -131,6 +131,7 @@ agent-top/
 │   │   ├── tutorials/
 │   │   │   ├── learning-paths.md
 │   │   │   ├── open-source-inspirations.md
+│   │   │   ├── open-source-pattern-matrix.md
 │   │   │   ├── practice-handbook.md
 │   │   │   ├── quick-navigation.md
 │   │   │   ├── reference-map.md
@@ -150,6 +151,7 @@ agent-top/
 ├── examples/
 │   ├── README.md
 │   ├── agent-decision-trace/
+│   ├── memory-vs-evidence/
 │   └── rag-evidence-refusal/
 ├── labs/
 │   ├── l0/
@@ -248,6 +250,7 @@ python -m ruff check .
 - Framework map: [`docs/en/frameworks/framework-map.md`](docs/en/frameworks/framework-map.md)
 - Design review checklist: [`docs/en/concepts/design-review-checklist.md`](docs/en/concepts/design-review-checklist.md)
 - Open-source inspirations: [`docs/en/tutorials/open-source-inspirations.md`](docs/en/tutorials/open-source-inspirations.md)
+- Open-source pattern matrix: [`docs/en/tutorials/open-source-pattern-matrix.md`](docs/en/tutorials/open-source-pattern-matrix.md)
 - Interview framework: [`docs/en/interviews/interview-framework.md`](docs/en/interviews/interview-framework.md)
 - Labs: [`labs`](labs)
 - Templates: [`templates`](templates)

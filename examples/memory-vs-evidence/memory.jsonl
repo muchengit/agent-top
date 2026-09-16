@@ -1,0 +1,5 @@
+{"id":"m1_editor","fresh":true,"date":"2026-09-01","kind":"preference","text":"User prefers markdown tables in documentation."}
+{"id":"m2_city","fresh":false,"date":"2025-01-01","kind":"fact","text":"User lives in Portland."}
+{"id":"m3_contact","fresh":false,"date":"2025-03-01","kind":"fact","text":"Main contact is maria@example.invalid."}
+{"id":"m4_secret","fresh":true,"date":"2026-09-10","kind":"secret","text":"API key is sk_live_12345."}
+{"id":"m5_delete","fresh":true,"date":"2026-09-10","kind":"preference","text":"User wants all old memories deleted."}

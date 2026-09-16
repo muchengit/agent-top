@@ -77,7 +77,7 @@ agent-top/
 │   │   ├── production/               # 评估、回归、安全、维护、回滚
 │   │   ├── quick-reference/          # 术语、命令、架构、生产速查表
 │   │   ├── skills/                   # Agent 技能体系
-│   │   ├── tutorials/                # 外部教程、开源项目灵感、学习路径、快速导航、练习手册
+│   │   ├── tutorials/                # 外部教程、开源项目灵感、模式矩阵、学习路径、快速导航、练习手册
 │   │   ├── l0-l5 tutorials           # L0-L5 详细教程
 │   │   ├── README.md                 # 英文文档索引
 │   │   └── agent-top-concrete-framework.md
@@ -102,6 +102,7 @@ agent-top/
 │       └── tutorials/                # 中文教程与开源项目灵感
 ├── examples/
 │   ├── agent-decision-trace/         # 无需 API key 的 Agent 决策练习
+│   ├── memory-vs-evidence/           # Memory 与 Evidence 决策练习
 │   └── rag-evidence-refusal/         # RAG 证据与拒绝回答练习
 ├── labs/
 │   ├── l0/                           # 第一次 LLM 调用
@@ -161,6 +162,7 @@ agent-top/
 - 面试框架：[`docs/zh/interviews/面试框架.md`](docs/zh/interviews/面试框架.md)
 - 学习路径：[`docs/zh/tutorials/学习路径.md`](docs/zh/tutorials/学习路径.md)
 - 开源项目灵感目录：[`docs/zh/tutorials/开源项目灵感目录.md`](docs/zh/tutorials/开源项目灵感目录.md)
+- 开源模式矩阵：[`docs/en/tutorials/open-source-pattern-matrix.md`](docs/en/tutorials/open-source-pattern-matrix.md)
 - 可执行 Lab：[`labs`](labs)
 - 内容模板：[`templates`](templates)
 - 中文文档索引：[`docs/zh/文档索引.md`](docs/zh/文档索引.md)

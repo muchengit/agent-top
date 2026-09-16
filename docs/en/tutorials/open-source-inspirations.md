@@ -6,7 +6,7 @@ validated_date: 2026-09-16
 
 # Open-Source Inspirations Directory
 
-This page turns verified GitHub Agent projects into learning themes. Agent-Top does not copy external code or prose. It absorbs stable patterns and maps them to local concepts, Labs, cases, and maintenance workflow.
+This page turns verified GitHub Agent projects into learning themes. Agent-Top does not copy external code or prose. It absorbs stable patterns and maps them to local concepts, Labs, cases, and maintenance workflow. For a distilled decision matrix, use [`open-source-pattern-matrix.md`](open-source-pattern-matrix.md).
 
 This page uses GitHub project discoveries verified on 2026-09-16. External links are maintainer-verified learning signals, not authoritative framework documentation.
 
