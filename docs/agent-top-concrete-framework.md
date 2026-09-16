@@ -3,7 +3,7 @@
 > 本文由 5 位领域专家第一轮发散 + 首席框架设计师第二轮收敛讨论产出：
 > 🏗️ Agent 系统架构专家 · 🎓 AI 教育/课程设计专家 · 🌐 开源社区运营/DevRel 专家 · 💼 技术招聘/面试教练 · ✍️ 技术内容策略专家。
 >
-> 配套文档：[agent-top-roadmap.md](agent-top-roadmap.md)（高层路线图）。本框架是其“具体落地版”。
+> 配套文档：[../agent-top-roadmap.md](../agent-top-roadmap.md)（高层路线图）。本框架是其“具体落地版”。
 
 ---
 

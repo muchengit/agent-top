@@ -1,0 +1,2 @@
+# No third-party dependencies are required for the initial Labs.
+# Add framework-specific dependencies inside individual Lab directories later.

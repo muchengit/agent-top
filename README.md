@@ -48,6 +48,15 @@ Each article or Lab follows a consistent structure:
 | L4 | Productionize Agent systems with evaluation, safety, deployment, cost, and postmortems |
 | L5 | Create original patterns, open-source contributions, and real-world influence |
 
+## Local Checks
+
+Run the repository checks:
+
+```bash
+python scripts/check_repository.py
+python -m unittest discover -s labs -p "test_*.py"
+```
+
 ## Documentation
 
 See the concrete framework:
