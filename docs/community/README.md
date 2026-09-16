@@ -13,6 +13,8 @@ Agent-Top is maintained as a bilingual, docs-first open source community.
 - [`contributor-onboarding.md`](contributor-onboarding.md)
 - [`translation-workflow.md`](translation-workflow.md)
 - [`community-rhythm.md`](community-rhythm.md)
+- [`agent-community-lab.md`](agent-community-lab.md)
+- [`community-lab-host-script.md`](community-lab-host-script.md)
 - [`labels.md`](labels.md)
 - [`glossary.md`](glossary.md)
 - [`maintainer-rotation.md`](maintainer-rotation.md)

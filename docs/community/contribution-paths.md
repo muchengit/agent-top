@@ -62,6 +62,11 @@ Start with:
 - `docs-only`
 - `translation-needed`
 - `sync-required`
+- `lab`
+
+## Community Lab Sessions
+
+Community Lab sessions are a contribution path when they produce docs, Labs, translations, review notes, or follow-up issues. Use `docs-only` for writing-only patches and `lab` for runnable examples.
 
 ## Review Policy
 
