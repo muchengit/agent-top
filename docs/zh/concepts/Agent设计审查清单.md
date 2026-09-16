@@ -18,6 +18,8 @@ last-synced: 2026-09-16
 - **Rework**：架构存在未解决的 correctness、safety 或 maintainability 风险。
 - **Stop**：任务不需要 Agent，或风险不可接受。
 
+可复制模板见 [`../../../templates/agent-design-template.md`](../../../templates/agent-design-template.md)。
+
 审查模板：
 
 ```markdown

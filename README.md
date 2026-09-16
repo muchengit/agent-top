@@ -156,6 +156,7 @@ agent-top/
 ├── scripts/
 │   └── check_repository.py
 ├── templates/
+│   ├── agent-design-template.md
 │   ├── article-template.md
 │   ├── community-lab-template.md
 │   ├── interview-question-template.md

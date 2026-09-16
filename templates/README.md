@@ -13,6 +13,7 @@ Templates define the standard structure for Agent-Top contributions.
 - [`lab-template.md`](lab-template.md)
 - [`interview-question-template.md`](interview-question-template.md)
 - [`postmortem-template.md`](postmortem-template.md)
+- [`agent-design-template.md`](agent-design-template.md)
 - [`monthly-contributor-report.md`](monthly-contributor-report.md)
 - [`community-lab-template.md`](community-lab-template.md)
 
@@ -22,6 +23,7 @@ Templates define the standard structure for Agent-Top contributions.
 - **Lab**: runnable code with deterministic tests.
 - **Interview question**: concept, implementation, debugging, or design question.
 - **Postmortem**: production or learning incident with action items.
+- **Agent design**: reusable one-page design review and interview artifact.
 - **Community Lab**: group session notes and follow-up artifacts.
 - **Monthly contributor report**: contribution review and recognition.
 

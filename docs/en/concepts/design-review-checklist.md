@@ -18,6 +18,8 @@ A good review ends with four decisions:
 - **Rework**: architecture has unresolved correctness, safety, or maintainability risks.
 - **Stop**: task does not need an Agent, or risks are unacceptable.
 
+Use the reusable template in [`../../../templates/agent-design-template.md`](../../../templates/agent-design-template.md).
+
 Review template:
 
 ```markdown
