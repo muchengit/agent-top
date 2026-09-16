@@ -12,9 +12,9 @@ It helps learners and engineers build practical Agent skills from first LLM call
 - Multi-turn state and context compression
 - Mainstream Agent frameworks with version-anchored Labs
 - MCP integration
-- RAG pipelines and retrieval evaluation
+- RAG pipelines, retrieval evaluation, and multi-round research discussion
 - Long-term memory with Mem0 / Letta
-- Multi-agent communication and orchestration
+- Multi-agent communication, orchestration, and supervisor routing
 - Evaluation, observability, safety guardrails, deployment, and cost optimization
 - Release gates and production regression checks
 - Production postmortems and trade-off thinking

@@ -37,6 +37,7 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`concepts/react-pattern.md`](concepts/react-pattern.md)
 - [`concepts/rag-memory-mcp-flow.md`](concepts/rag-memory-mcp-flow.md)
 - [`concepts/multi-round-research-discussion.md`](concepts/multi-round-research-discussion.md)
+- [`concepts/agent-system-architecture.md`](concepts/agent-system-architecture.md)
 
 ## Frameworks
 

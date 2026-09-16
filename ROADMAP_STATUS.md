@@ -11,7 +11,7 @@ validated_date: 2026-09-16
 | --- | --- | --- |
 | Repository basics | Done | `README.md`, `README.zh-CN.md`, `LICENSE`, `.gitignore` |
 | Concrete framework | Done | `docs/agent-top-concrete-framework.md` |
-| Concepts | Done | `docs/concepts/` |
+| Concepts | Done | `docs/concepts/`, including architecture and multi-round research flows |
 | Framework map | Done | `docs/frameworks/framework-map.md` |
 | Executable Labs | Done | `labs/l0` through `labs/l5`, including supplementary labs |
 | Detailed tutorials | Done | `docs/en/` and `docs/zh/` through L5 |
@@ -37,7 +37,7 @@ validated_date: 2026-09-16
 | Framework example freshness | reviewed before stale threshold |
 | Review coverage | >= 2 backups per active module |
 | Tutorial coverage | L0-L5 EN and ZH present |
-| Lab test coverage | 28 deterministic Lab tests pass locally |
+| Lab test coverage | 35 deterministic Lab tests pass locally |
 
 ## Next Priority
 
