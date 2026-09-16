@@ -44,3 +44,13 @@ Use the glossary for stable terms. Prefer consistency over local phrasing when t
 - Chinese link target uses an old filename.
 - Transliteration changes the meaning of MCP, RAG, or ReAct.
 - Framework names are translated when they should remain brand names.
+
+## Review Checklist
+
+- `i18n-key` matches the paired file.
+- `last-synced` matches the latest accepted source update.
+- Chinese links point to Chinese filenames where available.
+- Framework names, brand names, and protocol names remain unchanged unless the glossary says otherwise.
+- Technical terms are consistent with the glossary.
+- Examples are not accidentally localized in a way that changes API, code, or command behavior.
+- The translated page has no placeholder text or untranslated headings.
