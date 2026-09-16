@@ -18,6 +18,7 @@ Welcome. Agent-Top is built around durable Agent patterns, executable Labs, and 
 python scripts/check_repository.py
 python -m unittest discover -s labs -p "test_*.py"
 python -m compileall -q labs scripts
+python -m ruff check .
 ```
 
 ## Contribution Types

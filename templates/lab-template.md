@@ -18,15 +18,16 @@ Build and verify a small working Agent system.
 - Estimated time:
 - Dependencies:
 
-## Steps
+## Run
 
-1. Create the example.
-2. Run the example.
-3. Inspect the output.
+```bash
+python -m unittest labs.lx.lab_name.test_lab
+```
 
-## Code
+## Lab Files
 
-Use version-anchored code and keep examples executable.
+- `agent_top_labs_lx_lab_name.py`: executable Lab implementation.
+- `test_lab.py`: tests that verify the Lab behavior.
 
 ## Common Pitfalls
 

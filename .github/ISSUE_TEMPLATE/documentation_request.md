@@ -19,4 +19,6 @@ labels: [docs]
 - [ ] Goal is clear
 - [ ] Prerequisites are listed
 - [ ] Steps are executable or reviewable
+- [ ] For Labs, README has Goal / Prerequisites / Run / Common Pitfalls / Self-Check
+- [ ] For Labs, executable code and tests live in the same Lab directory
 - [ ] Self-check questions are included where relevant
