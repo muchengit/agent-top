@@ -1,0 +1,39 @@
+- name: good first issue
+  description: Good for newcomers
+  color: '7057ff'
+
+- name: docs-only
+  description: Documentation-only change
+  color: '0e8a16'
+
+- name: translation-needed
+  description: Translation task available for claim
+  color: 'fbca04'
+
+- name: sync-required
+  description: EN and ZH content is out of sync
+  color: 'd93f0b'
+
+- name: deprecated
+  description: Content should point to a replacement
+  color: '5319e7'
+
+- name: breaking-change
+  description: Framework or SDK change may affect examples
+  color: 'c2516f'
+
+- name: maintainer-review
+  description: Architecture or safety review required
+  color: 'b60205'
+
+- name: lab
+  description: Executable Lab content
+  color: '008672'
+
+- name: interview
+  description: Interview question or rubric content
+  color: 'f9d0c4'
+
+- name: production
+  description: Production, safety, eval, or postmortem content
+  color: 'e0441e'

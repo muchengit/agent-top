@@ -68,6 +68,8 @@ python -m compileall -q labs scripts
 - Documentation index: [`docs/README.md`](docs/README.md)
 - Governance: [`GOVERNANCE.md`](GOVERNANCE.md)
 - Contributing: [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- Community: [`docs/community/README.md`](docs/community/README.md)
+- Security: [`SECURITY.md`](SECURITY.md)
 - Roadmap status: [`ROADMAP_STATUS.md`](ROADMAP_STATUS.md)
 
 ## Documentation

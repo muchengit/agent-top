@@ -31,3 +31,5 @@ validated_date: 2026-09-16
 - [`community/translation-workflow.md`](community/translation-workflow.md)
 - [`community/contributor-of-the-month.md`](community/contributor-of-the-month.md)
 - [`community/maintainer-rotation.md`](community/maintainer-rotation.md)
+- [`community/contributor-onboarding.md`](community/contributor-onboarding.md)
+- [`SECURITY.md`](../SECURITY.md)

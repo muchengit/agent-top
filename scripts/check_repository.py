@@ -20,12 +20,15 @@ REQUIRED_PATHS = [
     Path("GOVERNANCE.md"),
     Path("CONTRIBUTING.md"),
     Path("CONTRIBUTING.zh-CN.md"),
+    Path("SECURITY.md"),
     Path("docs/community/contribution-paths.md"),
     Path("docs/community/community-rhythm.md"),
     Path("docs/community/labels.md"),
     Path("docs/community/maintainer-rotation.md"),
     Path("docs/community/contributor-of-the-month.md"),
     Path("docs/community/translation-workflow.md"),
+    Path(".github/labels.yml"),
+    Path("docs/community/contributor-onboarding.md"),
     Path("docs/community/README.md"),
     Path("docs/production/quarterly-maintenance.md"),
     Path("templates/monthly-contributor-report.md"),
@@ -37,9 +40,22 @@ REQUIRED_PATHS = [
     Path("templates/postmortem-template.md"),
 ]
 MAX_STALE_DAYS = 180
+FRONTMATTER_PATTERN = re.compile(r"^---\n(.*?)\n---\n", re.DOTALL)
 DATE_PATTERN = re.compile(r"validated_date:\s*([0-9]{4}-[0-9]{2}-[0-9]{2})")
 TESTED_PATTERN = re.compile(r"tested_against:\s*([^\n]+)")
 RELATIVE_LINK_PATTERN = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+LABEL_NAMES = {
+    "good first issue",
+    "docs-only",
+    "translation-needed",
+    "sync-required",
+    "deprecated",
+    "breaking-change",
+    "maintainer-review",
+    "lab",
+    "interview",
+    "production",
+}
 
 
 def fail(message: str) -> None:
@@ -97,6 +113,35 @@ def check_relative_links(markdown_paths: list[Path]) -> None:
         fail("broken relative links: " + json.dumps(broken, ensure_ascii=False))
 
 
+def parse_frontmatter(path: Path) -> dict[str, str]:
+    text = path.read_text(encoding="utf-8")
+    match = FRONTMATTER_PATTERN.match(text)
+    if not match:
+        return {}
+    values: dict[str, str] = {}
+    for line in match.group(1).splitlines():
+        if ":" not in line:
+            continue
+        key, value = line.split(":", 1)
+        values[key.strip()] = value.strip().strip('"')
+    return values
+
+
+def check_github_labels() -> None:
+    labels_path = ROOT / ".github" / "labels.yml"
+    names = set()
+    for line in labels_path.read_text(encoding="utf-8").splitlines():
+        stripped = line.strip()
+        if not stripped.startswith("- name:"):
+            continue
+        name = stripped[len("- name:"):].strip().strip('"').strip("'")
+        if name:
+            names.add(name)
+    missing = sorted(LABEL_NAMES - names)
+    extra = sorted(names - LABEL_NAMES)
+    if missing or extra:
+        fail("label config mismatch: missing=" + ", ".join(missing) + "; extra=" + ", ".join(extra))
+
 def check_no_conflict_markers(markdown_paths: list[Path]) -> None:
     markers = ["<<<<<<<", "=======", ">>>>>>>"]
     bad: list[str] = []
@@ -108,12 +153,25 @@ def check_no_conflict_markers(markdown_paths: list[Path]) -> None:
         fail("merge conflict markers found: " + ", ".join(bad))
 
 
+def check_bilingual_frontmatter(markdown_paths: list[Path]) -> None:
+    bad: list[str] = []
+    for path in markdown_paths:
+        if "docs/en" not in path.parts and "docs/zh" not in path.parts:
+            continue
+        meta = parse_frontmatter(path)
+        if "i18n-key" not in meta or "last-synced" not in meta:
+            bad.append(str(path.relative_to(ROOT)))
+    if bad:
+        fail("bilingual frontmatter missing: " + ", ".join(bad))
+
+
 def main() -> None:
     check_required_paths()
     markdown_paths = iter_markdown()
     check_no_conflict_markers(markdown_paths)
     check_version_anchors(markdown_paths)
     check_relative_links(markdown_paths)
+    check_bilingual_frontmatter(markdown_paths)
     print(f"Repository checks passed: {len(markdown_paths)} Markdown files checked.")
 
 

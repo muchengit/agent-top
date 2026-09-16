@@ -11,4 +11,5 @@ validated_date: 2026-09-16
 - [`labels.md`](labels.md)
 - [`contributor-of-the-month.md`](contributor-of-the-month.md)
 - [`maintainer-rotation.md`](maintainer-rotation.md)
+- [`contributor-onboarding.md`](contributor-onboarding.md)
 - [`glossary.md`](glossary.md)
