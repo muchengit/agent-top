@@ -84,6 +84,7 @@ agent-top/
 │   │   │   └── translation-workflow.md
 │   │   ├── concepts/
 │   │   │   ├── agent-system-architecture.md
+│   │   │   ├── design-review-checklist.md
 │   │   │   ├── multi-round-research-discussion.md
 │   │   │   ├── overview.md
 │   │   │   ├── rag-memory-mcp-flow.md
@@ -206,6 +207,7 @@ python -m ruff check .
 
 - Concepts: [`docs/en/concepts`](docs/en/concepts)
 - Framework map: [`docs/en/frameworks/framework-map.md`](docs/en/frameworks/framework-map.md)
+- Design review checklist: [`docs/en/concepts/design-review-checklist.md`](docs/en/concepts/design-review-checklist.md)
 - Open-source inspirations: [`docs/en/tutorials/open-source-inspirations.md`](docs/en/tutorials/open-source-inspirations.md)
 - Interview framework: [`docs/en/interviews/interview-framework.md`](docs/en/interviews/interview-framework.md)
 - Labs: [`labs`](labs)

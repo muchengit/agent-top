@@ -21,6 +21,7 @@ validated_date: 2026-09-16
 
 - [`agent-top-concrete-framework.md`](agent-top-concrete-framework.md)：具体框架
 - [`concepts/`](concepts/)：概念与架构
+- [`concepts/design-review-checklist.md`](concepts/design-review-checklist.md)：Agent 设计审查清单
 - [`frameworks/`](frameworks/)：框架地图
 - [`production/`](production/)：生产指南
 - [`cases/`](cases/)：案例研究
