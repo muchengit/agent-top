@@ -72,7 +72,7 @@ Agent-Top 用 L0-L5 能力模型组织 LLM Agent 学习路径，让学习者从�
 
 ## 关联文档
 
-- L0-L5 中文教程：[`l0-first-llm-call.md`](l0-first-llm-call.md)
-- Agent 架构：[`concepts/agent-system-architecture.md`](concepts/agent-system-architecture.md)
-- 框架地图：[`frameworks/framework-map.md`](frameworks/framework-map.md)
-- 生产清单：[`quick-reference/production-checklist.md`](quick-reference/production-checklist.md)
+- L0-L5 中文教程：[`l0-first-llm-call.md`](L0第一次LLM调用.md)
+- Agent 架构：[`concepts/agent-system-architecture.md`](concepts/Agent系统架构.md)
+- 框架地图：[`frameworks/framework-map.md`](frameworks/框架地图.md)
+- 生产清单：[`quick-reference/production-checklist.md`](quick-reference/生产清单.md)

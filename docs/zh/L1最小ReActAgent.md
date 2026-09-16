@@ -221,4 +221,4 @@ python -m unittest labs.l1.minimal_react_agent.test_lab
 
 ## 下一步
 
-继续 [`L2 带 MCP 的可靠单 Agent`](l2-single-agent-mcp.md)，添加更清晰的工具边界。
+继续 [`L2 带 MCP 的可靠单 Agent`](L2可靠单Agent与MCP.md)，添加更清晰的工具边界。

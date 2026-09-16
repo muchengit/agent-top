@@ -220,4 +220,4 @@ python -m unittest labs.l0.first_llm_call.test_lab
 
 ## 下一步
 
-继续 [`L1 最小 ReAct Agent`](l1-minimal-react-agent.md)，不使用框架构建一个小型 Agent 循环。
+继续 [`L1 最小 ReAct Agent`](L1最小ReActAgent.md)，不使用框架构建一个小型 Agent 循环。
