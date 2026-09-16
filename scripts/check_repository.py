@@ -177,6 +177,22 @@ def check_bilingual_frontmatter(markdown_paths: list[Path]) -> None:
 
 
 
+
+def check_bilingual_pairs(markdown_paths: list[Path]) -> None:
+    keys_by_lang: dict[str, set[str]] = {"en": set(), "zh": set()}
+    for path in markdown_paths:
+        rel_parts = path.relative_to(ROOT).parts
+        if len(rel_parts) < 2 or rel_parts[0] != "docs" or rel_parts[1] not in keys_by_lang:
+            continue
+        meta = parse_frontmatter(path)
+        key = meta.get("i18n-key", "").strip().strip('"')
+        if key:
+            keys_by_lang[rel_parts[1]].add(key)
+    missing = sorted(keys_by_lang["en"] ^ keys_by_lang["zh"])
+    if missing:
+        fail("unpaired bilingual keys: " + ", ".join(missing))
+
+
 def check_lab_readmes(markdown_paths: list[Path]) -> None:
     lab_readmes = [
         path
@@ -222,6 +238,7 @@ def main() -> None:
     check_version_anchors(markdown_paths)
     check_relative_links(markdown_paths)
     check_bilingual_frontmatter(markdown_paths)
+    check_bilingual_pairs(markdown_paths)
     check_lab_readmes(markdown_paths)
     check_executable_labs()
     print(f"Repository checks passed: {len(markdown_paths)} Markdown files checked.")
