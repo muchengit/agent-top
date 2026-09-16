@@ -59,7 +59,9 @@ Agent-Top 是一个面向 LLM Agent 开发的开源学习框架。
 - 内容模板：[`templates`](templates)
 - 治理规范：[`GOVERNANCE.md`](GOVERNANCE.md)
 - 贡献指南：[`CONTRIBUTING.md`](CONTRIBUTING.md)
+- 中文贡献指南：[`CONTRIBUTING.zh-CN.md`](CONTRIBUTING.zh-CN.md)
 - 路线状态：[`ROADMAP_STATUS.md`](ROADMAP_STATUS.md)
+- 中文路线状态：[`ROADMAP_STATUS.zh-CN.md`](ROADMAP_STATUS.zh-CN.md)
 
 ## 文档
 

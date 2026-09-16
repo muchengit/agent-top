@@ -86,7 +86,11 @@ agent-top/
 ├── CONTRIBUTING.md           # English contribution guide
 ├── CONTRIBUTING.zh-CN.md     # Chinese contribution guide
 ├── ROADMAP_STATUS.md         # Current completion status and next priorities
-└── SECURITY.md               # Security reporting and safe Lab policy
+├── ROADMAP_STATUS.zh-CN.md   # Chinese roadmap status
+├── SECURITY.md               # Security reporting and safe Lab policy
+├── SECURITY.zh-CN.md         # Chinese security policy
+├── CODE_OF_CONDUCT.zh-CN.md  # Chinese code of conduct
+└── agent-top-roadmap.zh-CN.md # Chinese roadmap
 ```
 
 ## Directory Responsibilities
@@ -119,9 +123,12 @@ python -m ruff check .
 - Documentation index: [`docs/en/README.md`](docs/en/README.md)
 - Governance: [`GOVERNANCE.md`](GOVERNANCE.md)
 - Contributing: [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- Chinese contribution guide: [`CONTRIBUTING.zh-CN.md`](CONTRIBUTING.zh-CN.md)
 - Community: [`docs/en/community/README.md`](docs/en/community/README.md)
 - Security: [`SECURITY.md`](SECURITY.md)
+- Chinese security policy: [`SECURITY.zh-CN.md`](SECURITY.zh-CN.md)
 - Roadmap status: [`ROADMAP_STATUS.md`](ROADMAP_STATUS.md)
+- Chinese roadmap status: [`ROADMAP_STATUS.zh-CN.md`](ROADMAP_STATUS.zh-CN.md)
 
 ## Documentation
 
