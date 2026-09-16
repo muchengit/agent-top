@@ -72,6 +72,7 @@ agent-top/
 │   │   ├── portfolio/                # 作品集项目路径
 │   │   ├── production/               # 评估、安全、维护、回滚
 │   │   ├── quick-reference/          # 术语、命令、架构、生产速查表
+│   │   ├── skills/                   # Agent 技能体系
 │   │   ├── tutorials/                # 外部教程、开源项目灵感、学习路径映射
 │   │   ├── l0-l5 tutorials           # L0-L5 详细教程
 │   │   ├── README.md                 # 英文文档索引
@@ -93,6 +94,7 @@ agent-top/
 │       ├── portfolio/                # 中文作品集路径
 │       ├── production/               # 中文生产指南
 │       ├── quick-reference/          # 中文速查表
+│       ├── skills/                   # 中文 Agent 技能体系
 │       └── tutorials/                # 中文教程与开源项目灵感
 ├── labs/
 │   ├── l0/                           # 第一次 LLM 调用

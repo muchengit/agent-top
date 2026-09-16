@@ -35,3 +35,4 @@ Quick reference pages are the fast lookup layer for Agent-Top.
 - Concepts: [`../concepts/`](../concepts/)
 - Production: [`../production/`](../production/)
 - Labs: [`labs`](../../../labs/README.md)
+- Agent skills: [`../skills/README.md`](../skills/README.md)

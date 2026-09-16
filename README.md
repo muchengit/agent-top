@@ -118,6 +118,9 @@ agent-top/
 │   │   │   ├── architecture-patterns.md
 │   │   │   ├── lab-command-cheatsheet.md
 │   │   │   └── production-checklist.md
+│   │   ├── skills/
+│   │   │   ├── README.md
+│   │   │   └── tool-mcp-safety.md
 │   │   ├── tutorials/
 │   │   │   ├── learning-paths.md
 │   │   │   ├── open-source-inspirations.md
