@@ -20,15 +20,31 @@ A production Agent system usually combines multiple subsystems. Understanding th
 7. Multi-agent components decompose, verify, or specialize work.
 8. Evaluation and observability record quality, latency, cost, and safety signals.
 
+```mermaid
+flowchart TD
+  U[User Query] --> GW[Gateway]
+  GW --> Auth[Auth / Rate / Safety]
+  Auth --> RAG[RAG Retrieval]
+  Auth --> Memory[Memory Context]
+  RAG --> Planner[Planner]
+  Memory --> Planner
+  Planner --> Tools[MCP / Tool Gateway]
+  Planner --> Agents[Multi-Agent Workers]
+  Tools --> Verify[Verifier]
+  Agents --> Verify
+  Verify --> Obs[Eval / Observability]
+  Verify --> User[Answer]
+```
+
 ## Data Ownership
 
-| Source | Owns | Risk |
-| --- | --- | --- |
-| RAG | Retrieved evidence for the current question | Stale or irrelevant documents |
-| Memory | Durable user or task context | Privacy, stale facts, overgeneralization |
-| Tool gateway | External actions and state | Permission mistakes, side effects |
-| Planner | Step selection and routing | Wrong route, loops, overconfidence |
-| Observability | Trace, cost, latency, errors | Incomplete trace, missing fields |
+| Source | Owns | Risk | Correct Question |
+| --- | --- | --- | --- |
+| RAG | Retrieved evidence for the current question | Stale or irrelevant documents | Did retrieval return the source needed for this query? |
+| Memory | Durable user or task context | Privacy, stale facts, overgeneralization | Should this fact be stored, deleted, or forgotten? |
+| Tool gateway | External actions and state | Permission mistakes, side effects | Is this read, write, or destructive? |
+| Planner | Step selection and routing | Wrong route, loops, overconfidence | Is the next step the smallest useful step? |
+| Observability | Trace, cost, latency, errors | Incomplete trace, missing fields | Can the incident be reproduced from the trace? |
 
 ## Design Rules
 
@@ -39,6 +55,8 @@ A production Agent system usually combines multiple subsystems. Understanding th
 - Use eval sets to catch regressions.
 - Separate evidence from generated text.
 - Do not let final answers hide missing sources.
+- Prefer tool gateways that enforce permissions at execution time.
+- Treat subagent output as evidence that may need verification.
 
 ## Failure Triage
 
@@ -61,3 +79,4 @@ When the answer is wrong, check in this order:
 - Can it detect stale facts?
 - Can it escalate to a human?
 - Can it rollback or disable a risky path?
+- Can each subsystem be evaluated independently?

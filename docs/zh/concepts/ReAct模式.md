@@ -16,6 +16,14 @@ ReAct 交替进行 reasoning 和 action。它是先学 Agent 循环的好模式�
 4. Observe tool result。
 5. 重复直到完成、模糊、不安全或耗尽。
 
+```mermaid
+flowchart LR
+  O[Observe] --> T[Think]
+  T --> A[Act]
+  A --> O
+  O --> F[Final Answer]
+```
+
 ## Pseudocode
 
 ```python

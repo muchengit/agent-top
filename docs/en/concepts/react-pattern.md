@@ -17,6 +17,14 @@ ReAct interleaves reasoning and action. It is one of the most useful patterns to
 4. Observe tool result.
 5. Repeat until the answer is complete, ambiguous, unsafe, or exhausted.
 
+```mermaid
+flowchart LR
+  O[Observe] --> T[Think]
+  T --> A[Act]
+  A --> O
+  O --> F[Final Answer]
+```
+
 ## Pseudocode
 
 ```python
