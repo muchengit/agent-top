@@ -16,8 +16,13 @@ Templates define the standard structure for Agent-Top contributions.
 - [`agent-design-template.md`](agent-design-template.md)
 - [`design-review-workshop-template.md`](design-review-workshop-template.md)
 - [`design-review-example.md`](design-review-example.md)
+- [`case-study-template.md`](case-study-template.md)
+- [`case-study-writing-guide.md`](case-study-writing-guide.md)
+- [`contribution-checklist.md`](contribution-checklist.md)
 - [`Agent设计审查Workshop模板.md`](Agent设计审查Workshop模板.md)
 - [`Agent设计审查范例.md`](Agent设计审查范例.md)
+- [`案例研究模板.md`](案例研究模板.md)
+- [`案例研究写作指南.md`](案例研究写作指南.md)
 - [`monthly-contributor-report.md`](monthly-contributor-report.md)
 - [`community-lab-template.md`](community-lab-template.md)
 
@@ -30,6 +35,8 @@ Templates define the standard structure for Agent-Top contributions.
 - **Agent design**: reusable one-page design review and interview artifact.
 - **Design review workshop**: structured group review notes with decision record.
 - **Design review example**: completed review output for customer refund assistant.
+- **Case study**: scenario-backed pattern lesson with failure modes and evidence.
+- **Contribution checklist**: pre-PR verification for docs, Labs, Examples, translation, and safety.
 - **Community Lab**: group session notes and follow-up artifacts.
 - **Monthly contributor report**: contribution review and recognition.
 

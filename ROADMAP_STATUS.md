@@ -17,6 +17,7 @@ validated_date: 2026-09-16
 | Task-first onboarding | Done | `docs/en/tutorials/quick-navigation.md`, `docs/zh/tutorials/快速导航卡.md`, `examples/README.md`, `examples/agent-decision-trace/`, and `examples/rag-evidence-refusal/` |
 | Design review assets | Done | `docs/en/concepts/design-review-workshop.md` and `docs/en/concepts/agent-system-blueprint.md` plus Chinese mirrors |
 | Practice handbook | Done | `docs/en/tutorials/practice-handbook.md` plus Chinese mirror |
+| Contribution assets | Done | Case study templates, contribution checklist, and enhanced PR template |
 | Detailed tutorials | Done | `docs/en/` and `docs/zh/` through L5 |
 | Tutorial reference map | Done | `docs/en/tutorials/reference-map.md`, `docs/zh/tutorials/reference-map.md` |
 | Chinese tutorial filenames | Done | Chinese names under `docs/zh/` |

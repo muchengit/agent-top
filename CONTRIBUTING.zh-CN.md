@@ -59,6 +59,8 @@ python -m ruff check .
 
 ## PR 说明
 
+提交 PR 前使用 [`templates/contribution-checklist.md`](templates/contribution-checklist.md)。
+
 请包含：
 
 - 改了什么。

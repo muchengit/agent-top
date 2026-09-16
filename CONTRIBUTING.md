@@ -59,6 +59,8 @@ Use Markdown and executable Labs as the primary content format. For concrete Lab
 
 ## PR Description
 
+Use [`templates/contribution-checklist.md`](templates/contribution-checklist.md) before opening a PR.
+
 Include:
 
 - What changed.

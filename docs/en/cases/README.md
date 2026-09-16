@@ -18,6 +18,10 @@ Case studies connect concepts, Labs, and production decisions to realistic Agent
 - [`personal-knowledge-rag.md`](personal-knowledge-rag.md): personal knowledge base with RAG, memory, and refusal behavior.
 - [`production-regression-gate.md`](production-regression-gate.md): production release gate with safety, trace, rollback, and cost controls.
 
+## Writing Support
+
+Use [`../../../templates/case-study-template.md`](../../../templates/case-study-template.md) and [`../../../templates/case-study-writing-guide.md`](../../../templates/case-study-writing-guide.md) for new cases.
+
 ## Case Study Rules
 
 Each case should include:

@@ -17,6 +17,7 @@ validated_date: 2026-09-16
 | 任务优先入口 | Done | `docs/en/tutorials/quick-navigation.md`、`docs/zh/tutorials/快速导航卡.md`、`examples/README.md`、`examples/agent-decision-trace/`、`examples/rag-evidence-refusal/` |
 | 设计审查资产 | Done | `docs/en/concepts/design-review-workshop.md`、`docs/en/concepts/agent-system-blueprint.md` 及中文镜像 |
 | 练习手册 | Done | `docs/en/tutorials/practice-handbook.md` 及中文镜像 |
+| 贡献资产 | Done | 案例研究模板、贡献自查清单和增强 PR 模板 |
 | 详细教程 | Done | `docs/en/` 和 `docs/zh/` 覆盖 L0-L5 |
 | 中文教程文件名 | Done | `docs/zh/` 下的中文镜像 |
 | 面试资产 | Done | `docs/en/interviews/`, `docs/zh/interviews/`, 含 STAR 回答范例 |
