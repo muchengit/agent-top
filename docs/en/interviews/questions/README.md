@@ -11,6 +11,7 @@ Agent-Top question sets are organized by capability level and question depth.
 
 ## Question Sets
 
+- [`l0-basics.md`](l0-basics.md): baseline concepts before Agent loops and tools.
 - [`question-bank-overview.md`](question-bank-overview.md): current coverage, interview bundles, scoring notes, and expansion plan.
 - [`l1-components.md`](l1-components.md): core Agent components and minimal loops.
 - [`l2-framework-mcp.md`](l2-framework-mcp.md): framework fit, tool boundaries, and MCP-style failures.
@@ -50,6 +51,7 @@ A good Agent-Top interview question should make a strong candidate explain:
 
 | Level | Question Set | Portfolio Evidence |
 | --- | --- | --- |
+| L0 | [`l0-basics.md`](l0-basics.md) | Prompt rewrite or tiny trace |
 | L1 | [`l1-components.md`](l1-components.md) | Minimal ReAct Agent run |
 | L2 | [`l2-framework-mcp.md`](l2-framework-mcp.md) | Enterprise Multi-Tool Agent |
 | L3 | [`l3-system-design.md`](l3-system-design.md) | Personal Knowledge Base or Multi-Agent Collaboration |

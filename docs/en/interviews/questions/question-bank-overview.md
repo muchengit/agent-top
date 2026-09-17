@@ -7,12 +7,13 @@ last-synced: 2026-09-17
 
 # Interview Question Bank Overview
 
-This page turns the Agent-Top interview assets into a working preparation map. It covers the current 21 questions across L1-L5 and defines what to add next.
+This page turns the Agent-Top interview assets into a working preparation map. It covers the current 28 questions across L0-L5 and defines what to add next.
 
 ## Current Coverage Matrix
 
 | Level | Questions | Core Signal | Best Interview Use | Portfolio Evidence |
 | --- | ---: | --- | --- | --- |
+| L0 Basics | 7 | Prompt, context, tokens, safety, debugging | First-pass screening or onboarding | Prompt rewrite or tiny trace |
 | L1 Components | 4 | ReAct, perception, tools, memory, stop conditions | Junior Agent engineer screening | Minimal ReAct Agent run |
 | L2 Framework and MCP | 4 | Framework fit, tool boundaries, MCP failure handling, human approval | Mid-level implementation review | Enterprise Multi-Tool Agent |
 | L3 System Design | 4 | RAG, memory, MCP, multi-agent routing, retrieval evals | Technical design interview | Personal Knowledge Base or Multi-Agent Collaboration |
@@ -97,7 +98,6 @@ Suggested thresholds:
 
 ### Next 20 Questions To Add
 
-- L0: token, context window, prompt, and completion boundaries.
 - L1: tool ambiguity, memory staleness, planning stop conditions, and direct-answer vs tool-call decision.
 - L2: MCP capability discovery, tool schema mismatch, auth scopes, and provider SDK migration.
 - L3: stale memory, multi-source citation, retrieval refusal, and multi-agent state ownership.
@@ -106,10 +106,10 @@ Suggested thresholds:
 
 ### Priority
 
-1. Add L0 questions because the learning path starts there.
-2. Deepen L2 MCP and tool security.
-3. Add L4 incident drills with explicit root-cause categories.
-4. Add L5 contribution and governance questions with portfolio evidence.
+1. Deepen L2 MCP and tool security.
+2. Add L4 incident drills with explicit root-cause categories.
+3. Add L5 contribution and governance questions with portfolio evidence.
+4. Add L0 production variants once the baseline page stabilizes.
 
 ## Candidate Preparation Checklist
 
@@ -121,6 +121,7 @@ Suggested thresholds:
 
 ## Related Files
 
+- [`l0-basics.md`](l0-basics.md)
 - [`l1-components.md`](l1-components.md)
 - [`l2-framework-mcp.md`](l2-framework-mcp.md)
 - [`l3-system-design.md`](l3-system-design.md)

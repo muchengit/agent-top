@@ -21,6 +21,7 @@ Agent interviews should measure whether a candidate can build reliable Agent sys
 
 | Level | Concept | Implementation | Debugging | Design |
 | --- | --- | --- | --- | --- |
+| L0 | Prompt, tokens, context window, model output vs final response | Prompt rewrite | Bad response debugging | Baseline screening |
 | L1 | Perception, planning, tools, memory | Minimal ReAct loop | Failed tool loop | Single-agent shape |
 | L2 | Framework fit and tool boundaries | Guardrailed single Agent | MCP failure handling | Tool routing |
 | L3 | RAG, memory, MCP, and multi-agent flow | End-to-end pipeline | Retrieval misses and stale memory | Customer support system |
@@ -107,6 +108,14 @@ Recommended structure:
 
 ## Scoring Rubric
 
+### L0 Baseline
+
+Weight:
+
+- 40% explains prompt, context, and token basics.
+- 30% can debug a bad response from a small trace.
+- 30% can separate model output from final user response.
+
 ### L1 Component Understanding
 
 Weight:
@@ -186,6 +195,7 @@ Ask candidates to map each claim to one of four project gradients:
 
 ## Related Question Sets
 
+- [`questions/l0-basics.md`](questions/l0-basics.md)
 - [`questions/l1-components.md`](questions/l1-components.md)
 - [`questions/l2-framework-mcp.md`](questions/l2-framework-mcp.md)
 - [`questions/l3-system-design.md`](questions/l3-system-design.md)
