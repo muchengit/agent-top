@@ -46,6 +46,45 @@ The main agent does not blindly accept employee output. It integrates, audits, a
 
 Additional employees can be added when the project grows, but every new role needs one owner, one output type, one quality gate, and one backup.
 
+
+## Mandatory Employee Objectives
+
+Every employee must maintain a written work charter. The main agent rejects work that is vague, unverifiable, unsafe, or not linked to a project outcome.
+
+| Employee | Mandatory objective | Required evidence | Rework condition |
+| --- | --- | --- | --- |
+| Research Discoverer | Find only sources that change roadmap, tutorials, Labs, interviews, or contribution strategy. | Source digest with date, source, gap, recommendation, and confidence. | Rework if sources are marketing-only, duplicated, undated, or not mapped to roadmap impact. |
+| Python Engineer | Keep every Python Lab deterministic, API-key-free, and aligned with the pattern contract. | Runnable `agent_top_labs_*.py`, deterministic tests, README run command, updated Lab index. | Rework if behavior is flaky, requires external services, lacks tests, or diverges from the stable pattern. |
+| Node.js/TypeScript Engineer | Keep JS/TS examples consistent with Python behavior and production-safe. | Runtime executable JS reference plus TS source with parity notes. | Rework if semantics differ from the Python reference, runtime fails, or TS remains unverified without a stated gap. |
+| Rust Engineer | Keep Rust examples compilable and behavior-compatible with the shared pattern contract. | Rust source, compile command, deterministic runtime assertion or test evidence. | Rework if it does not compile, has side effects beyond the pattern, or lacks a clear failure path. |
+| Go Engineer | Keep Go examples modular, tested, and easy to run from a clean checkout. | `go.mod`, Go source, `go test` evidence, usage notes. | Rework if the module cannot run, tests are missing, or the example is not comparable to the shared pattern. |
+| Language Parity Reviewer | Own cross-language equivalence and stop examples that drift. | Parity matrix, mismatch list, recommendation to accept or return each language. | Rework if parity is described without evidence, ignores a language, or accepts hidden behavior drift. |
+| Docs Structure Auditor | Keep docs navigable, bilingual, link-safe, and frontmatter-consistent. | Repository check output, broken-link/frontmatter report, required fixes. | Rework if docs fail checks, Chinese pages jump to English without reason, or links are stale. |
+| Translation Editor | Keep Chinese docs complete, native-readable, and aligned with the English source. | Chinese file, `i18n-key`, `last-synced`, glossary update, notes for untranslated sections. | Rework if Chinese content is empty, copied mechanically, terminology is inconsistent, or sync metadata is stale. |
+| Interview Coach | Generate interviews that test understanding, implementation, trade-offs, and production judgment. | Question bank by L0-L5, rubric, answer key, failure-mode probing points. | Rework if questions only test memorization, lack scoring criteria, or omit production trade-offs. |
+| Interview Candidate | Simulate realistic answers and portfolio walkthroughs to stress-test the interview pack. | STAR answer, demo script, failure-mode explanation, self-critique. | Rework if answers are generic, omit evidence, or fail to explain trade-offs. |
+| Open Source Contributor | Produce external contribution work that is safe, scoped, and reviewable. | Contribution plan, issue/PR draft, checklist, maintainer communication notes. | Rework if it depends on private context, is too broad, or lacks reviewer-ready acceptance criteria. |
+| Eval and Observability Engineer | Keep evals, traces, metrics, and regression packets reviewable and repeatable. | Eval set, trace schema, metric thresholds, regression evidence. | Rework if metrics are subjective, traces are not replayable, or regression cases are missing. |
+| Safety and Guardrail Engineer | Protect the project from unsafe, destructive, or permission-unclear behavior. | Guardrail checklist, destructive-action classification, rollback and incident notes. | Rework if safety is added after execution, bypasses review, or lacks rollback notes. |
+| Cost and Reliability Engineer | Keep Agent examples cost-aware, retry-aware, and operationally realistic. | Cost table, latency/retry policy, rollback plan, reliability checklist. | Rework if cost/latency is ignored, retries can loop forever, or degradation is undefined. |
+| Community Operations Lead | Keep contribution flow healthy, sustainable, and newcomer-friendly. | Good-first issue list, translation backlog, showcase cadence, recognition notes. | Rework if tasks are too broad, stale, duplicate, or create reviewer burnout. |
+
+The main agent owns the final merge decision. A worker can propose, but only the main agent can mark work accepted, returned for rework, or rejected.
+
+### Non-Negotiable Rejection Rules
+
+The main agent must return work for rework when any of these occur:
+
+- No explicit expected files or acceptance criteria.
+- Work is not reproducible by a second employee.
+- Code or examples drift from the pattern contract.
+- Docs, tests, and README instructions disagree.
+- Safety-sensitive actions lack confirmation, rollback, or maintainer review.
+- Bilingual content is missing, stale, or linked incorrectly.
+- Claims are not backed by local checks, public evidence, or concrete artifacts.
+- The task creates maintainer burden without reducing long-term ambiguity.
+
+
 ## Workstream Board
 
 The main agent keeps a weekly board with these lanes:

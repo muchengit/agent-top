@@ -20,6 +20,7 @@ Templates define the standard structure for Agent-Top contributions.
 - [`case-study-writing-guide.md`](case-study-writing-guide.md)
 - [`contribution-checklist.md`](contribution-checklist.md)
 - [`project-dispatch-plan.md`](project-dispatch-plan.md)
+- [`employee-work-charter.md`](employee-work-charter.md)
 - [`l5-expert-evidence-template.md`](l5-expert-evidence-template.md)
 - [`L5专家证据模板.md`](L5专家证据模板.md)
 - [`observability-trace-template.md`](observability-trace-template.md)
@@ -41,6 +42,8 @@ Templates define the standard structure for Agent-Top contributions.
 - **Design review workshop**: structured group review notes with decision record.
 - **Design review example**: completed review output for customer refund assistant.
 - **Case study**: scenario-backed pattern lesson with failure modes and evidence.
+- **Employee work charter**: mandatory per-employee objective, expected output, acceptance criteria, rework rules, and main-agent review fields.
+- **Main agent rework log**: rejection reason, evidence, required fixes, rework SLA, and re-review outcome.
 - **Project dispatch plan**: main-agent dispatch queue with employee assignments, expected files, gates, and merge decision.
 - **Contribution checklist**: pre-PR verification for docs, Labs, Examples, translation, and safety.
 - **L5 expert evidence**: packaged expert-level evidence for pattern quality, governance, influence, rubric scores, and final decision.

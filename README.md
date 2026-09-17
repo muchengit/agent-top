@@ -270,6 +270,8 @@ python -m ruff check .
 - L5 expert evidence template: [`templates/l5-expert-evidence-template.md`](templates/l5-expert-evidence-template.md)
 - Company-style long-run operating model: [`docs/en/governance/project-operating-model.md`](docs/en/governance/project-operating-model.md)
 - Project dispatch plan template: [`templates/project-dispatch-plan.md`](templates/project-dispatch-plan.md)
+- Employee work charter: [`templates/employee-work-charter.md`](templates/employee-work-charter.md)
+- Main agent rework log: [`templates/main-agent-rework-log.md`](templates/main-agent-rework-log.md)
 - 2026-09-17 dispatch run: [`docs/en/operations/2026-09-17-project-dispatch-run.md`](docs/en/operations/2026-09-17-project-dispatch-run.md)
 - Project dispatch run template: [`docs/en/operations/project-dispatch-run-template.md`](docs/en/operations/project-dispatch-run-template.md)
 - Orchestration preview script: [`scripts/orchestrate_project.py`](scripts/orchestrate_project.py)

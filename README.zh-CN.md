@@ -176,6 +176,8 @@ agent-top/
 - L5 专家证据模板：[`templates/L5专家证据模板.md`](templates/L5专家证据模板.md)
 - 公司化长期运营模式：[`docs/zh/governance/项目运营模式.md`](docs/zh/governance/项目运营模式.md)
 - 项目调度计划模板：[`templates/project-dispatch-plan.md`](templates/project-dispatch-plan.md)
+- 员工工作章程：[`templates/员工工作章程.md`](templates/员工工作章程.md)
+- 主 Agent 返工日志：[`templates/主Agent返工日志.md`](templates/主Agent返工日志.md)
 - 2026-09-17 调度运行记录：[`docs/zh/operations/2026-09-17-项目调度运行记录.md`](docs/zh/operations/2026-09-17-项目调度运行记录.md)
 - 项目调度运行记录模板：[`docs/zh/operations/项目调度运行记录模板.md`](docs/zh/operations/项目调度运行记录模板.md)
 - 调度预览脚本：[`scripts/orchestrate_project.py`](scripts/orchestrate_project.py)
