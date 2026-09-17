@@ -10,7 +10,7 @@ last-synced: 2026-09-16
 
 ## Goal
 
-Design a reusable Agent pattern that has stable inputs, outputs, safety checks, verification, and clear failure modes.
+Design a reusable Agent pattern that has stable inputs, outputs, safety checks, verification, and clear failure modes. After the tutorial, package the work with [`tutorials/industry-benchmark-and-l5-expert-path.md`](tutorials/industry-benchmark-and-l5-expert-path.md) and [`../../templates/l5-expert-evidence-template.md`](../../templates/l5-expert-evidence-template.md).
 
 ## Why L5 Matters
 

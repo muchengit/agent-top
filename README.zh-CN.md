@@ -52,7 +52,7 @@ Agent-Top 是一个面向 LLM Agent 开发的开源学习框架。
 | L2 | 用框架和 MCP 构建可靠单 Agent |
 | L3 | 构建包含 RAG、记忆、可观测和多 Agent 流程的端到端系统 |
 | L4 | 完成生产化：评估、安全、部署、成本与 Postmortem |
-| L5 | 形成原创模式、开源贡献和真实影响力 |
+| L5 | 形成原创模式、开源贡献、治理证据和真实影响力 |
 
 ## 仓库结构
 
@@ -77,7 +77,7 @@ agent-top/
 │   │   ├── production/               # 评估、回归、安全、维护、回滚
 │   │   ├── quick-reference/          # 术语、命令、架构、生产速查表
 │   │   ├── skills/                   # Agent 技能体系
-│   │   ├── tutorials/                # 外部教程、开源项目灵感、模式矩阵、学习路径、快速导航、练习手册
+│   │   ├── tutorials/                # 外部教程、行业对标、开源项目灵感、模式矩阵、学习路径、快速导航、练习手册
 │   │   ├── l0-l5 tutorials           # L0-L5 详细教程
 │   │   ├── README.md                 # 英文文档索引
 │   │   └── agent-top-concrete-framework.md
@@ -172,6 +172,8 @@ agent-top/
 - 框架地图：[`docs/zh/frameworks/框架地图.md`](docs/zh/frameworks/框架地图.md)
 - 面试框架：[`docs/zh/interviews/面试框架.md`](docs/zh/interviews/面试框架.md)
 - 学习路径：[`docs/zh/tutorials/学习路径.md`](docs/zh/tutorials/学习路径.md)
+- 行业对标与 L5 专家路径：[`docs/zh/tutorials/行业对标与L5专家路径.md`](docs/zh/tutorials/行业对标与L5专家路径.md)
+- L5 专家证据模板：[`templates/L5专家证据模板.md`](templates/L5专家证据模板.md)
 - 开源项目灵感目录：[`docs/zh/tutorials/开源项目灵感目录.md`](docs/zh/tutorials/开源项目灵感目录.md)
 - 开源模式矩阵：[`docs/en/tutorials/open-source-pattern-matrix.md`](docs/en/tutorials/open-source-pattern-matrix.md)
 - 可执行 Lab：[`labs`](labs)

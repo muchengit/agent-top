@@ -37,3 +37,31 @@
 - name: production
   description: Production, safety, eval, or postmortem content
   color: 'e0441e'
+
+- name: good-first-L5
+  description: Good first project for an L5 expert evidence bundle
+  color: '7057ff'
+
+- name: original-pattern
+  description: Contribution introduces a reusable Agent pattern
+  color: '2e97ff'
+
+- name: external-impact
+  description: Contribution includes talk, PR, article, workshop, or adoption evidence
+  color: 'f065aa'
+
+- name: eval-evidence
+  description: Contribution includes eval, trace, risk, or release evidence
+  color: '0e8a16'
+
+- name: safety-review
+  description: Contribution touches safety or permission-sensitive behavior
+  color: 'b60205'
+
+- name: release-governance
+  description: Contribution affects release, rollback, or maintainer process
+  color: 'c2516f'
+
+- name: sig-candidate
+  description: Workstream is mature enough to consider SIG ownership
+  color: '1d76db'

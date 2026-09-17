@@ -71,6 +71,7 @@ Exit evidence:
 3. Run [`../../../labs/l5/custom_pattern_lab/README.md`](../../../labs/l5/custom_pattern_lab/README.md).
 4. Run [`../../../labs/l5/pattern_catalog/README.md`](../../../labs/l5/pattern_catalog/README.md).
 5. Draft one reusable pattern with safety and verification.
+6. Read [`industry-benchmark-and-l5-expert-path.md`](industry-benchmark-and-l5-expert-path.md) and package the work with [`../../../templates/l5-expert-evidence-template.md`](../../../templates/l5-expert-evidence-template.md).
 
 Exit evidence:
 
@@ -78,3 +79,4 @@ Exit evidence:
 - Deterministic Lab.
 - Failure-mode section.
 - Reviewer-ready contribution notes.
+- L5 expert evidence bundle with pattern, governance, evidence, and influence rubric scores.

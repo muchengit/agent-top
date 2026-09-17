@@ -46,6 +46,7 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`tutorials/练习与Lab使用手册.md`](tutorials/练习与Lab使用手册.md)：如何用 Examples 和 Labs 产出证据
 - [`tutorials/教程参考地图.md`](tutorials/教程参考地图.md)
 - [`tutorials/学习路径.md`](tutorials/学习路径.md)
+- [`tutorials/行业对标与L5专家路径.md`](tutorials/行业对标与L5专家路径.md)
 - [`tutorials/搜索补充.md`](tutorials/搜索补充.md)
 - [`tutorials/开源项目灵感目录.md`](tutorials/开源项目灵感目录.md)：可吸纳的开源项目与模式
 - [`tutorials/开源模式矩阵.md`](tutorials/开源模式矩阵.md)：从开源 Agent 项目中提炼的模式

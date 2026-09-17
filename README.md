@@ -52,7 +52,7 @@ Each article or Lab follows a consistent structure:
 | L2 | Build a reliable single Agent with a framework and MCP |
 | L3 | Build end-to-end systems with RAG, memory, observability, and multi-agent flows |
 | L4 | Productionize Agent systems with evaluation, safety, deployment, cost, and postmortems |
-| L5 | Create original patterns, open-source contributions, and real-world influence |
+| L5 | Create original patterns, open-source contributions, governance evidence, and real-world influence |
 
 
 ## Repository Structure
@@ -131,6 +131,7 @@ agent-top/
 │   │   │   └── tool-mcp-safety.md
 │   │   ├── tutorials/
 │   │   │   ├── learning-paths.md
+│   │   │   ├── industry-benchmark-and-l5-expert-path.md
 │   │   │   ├── open-source-inspirations.md
 │   │   │   ├── open-source-pattern-matrix.md
 │   │   │   ├── practice-handbook.md
@@ -263,6 +264,8 @@ python -m ruff check .
 - Design review checklist: [`docs/en/concepts/design-review-checklist.md`](docs/en/concepts/design-review-checklist.md)
 - Open-source inspirations: [`docs/en/tutorials/open-source-inspirations.md`](docs/en/tutorials/open-source-inspirations.md)
 - Open-source pattern matrix: [`docs/en/tutorials/open-source-pattern-matrix.md`](docs/en/tutorials/open-source-pattern-matrix.md)
+- Industry benchmark and L5 expert path: [`docs/en/tutorials/industry-benchmark-and-l5-expert-path.md`](docs/en/tutorials/industry-benchmark-and-l5-expert-path.md)
+- L5 expert evidence template: [`templates/l5-expert-evidence-template.md`](templates/l5-expert-evidence-template.md)
 - Interview framework: [`docs/en/interviews/interview-framework.md`](docs/en/interviews/interview-framework.md)
 - Labs: [`labs`](labs)
 - Templates: [`templates`](templates)

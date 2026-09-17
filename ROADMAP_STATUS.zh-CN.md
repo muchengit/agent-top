@@ -21,6 +21,7 @@ validated_date: 2026-09-16
 | 评估 Playbook | Done | `docs/en/production/evals-playbook.md`、中文镜像和 eval report 模板 |
 | 开源模式矩阵 | Done | `docs/en/tutorials/open-source-pattern-matrix.md`、中文镜像、`examples/memory-vs-evidence/`、`examples/coding-workspace-safety/`、`examples/data-source-policy/`、`examples/coding-task-navigation/`、`examples/agent-eval-regression/`、`examples/github-agent-review/` 和 `examples/observability-trace/`, `examples/model-gateway/`, `examples/safety-eval/`, `examples/mcp-tool-boundary/`, `examples/memory-index-evidence/`, `examples/release-gate-evidence/`, 包括 runtime、gateway、safety、tool-boundary、index、release-gate evidence |
 | 详细教程 | Done | `docs/en/` 和 `docs/zh/` 覆盖 L0-L5 |
+| 行业对标与 L5 专家路径 | Done | `docs/en/tutorials/industry-benchmark-and-l5-expert-path.md`、中文镜像和 `templates/l5-expert-evidence-template.md` |
 | 中文教程文件名 | Done | `docs/zh/` 下的中文镜像 |
 | 面试资产 | Done | `docs/en/interviews/`, `docs/zh/interviews/`, 含 STAR 回答范例 |
 | 作品集路径 | Done | `docs/en/portfolio/projects.md`、个人 Agent 作品集、开源影响力指南 |

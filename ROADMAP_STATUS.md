@@ -21,6 +21,7 @@ validated_date: 2026-09-16
 | Evaluation playbook | Done | `docs/en/production/evals-playbook.md` and Chinese mirror plus eval report template |
 | Open-source pattern matrix | Done | `docs/en/tutorials/open-source-pattern-matrix.md`, Chinese mirror, `examples/memory-vs-evidence/`, `examples/coding-workspace-safety/`, `examples/data-source-policy/`, `examples/coding-task-navigation/`, `examples/agent-eval-regression/`, `examples/github-agent-review/`, `examples/observability-trace/`, and `examples/model-gateway/`, `examples/safety-eval/`, `examples/mcp-tool-boundary/`, `examples/memory-index-evidence/`, `examples/release-gate-evidence/`, including runtime, gateway, safety, tool-boundary, index, and release-gate evidence |
 | Detailed tutorials | Done | `docs/en/` and `docs/zh/` through L5 |
+| Industry benchmark and L5 expert path | Done | `docs/en/tutorials/industry-benchmark-and-l5-expert-path.md`, Chinese mirror, and `templates/l5-expert-evidence-template.md` |
 | Tutorial reference map | Done | `docs/en/tutorials/reference-map.md`, `docs/zh/tutorials/reference-map.md` |
 | Chinese tutorial filenames | Done | Chinese names under `docs/zh/` |
 | Interview assets | Done | `docs/en/interviews/interview-framework.md`, `docs/en/interviews/questions/`, `docs/en/interviews/interview-answer-framework.md` |

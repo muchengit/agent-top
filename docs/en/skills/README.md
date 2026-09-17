@@ -92,7 +92,7 @@ Use the matrix below as a map, not as a grade. Move forward when you can produce
 | L2 | Framework boundaries, MCP-style tools, cost-aware routing | Design a reliable single Agent, compare frameworks, debug tool calls | Single Agent project, framework notes, MCP Lab evidence |
 | L3 | RAG, memory, multi-agent, observability, research flow | Build end-to-end systems, evaluate retrieval, isolate multi-agent state | RAG evaluator, memory flow notes, Langfuse-style trace report |
 | L4 | Production ops, evals, safety, rollback, incidents | Run production gates, postmortems, guardrails, cost/latency budgets | Regression gate, postmortem, production checklist evidence |
-| L5 | Patterns, contribution, external influence | Define reusable patterns, write design docs, open source PRs or talks | Pattern catalog entry, design doc, PR, talk, or article |
+| L5 | Patterns, governance, contribution, external influence | Define reusable patterns, package expert evidence, mentor reviewers, produce maintainable influence artifacts | Pattern catalog entry, L5 expert evidence bundle, design doc, PR, talk, or article |
 
 ## Skill Categories
 
@@ -130,8 +130,10 @@ Use the matrix below as a map, not as a grade. Move forward when you can produce
    - Production checklist completion.
 
 5. **L5 Impact Pack**
+   - Industry benchmark and L5 expert path.
    - Custom pattern Lab.
    - Pattern catalog Lab.
+   - L5 expert evidence bundle.
    - Open-source contribution or design article.
 
 ## Example Skill Cards

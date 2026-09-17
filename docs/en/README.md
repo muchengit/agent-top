@@ -57,6 +57,7 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`tutorials/practice-handbook.md`](tutorials/practice-handbook.md): how to combine Examples and Labs with evidence
 - [`tutorials/reference-map.md`](tutorials/reference-map.md)
 - [`tutorials/learning-paths.md`](tutorials/learning-paths.md)
+- [`tutorials/industry-benchmark-and-l5-expert-path.md`](tutorials/industry-benchmark-and-l5-expert-path.md)
 - [`tutorials/search-supplements.md`](tutorials/search-supplements.md)
 - [`tutorials/open-source-inspirations.md`](tutorials/open-source-inspirations.md): open-source projects and patterns to absorb
 - [`tutorials/open-source-pattern-matrix.md`](tutorials/open-source-pattern-matrix.md): distilled patterns from open-source Agent projects

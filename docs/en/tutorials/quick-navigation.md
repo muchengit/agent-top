@@ -27,6 +27,7 @@ Use this page when you already know what you want to accomplish. Pick one task, 
 | Practice MCP-style tool boundaries | [`../l2-single-agent-mcp.md`](../l2-single-agent-mcp.md) -> [`../../../labs/l2/single_agent_mcp/README.md`](../../../labs/l2/single_agent_mcp/README.md) | A tool allowlist with read/write/destructive risk classes |
 | Evaluate RAG and memory evidence | [`../l3-rag-memory-observability.md`](../l3-rag-memory-observability.md) -> [`../../../labs/l3/rag_evaluator/README.md`](../../../labs/l3/rag_evaluator/README.md) | A refusal case for missing evidence and a required-source eval |
 | Prepare a production gate | [`../l4-production.md`](../l4-production.md) -> [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) | A release checklist covering safety, trace, rollback, cost, and latency |
+| Prepare an L5 expert evidence bundle | [`../l5-custom-patterns.md`](../l5-custom-patterns.md) -> [`industry-benchmark-and-l5-expert-path.md`](industry-benchmark-and-l5-expert-path.md) -> [`../../../templates/l5-expert-evidence-template.md`](../../../templates/l5-expert-evidence-template.md) | An L5 evidence bundle with pattern contract, governance notes, rubric scores, and external influence evidence |
 
 ## Navigation by Role
 

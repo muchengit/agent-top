@@ -89,7 +89,7 @@ Agent-Top 更重视后者：框架会变，skill 会继续有用。
 | L2 | 框架边界、MCP-style tools、成本感知路由 | 设计可靠单 Agent，调试 tool calls | 单 Agent project、framework notes、MCP evidence |
 | L3 | RAG、记忆、多 Agent、observability、研究流程 | 构建端到端系统，评估 retrieval | RAG evaluator、memory notes、trace report |
 | L4 | 生产运维、evals、safety、rollback、incident | 运行发布门禁、postmortem、guardrails | regression gate、postmortem、生产 checklist |
-| L5 | patterns、开源贡献、外部影响力 | 定义可复用模式，写出设计说明 | pattern catalog、design doc、PR、talk、article |
+| L5 | patterns、governance、开源贡献、外部影响力 | 定义可复用模式，打包专家证据，mentor reviewer，产出可维护影响力 artifact | pattern catalog、L5 专家证据包、design doc、PR、talk、article |
 
 ## 如何把一个经验沉淀成 Skill？
 
@@ -113,3 +113,4 @@ Agent-Top 更重视后者：框架会变，skill 会继续有用。
 2. 再读 Tool/MCP 安全技能卡。
 3. 然后进入 L2/L3 教程和案例。
 4. 最后用生产清单和 postmortem 模板做复盘。
+5. 若要证明 L5，阅读 [`../tutorials/行业对标与L5专家路径.md`](../tutorials/行业对标与L5专家路径.md)，并填写 [`../../../templates/L5专家证据模板.md`](../../../templates/L5专家证据模板.md)。
