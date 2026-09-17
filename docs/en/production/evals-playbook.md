@@ -136,6 +136,33 @@ owner:
 decision:
 ```
 
+## GitHub Actions Evidence
+
+Use CI workflow evidence to make release decisions replayable:
+
+- Pin every action used in the gate, or record why the ref is intentionally moving.
+- Bind the release decision to the exact commit SHA, workflow run id, and evaluated matrix version.
+- Record the Python or runtime setup version used by the workflow.
+- Store artifact identity with the decision: artifact name, artifact SHA, and download/provenance owner.
+- Store cache identity with the decision: cache key, cache hit/miss, and owner responsible for invalidation.
+- For every Block, Canary, Rollback, or Request Evidence decision, record owner and next action.
+
+Minimum release-gate fields:
+
+```text
+workflow_run_id:
+commit_sha:
+action_ref:
+setup_version:
+artifact_sha:
+cache_key:
+decision:
+owner:
+rollback:
+```
+
+See [`../../../examples/release-gate-evidence/README.md`](../../../examples/release-gate-evidence/README.md) for a fictional evidence exercise with answer key.
+
 ## 7. Report Template
 
 Use [`../../../templates/eval-report-template.md`](../../../templates/eval-report-template.md) for a copyable report. Example structure:

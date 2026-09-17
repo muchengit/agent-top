@@ -18,6 +18,7 @@ A 2026-09-17 platform-evidence pass checked reachable public repositories with `
 A 2026-09-17 safety-evidence pass checked reachable public repositories with `git ls-remote`: Guardrails AI, OpenAI Evals, Langfuse, Mem0, Letta, Chroma, Ollama, Microsoft RAI Toolbox, Hugging Face Alignment Handbook, and MLflow. These entries are learning signals for output validation, safety eval batteries, trace datasets, memory governance, vector provenance, local model boundaries, responsible AI review, and experiment evidence; they are not authoritative setup guides.
 A 2026-09-17 tool-boundary pass checked reachable public repositories with `git ls-remote`: LangChain, LangGraph, LangSmith CLI, OpenAI Agents Python, ModelContextProtocol servers, Google ADK Python, LlamaIndex, Haystack, browser-use, and Pydantic AI. These entries are learning signals for MCP server boundaries, graph state checkpoints, typed tool output, RAG pipeline evidence, browser action traces, and SDK handoff boundaries; they are not authoritative setup guides.
 A 2026-09-17 deployment-evidence pass checked reachable public repositories with `git ls-remote`: Hugging Face TGI, MLflow, Letta, Mem0, Milvus, Weaviate, and Elasticsearch. These entries are learning signals for serving deployment evidence, experiment/run evidence, memory lifecycle, vector collection isolation, deletion propagation, and search index metadata; they are not authoritative setup guides.
+A 2026-09-17 release-gate-evidence pass checked reachable public repositories with `git ls-remote`: GitHub Actions `checkout`, `setup-python`, `upload-artifact`, `download-artifact`, `cache`, and `upload-pages-artifact`. These entries are learning signals for workflow evidence, action pinning, artifact provenance, cache identity, and release decision replayability; they are not authoritative CI setup guides.
 
 ## Project-to-Topic Map
 
@@ -129,6 +130,10 @@ A 2026-09-17 deployment-evidence pass checked reachable public repositories with
 | Ruff-style deterministic linters | local quality gates | fast deterministic checks, explicit rule output, CI pass/fail evidence, and small reviewable diffs |
 | uv-style Python package manager | dependency and tool lock evidence | lockfile reproducibility, pinned tool versions, isolated environments, and release evidence for package resolution |
 | Dapr-style distributed application runtime | workflow provenance and operation boundaries | activity/workflow boundaries, component boundaries, retry/dead-letter patterns, and distributed operation provenance |
+| GitHub Actions checkout/setup-python | workflow reproducibility evidence | exact action ref, setup version, commit SHA, and workflow run id for release replay |
+| GitHub Actions upload/download artifact | artifact evidence | artifact name, artifact SHA, download owner, and decision linkage |
+| GitHub Actions cache | cache identity evidence | cache key, hit/miss, invalidation owner, and release risk decision |
+| GitHub Actions upload-pages-artifact | site build evidence | published artifact identity, workflow run id, deployment target, and rollback note |
 
 ## Absorbable Patterns
 
@@ -185,6 +190,10 @@ A 2026-09-17 deployment-evidence pass checked reachable public repositories with
 - **Vector collection boundary**: keep collection, tenant/partition, schema version, embedding model/version, deletion propagation, and index metadata explicit.
 - **Search evidence contract**: record query, filter, index version, source doc id, freshness, ranking, citations, and answer policy.
 - **Memory lifecycle evidence**: record source, confidence, scope, conflict, update/delete action, owner, last verified, and privacy policy for durable memory.
+- **GitHub Actions evidence**: bind release decisions to workflow run id, commit SHA, action refs, setup version, artifact identity, cache key, owner, and rollback target.
+- **Workflow evidence**: make the workflow/activity id, input event, retry attempt, dead-letter state, and owner replayable across services.
+- **Artifact evidence**: record artifact name, artifact SHA, upload/download owner, and decision linkage so release decisions are auditable.
+- **Cache evidence**: record cache key, hit/miss, invalidation owner, and release risk decision before treating cached results as safe.
 
 ## Contribution Checklist
 
@@ -253,6 +262,10 @@ Checklist:
 | SDK trace client evidence | [`../production/observability-trace-contract.md`](../production/observability-trace-contract.md), [`../production/evals-playbook.md`](../production/evals-playbook.md) |
 | Role-based crew boundary | [`../concepts/multi-agent-scheduling.md`](../concepts/multi-agent-scheduling.md), [`../concepts/plan-decision-making.md`](../concepts/plan-decision-making.md) |
 | Lightweight runtime boundary | [`../concepts/agent-system-architecture.md`](../concepts/agent-system-architecture.md), [`../concepts/long-term-memory.md`](../concepts/long-term-memory.md) |
+| GitHub Actions evidence | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../examples/release-gate-evidence/README.md`](../../../examples/release-gate-evidence/README.md) |
+| Workflow evidence | [`../concepts/multi-agent-scheduling.md`](../concepts/multi-agent-scheduling.md), [`../production/observability-trace-contract.md`](../production/observability-trace-contract.md) |
+| Artifact evidence | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../examples/release-gate-evidence/README.md`](../../../examples/release-gate-evidence/README.md) |
+| Cache evidence | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../examples/release-gate-evidence/README.md`](../../../examples/release-gate-evidence/README.md) |
 
 ## License/API Verification Rule
 

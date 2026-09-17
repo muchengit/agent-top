@@ -96,6 +96,7 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`../../examples/safety-eval/README.md`](../../examples/safety-eval/README.md)
 - [`../../examples/mcp-tool-boundary/README.md`](../../examples/mcp-tool-boundary/README.md)
 - [`../../examples/memory-index-evidence/README.md`](../../examples/memory-index-evidence/README.md)
+- [`../../examples/release-gate-evidence/README.md`](../../examples/release-gate-evidence/README.md)
 
 ## Production
 

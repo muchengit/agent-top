@@ -136,6 +136,33 @@ owner:
 decision:
 ```
 
+## GitHub Actions 证据
+
+把 CI workflow 证据作为可回放的发布依据：
+
+- 固定发布门禁用到的每个 action；如果 ref 故意移动，要记录原因。
+- 把发布决策绑定到精确 commit SHA、workflow run id 和被评估的 matrix version。
+- 记录 workflow 使用的 Python 或 runtime setup version。
+- artifact decision 必须记录 artifact name、artifact SHA 和下载/provenance owner。
+- cache decision 必须记录 cache key、hit/miss 和负责失效处理的 owner。
+- 每次 Block、Canary、Rollback 或 Request Evidence 都要记录 owner 和 next action。
+
+最小 release-gate 字段：
+
+```text
+workflow_run_id:
+commit_sha:
+action_ref:
+setup_version:
+artifact_sha:
+cache_key:
+decision:
+owner:
+rollback:
+```
+
+虚构练习与答案见 [`../../../examples/release-gate-evidence/README.md`](../../../examples/release-gate-evidence/README.md)。
+
 ## 7. 报告模板
 
 可复制模板见 [`../../../templates/eval-report-template.md`](../../../templates/eval-report-template.md)。结构示例：

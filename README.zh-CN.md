@@ -113,6 +113,7 @@ agent-top/
 │   ├── safety-eval/                  # Safety eval evidence 练习
 │   ├── mcp-tool-boundary/            # MCP tool boundary 练习
 │   ├── memory-index-evidence/        # Memory 与 Index evidence 练习
+│   ├── release-gate-evidence/        # Release gate evidence 练习
 │   └── rag-evidence-refusal/         # RAG 证据与拒绝回答练习
 ├── labs/
 │   ├── l0/                           # 第一次 LLM 调用
@@ -150,7 +151,7 @@ agent-top/
 
 - `docs/en/`：所有双语文档的英文主源。
 - `docs/zh/`：中文镜像，目录结构与 `docs/en` 对齐。
-- `examples/`：无需 API key 的 Agent 决策、评估、可观测、gateway、safety、MCP boundary、memory/index、GitHub review 和 coding-task 练习材料。
+- `examples/`：无需 API key 的 Agent 决策、评估、可观测、gateway、safety、MCP boundary、memory/index、release-gate、GitHub review 和 coding-task 练习材料。
 - `labs/`：可运行、确定性、无需 API key 的练习。
 - `templates/`：可复用贡献模板，方便 reviewer 检查一致性。
 - `scripts/`：本地校验链接、frontmatter、版本锚点和 Lab 完整性。
