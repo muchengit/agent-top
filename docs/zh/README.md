@@ -76,6 +76,14 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`quick-reference/Lab命令速查.md`](quick-reference/Lab命令速查.md)
 - [`quick-reference/生产清单.md`](quick-reference/生产清单.md)
 
+## 练习材料
+
+- [`../../examples/README.md`](../../examples/README.md)：本地虚构样例与 JSONL 练习
+- [`../../examples/model-gateway/README.md`](../../examples/model-gateway/README.md)：Model gateway evidence
+- [`../../examples/safety-eval/README.md`](../../examples/safety-eval/README.md)：Safety eval evidence
+- [`../../examples/mcp-tool-boundary/README.md`](../../examples/mcp-tool-boundary/README.md)：MCP tool boundary
+- [`../../examples/memory-index-evidence/README.md`](../../examples/memory-index-evidence/README.md)：Memory 与 Index evidence
+
 ## 生产
 
 - [`production/文档索引.md`](production/文档索引.md)
@@ -94,6 +102,11 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`interviews/questions/L3系统设计题.md`](interviews/questions/L3系统设计题.md)
 - [`interviews/questions/L4生产化.md`](interviews/questions/L4生产化.md)
 - [`interviews/questions/L5模式题.md`](interviews/questions/L5模式题.md)
+- [`../en/interviews/interview-answer-framework.md`](../en/interviews/interview-answer-framework.md)
+- [`interviews/面试答案范例.md`](interviews/面试答案范例.md)
+- [`interviews/questions/L4生产化.md`](interviews/questions/L4生产化.md)
+- [`portfolio/开源贡献与外部影响力指南.md`](portfolio/开源贡献与外部影响力指南.md)
+- [`community/Agent社区实验.md`](community/Agent社区实验.md)
 
 ## 作品集
 

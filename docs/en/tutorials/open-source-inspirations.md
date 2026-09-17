@@ -121,6 +121,11 @@ A 2026-09-17 deployment-evidence pass checked reachable public repositories with
 | Elasticsearch-style search platforms | search index metadata | index/version, mapping, query filter, source doc id, freshness, ranking, and deletion state |
 | Sentry-style error monitoring | incident grouping and release-aware errors | issue fingerprinting, release association, error grouping, alert routing, and blameless root-cause evidence |
 | Grafana Pyroscope-style continuous profiling | runtime hotspots and resource evidence | sampling or continuous profiling, service/resource labels, hotspot routes, and cost diagnosis without full traces |
+| SGLang-style serving frameworks | distributed LLM serving boundaries | runtime serving, parallelism knobs, speculative decoding, prefix cache, throughput/capacity evidence, and load-test evidence |
+| OpenAI simple-evals-style benchmark packages | minimal reproducible eval bundles | task definition, prompt, data schema, scoring function, and benchmark boundary |
+| LangSmith SDK-style trace client | SDK trace client evidence | trace client id/version, session/conversation id, run metadata, dataset link, and prompt-version linkage |
+| CrewAI-style role-based crews | bounded role teams | crew, role, task, handoff, process, and workflow stop-condition evidence |
+| Agno-style lightweight runtimes | fast agent/toolkit composition | lightweight toolkit boundary, run/session state, memory boundary, and simple-to-audit workflow evidence |
 | Ruff-style deterministic linters | local quality gates | fast deterministic checks, explicit rule output, CI pass/fail evidence, and small reviewable diffs |
 | uv-style Python package manager | dependency and tool lock evidence | lockfile reproducibility, pinned tool versions, isolated environments, and release evidence for package resolution |
 | Dapr-style distributed application runtime | workflow provenance and operation boundaries | activity/workflow boundaries, component boundaries, retry/dead-letter patterns, and distributed operation provenance |
@@ -171,12 +176,17 @@ A 2026-09-17 deployment-evidence pass checked reachable public repositories with
 - **Typed tool output**: validate tool and model outputs against schema before downstream state changes; record validation errors and retry budget.
 - **RAG pipeline boundary**: keep ingestion, retrieval, ranking, reranking, citation, and answer policy as separate evidence points.
 - **Browser action trace**: record visible context, action intent, DOM/screenshot summary, retry budget, and rollback note for UI-changing actions.
+- **Serving capacity planning**: treat offline quality evidence and online throughput/latency evidence separately; record parallelism, queue depth, batch size, timeout, and saturation before scaling claims.
+- **Minimal eval bundle**: keep a benchmark small enough to copy and run, with task definition, prompt, data schema, and scoring function separated from framework setup.
+- **SDK trace client evidence**: keep trace client id/version, session/conversation id, run metadata, dataset link, and prompt version close to eval, deploy, and observability workflows.
+- **Role-based crew boundary**: define crew, role, task, handoff, process, and stop condition so delegation is auditable.
+- **Lightweight runtime boundary**: document toolkit, run/session state, memory, and audit fields even when the runtime is intentionally small.
 - **Serving deployment evidence**: record endpoint, model revision, revision id, health, resource limits, timeout, capacity, and rollback action for inference-serving changes.
 - **Vector collection boundary**: keep collection, tenant/partition, schema version, embedding model/version, deletion propagation, and index metadata explicit.
 - **Search evidence contract**: record query, filter, index version, source doc id, freshness, ranking, citations, and answer policy.
 - **Memory lifecycle evidence**: record source, confidence, scope, conflict, update/delete action, owner, last verified, and privacy policy for durable memory.
 
-## Contributor Workflow
+## Contribution Checklist
 
 When adding another open-source project, submit in this order:
 
@@ -185,6 +195,15 @@ When adding another open-source project, submit in this order:
 3. Framework-specific details isolated in a Lab or comparison table.
 4. Mapping to local Agent-Top concepts, Labs, cases, or interviews.
 5. Verified external repository URL and license note for maintainers.
+
+Checklist:
+
+- Name the local landing page.
+- Choose concept, Lab, example, or production guide.
+- Add one stable principle.
+- Link evidence or eval.
+- State what not to copy.
+- Mirror EN/ZH.
 
 ## Local Mapping Examples
 
@@ -229,6 +248,15 @@ When adding another open-source project, submit in this order:
 | Vector collection boundary | [`../concepts/rag-memory-mcp-flow.md`](../concepts/rag-memory-mcp-flow.md), [`../../examples/memory-index-evidence/README.md`](../../../examples/memory-index-evidence/README.md) |
 | Search evidence contract | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../examples/rag-evidence-refusal/README.md`](../../../examples/rag-evidence-refusal/README.md) |
 | Memory lifecycle evidence | [`../concepts/long-term-memory.md`](../concepts/long-term-memory.md), [`../../examples/memory-vs-evidence/README.md`](../../../examples/memory-vs-evidence/README.md) |
+| Serving capacity planning | [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md), [`../../examples/memory-index-evidence/README.md`](../../../examples/memory-index-evidence/README.md) |
+| Minimal eval bundle | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../examples/agent-eval-regression/README.md`](../../../examples/agent-eval-regression/README.md) |
+| SDK trace client evidence | [`../production/observability-trace-contract.md`](../production/observability-trace-contract.md), [`../production/evals-playbook.md`](../production/evals-playbook.md) |
+| Role-based crew boundary | [`../concepts/multi-agent-scheduling.md`](../concepts/multi-agent-scheduling.md), [`../concepts/plan-decision-making.md`](../concepts/plan-decision-making.md) |
+| Lightweight runtime boundary | [`../concepts/agent-system-architecture.md`](../concepts/agent-system-architecture.md), [`../concepts/long-term-memory.md`](../concepts/long-term-memory.md) |
+
+## License/API Verification Rule
+
+SSH reachability or `git ls-remote` is discovery evidence only. Do not promote a repository URL, license, API stability, or setup guidance until maintainers separately verify those facts. Agent-Top absorbs stable learning themes, not authoritative external documentation.
 
 ## Maintenance Rule
 

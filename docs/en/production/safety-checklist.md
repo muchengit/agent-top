@@ -60,7 +60,6 @@ Safety controls should protect users, data, and the Agent's ability to operate p
 - Redact secrets.
 - Preserve enough trace to reproduce incidents.
 
-
 ## Guardrail Evidence
 
 Safety checks should not only say “passed”. Each guardrail decision should record replayable evidence:
@@ -73,7 +72,6 @@ Safety checks should not only say “passed”. Each guardrail decision should r
 - `owner`: prompt, tool, retrieval, memory, runtime, or release owner.
 
 Use these fields to answer: why did the system allow or block this action, and how will we prove similar issues are intercepted next time?
-
 
 ## MCP Tool Call Evidence
 

@@ -8,6 +8,10 @@ Goal: decide whether each tool call is ready to execute, must be blocked, or nee
 
 - [`tool-call-evidence.jsonl`](tool-call-evidence.jsonl): fictional MCP and graph-state decisions.
 
+## JSONL Shape
+
+Common fields: `event`, `trace_id`, `server_id`, `tool_name`, `input_schema_version`, `permission_scope`, `transport_lifecycle`, `audit_actor`, `result_status`, `decision`. Optional event-specific fields may include `graph_checkpoint`, `schema_error`, and `visible_context`.
+
 ## Steps
 
 1. Read each tool decision event.

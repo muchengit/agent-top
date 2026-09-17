@@ -89,6 +89,14 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`quick-reference/lab-command-cheatsheet.md`](quick-reference/lab-command-cheatsheet.md)
 - [`quick-reference/production-checklist.md`](quick-reference/production-checklist.md)
 
+## Examples
+
+- [`../../examples/README.md`](../../examples/README.md)
+- [`../../examples/model-gateway/README.md`](../../examples/model-gateway/README.md)
+- [`../../examples/safety-eval/README.md`](../../examples/safety-eval/README.md)
+- [`../../examples/mcp-tool-boundary/README.md`](../../examples/mcp-tool-boundary/README.md)
+- [`../../examples/memory-index-evidence/README.md`](../../examples/memory-index-evidence/README.md)
+
 ## Production
 
 - [`production/README.md`](production/README.md)

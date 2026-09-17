@@ -10,6 +10,10 @@ Goal: decide which facts come from memory, live tool results, retrieved sources,
 - [`prompts.jsonl`](prompts.jsonl): fictional user questions.
 - [`answers.template.jsonl`](answers.template.jsonl): start your decision log here.
 
+## JSONL Shape
+
+Prompt records use `id`, `prompt`, and optional `tool_result`. `tool_result` is `null` when the prompt is a pure decision prompt and non-null when live tool evidence should compete with memory.
+
 ## Steps
 
 1. Read one prompt.

@@ -27,6 +27,18 @@ Agent-Top examples are fictional, local, and do not require API keys, external s
 3. Compare your decisions with the answer key.
 4. Change one rule, such as requiring citations for all factual claims, and record what changes.
 
+## JSONL Conventions
+
+Each JSONL file in this repository is local fixture data. Every non-empty line must parse as one JSON object. Files may use different schemas when the event type is different, but keys inside one file should stay stable unless the file README explains an optional event-specific field.
+
+## 中文说明
+
+`examples/` 下的 JSONL 都是本地虚构练习数据。每个非空行都必须是 1 个 JSON object。不同 event 可以使用不同 schema，但同一个文件内的字段应保持稳定；若字段是可选或事件特定字段，应在该 example README 里说明。
+
+## Bilingual Notes
+
+This index is intentionally bilingual: English names describe stable directories and artifact types, while the Chinese notes explain how learners should use the exercises. Individual example README files remain local, fictional, and API-key-free.
+
 ## Relationship To Labs
 
 Examples are paper exercises and design practice. Runnable deterministic code lives in [`../labs/README.md`](../labs/README.md). For how to combine them, see [`../docs/en/tutorials/practice-handbook.md`](../docs/en/tutorials/practice-handbook.md).

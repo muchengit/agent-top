@@ -150,7 +150,7 @@ agent-top/
 
 - `docs/en/`：所有双语文档的英文主源。
 - `docs/zh/`：中文镜像，目录结构与 `docs/en` 对齐。
-- `examples/`：无需 API key 的 Agent 决策练习和 RAG 证据练习材料。
+- `examples/`：无需 API key 的 Agent 决策、评估、可观测、gateway、safety、MCP boundary、memory/index、GitHub review 和 coding-task 练习材料。
 - `labs/`：可运行、确定性、无需 API key 的练习。
 - `templates/`：可复用贡献模板，方便 reviewer 检查一致性。
 - `scripts/`：本地校验链接、frontmatter、版本锚点和 Lab 完整性。

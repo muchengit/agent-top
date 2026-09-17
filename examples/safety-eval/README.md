@@ -8,6 +8,10 @@ Goal: decide whether a safety failure should block release, route to an owner, o
 
 - [`safety-tests.jsonl`](safety-tests.jsonl): fictional safety eval cases.
 
+## JSONL Shape
+
+Common fields: `event`, `trace_id`, `case`, `source`, `validator`, `verdict`, `matched_policy`, `fail_closed`, `decision`, `owner`, and `next_action`. Optional fields such as `repair_attempt` appear only when relevant to failure repair.
+
 ## Steps
 
 1. Read each safety test event.
