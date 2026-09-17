@@ -11,6 +11,7 @@ Agent-Top question sets are organized by capability level and question depth.
 
 ## Question Sets
 
+- [`full-question-bank.md`](full-question-bank.md): compact L0-L5 all-level bank for screening and review.
 - [`l0-basics.md`](l0-basics.md): baseline concepts before Agent loops and tools.
 - [`question-bank-overview.md`](question-bank-overview.md): current coverage, interview bundles, scoring notes, and expansion plan.
 - [`l1-components.md`](l1-components.md): core Agent components and minimal loops.
