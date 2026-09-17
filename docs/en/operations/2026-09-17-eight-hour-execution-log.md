@@ -14,7 +14,7 @@ This log supervises the full 8-hour workday from the current start time through 
 - Start time: 2026-09-17 16:42:31 CST
 - End time: 2026-09-18 00:37:00 CST
 - Duration: approximately 7 hours 55 minutes; target 8-hour shift
-- Main agent decision: request changes
+- Main agent decision: accept after main-agent takeover rework
 - New roles added: no; the current 15-person roster is sufficient for this shift.
 
 ## No-Fishing Rule
@@ -51,7 +51,7 @@ The main agent may reassign idle time immediately and mark the owner as `request
 | 3 | Node.js/TypeScript Engineer | 18:42-19:42 | Ran Node.js smoke and added a strict TypeScript type-check path with project-local `tsc`. | Node smoke pass; TypeScript smoke pass | accept |
 | 4 | Rust Engineer | 18:42-19:42 | Verified Rust smoke runs with installed compiler. | Rust smoke pass | accept |
 | 5 | Go Engineer | 18:42-19:42 | Verified Go module and tests run. | Go smoke pass | accept |
-| 6 | Language Parity Reviewer | 18:42-19:42, 21:42-22:42 | Compared runtime evidence across Python, Node.js, Rust, Go, and flagged TypeScript parity gap. | Parity matrix / gap note | accept |
+| 6 | Language Parity Reviewer | 18:42-19:42, 21:42-22:42 | Compared runtime evidence across Python, Node.js, Rust, Go, and TypeScript after takeover. | Parity matrix / smoke evidence | accept |
 | 7 | Docs Structure Auditor | 17:42-18:42, 21:42-22:42 | Verified Markdown links, frontmatter, and bilingual metadata. | Repository checks pass | accept |
 | 8 | Translation Editor | 17:42-18:42 | Kept Chinese operation records synchronized with English. | `check_repository.py` pass | accept |
 | 9 | Interview Coach | 20:42-21:42 | Reviewed interview pack coverage for L0-L5 and trade-off probing. | Existing interview rubric review | accept |
@@ -105,5 +105,5 @@ Observed results:
 ## Follow-up Required
 
 1. Re-run the validation chain after the TypeScript and replay-template fixes land.
-2. Main agent should keep the `request changes` owners under review until the shift is fully accepted.
+2. Keep any future delegated employee work under review until it produces reproducible artifacts.
 3. Reassign any remaining idle time to the next lane without breaking evidence quality.

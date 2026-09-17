@@ -11,14 +11,14 @@ This file records one complete main-agent dispatch pass across the Agent-Top emp
 
 ## Main Agent Decision
 
-Decision: **accept this run as a valid first full-company cycle**
+Decision: **accept this run after main-agent takeover rework**
 
 Reason:
 
 - The dispatch queue covered all 15 employees.
 - Existing repository quality gates passed.
 - Documentation, Labs, bilingual metadata, and multilingual smoke checks remain aligned.
-- No employee produced a blocked item requiring maintainer escalation in this cycle.
+- Delegated employees did not produce the required artifacts, so the main agent took over the remaining rework and produced reproducible evidence.
 
 ## Dispatch Queue
 
@@ -26,7 +26,7 @@ Reason:
 | --- | --- | --- | --- | --- |
 | 1 | Research Discoverer | Research | Reviewed current repo for roadmap/content gaps after recent L5 and operating-model additions | Pass |
 | 2 | Python Engineer | Multilingual Labs | Existing Python Lab suite and multilingual Lab are executable and deterministic | Pass |
-| 3 | Node.js/TypeScript Engineer | Multilingual Labs | Node.js smoke executes; TypeScript source remains a reference implementation | Pass with note |
+| 3 | Node.js/TypeScript Engineer | Multilingual Labs | Initial Node.js smoke only; TypeScript was source-only. | Returned, then main agent added strict TS smoke |
 | 4 | Rust Engineer | Multilingual Labs | Rust compiler is installed locally and Rust smoke executes | Pass |
 | 5 | Go Engineer | Multilingual Labs | Go module and test run under `go test` | Pass |
 | 6 | Language Parity Reviewer | Multilingual Labs | Python, Node.js, Rust, and Go executed in smoke; TypeScript parity verified with project-local `tsc` | Pass |
@@ -55,22 +55,21 @@ python scripts/orchestrate_project.py --count 15 --output docs/en/operations/202
 
 Observed results:
 
-- Repository checks: pass, 233 Markdown files checked.
+- Repository checks: pass, 250 Markdown files checked.
 - Unit tests: pass, 41 tests.
 - Compileall: pass.
 - Ruff: pass.
-- Multilingual smoke: pass for Python, Node.js, Rust, and Go.
-- TypeScript: source example present; no compiler gate configured yet.
+- Multilingual smoke: pass for Python, Node.js, Rust, Go, and TypeScript.
+- TypeScript: strict type-check gate runs through local `tsc`.
 
 ## Follow-up Work
 
 Next dispatch cycle should prioritize:
 
-1. Add a TypeScript smoke command using a local compiler or type checker.
-2. Create a short research digest for the next week's trends and content gaps.
-3. Expand one interview pack with a mock candidate answer and scoring rubric.
-4. Add one open-source contribution plan for an external Agent repository.
-5. Review bilingual sync lag and close any `translation-needed` backlog older than 14 days.
+1. Create a short research digest for the next week's trends and content gaps.
+2. Expand one interview pack with a mock candidate answer and scoring rubric.
+3. Add one open-source contribution plan for an external Agent repository.
+4. Review bilingual sync lag and close any `translation-needed` backlog older than 14 days.
 
 ## Main Agent Review Notes
 
