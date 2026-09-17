@@ -1,10 +1,11 @@
 ---
+title: Agent 概念总览
+validated_date: 2026-09-17
 i18n-key: concepts-overview
-last-synced: 2026-09-16
-validated_date: 2026-09-16
+last-synced: 2026-09-17
 ---
 
-Agent 概念总览
+# Agent 概念总览
 
 Agent 是使用 LLM、工具、记忆、规划和控制循环完成任务的系统。
 
@@ -56,4 +57,23 @@ Agent 是使用 LLM、工具、记忆、规划和控制循环完成任务的系�
 - 把 memory 当事实。
 - 默认 retrieval 总是新鲜。
 - 只在 final prompt 里做安全检查。
+- 在出现生产问题之后才补 observability。
+
+## 学习路径
+
+1. 学会一次 LLM 调用。
+2. 不用框架构建最小 ReAct loop。
+3. 理解 loop 之后再引入框架。
+4. 加入 MCP 式工具边界。
+5. 加入 RAG 与记忆。
+6. 加入 observability 与 evals。
+7. 加入生产控制。
+8. 提炼可复用模式。
+
+## 与相邻文档的关系
+
+- [`多轮研究讨论.md`](多轮研究讨论.md)：把单轮 ReAct 循环扩展为多轮、多 Agent 研究讨论。
+- [`Agent系统架构.md`](Agent系统架构.md)：把概念落实到组件、边界与部署形态。
+- [`ReAct模式.md`](ReAct模式.md)：理解最小控制循环。
+- [`RAG记忆MCP数据流.md`](RAG记忆MCP数据流.md)：理解检索、记忆与工具协议如何串联。
 

@@ -1,64 +1,266 @@
 ---
 i18n-key: quick-reference-agent-glossary
-last-synced: 2026-09-16
-validated_date: 2026-09-16
+last-synced: 2026-09-17
+validated_date: 2026-09-17
 ---
 
 # Agent 术语表
 
-这份术语表用于统一文档、Lab、面试和生产 incident 的表述。
+这份术语表用于统一文档、Lab、面试和生产 incident 的表述。每个词条包含一句话定义、
+为什么重要、以及最常见的误用。术语分为基础、生产与决策三类。
 
-## 核心术语
+## 基础术语
 
-| Term | 含义 |
-| --- | --- |
-| Agent | 使用 LLM、工具、记忆、规划和控制循环完成任务的系统 |
-| 感知 | 将用户输入、工具结果和检索 context 变成可用状态 |
-| 规划 | 决定下一个 action 或 reasoning step |
-| Action | 工具调用、检索请求、消息或系统动作 |
-| Observation | 工具、检索、模型或环境返回的证据 |
-| ReAct | 推理和动作交替的循环 |
-| Tool | 有类型化输入输出的外部函数或动作 |
-| MCP | 连接 LLM app 和 MCP server 的标准协议；MCP server 可暴露 tools、resources、prompts、schemas 和 context |
-| RAG | 使用检索源的生成 |
-| 记忆 | 跨轮或跨会话存储的 context |
-| Guardrail | 防止不安全行为的规则 |
-| Eval | 衡量 Agent 行为的测试 |
-| Trace | prompt、tool calls、decisions、outcomes 记录 |
-| Rollback | 恢复已知安全行为的路径 |
+### Agent
+
+- **定义**：使用 LLM、工具、记忆、规划和控制循环完成任务的系统。
+- **为什么重要**：Agent 是部署、评估和 incident 复盘的基本单位，其边界决定了你要测试和监控什么。
+- **常见误用**：把任何一次单独的 LLM 调用叫做 "Agent"。真正的 Agent 需要有循环、工具或记忆；单次调用只是 LLM 调用。
+
+### LLM
+
+- **定义**：在 Agent 内部生成文本和推理的语言模型。
+- **为什么重要**：LLM 只是一个组件，不是整个系统；编排、工具和 eval 决定可靠性。
+- **常见误用**：把模型质量当成唯一的质量杠杆，忽略检索、工具和 guardrail 的失败。
+
+### 感知
+
+- **定义**：将用户输入、工具结果和检索 context 变成可用的状态。
+- **为什么重要**：感知不好时，即使模型很好也会产生错误规划。
+- **常见误用**：把感知等同于原始 prompt 文本，而不是规划器实际使用的解析后、类型化状态。
+
+### 规划
+
+- **定义**：决定下一个 action 或 reasoning step。
+- **为什么重要**：规划质量决定完成任务前会产生多少浪费或高风险的步骤。
+- **常见误用**：把规划当成单个 prompt，而不是带 stop condition 和预算的结构化决策。
+
+### Action
+
+- **定义**：工具调用、检索请求、消息或其他系统动作。
+- **为什么重要**：每个 action 都是副作用，必须类型化、有权限控制、可审计。
+- **常见误用**：使用无法校验、无法做权限检查、无法记录的 free-text action。
+
+### Observation
+
+- **定义**：工具、检索、模型或环境返回的证据。
+- **为什么重要**：observation 驱动下一步规划，必须谨慎信任。
+- **常见误用**：不检查状态、格式或新鲜度就直接相信工具输出。
+
+### 控制循环
+
+- **定义**：感知-规划-行动-观察的循环，让 Agent 保持在任务上。
+- **为什么重要**：它限制了 Agent 运行多久、何时停止。
+- **常见误用**：循环没有最大步数或 stop condition。
+
+### Tool
+
+- **定义**：有类型化输入输出的外部函数或动作。
+- **为什么重要**：类型化契约让调用安全、可测试、可审计。
+- **常见误用**：不做 validation、权限或错误契约就直接暴露原始函数。
+
+### MCP
+
+- **定义**：连接 LLM app 和 MCP server 的标准协议；MCP server 可暴露 tools、resources、prompts、schemas 和 context。
+- **为什么重要**：它标准化工具集成，减少一次性 glue code。
+- **常见误用**：以为 MCP 可以替代 eval、guardrail 或认证。
+
+### RAG
+
+- **定义**：使用检索到的来源进行增强生成。
+- **为什么重要**：它把答案建立在当前或私有证据之上。
+- **常见误用**：没有 citation 或 retrieval eval 就把任何"带搜索"的调用称为 RAG。
+
+### 记忆
+
+- **定义**：跨轮或跨会话存储的 context。
+- **为什么重要**：它让多轮、多会话行为成为可能。
+- **常见误用**：无限期保存原始记录，却没有保留期、隐私或摘要策略。
+
+### Context window
+
+- **定义**：模型在单次调用中能注意到的最大 token 范围。
+- **为什么重要**：它限制了单次请求能容纳多少检索和对话 context。
+- **常见误用**：把 context window 当成长期记忆。
+
+### Embedding
+
+- **定义**：用于相似度搜索的文本稠密向量表示。
+- **为什么重要**：它决定语义检索的质量。
+- **常见误用**：以为 embedding 维度越高检索就一定越好。
+
+### Retriever
+
+- **定义**：为 prompt 选择候选文档的组件。
+- **为什么重要**：在模型看到 context 之前，retriever 就决定了召回率。
+- **常见误用**：只优化生成器，忽略检索失败。
+
+### Guardrail
+
+- **定义**：防止不安全行为的规则。
+- **为什么重要**：它把策略变成可执行的检查。
+- **常见误用**：只在 prompt 层面做 guardrail，跳过输出检查。
+
+### Eval
+
+- **定义**：衡量 Agent 行为的测试。
+- **为什么重要**：它把"感觉还行"变成回归信号。
+- **常见误用**：用几个 happy-path 例子就声称是 eval 套件。
+
+### Trace
+
+- **定义**：prompt、tool calls、decisions、outcomes 的记录。
+- **为什么重要**：它是调试和 postmortem 的原材料。
+- **常见误用**：只记录最终答案，丢掉决策路径。
+
+### Rollback
+
+- **定义**：恢复已知安全行为的路径。
+- **为什么重要**：它限制坏发布后的影响范围。
+- **常见误用**：以为 rollback 存在，却从未演练过。
 
 ## 生产术语
 
-| Term | 含义 |
-| --- | --- |
-| Contract | Agent 或工具的 input/output/failure-mode 约定 |
-| Handoff | 把任务状态传给另一个 Agent 或阶段 |
-| Verifier | 检查 evidence 和 recommendations 的组件或 Agent |
-| Supervisor | 路由任务给 worker 并执行 stop conditions 的编排者 |
-| Human-in-the-loop | 人工审批或复核高风险步骤的流程 |
-| Confidence | 回答背后证据强度，不替代验证 |
-| Citation | 连接到 claim 或 answer 的证据 |
-| Fallback | evidence、tool 或 model 不足时的安全回答 |
-| Idempotency | 工具可安全重试且不会重复副作用 |
-| Regression Gate | 阻断 unsafe behavior 上线的发布门禁 |
-| Blast Radius | 失败影响的、数据或系统范围 |
-| Postmortem | 把 incident 转成 prevention actions 的无责复盘 |
+### Contract
+
+- **定义**：Agent 或工具的 input/output/failure-mode 约定。
+- **为什么重要**：它让组件可以独立变更，让测试有意义。
+- **常见误用**：只记录 happy path，忽略 failure mode。
+
+### Handoff
+
+- **定义**：把任务状态传给另一个 Agent 或阶段。
+- **为什么重要**：它是 context 容易丢失或泄漏的接缝。
+- **常见误用**：传整个 transcript，而不是类型化的任务状态。
+
+### Verifier
+
+- **定义**：检查 evidence 和 recommendations 的组件或 Agent。
+- **为什么重要**：它是抓住幻觉 claim 的第二双眼睛。
+- **常见误用**：用同一个模型和 prompt 同时做生成和验证。
+
+### Supervisor
+
+- **定义**：路由任务给 worker 并执行 stop conditions 的编排者。
+- **为什么重要**：它集中管理策略、预算和终止。
+- **常见误用**：让 supervisor 变成瓶颈，每一步都重新规划。
+
+### Human-in-the-loop
+
+- **定义**：人工审批或复核高风险步骤的流程。
+- **为什么重要**：在自动化尚不安全的地方加入人类判断。
+- **常见误用**：让人类审批每个琐碎步骤，把人训练成机械点击。
+
+### Confidence
+
+- **定义**：回答背后证据的强度，不替代验证。
+- **为什么重要**：它帮助决定是确认、fallback 还是直接回答。
+- **常见误用**：把高 confidence 数值当成正确性的证明。
+
+### Citation
+
+- **定义**：连接到 claim 或 answer 的证据。
+- **为什么重要**：它让 claim 可核验、可审计。
+- **常见误用**：附上一个模型根本没用的来源。
+
+### Fallback
+
+- **定义**：evidence、tool 或 model 不足时的安全回答。
+- **为什么重要**：它让用户在安全边界内，而不是被迫 best guess。
+- **常见误用**：fallback 到另一个没有证据支撑的模型回答。
+
+### Idempotency
+
+- **定义**：工具可安全重试且不重复副作用的行为。
+- **为什么重要**：它防止重试造成重复扣费、重复邮件或重复写入。
+- **常见误用**：假设所有工具天然幂等。
+
+### Rate limit
+
+- **定义**：单位时间内的调用数或 token 上限。
+- **为什么重要**：它保护成本和稳定性预算。
+- **常见误用**：把 rate limit 当成唯一的成本控制手段。
+
+### Timeout
+
+- **定义**：等待工具或模型响应的最大时间。
+- **为什么重要**：它防止循环无限挂起。
+- **常见误用**：设了 timeout 却没有 retry 或 fail-closed 路径。
+
+### Regression Gate
+
+- **定义**：阻止不安全行为上线的发布门禁。
+- **为什么重要**：它让安全成为发布属性，而不是愿望。
+- **常见误用**：按测试数量而不是行为覆盖率来把关。
+
+### Blast Radius
+
+- **定义**：一次失败影响的用户、数据或系统范围。
+- **为什么重要**：它让设计聚焦于隔离和 rollback。
+- **常见误用**：忽略邮件、支付等第三方副作用。
+
+### Postmortem
+
+- **定义**：把 incident 变成预防措施的免责复盘。
+- **为什么重要**：它把失败变成系统改进。
+- **常见误用**：用它追责，或者停在"人为错误"。
+
+### Observability
+
+- **定义**：检查实时状态的能力：traces、metrics 和 logs。
+- **为什么重要**：这是用户报告之前调试生产的途径。
+- **常见误用**：收集了没人能查询或关联的日志。
+
+### Audit log
+
+- **定义**：只追加的决策与外部效果记录。
+- **为什么重要**：它提供责任追溯和 incident 还原。
+- **常见误用**：只记 action，不记背后的推理和工具结果。
 
 ## 决策术语
 
-| Term | 含义 |
-| --- | --- |
-| Fail closed | 停止或拒绝，而不是带着 unsafe assumptions 继续 |
-| Trade-off | accuracy、latency、cost、safety、maintainability 的显式权衡 |
-| Stable pattern | 跨框架仍然有效的设计思想 |
-| Framework boundary | 应隔离在 Lab 里的框架 API 细节 |
-| Validated date | 文档或示例被检查的日期 |
-| Tested against | 可执行示例对应的版本或环境锚点 |
+### Fail closed
 
-## 审查问题
+- **定义**：缺少安全假设时停止或拒绝，而不是继续。
+- **为什么重要**：证据缺失时防止错误或有害的动作。
+- **常见误用**：对每个不确定性都 fail closed，挡住正常业务。
 
-- 每个外部 action 是否有 typed tool contract？
-- 证据密集的回答是否有 verifier？
-- evidence 缺失时是否有 refusal path？
+### Trade-off
+
+- **定义**：对 accuracy、latency、cost、safety 和 maintainability 的明确比较。
+- **为什么重要**：它让设计选择可评审。
+- **常见误用**：用延迟收益掩盖成本或安全回退。
+
+### 稳定模式
+
+- **定义**：跨框架仍然有用的设计思想。
+- **为什么重要**：它让知识在项目间可迁移。
+- **常见误用**：把框架 API 当成模式。
+
+### 框架边界
+
+- **定义**：应隔离在 Lab 中的框架特定 API 细节。
+- **为什么重要**：它让模式文档在框架演进时仍然耐用。
+- **常见误用**：写框架特定文档却宣称与框架无关。
+
+### Validated date
+
+- **定义**：文档或示例被核验的日期。
+- **为什么重要**：它告诉读者指南有多新鲜。
+- **常见误用**：只改日期，没有真正重新核验内容。
+
+### Tested against
+
+- **定义**：可执行示例的版本或环境锚点。
+- **为什么重要**：它定义示例已知能跑的环境。
+- **常见误用**：对从未执行过的代码声称 "tested against"。
+
+## 快速审查问题
+
+- 每个外部 action 是否都有类型化的 tool contract？
+- 证据密集型 claim 是否有 verifier？
+- 证据缺失时是否有 refusal path？
 - 外部副作用是否有 rollback path？
-- 行为能否用 eval 测，而不是靠猜？
+- 行为能否用 eval 衡量，而不是靠猜？
+- 记忆策略是否明确：存什么、存多久、谁能读？
+- 失败模式是否 fail closed，且该路径是否被测试？
