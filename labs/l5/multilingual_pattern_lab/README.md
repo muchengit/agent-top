@@ -2,7 +2,7 @@
 title: Multilingual Pattern Lab
 capability_level: L5
 validated_date: 2026-09-17
-tested_against: "python 3.10+, node 20+, rust 1.70+, go 1.21+, typescript 5+"
+tested_against: "python 3.10+, node 20+, rust 1.58+, go 1.21+, typescript 7.0.2"
 ---
 
 # L5 Lab: Multilingual Pattern
@@ -24,11 +24,19 @@ Python is always available through the repository test suite:
 python -m unittest labs.l5.multilingual_pattern_lab.test_lab
 ```
 
+Install the local TypeScript compiler used by the smoke runner:
+
+```bash
+npm ci
+```
+
 Cross-language smoke checks:
 
 ```bash
 python scripts/smoke_multilingual_labs.py
 ```
+
+Expected smoke branches include Python, Node.js, Rust, Go, and TypeScript when the local runtime and compiler are available.
 
 ## What This Lab Teaches
 
