@@ -83,6 +83,7 @@ agent-top/
 │   │   │   ├── contributor-of-the-month.md
 │   │   │   ├── contributor-onboarding.md
 │   │   │   ├── glossary.md
+│   │   │   ├── good-first-L5-candidates.md
 │   │   │   ├── labels.md
 │   │   │   ├── maintainer-rotation.md
 │   │   │   └── translation-workflow.md
@@ -187,6 +188,7 @@ agent-top/
 │   │   └── regression_gate/
 │   ├── l5/
 │   │   ├── custom_pattern_lab/
+│   │   ├── multilingual_pattern_lab/
 │   │   └── pattern_catalog/
 │   └── README.md
 ├── scripts/
@@ -266,6 +268,7 @@ python -m ruff check .
 - Open-source pattern matrix: [`docs/en/tutorials/open-source-pattern-matrix.md`](docs/en/tutorials/open-source-pattern-matrix.md)
 - Industry benchmark and L5 expert path: [`docs/en/tutorials/industry-benchmark-and-l5-expert-path.md`](docs/en/tutorials/industry-benchmark-and-l5-expert-path.md)
 - L5 expert evidence template: [`templates/l5-expert-evidence-template.md`](templates/l5-expert-evidence-template.md)
+- Multilingual L5 pattern Lab: [`labs/l5/multilingual_pattern_lab/README.md`](labs/l5/multilingual_pattern_lab/README.md)
 - Interview framework: [`docs/en/interviews/interview-framework.md`](docs/en/interviews/interview-framework.md)
 - Labs: [`labs`](labs)
 - Templates: [`templates`](templates)

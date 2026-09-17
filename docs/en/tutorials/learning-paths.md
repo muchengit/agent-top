@@ -70,8 +70,9 @@ Exit evidence:
 2. Read [`../concepts/agent-system-architecture.md`](../concepts/agent-system-architecture.md).
 3. Run [`../../../labs/l5/custom_pattern_lab/README.md`](../../../labs/l5/custom_pattern_lab/README.md).
 4. Run [`../../../labs/l5/pattern_catalog/README.md`](../../../labs/l5/pattern_catalog/README.md).
-5. Draft one reusable pattern with safety and verification.
-6. Read [`industry-benchmark-and-l5-expert-path.md`](industry-benchmark-and-l5-expert-path.md) and package the work with [`../../../templates/l5-expert-evidence-template.md`](../../../templates/l5-expert-evidence-template.md).
+5. Run [`../../../labs/l5/multilingual_pattern_lab/README.md`](../../../labs/l5/multilingual_pattern_lab/README.md).
+6. Draft one reusable pattern with safety and verification.
+7. Read [`industry-benchmark-and-l5-expert-path.md`](industry-benchmark-and-l5-expert-path.md) and package the work with [`../../../templates/l5-expert-evidence-template.md`](../../../templates/l5-expert-evidence-template.md).
 
 Exit evidence:
 

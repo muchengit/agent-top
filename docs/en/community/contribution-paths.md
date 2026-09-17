@@ -49,6 +49,10 @@ Review contribution should check:
 
 Maintain framework maps, CI, templates, and release hygiene.
 
+## 5. L5 Expert Evidence
+
+Submit evidence packages for L5 contributions: original patterns, architecture review, eval/trace/risk/release evidence, external influence artifacts, and mentoring/review proof. Use [`good-first-L5-candidates.md`](good-first-L5-candidates.md) for candidate L5 packages when preparing an issue or PR.
+
 Maintenance contribution:
 
 - Keeps CI green.
@@ -65,6 +69,9 @@ Start with:
 - `translation-needed`
 - `sync-required`
 - `lab`
+- `good-first-L5`
+- `original-pattern`
+- `external-impact`
 
 ## Community Lab Sessions
 

@@ -41,6 +41,8 @@ python -m unittest labs.l4.cost_and_stability_guardrails.test_lab
 python -m unittest labs.l4.production_postmortem.test_lab
 python -m unittest labs.l5.custom_pattern_lab.test_lab
 python -m unittest labs.l5.pattern_catalog.test_lab
+python -m unittest labs.l5.multilingual_pattern_lab.test_lab
+python scripts/smoke_multilingual_labs.py
 ```
 
 ## Useful Debugging Commands

@@ -174,6 +174,7 @@ agent-top/
 - 学习路径：[`docs/zh/tutorials/学习路径.md`](docs/zh/tutorials/学习路径.md)
 - 行业对标与 L5 专家路径：[`docs/zh/tutorials/行业对标与L5专家路径.md`](docs/zh/tutorials/行业对标与L5专家路径.md)
 - L5 专家证据模板：[`templates/L5专家证据模板.md`](templates/L5专家证据模板.md)
+- 多语言 L5 模式 Lab：[`labs/l5/multilingual_pattern_lab/README.md`](labs/l5/multilingual_pattern_lab/README.md)
 - 开源项目灵感目录：[`docs/zh/tutorials/开源项目灵感目录.md`](docs/zh/tutorials/开源项目灵感目录.md)
 - 开源模式矩阵：[`docs/en/tutorials/open-source-pattern-matrix.md`](docs/en/tutorials/open-source-pattern-matrix.md)
 - 可执行 Lab：[`labs`](labs)

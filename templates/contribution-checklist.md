@@ -40,6 +40,13 @@ Use this before opening a PR.
 - [ ] Security-relevant topics include maintainer review.
 - [ ] Rollback or failure handling is described when relevant.
 
+## L5 Expert Evidence
+
+- [ ] If this PR claims L5 readiness, it includes or links an L5 expert evidence bundle.
+- [ ] L5 claims distinguish pattern quality, governance quality, and external influence.
+- [ ] L5 work includes failure modes, non-goals, rejected alternatives, and residual-risk notes.
+- [ ] L5 work that touches safety, release, permissions, or governance is labeled for maintainer review.
+
 ## Verification
 
 - [ ] `python scripts/check_repository.py`

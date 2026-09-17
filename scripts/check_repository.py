@@ -62,6 +62,13 @@ LABEL_NAMES = {
     "lab",
     "interview",
     "production",
+    "good-first-L5",
+    "original-pattern",
+    "external-impact",
+    "eval-evidence",
+    "safety-review",
+    "release-governance",
+    "sig-candidate",
 }
 
 
@@ -198,8 +205,7 @@ def check_lab_readmes(markdown_paths: list[Path]) -> None:
         path
         for path in markdown_paths
         if path.name == "README.md"
-        and path.relative_to(ROOT).parts[0] == "labs"
-        and len(path.relative_to(ROOT).parts) == 4
+        and is_concrete_lab_readme(path.relative_to(ROOT).parts)
     ]
     if not lab_readmes:
         fail("no lab README files found")
@@ -212,6 +218,10 @@ def check_lab_readmes(markdown_paths: list[Path]) -> None:
     if bad:
         fail("lab README sections missing: " + "; ".join(bad))
 
+
+
+def is_concrete_lab_readme(parts: tuple[str, ...]) -> bool:
+    return len(parts) == 4 and parts[0] == "labs" and parts[1].startswith("l")
 
 
 def check_executable_labs() -> None:

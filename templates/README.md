@@ -19,6 +19,8 @@ Templates define the standard structure for Agent-Top contributions.
 - [`case-study-template.md`](case-study-template.md)
 - [`case-study-writing-guide.md`](case-study-writing-guide.md)
 - [`contribution-checklist.md`](contribution-checklist.md)
+- [`l5-expert-evidence-template.md`](l5-expert-evidence-template.md)
+- [`L5专家证据模板.md`](L5专家证据模板.md)
 - [`observability-trace-template.md`](observability-trace-template.md)
 - [`可观测性Trace模板.md`](可观测性Trace模板.md)
 - [`Agent设计审查Workshop模板.md`](Agent设计审查Workshop模板.md)
@@ -39,6 +41,7 @@ Templates define the standard structure for Agent-Top contributions.
 - **Design review example**: completed review output for customer refund assistant.
 - **Case study**: scenario-backed pattern lesson with failure modes and evidence.
 - **Contribution checklist**: pre-PR verification for docs, Labs, Examples, translation, and safety.
+- **L5 expert evidence**: packaged expert-level evidence for pattern quality, governance, influence, rubric scores, and final decision.
 - **Observability trace template**: request, evidence, tool calls, guardrails, memory, runtime cost, and incident follow-up for replayable Agent behavior.
 - **Community Lab**: group session notes and follow-up artifacts.
 - **Monthly contributor report**: contribution review and recognition.

@@ -33,6 +33,9 @@ jobs:
       - name: Run Ruff
         run: python -m ruff check .
 
+      - name: Run multilingual pattern smoke test
+        run: python scripts/smoke_multilingual_labs.py
+
       - name: Clean local caches
         run: |
           find . -type d -name "__pycache__" -print0 | while read -r -d "" dir; do

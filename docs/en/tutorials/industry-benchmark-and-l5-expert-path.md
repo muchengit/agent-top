@@ -51,6 +51,7 @@ This replaces a vague "advanced expert" label with a reviewable package.
 ## L5 Expert Evidence Bundle
 
 Use [`../../../templates/l5-expert-evidence-template.md`](../../../templates/l5-expert-evidence-template.md) to package an L5 claim.
+Use [`../community/good-first-L5-candidates.md`](../community/good-first-L5-candidates.md) for candidate L5 packages that show what a complete evidence bundle should contain.
 
 Minimum evidence for L5 readiness:
 
@@ -127,4 +128,3 @@ The key decision is to keep the main model as L0-L5 while adding rubrics and evi
 - Open-source impact guide: [`../portfolio/open-source-impact-guide.md`](../portfolio/open-source-impact-guide.md)
 - Governance: [`../../../GOVERNANCE.md`](../../../GOVERNANCE.md)
 - Contribution paths: [`../community/contribution-paths.md`](../community/contribution-paths.md)
-

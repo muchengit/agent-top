@@ -5,7 +5,7 @@ validated_date: 2026-09-16
 
 # Labs
 
-Executable Labs are the primary hands-on format for Agent-Top. They run locally without API keys and use deterministic tests to make learning verifiable. The repository currently has 16 Labs and 39 tests.
+Executable Labs are the primary hands-on format for Agent-Top. They run locally without API keys and use deterministic tests to make learning verifiable. The repository currently has 17 Labs and 41 tests.
 
 ## Current Labs
 
@@ -41,6 +41,7 @@ Executable Labs are the primary hands-on format for Agent-Top. They run locally 
 
 - [`l5/custom_pattern_lab`](l5/custom_pattern_lab/README.md): reusable custom pattern with safety and verification.
 - [`l5/pattern_catalog`](l5/pattern_catalog/README.md): reusable pattern catalog with readiness checks.
+- [`l5/multilingual_pattern_lab`](l5/multilingual_pattern_lab/README.md): one pattern translated across Python, Node.js, Rust, Go, and TypeScript.
 
 ## Run All Tests
 
