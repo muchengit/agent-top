@@ -25,6 +25,8 @@ Templates define the standard structure for Agent-Top contributions.
 - [`L5专家证据模板.md`](L5专家证据模板.md)
 - [`observability-trace-template.md`](observability-trace-template.md)
 - [`可观测性Trace模板.md`](可观测性Trace模板.md)
+- [`eval-trace-replay-template.md`](eval-trace-replay-template.md)
+- [`可回放Eval和Trace模板.md`](可回放Eval和Trace模板.md)
 - [`Agent设计审查Workshop模板.md`](Agent设计审查Workshop模板.md)
 - [`Agent设计审查范例.md`](Agent设计审查范例.md)
 - [`案例研究模板.md`](案例研究模板.md)
@@ -47,6 +49,7 @@ Templates define the standard structure for Agent-Top contributions.
 - **Project dispatch plan**: main-agent dispatch queue with employee assignments, expected files, gates, and merge decision.
 - **Contribution checklist**: pre-PR verification for docs, Labs, Examples, translation, and safety.
 - **L5 expert evidence**: packaged expert-level evidence for pattern quality, governance, influence, rubric scores, and final decision.
+- **Eval and trace replay template**: replay commands, expected stdout, required artifacts, and exit criteria for eval/trace evidence.
 - **Observability trace template**: request, evidence, tool calls, guardrails, memory, runtime cost, and incident follow-up for replayable Agent behavior.
 - **Community Lab**: group session notes and follow-up artifacts.
 - **Monthly contributor report**: contribution review and recognition.

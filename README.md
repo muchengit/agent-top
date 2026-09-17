@@ -272,6 +272,7 @@ python -m ruff check .
 - Project dispatch plan template: [`templates/project-dispatch-plan.md`](templates/project-dispatch-plan.md)
 - Employee work charter: [`templates/employee-work-charter.md`](templates/employee-work-charter.md)
 - Main agent rework log: [`templates/main-agent-rework-log.md`](templates/main-agent-rework-log.md)
+- Eval and trace replay template: [`templates/eval-trace-replay-template.md`](templates/eval-trace-replay-template.md)
 - 2026-09-17 dispatch run: [`docs/en/operations/2026-09-17-project-dispatch-run.md`](docs/en/operations/2026-09-17-project-dispatch-run.md)
 - Project dispatch run template: [`docs/en/operations/project-dispatch-run-template.md`](docs/en/operations/project-dispatch-run-template.md)
 - Orchestration preview script: [`scripts/orchestrate_project.py`](scripts/orchestrate_project.py)

@@ -44,6 +44,17 @@ def main() -> int:
 
     go_command = ["go", "test", "./...", "-run", "Verifiable"]
     run_if_available("go", "go", go_command, LAB / "go")
+
+    local_tsc = ROOT / "node_modules" / ".bin" / "tsc"
+    if local_tsc.exists():
+        ts_command = [str(local_tsc), "--project", str(LAB / "typescript" / "tsconfig.json")]
+        run("typescript", ts_command)
+    elif shutil.which("tsc"):
+        ts_command = ["tsc", "--project", str(LAB / "typescript" / "tsconfig.json")]
+        run("typescript", ts_command)
+    else:
+        print("skip: typescript (tsc not installed; run npm install first)")
+
     print("multilingual smoke ok")
     return 0
 

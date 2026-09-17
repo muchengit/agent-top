@@ -178,6 +178,7 @@ agent-top/
 - 项目调度计划模板：[`templates/project-dispatch-plan.md`](templates/project-dispatch-plan.md)
 - 员工工作章程：[`templates/员工工作章程.md`](templates/员工工作章程.md)
 - 主 Agent 返工日志：[`templates/主Agent返工日志.md`](templates/主Agent返工日志.md)
+- 可回放 Eval 和 Trace 模板：[`templates/可回放Eval和Trace模板.md`](templates/可回放Eval和Trace模板.md)
 - 2026-09-17 调度运行记录：[`docs/zh/operations/2026-09-17-项目调度运行记录.md`](docs/zh/operations/2026-09-17-项目调度运行记录.md)
 - 项目调度运行记录模板：[`docs/zh/operations/项目调度运行记录模板.md`](docs/zh/operations/项目调度运行记录模板.md)
 - 调度预览脚本：[`scripts/orchestrate_project.py`](scripts/orchestrate_project.py)

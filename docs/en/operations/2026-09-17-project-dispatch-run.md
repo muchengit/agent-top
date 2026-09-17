@@ -29,7 +29,7 @@ Reason:
 | 3 | Node.js/TypeScript Engineer | Multilingual Labs | Node.js smoke executes; TypeScript source remains a reference implementation | Pass with note |
 | 4 | Rust Engineer | Multilingual Labs | Rust compiler is installed locally and Rust smoke executes | Pass |
 | 5 | Go Engineer | Multilingual Labs | Go module and test run under `go test` | Pass |
-| 6 | Language Parity Reviewer | Multilingual Labs | Python, Node.js, Rust, and Go executed in smoke; TypeScript parity tracked as source-only | Pass with note |
+| 6 | Language Parity Reviewer | Multilingual Labs | Python, Node.js, Rust, and Go executed in smoke; TypeScript parity verified with project-local `tsc` | Pass |
 | 7 | Docs Structure Auditor | Docs | Repository Markdown checks pass; links, frontmatter, and bilingual pairs are clean | Pass |
 | 8 | Translation Editor | Translation | Chinese operating model and dispatch template were added/linked | Pass |
 | 9 | Interview Coach | Interview | Existing L0-L5 interview materials remain linked from README and docs | Pass |
