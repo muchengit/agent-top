@@ -270,6 +270,7 @@ python -m ruff check .
 - L5 expert evidence template: [`templates/l5-expert-evidence-template.md`](templates/l5-expert-evidence-template.md)
 - Company-style long-run operating model: [`docs/en/governance/project-operating-model.md`](docs/en/governance/project-operating-model.md)
 - Project dispatch plan template: [`templates/project-dispatch-plan.md`](templates/project-dispatch-plan.md)
+- 2026-09-17 dispatch run: [`docs/en/operations/2026-09-17-project-dispatch-run.md`](docs/en/operations/2026-09-17-project-dispatch-run.md)
 - Orchestration preview script: [`scripts/orchestrate_project.py`](scripts/orchestrate_project.py)
 - Multilingual L5 pattern Lab: [`labs/l5/multilingual_pattern_lab/README.md`](labs/l5/multilingual_pattern_lab/README.md)
 - Interview framework: [`docs/en/interviews/interview-framework.md`](docs/en/interviews/interview-framework.md)
