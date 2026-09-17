@@ -80,6 +80,24 @@ Record for each model call:
 
 Use these fields to answer: why was this model chosen, why did cost rise, and can the system safely rollback or degrade?
 
+
+## Serving Deployment Evidence
+
+When Agents use self-hosted inference servers or serving endpoints, deployment is also stability evidence.
+
+Record for each deployment or runtime change:
+
+- `endpoint`: serving endpoint or gateway route.
+- `model_revision`: model id, revision, commit, or image tag.
+- `revision_id`: deployed runtime revision actually serving traffic.
+- `health`: health check status.
+- `resource_limits`: CPU, GPU, memory, batch size, or concurrency limits.
+- `timeout_policy`: request, stream, queue, and retry timeouts.
+- `capacity`: current throughput, queue depth, or saturation state.
+- `rollback_action`: rollback or degradation path that can be executed.
+
+Use these fields to answer: why did this serving change affect latency, cost, quality, or safety, and how can it be rolled back?
+
 ## Guardrail Decision
 
 A runtime guardrail should decide one of:

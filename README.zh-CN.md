@@ -112,6 +112,7 @@ agent-top/
 │   ├── model-gateway/                # Model gateway evidence 练习
 │   ├── safety-eval/                  # Safety eval evidence 练习
 │   ├── mcp-tool-boundary/            # MCP tool boundary 练习
+│   ├── memory-index-evidence/        # Memory 与 Index evidence 练习
 │   └── rag-evidence-refusal/         # RAG 证据与拒绝回答练习
 ├── labs/
 │   ├── l0/                           # 第一次 LLM 调用

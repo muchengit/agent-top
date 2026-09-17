@@ -45,14 +45,14 @@ class Trace:
     event: str
     data: dict[str, str]
 
-class In记忆Store:
+class InMemoryStore:
     def __init__(self, documents: list[str]) -> None:
         self.documents = documents
 
     def retrieve(self, query: str, top_k: int = 2) -> list[str]:
         return [doc for doc in self.documents if query.lower() in doc.lower()][:top_k]
 
-class Session记忆:
+class SessionMemory:
     def __init__(self) -> None:
         self.turns: list[str] = []
 
@@ -64,7 +64,7 @@ class Session记忆:
 
 def answer_with_trace(
     query: str,
-    store: In记忆Store,
+    store: InMemoryStore,
     memory: Session记忆,
 ) -> tuple[str, list[Trace]]:
     memory.remember(query)
@@ -83,9 +83,9 @@ def answer_with_trace(
 
 ```bash
 python - <<'PY'
-from labs.l3.rag_memory_observability.agent_top_labs_l3_rag_memory_observability import In记忆Store, Session记忆, answer_with_trace
-store = In记忆Store(["RAG retrieves context", "MCP exposes tools", "记忆 persists turns"])
-memory = Session记忆()
+from labs.l3.rag_memory_observability.agent_top_labs_l3_rag_memory_observability import InMemoryStore, SessionMemory, answer_with_trace
+store = InMemoryStore(["RAG retrieves context", "MCP exposes tools", "记忆 persists turns"])
+memory = SessionMemory()
 answer, traces = answer_with_trace("RAG", store, memory)
 print(answer)
 for trace in traces:
@@ -105,9 +105,9 @@ memory {'recent_turns': '1'}
 
 ```bash
 python - <<'PY'
-from labs.l3.rag_memory_observability.agent_top_labs_l3_rag_memory_observability import In记忆Store, Session记忆, answer_with_trace
-store = In记忆Store(["RAG retrieves context", "MCP exposes tools", "记忆 persists turns"])
-memory = Session记忆()
+from labs.l3.rag_memory_observability.agent_top_labs_l3_rag_memory_observability import InMemoryStore, SessionMemory, answer_with_trace
+store = InMemoryStore(["RAG retrieves context", "MCP exposes tools", "记忆 persists turns"])
+memory = SessionMemory()
 answer_with_trace("RAG", store, memory)
 _, traces = answer_with_trace("MCP", store, memory)
 print(traces[1].data)
@@ -136,8 +136,8 @@ OK
 
 ## 各部分作用
 
-- `In记忆Store` 是一个小检索层。
-- `Session记忆` 是一个小会话层。
+- `InMemoryStore` 是一个小检索层。
+- `SessionMemory` 是一个小会话层。
 - `answer_with_trace()` 把两者连接起来并生成 trace。
 - `Trace` 是调试视图，记录发生了什么。
 

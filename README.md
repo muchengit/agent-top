@@ -162,6 +162,7 @@ agent-top/
 │   ├── model-gateway/
 │   ├── safety-eval/
 │   ├── mcp-tool-boundary/
+│   ├── memory-index-evidence/
 │   └── rag-evidence-refusal/
 ├── labs/
 │   ├── l0/
