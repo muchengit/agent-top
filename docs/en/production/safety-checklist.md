@@ -74,6 +74,23 @@ Safety checks should not only say “passed”. Each guardrail decision should r
 
 Use these fields to answer: why did the system allow or block this action, and how will we prove similar issues are intercepted next time?
 
+
+## MCP Tool Call Evidence
+
+MCP tool call evidence should answer who did what through which tool, with which approval, and whether the result can be rolled back.
+
+Record at minimum:
+
+- `server_id`: MCP server or tool gateway identifier.
+- `tool_name`: tool name without secrets.
+- `input_schema_version`: input schema version.
+- `permission_scope`: `read`, `write`, `destructive`, or `admin`.
+- `transport_lifecycle`: `initialized`, `calling`, `failed`, `cancelled`, or `completed`.
+- `audit_actor`: user, tenant, service account, or human approver.
+- `result_status`: `success`, `empty`, `error`, `blocked`, or `partial`.
+
+Use these fields to separate tool failure, permission denial, empty result, and partial success.
+
 ## Risk Classification
 
 | Risk | Example | Required Control |

@@ -42,6 +42,7 @@ last-synced: 2026-09-16
 ## 实践证据
 
 - Lab: [`../../../labs/l2/single_agent_mcp/README.md`](../../../labs/l2/single_agent_mcp/README.md)
+- Example: [`../../../examples/mcp-tool-boundary/README.md`](../../../examples/mcp-tool-boundary/README.md)
 - Case: [`../cases/企业多工具Agent案例.md`](../cases/企业多工具Agent案例.md)
 - Project artifact: 带 risk table 和 audit fields 的 tool gateway design note。
 

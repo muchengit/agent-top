@@ -17,6 +17,7 @@ Agent-Top examples are fictional, local, and do not require API keys, external s
 | Observability Trace | [`observability-trace/README.md`](observability-trace/README.md) | Trace completeness, PII redaction, tool/retrieval/final-answer evidence, and postmortem readiness |
 | Model Gateway Evidence | [`model-gateway/README.md`](model-gateway/README.md) | Model routing evidence, fallback/retry visibility, budget decisions, and inference runtime checks |
 | Safety Eval Evidence | [`safety-eval/README.md`](safety-eval/README.md) | Injection, leakage, refusal, harm, hallucination, memory conflict, and guardrail evidence |
+| MCP Tool Boundary | [`mcp-tool-boundary/README.md`](mcp-tool-boundary/README.md) | MCP server evidence, graph checkpoints, typed tool output, permission scope, and result status |
 
 ## How To Use These Exercises
 

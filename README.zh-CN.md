@@ -109,6 +109,9 @@ agent-top/
 │   ├── agent-eval-regression/        # Agent 评估回归练习
 │   ├── github-agent-review/          # GitHub Agent review 练习
 │   ├── observability-trace/          # 可观测性与 trace 契约练习
+│   ├── model-gateway/                # Model gateway evidence 练习
+│   ├── safety-eval/                  # Safety eval evidence 练习
+│   ├── mcp-tool-boundary/            # MCP tool boundary 练习
 │   └── rag-evidence-refusal/         # RAG 证据与拒绝回答练习
 ├── labs/
 │   ├── l0/                           # 第一次 LLM 调用

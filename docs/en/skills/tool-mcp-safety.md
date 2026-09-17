@@ -42,6 +42,7 @@ Help engineers expose external actions through a controlled boundary, including 
 ## Practice Evidence
 
 - Lab: [`../../../labs/l2/single_agent_mcp/README.md`](../../../labs/l2/single_agent_mcp/README.md)
+- Example: [`../../../examples/mcp-tool-boundary/README.md`](../../../examples/mcp-tool-boundary/README.md)
 - Case: [`../cases/enterprise-multi-tool-agent.md`](../cases/enterprise-multi-tool-agent.md)
 - Project artifact: tool gateway design note with risk table and audit fields.
 

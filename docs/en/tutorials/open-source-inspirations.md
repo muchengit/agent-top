@@ -16,6 +16,7 @@ A 2026-09-17 GitHub-native pass re-verified several GitHub CLI, GitHub REST API,
 A 2026-09-17 runtime-evidence pass checked reachable public repositories with `git ls-remote`: Sentry, Grafana Pyroscope, Ruff, uv, and Dapr. These entries are learning signals for incident grouping, profiling, deterministic lint gates, lockfile evidence, and workflow provenance; they are not authoritative setup guides.
 A 2026-09-17 platform-evidence pass checked reachable public repositories with `git ls-remote`: OpenTelemetry semantic conventions, OpenTelemetry Python, OpenTelemetry Python contrib, Arize Phoenix, promptfoo, LiteLLM, Dify, Agno, Traceloop OpenLLMetry, vLLM, and open-webui. These entries are learning signals for GenAI telemetry, eval-as-CI, model gateway boundaries, platform portals, and inference runtime metrics; they are not authoritative setup guides.
 A 2026-09-17 safety-evidence pass checked reachable public repositories with `git ls-remote`: Guardrails AI, OpenAI Evals, Langfuse, Mem0, Letta, Chroma, Ollama, Microsoft RAI Toolbox, Hugging Face Alignment Handbook, and MLflow. These entries are learning signals for output validation, safety eval batteries, trace datasets, memory governance, vector provenance, local model boundaries, responsible AI review, and experiment evidence; they are not authoritative setup guides.
+A 2026-09-17 tool-boundary pass checked reachable public repositories with `git ls-remote`: LangChain, LangGraph, LangSmith CLI, OpenAI Agents Python, ModelContextProtocol servers, Google ADK Python, LlamaIndex, Haystack, browser-use, and Pydantic AI. These entries are learning signals for MCP server boundaries, graph state checkpoints, typed tool output, RAG pipeline evidence, browser action traces, and SDK handoff boundaries; they are not authoritative setup guides.
 
 ## Project-to-Topic Map
 
@@ -100,6 +101,16 @@ A 2026-09-17 safety-evidence pass checked reachable public repositories with `gi
 | Microsoft RAI Toolbox-style review workflows | responsible AI review | fairness, toxicity, representativeness, bias, transparency, and mitigation review evidence |
 | Hugging Face Alignment Handbook-style guidance | alignment evaluation concepts | helpfulness, honesty, harmlessness, safety metrics, and evaluation methodology boundaries |
 | MLflow-style experiment tracking | experiment evidence | run id, parameters, metrics, artifacts, and comparison evidence |
+| LangChain-style agent frameworks | composable Agent building blocks | chains, tools, memory, output parsers, and framework-specific boundaries kept out of stable docs |
+| LangGraph-style state graphs | graph state and checkpointing | explicit state schema, transitions, checkpoints, retries, interrupts, and stop conditions |
+| LangSmith-style developer CLI | developer workflow evidence | trace inspection, deployment metadata, app/thread context, and eval/report linkage |
+| OpenAI Agents Python-style SDK | SDK agent boundaries | agents, tools, handoffs, guardrails, sessions, and trace-friendly orchestration boundaries |
+| ModelContextProtocol servers ecosystem | official MCP server catalog boundary | local filesystem/server examples, tool discovery, resource exposure, and server lifecycle evidence |
+| Google ADK Python-style Agent SDK | production Agent composition | deterministic agents, tool use, sessions, memory, and deployment boundary |
+| LlamaIndex-style data frameworks | RAG pipeline evidence | indexing, retrieval, node metadata, query engine boundaries, and evaluation hooks |
+| Haystack-style pipelines | composable pipeline components | retriever, ranker, reader, writer, and component boundary evidence |
+| browser-use-style browser Agents | browser action traces | visible page context, action intent, DOM/screenshot evidence, retry budgets, and rollback notes |
+| Pydantic AI-style typed Agents | typed tool outputs | typed dependencies, tool definitions, structured output, validation, and model-call boundaries |
 | Sentry-style error monitoring | incident grouping and release-aware errors | issue fingerprinting, release association, error grouping, alert routing, and blameless root-cause evidence |
 | Grafana Pyroscope-style continuous profiling | runtime hotspots and resource evidence | sampling or continuous profiling, service/resource labels, hotspot routes, and cost diagnosis without full traces |
 | Ruff-style deterministic linters | local quality gates | fast deterministic checks, explicit rule output, CI pass/fail evidence, and small reviewable diffs |
@@ -147,6 +158,11 @@ A 2026-09-17 safety-evidence pass checked reachable public repositories with `gi
 - **Memory governance evidence**: record memory source, confidence, owner, conflict, update/delete action, and privacy scope before using memory as evidence.
 - **Local model boundary**: separate local model registry, pull/run command, model id/version, resource limits, network policy, and trace fields for private inference.
 - **Experiment evidence**: bind prompt, model, tool, and dataset changes to run id, parameters, metrics, artifacts, and comparison decision.
+- **MCP server boundary**: record server id, tool name, input schema, permission scope, transport/lifecycle state, result status, and audit actor before execution.
+- **Graph state boundary**: define state schema, node transitions, checkpoint id, retry count, interrupt owner, and stop condition for multi-step Agent flows.
+- **Typed tool output**: validate tool and model outputs against schema before downstream state changes; record validation errors and retry budget.
+- **RAG pipeline boundary**: keep ingestion, retrieval, ranking, reranking, citation, and answer policy as separate evidence points.
+- **Browser action trace**: record visible context, action intent, DOM/screenshot summary, retry budget, and rollback note for UI-changing actions.
 
 ## Contributor Workflow
 
@@ -192,6 +208,11 @@ When adding another open-source project, submit in this order:
 | Memory governance evidence | [`../concepts/long-term-memory.md`](../concepts/long-term-memory.md), [`../../examples/memory-vs-evidence/README.md`](../../../examples/memory-vs-evidence/README.md) |
 | Local model boundary | [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
 | Experiment evidence | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../production/observability-trace-contract.md`](../production/observability-trace-contract.md) |
+| MCP server boundary | [`../skills/tool-mcp-safety.md`](../skills/tool-mcp-safety.md), [`../../examples/mcp-tool-boundary/README.md`](../../../examples/mcp-tool-boundary/README.md) |
+| Graph state boundary | [`../concepts/plan-decision-making.md`](../concepts/plan-decision-making.md), [`../../examples/mcp-tool-boundary/README.md`](../../../examples/mcp-tool-boundary/README.md) |
+| Typed tool output | [`../concepts/agent-system-architecture.md`](../concepts/agent-system-architecture.md), [`../production/evals-playbook.md`](../production/evals-playbook.md) |
+| RAG pipeline boundary | [`../l3-rag-memory-observability.md`](../l3-rag-memory-observability.md), [`../production/evals-playbook.md`](../production/evals-playbook.md) |
+| Browser action trace | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
 
 ## Maintenance Rule
 

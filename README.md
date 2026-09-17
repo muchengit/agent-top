@@ -161,6 +161,7 @@ agent-top/
 │   ├── observability-trace/
 │   ├── model-gateway/
 │   ├── safety-eval/
+│   ├── mcp-tool-boundary/
 │   └── rag-evidence-refusal/
 ├── labs/
 │   ├── l0/

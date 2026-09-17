@@ -14,17 +14,17 @@ validated_date: 2026-09-16
 | 概念 | Done | `docs/en/concepts/`, 包括架构、MCP、多 Agent 调度、长期记忆、模型幻觉、Plan 决策、核心概念深挖来源和核心 Agent 实施手册 |
 | 框架地图 | Done | `docs/en/frameworks/framework-map.md` |
 | 可执行 Lab | Done | `labs/l0` 到 `labs/l5`，包括补充 Lab |
-| 任务优先入口 | Done | `docs/en/tutorials/quick-navigation.md`、`docs/zh/tutorials/快速导航卡.md`、`examples/README.md`、`examples/agent-decision-trace/`、`examples/rag-evidence-refusal/`、`examples/memory-vs-evidence/`、`examples/coding-workspace-safety/`、`examples/data-source-policy/`、`examples/coding-task-navigation/`、`examples/agent-eval-regression/`、`examples/github-agent-review/` 和 `examples/observability-trace/`, `examples/model-gateway/`, `examples/safety-eval/`, including runtime, gateway, and safety evidence |
+| 任务优先入口 | Done | `docs/en/tutorials/quick-navigation.md`、`docs/zh/tutorials/快速导航卡.md`、`examples/README.md`、`examples/agent-decision-trace/`、`examples/rag-evidence-refusal/`、`examples/memory-vs-evidence/`、`examples/coding-workspace-safety/`、`examples/data-source-policy/`、`examples/coding-task-navigation/`、`examples/agent-eval-regression/`、`examples/github-agent-review/` 和 `examples/observability-trace/`, `examples/model-gateway/`, `examples/safety-eval/`, `examples/mcp-tool-boundary/`, including runtime, gateway, safety, and tool-boundary evidence |
 | 设计审查资产 | Done | `docs/en/concepts/design-review-workshop.md`、`docs/en/concepts/agent-system-blueprint.md` 及中文镜像 |
 | 练习手册 | Done | `docs/en/tutorials/practice-handbook.md` 及中文镜像 |
 | 贡献资产 | Done | 案例研究模板、贡献自查清单和增强 PR 模板 |
 | 评估 Playbook | Done | `docs/en/production/evals-playbook.md`、中文镜像和 eval report 模板 |
-| 开源模式矩阵 | Done | `docs/en/tutorials/open-source-pattern-matrix.md`、中文镜像、`examples/memory-vs-evidence/`、`examples/coding-workspace-safety/`、`examples/data-source-policy/`、`examples/coding-task-navigation/`、`examples/agent-eval-regression/`、`examples/github-agent-review/` 和 `examples/observability-trace/`, `examples/model-gateway/`, `examples/safety-eval/`, including runtime, gateway, and safety evidence |
+| 开源模式矩阵 | Done | `docs/en/tutorials/open-source-pattern-matrix.md`、中文镜像、`examples/memory-vs-evidence/`、`examples/coding-workspace-safety/`、`examples/data-source-policy/`、`examples/coding-task-navigation/`、`examples/agent-eval-regression/`、`examples/github-agent-review/` 和 `examples/observability-trace/`, `examples/model-gateway/`, `examples/safety-eval/`, `examples/mcp-tool-boundary/`, including runtime, gateway, safety, and tool-boundary evidence |
 | 详细教程 | Done | `docs/en/` 和 `docs/zh/` 覆盖 L0-L5 |
 | 中文教程文件名 | Done | `docs/zh/` 下的中文镜像 |
 | 面试资产 | Done | `docs/en/interviews/`, `docs/zh/interviews/`, 含 STAR 回答范例 |
 | 作品集路径 | Done | `docs/en/portfolio/projects.md`、个人 Agent 作品集、开源影响力指南 |
-| 生产指南 | Done | `docs/en/production/`、成本稳定性运行手册、评估与回归 Playbook、可观测性与 Trace 契约、生产速查表、`examples/observability-trace/`, `examples/model-gateway/`, `examples/safety-eval/`, including runtime, gateway, and safety evidence |
+| 生产指南 | Done | `docs/en/production/`、成本稳定性运行手册、评估与回归 Playbook、可观测性与 Trace 契约、生产速查表、`examples/observability-trace/`, `examples/model-gateway/`, `examples/safety-eval/`, `examples/mcp-tool-boundary/`, including runtime, gateway, safety, and tool-boundary evidence |
 | 案例研究 | Done | `docs/en/cases/` |
 | 速查表 | Done | `docs/en/quick-reference/` |
 | Agent 技能体系 | Done | `docs/en/skills/README.md`、`docs/zh/skills/Agent技能指南.md`、`templates/agent-skill-card-template.md` |
