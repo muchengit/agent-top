@@ -177,6 +177,7 @@ agent-top/
 - 公司化长期运营模式：[`docs/zh/governance/项目运营模式.md`](docs/zh/governance/项目运营模式.md)
 - 项目调度计划模板：[`templates/project-dispatch-plan.md`](templates/project-dispatch-plan.md)
 - 2026-09-17 调度运行记录：[`docs/zh/operations/2026-09-17-项目调度运行记录.md`](docs/zh/operations/2026-09-17-项目调度运行记录.md)
+- 项目调度运行记录模板：[`docs/zh/operations/项目调度运行记录模板.md`](docs/zh/operations/项目调度运行记录模板.md)
 - 调度预览脚本：[`scripts/orchestrate_project.py`](scripts/orchestrate_project.py)
 - 多语言 L5 模式 Lab：[`labs/l5/multilingual_pattern_lab/README.md`](labs/l5/multilingual_pattern_lab/README.md)
 - 开源项目灵感目录：[`docs/zh/tutorials/开源项目灵感目录.md`](docs/zh/tutorials/开源项目灵感目录.md)
