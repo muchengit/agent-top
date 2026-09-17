@@ -60,6 +60,26 @@ Maintenance contribution:
 - Rotates reviewers.
 - Prevents documentation sprawl.
 
+## Non-Python Lab Maintenance
+
+Python remains the default runnable Lab language, but Node.js, Rust, Go, and TypeScript examples need explicit ownership when they are added.
+
+Each non-Python Lab maintainer should:
+
+- Keep the shared pattern contract unchanged.
+- Update language-specific commands and version anchors.
+- Run the relevant smoke path before requesting review.
+- Document intentional parity differences.
+- Route CI failures to the owning language lane, not to the docs reviewer.
+
+Acceptance evidence:
+
+- Node.js: runnable command and expected stdout.
+- TypeScript: `npm ci` plus local TypeScript compile or smoke output.
+- Rust: compile/test command and failure behavior.
+- Go: module path, `go test`, and clean-checkout command.
+- Parity reviewer: mismatch table with accept/rework decision.
+
 ## Labels
 
 Start with:

@@ -65,3 +65,4 @@ Every Lab should include:
 - One deterministic `test_*.py` file.
 - No API key requirement.
 - Version anchor in README when relevant.
+- Multilingual parity note when examples are translated beyond Python: source of truth, owner, runtime/toolchain versions, smoke command, and parity status.

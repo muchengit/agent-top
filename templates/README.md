@@ -18,6 +18,10 @@ Templates define the standard structure for Agent-Top contributions.
 - [`design-review-example.md`](design-review-example.md)
 - [`case-study-template.md`](case-study-template.md)
 - [`case-study-writing-guide.md`](case-study-writing-guide.md)
+- [`paper-reading-session-template.md`](paper-reading-session-template.md)
+- [`paper-reading-session-template.zh-CN.md`](paper-reading-session-template.zh-CN.md)
+- [`technical-talk-outline-template.md`](technical-talk-outline-template.md)
+- [`technical-talk-outline-template.zh-CN.md`](technical-talk-outline-template.zh-CN.md)
 - [`contribution-checklist.md`](contribution-checklist.md)
 - [`project-dispatch-plan.md`](project-dispatch-plan.md)
 - [`employee-work-charter.md`](employee-work-charter.md)
@@ -44,6 +48,8 @@ Templates define the standard structure for Agent-Top contributions.
 - **Design review workshop**: structured group review notes with decision record.
 - **Design review example**: completed review output for customer refund assistant.
 - **Case study**: scenario-backed pattern lesson with failure modes and evidence.
+- **Paper reading session**: research digest with claim, reproduction notes, Lab connection, questions, and follow-up.
+- **Technical talk outline**: reusable talk plan with audience, demo, trade-offs, Q&A risks, and follow-up owner.
 - **Employee work charter**: mandatory per-employee objective, expected output, acceptance criteria, rework rules, and main-agent review fields.
 - **Main agent rework log**: rejection reason, evidence, required fixes, rework SLA, and re-review outcome.
 - **Project dispatch plan**: main-agent dispatch queue with employee assignments, expected files, gates, and merge decision.

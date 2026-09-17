@@ -38,6 +38,19 @@ python scripts/smoke_multilingual_labs.py
 
 Expected smoke branches include Python, Node.js, Rust, Go, and TypeScript when the local runtime and compiler are available.
 
+
+## Maintenance Contract
+
+For every non-Python Lab, maintain these fields in the Lab README or in the Lab owner's PR notes:
+
+- Source of truth: the canonical pattern contract or upstream Lab.
+- Owner: the language maintainer responsible for parity and staleness fixes.
+- Toolchain: package manager, compiler, runtime, and compiler flags used for validation.
+- Validation: exact local command and expected output shape.
+- Parity: accepted differences from Python behavior and why they are intentional.
+
+A multilingual Lab is not complete when only syntax ports exist. It is complete only after a maintainer can rerun the checks from a clean checkout and explain any behavioral difference.
+
 ## What This Lab Teaches
 
 - Language syntax differs; the pattern contract should stay stable.

@@ -35,6 +35,20 @@ Before choosing a framework, answer:
 - Do I need prompt optimization?
 - Can I maintain this framework for the next quarter?
 
+## Framework Selection Decision Tree
+
+Use this order before introducing framework code into a Lab:
+
+1. Can the idea be taught with a plain Python loop and explicit prompts? If yes, keep the tutorial framework-free.
+2. Is the main need a stable SDK boundary for model calls, tools, structured output, or provider features? If yes, use the SDK camp as the Lab reference.
+3. Does the workflow need named states, branches, cycles, human approval, checkpointing, or replayable debugging? If yes, use LangGraph-style graph orchestration.
+4. Does the workflow need role separation, specialist prompts, or multi-agent verification? If yes, compare CrewAI and AutoGen-style patterns before adding orchestration.
+5. Is retrieval the main uncertainty: chunking, ranking, filtering, source freshness, or evals? If yes, use a RAG framework only after defining the retrieval metric.
+6. Is the goal prompt or pipeline optimization with a benchmark? If yes, use DSPy-style optimization only with an eval harness.
+7. Is the team already committed to a typed or enterprise ecosystem? If yes, choose Pydantic AI or Semantic Kernel based on the surrounding stack.
+
+Default rule: start without a framework until the Lab proves the missing boundary. A framework earns its place when it reduces state, testing, observability, or maintenance work.
+
 ## Stable Boundaries to Teach
 
 Regardless of framework, teach:
