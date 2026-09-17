@@ -22,7 +22,8 @@ validated_date: 2026-09-16
 | Open-source pattern matrix | Done | `docs/en/tutorials/open-source-pattern-matrix.md`, Chinese mirror, `examples/memory-vs-evidence/`, `examples/coding-workspace-safety/`, `examples/data-source-policy/`, `examples/coding-task-navigation/`, `examples/agent-eval-regression/`, `examples/github-agent-review/`, `examples/observability-trace/`, and `examples/model-gateway/`, `examples/safety-eval/`, `examples/mcp-tool-boundary/`, `examples/memory-index-evidence/`, `examples/release-gate-evidence/`, including runtime, gateway, safety, tool-boundary, index, and release-gate evidence |
 | Detailed tutorials | Done | `docs/en/` and `docs/zh/` through L5 |
 | Industry benchmark and L5 expert path | Done | `docs/en/tutorials/industry-benchmark-and-l5-expert-path.md`, Chinese mirror, and `templates/l5-expert-evidence-template.md` |
-| Tutorial reference map | Done | `docs/en/tutorials/reference-map.md`, `docs/zh/tutorials/reference-map.md` |
+| Team Agent infrastructure | Done | `docs/en/production/team-agent-infrastructure.md`, `docs/zh/production/团队Agent基础设施.md` |
+| Tutorial reference map | Done | `docs/en/tutorials/reference-map.md`, `docs/zh/tutorials/教程参考地图.md` |
 | Chinese tutorial filenames | Done | Chinese names under `docs/zh/` |
 | Interview assets | Done | `docs/en/interviews/interview-framework.md`, `docs/en/interviews/questions/`, `docs/en/interviews/interview-answer-framework.md` |
 | Portfolio tracks | Done | `docs/en/portfolio/projects.md`, `docs/en/portfolio/personal-agent-portfolio.md`, `docs/en/portfolio/open-source-impact-guide.md` |
@@ -49,7 +50,7 @@ validated_date: 2026-09-16
 | Framework example freshness | reviewed before stale threshold |
 | Review coverage | >= 2 backups per active module |
 | Tutorial coverage | L0-L5 EN and ZH present |
-| Lab test coverage | 39 deterministic Lab tests pass locally |
+| Lab test coverage | 41 deterministic Lab tests pass locally |
 
 ## Next Priority
 

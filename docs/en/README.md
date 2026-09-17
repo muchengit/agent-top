@@ -1,8 +1,8 @@
 ---
 title: Documentation Index
-validated_date: 2026-09-16
+validated_date: 2026-09-17
 i18n-key: readme
-last-synced: 2026-09-16
+last-synced: 2026-09-17
 ---
 
 # Documentation Index
@@ -70,14 +70,25 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 ## Skills
 
 - [`skills/README.md`](skills/README.md)
+- [`skills/tool-mcp-safety.md`](skills/tool-mcp-safety.md)
 - [`../zh/skills/Agent技能指南.md`](../zh/skills/Agent技能指南.md)
 - [`../../templates/agent-skill-card-template.md`](../../templates/agent-skill-card-template.md)
+
+## Templates
+
+- [`../../templates/paper-reading-session-template.md`](../../templates/paper-reading-session-template.md)
+- [`../../templates/technical-talk-outline-template.md`](../../templates/technical-talk-outline-template.md)
+- [`../../templates/eval-trace-replay-template.md`](../../templates/eval-trace-replay-template.md)
+- [`../../templates/observability-trace-template.md`](../../templates/observability-trace-template.md)
 
 ## Case Studies
 
 - [`cases/README.md`](cases/README.md)
 - [`../zh/cases/文档索引.md`](../zh/cases/文档索引.md)
 - [`cases/customer-support-multi-agent.md`](cases/customer-support-multi-agent.md)
+- [`cases/enterprise-multi-tool-agent.md`](cases/enterprise-multi-tool-agent.md)
+- [`cases/multi-agent-collaboration.md`](cases/multi-agent-collaboration.md)
+- [`cases/pattern-contribution.md`](cases/pattern-contribution.md)
 - [`cases/personal-knowledge-rag.md`](cases/personal-knowledge-rag.md)
 - [`cases/production-regression-gate.md`](cases/production-regression-gate.md)
 
@@ -107,11 +118,17 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`production/observability-trace-contract.md`](production/observability-trace-contract.md)
 - [`production/safety-checklist.md`](production/safety-checklist.md)
 - [`production/quarterly-maintenance.md`](production/quarterly-maintenance.md)
+- [`production/cost-stability-operations.md`](production/cost-stability-operations.md)
+- [`production/team-agent-infrastructure.md`](production/team-agent-infrastructure.md)
 
 ## Interviews
 
 - [`interviews/interview-framework.md`](interviews/interview-framework.md)
+- [`interviews/interview-answer-framework.md`](interviews/interview-answer-framework.md)
 - [`interviews/questions/README.md`](interviews/questions/README.md)
+- [`interviews/questions/question-bank-overview.md`](interviews/questions/question-bank-overview.md)
+- [`interviews/questions/full-question-bank.md`](interviews/questions/full-question-bank.md)
+- [`interviews/questions/l0-basics.md`](interviews/questions/l0-basics.md)
 - [`interviews/questions/l1-components.md`](interviews/questions/l1-components.md)
 - [`interviews/questions/l2-framework-mcp.md`](interviews/questions/l2-framework-mcp.md)
 - [`interviews/questions/l3-system-design.md`](interviews/questions/l3-system-design.md)
@@ -123,10 +140,13 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`portfolio/README.md`](portfolio/README.md)
 - [`portfolio/projects.md`](portfolio/projects.md)
 - [`portfolio/personal-agent-portfolio.md`](portfolio/personal-agent-portfolio.md)
+- [`portfolio/open-source-impact-guide.md`](portfolio/open-source-impact-guide.md)
 
 ## Community
 
 - [`community/README.md`](community/README.md)
+- [`community/agent-community-lab.md`](community/agent-community-lab.md)
+- [`community/community-lab-host-script.md`](community/community-lab-host-script.md)
 - [`community/contribution-paths.md`](community/contribution-paths.md)
 - [`community/contributor-onboarding.md`](community/contributor-onboarding.md)
 - [`community/translation-workflow.md`](community/translation-workflow.md)
@@ -135,9 +155,19 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`community/glossary.md`](community/glossary.md)
 - [`community/maintainer-rotation.md`](community/maintainer-rotation.md)
 - [`community/contributor-of-the-month.md`](community/contributor-of-the-month.md)
+- [`community/good-first-L5-candidates.md`](community/good-first-L5-candidates.md)
+
+## Operations
+
+- [`operations/2026-09-17-project-dispatch-run.md`](operations/2026-09-17-project-dispatch-run.md)
+- [`operations/2026-09-17-project-dispatch-queue.md`](operations/2026-09-17-project-dispatch-queue.md)
+- [`operations/2026-09-17-eight-hour-execution-log.md`](operations/2026-09-17-eight-hour-execution-log.md)
+- [`operations/2026-09-17-research-docs-supervision-snapshot.md`](operations/2026-09-17-research-docs-supervision-snapshot.md)
+- [`operations/project-dispatch-run-template.md`](operations/project-dispatch-run-template.md)
 
 ## Governance and Security
 
 - [`GOVERNANCE.md`](../../GOVERNANCE.md)
 - [`SECURITY.md`](../../SECURITY.md)
 - [`ROADMAP_STATUS.md`](../../ROADMAP_STATUS.md)
+- [`governance/project-operating-model.md`](governance/project-operating-model.md)

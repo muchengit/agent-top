@@ -1,3 +1,10 @@
+---
+title: 2026-09-17 项目调度队列
+validated_date: 2026-09-17
+i18n-key: operations-2026-09-17-project-dispatch-queue
+last-synced: 2026-09-17
+---
+
 # 项目调度队列
 
 生成时间: 2026-09-17

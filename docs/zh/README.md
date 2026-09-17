@@ -61,6 +61,13 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`skills/工具MCP安全技能卡.md`](skills/工具MCP安全技能卡.md)
 - [`../../templates/Agent技能卡模板.md`](../../templates/Agent技能卡模板.md)
 
+## 模板
+
+- [`../../templates/paper-reading-session-template.zh-CN.md`](../../templates/paper-reading-session-template.zh-CN.md)
+- [`../../templates/technical-talk-outline-template.zh-CN.md`](../../templates/technical-talk-outline-template.zh-CN.md)
+- [`../../templates/可回放Eval和Trace模板.md`](../../templates/可回放Eval和Trace模板.md)
+- [`../../templates/可观测性Trace模板.md`](../../templates/可观测性Trace模板.md)
+
 ## 案例研究
 
 - [`cases/文档索引.md`](cases/文档索引.md)
@@ -68,6 +75,9 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`cases/多Agent客服案例.md`](cases/多Agent客服案例.md)
 - [`cases/个人知识库RAG案例.md`](cases/个人知识库RAG案例.md)
 - [`cases/生产回归门禁案例.md`](cases/生产回归门禁案例.md)
+- [`cases/企业多工具Agent案例.md`](cases/企业多工具Agent案例.md)
+- [`cases/多Agent协作案例.md`](cases/多Agent协作案例.md)
+- [`cases/模式贡献案例.md`](cases/模式贡献案例.md)
 
 ## 速查表
 
@@ -93,11 +103,16 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`production/可观测性与Trace契约.md`](production/可观测性与Trace契约.md)
 - [`production/安全清单.md`](production/安全清单.md)
 - [`production/季度维护.md`](production/季度维护.md)
+- [`production/成本稳定性运行手册.md`](production/成本稳定性运行手册.md)
+- [`production/团队Agent基础设施.md`](production/团队Agent基础设施.md)
 
 ## 面试
 
 - [`interviews/面试框架.md`](interviews/面试框架.md)
 - [`interviews/questions/文档索引.md`](interviews/questions/文档索引.md)
+- [`interviews/questions/面试题总览.md`](interviews/questions/面试题总览.md)
+- [`interviews/questions/L0-L5全题库.md`](interviews/questions/L0-L5全题库.md)
+- [`interviews/questions/L0入门.md`](interviews/questions/L0入门.md)
 - [`interviews/questions/L1组件题.md`](interviews/questions/L1组件题.md)
 - [`interviews/questions/L2框架MCP题.md`](interviews/questions/L2框架MCP题.md)
 - [`interviews/questions/L3系统设计题.md`](interviews/questions/L3系统设计题.md)
@@ -105,7 +120,6 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`interviews/questions/L5模式题.md`](interviews/questions/L5模式题.md)
 - [`../en/interviews/interview-answer-framework.md`](../en/interviews/interview-answer-framework.md)
 - [`interviews/面试答案范例.md`](interviews/面试答案范例.md)
-- [`interviews/questions/L4生产化.md`](interviews/questions/L4生产化.md)
 - [`portfolio/开源贡献与外部影响力指南.md`](portfolio/开源贡献与外部影响力指南.md)
 - [`community/Agent社区实验.md`](community/Agent社区实验.md)
 
@@ -126,9 +140,20 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`community/术语表.md`](community/术语表.md)
 - [`community/维护者轮值.md`](community/维护者轮值.md)
 - [`community/月度贡献者.md`](community/月度贡献者.md)
+- [`community/L5专家候选任务.md`](community/L5专家候选任务.md)
+- [`community/社区实验主持脚本.md`](community/社区实验主持脚本.md)
+
+## 运营
+
+- [`operations/2026-09-17-项目调度运行记录.md`](operations/2026-09-17-项目调度运行记录.md)
+- [`operations/2026-09-17-project-dispatch-queue.md`](operations/2026-09-17-project-dispatch-queue.md)
+- [`operations/2026-09-17-8小时监督执行日志.md`](operations/2026-09-17-8小时监督执行日志.md)
+- [`operations/2026-09-17-Research与Docs监督快照.md`](operations/2026-09-17-Research与Docs监督快照.md)
+- [`operations/项目调度运行记录模板.md`](operations/项目调度运行记录模板.md)
 
 ## 治理与安全
 
+- [`governance/项目运营模式.md`](governance/项目运营模式.md)：公司化长期运营与主 Agent 调度机制
 - [`../../GOVERNANCE.zh-CN.md`](../../GOVERNANCE.zh-CN.md)
 - [`../../SECURITY.zh-CN.md`](../../SECURITY.zh-CN.md)
 - [`../../ROADMAP_STATUS.zh-CN.md`](../../ROADMAP_STATUS.zh-CN.md)

@@ -174,7 +174,9 @@ def check_no_conflict_markers(markdown_paths: list[Path]) -> None:
 def check_bilingual_frontmatter(markdown_paths: list[Path]) -> None:
     bad: list[str] = []
     for path in markdown_paths:
-        if "docs/en" not in path.parts and "docs/zh" not in path.parts:
+        rel_parts = path.relative_to(ROOT).parts
+        is_bilingual = rel_parts[:2] in (("docs", "en"), ("docs", "zh"))
+        if len(rel_parts) < 3 or not is_bilingual:
             continue
         meta = parse_frontmatter(path)
         if "i18n-key" not in meta or "last-synced" not in meta:
@@ -258,6 +260,24 @@ def check_examples_jsonl() -> None:
                 fail(f"{path.relative_to(ROOT)}:{number} is not valid JSONL: {exc}")
 
 
+def check_docs_site_links() -> None:
+    index_path = ROOT / "docs-site" / "index.html"
+    text = index_path.read_text(encoding="utf-8")
+    broken: list[str] = []
+    for match in re.finditer(r'href="([^"]*)"', text):
+        href = match.group(1).strip()
+        if not href or href.startswith(("http://", "https://", "#", "mailto:")):
+            continue
+        cleaned = href.split("#", 1)[0]
+        if not cleaned:
+            continue
+        candidate = (ROOT / "docs-site" / cleaned).resolve()
+        if not candidate.exists():
+            broken.append(href)
+    if broken:
+        fail("broken docs-site links: " + json.dumps(broken, ensure_ascii=False))
+
+
 def main() -> None:
     check_required_paths()
     markdown_paths = iter_markdown()
@@ -269,6 +289,7 @@ def main() -> None:
     check_lab_readmes(markdown_paths)
     check_executable_labs()
     check_examples_jsonl()
+    check_docs_site_links()
     print(f"Repository checks passed: {len(markdown_paths)} Markdown files checked.")
 
 
