@@ -69,6 +69,7 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`../../templates/可观测性Trace模板.md`](../../templates/可观测性Trace模板.md)
 - [`../../templates/复盘模板.md`](../../templates/复盘模板.md)
 - [`../../templates/Agent设计模板.md`](../../templates/Agent设计模板.md)
+- [`../../templates/Lab模板.md`](../../templates/Lab模板.md)
 
 ## 案例研究
 
@@ -107,6 +108,7 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`../../examples/memory-index-evidence/README.md`](../../examples/memory-index-evidence/README.md)：Memory 与 Index evidence
 - [`../../examples/multilingual-support/README.md`](../../examples/multilingual-support/README.md)：多语言路由与回退
 - [`../../examples/compliance-review/README.md`](../../examples/compliance-review/README.md)：合规评审与审批证据门
+- [`../../examples/release-gate-evidence/README.md`](../../examples/release-gate-evidence/README.md)：发布门禁证据
 
 ## 生产
 
@@ -141,6 +143,7 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`portfolio/文档索引.md`](portfolio/文档索引.md)
 - [`portfolio/作品集项目.md`](portfolio/作品集项目.md)
 - [`portfolio/agent项目作品集指南.md`](portfolio/agent项目作品集指南.md)
+- [`portfolio/开源贡献与外部影响力指南.md`](portfolio/开源贡献与外部影响力指南.md)
 
 ## 社区
 
