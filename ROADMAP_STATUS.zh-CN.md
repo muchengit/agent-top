@@ -72,14 +72,14 @@ validated_date: 2026-09-18
 
 ### 2. 双语 SLA 维持
 
-- [ ] 新文档从创建之日起即为 EN/ZH 成对提交；标记只添加单语文的 PR。验收：CI 中 `scripts/check_repository.py` 的双语检查通过。
-- [ ] 任一侧修改时同步刷新两侧镜像的 `last-synced` frontmatter。验收：无任何 EN/ZH 成对文档漂移超过 14 天健康目标。
+- [x] 新文档从创建之日起即为 EN/ZH 成对提交；标记只添加单语文的 PR。验收：CI 中 `scripts/check_repository.py` 的双语检查通过。
+- [x] 任一侧修改时同步刷新两侧镜像的 `last-synced` frontmatter。验收：无任何 EN/ZH 成对文档漂移超过 14 天健康目标。
 - [ ] 每个 PR 与每季度运行 `scripts/check_repository.py`，合并前修复死链与缺失镜像。验收：`check_repository.py` 的 CI job 保持绿色。
 
 ### 3. 框架示例保鲜
 
-- [ ] 上游 API 变化时，对框架文档（`docs/en/frameworks/`、`docs/en/agent-top-concrete-framework.md`）保持 `sync-required` 标签流程。验收：PR 模板包含该标签的检查项。
-- [ ] 在框架示例 frontmatter 中记录 `tested_against` 与 `validated_date`（如 `examples/model-gateway/`、`examples/mcp-tool-boundary/`）。验收：所有示例 frontmatter 均包含这两个键。
+- [x] 上游 API 变化时，对框架文档（`docs/en/frameworks/`、`docs/en/agent-top-concrete-framework.md`）保持 `sync-required` 标签流程。验收：PR 模板包含该标签的检查项。
+- [x] 在框架示例 frontmatter 中记录 `tested_against` 与 `validated_date`（如 `examples/model-gateway/`、`examples/mcp-tool-boundary/`）。验收：所有示例 frontmatter 均包含这两个键。
 - [x] 依据 `docs/en/production/quarterly-maintenance.md` 维护季度维护日历，在过期阈值前 review 框架示例。验收：季度 review 记录落入 `templates/monthly-contributor-report.md` 或维护日志。
 
 ### 4. Labs 覆盖（可选新增）

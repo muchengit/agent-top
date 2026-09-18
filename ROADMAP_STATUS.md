@@ -77,14 +77,14 @@ Break the roadmap vision into trackable tasks. Themes 1-3 are the core commitmen
 
 ### 2. Bilingual SLA
 
-- [ ] Create new docs as EN/ZH pairs from day one; flag PRs that add a single-language doc. Acceptance: bilingual checks in `scripts/check_repository.py` pass in CI.
-- [ ] Refresh the `last-synced` frontmatter on both mirrors whenever one side changes. Acceptance: no EN/ZH pair drifts beyond the 14-day health target.
-- [ ] Run `scripts/check_repository.py` on every PR and quarterly, fixing dead links and missing mirrors before merge. Acceptance: the `check_repository.py` CI job stays green.
+- [x] Create new docs as EN/ZH pairs from day one; flag PRs that add a single-language doc. Acceptance: bilingual checks in `scripts/check_repository.py` pass in CI.
+- [x] Refresh the `last-synced` frontmatter on both mirrors whenever one side changes. Acceptance: no EN/ZH pair drifts beyond the 14-day health target.
+- [x] Run `scripts/check_repository.py` on every PR and quarterly, fixing dead links and missing mirrors before merge. Acceptance: the `check_repository.py` CI job stays green.
 
 ### 3. Framework Freshness
 
-- [ ] Keep the `sync-required` label workflow for framework docs (`docs/en/frameworks/`, `docs/en/agent-top-concrete-framework.md`) when upstream APIs change. Acceptance: the label checklist item is part of the PR template.
-- [ ] Record `tested_against` and `validated_date` in framework example frontmatter (e.g., `examples/model-gateway/`, `examples/mcp-tool-boundary/`). Acceptance: all example frontmatter includes both keys.
+- [x] Keep the `sync-required` label workflow for framework docs (`docs/en/frameworks/`, `docs/en/agent-top-concrete-framework.md`) when upstream APIs change. Acceptance: the label checklist item is part of the PR template.
+- [x] Record `tested_against` and `validated_date` in framework example frontmatter (e.g., `examples/model-gateway/`, `examples/mcp-tool-boundary/`). Acceptance: all example frontmatter includes both keys.
 - [x] Maintain a quarterly maintenance calendar based on `docs/en/production/quarterly-maintenance.md`; review framework examples before the stale threshold. Acceptance: quarterly review notes land in `templates/monthly-contributor-report.md` or a maintenance log.
 
 ### 4. Labs Coverage (optional)
