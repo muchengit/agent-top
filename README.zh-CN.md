@@ -88,7 +88,19 @@ agent-top/
 - `scripts/`：本地校验链接、frontmatter、版本锚点和 Lab 完整性。
 - `.github/`：CI、标签、Issue 模板和 PR 模板。
 
+## 本地检查
+
+运行仓库检查：
+
+```bash
+python scripts/check_repository.py
+python -m unittest discover -s labs -p "test_*.py"
+python -m compileall -q labs scripts
+python -m ruff check .
+```
+
 ## 仓库地图
+
 
 - 设计审查 Workshop：[`docs/en/concepts/design-review-workshop.md`](docs/en/concepts/design-review-workshop.md)
 - 系统蓝图：[`docs/en/concepts/agent-system-blueprint.md`](docs/en/concepts/agent-system-blueprint.md)
