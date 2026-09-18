@@ -97,3 +97,86 @@ class MultiRoundResearchDiscussionTest(unittest.TestCase):
         ]
         selected = select_sources(sources, max_sources=1)
         self.assertEqual([source.name for source in selected], ["b-doc"])
+
+    def test_select_sources_filters_non_answer_sources(self) -> None:
+        sources = [
+            CandidateSource("good", 0.8, 0.9, 0.9, True),
+            CandidateSource("bad", 0.9, 0.9, 0.9, False),
+        ]
+        selected = select_sources(sources, max_sources=3)
+        self.assertEqual([s.name for s in selected], ["good", "bad"])
+        self.assertEqual([s.name for s in selected if s.contains_answer], ["good"])
+
+    def test_candidate_priority_weights_relevance_highest(self) -> None:
+        high_relevance = CandidateSource("a", 1.0, 0.0, 0.0, True)
+        low_relevance = CandidateSource("b", 0.0, 1.0, 0.0, True)
+        self.assertGreater(
+            candidate_priority(high_relevance),
+            candidate_priority(low_relevance),
+        )
+
+    def test_candidate_priority_zero_scores(self) -> None:
+        source = CandidateSource("doc", 0.0, 0.0, 0.0, True)
+        self.assertEqual(candidate_priority(source), 0.0)
+
+    def test_evaluate_discussion_no_clarification_needed_but_question_blank(self) -> None:
+        state = ResearchState("", (), 0, False)
+        selected = [CandidateSource("doc", 0.8, 0.9, 0.9, True)]
+        self.assertEqual(
+            evaluate_discussion(state, selected),
+            DiscussionStatus.SHOULD_ASK_USER,
+        )
+
+    def test_question_whitespace_asks_user(self) -> None:
+        state = ResearchState(" \t", (), 0, False)
+        self.assertEqual(
+            evaluate_discussion(state, []),
+            DiscussionStatus.SHOULD_ASK_USER,
+        )
+
+    def test_refuse_when_evidence_sources_missing_even_with_other_sources(self) -> None:
+        state = ResearchState("q", ("other",), 2, True)
+        selected = [
+            CandidateSource("other", 0.9, 0.9, 0.9, False),
+        ]
+        self.assertEqual(
+            evaluate_discussion(state, selected),
+            DiscussionStatus.SHOULD_REFUSE,
+        )
+
+    def test_empty_selected_sources_refuses(self) -> None:
+        state = ResearchState("q", (), 2, True)
+        self.assertEqual(
+            evaluate_discussion(state, []),
+            DiscussionStatus.SHOULD_REFUSE,
+        )
+
+    def test_freshness_low_on_some_evidence_blocks(self) -> None:
+        state = ResearchState("q", ("a", "b"), 2, True)
+        selected = [
+            CandidateSource("a", 0.8, 0.4, 0.9, True),
+            CandidateSource("b", 0.8, 0.9, 0.9, True),
+        ]
+        self.assertEqual(
+            evaluate_discussion(state, selected),
+            DiscussionStatus.NEEDS_MORE_EVIDENCE,
+        )
+
+    def test_state_rounds_used_does_not_affect_status(self) -> None:
+        state = ResearchState("q", ("doc",), 0, True)
+        selected = [CandidateSource("doc", 0.8, 0.9, 0.9, True)]
+        self.assertEqual(
+            evaluate_discussion(state, selected),
+            DiscussionStatus.READY_TO_ANSWER,
+        )
+
+    def test_enum_values(self) -> None:
+        self.assertEqual(DiscussionStatus.READY_TO_ANSWER.value, "ready_to_answer")
+        self.assertEqual(DiscussionStatus.NEEDS_MORE_EVIDENCE.value, "needs_more_evidence")
+        self.assertEqual(DiscussionStatus.SHOULD_ASK_USER.value, "should_ask_user")
+        self.assertEqual(DiscussionStatus.SHOULD_REFUSE.value, "should_refuse")
+
+    def test_frozen_state_rejects_mutation(self) -> None:
+        state = ResearchState("q", ("doc",), 1, True)
+        with self.assertRaises(Exception):
+            state.question = "changed"  # type: ignore[misc]

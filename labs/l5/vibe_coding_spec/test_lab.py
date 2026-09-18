@@ -3,6 +3,7 @@ from __future__ import annotations
 import unittest
 
 from .agent_top_labs_l5_vibe_coding_spec import (
+    Spec,
     acceptance_command_present,
     check_spec,
     ready_to_prompt,
@@ -123,6 +124,79 @@ class VibeCodingSpecTest(unittest.TestCase):
             acceptance="  pytest passes.  ",
         )
         self.assertEqual(spec.one_sentence(), "Add search. GET /search. pytest passes.")
+
+    def test_scope_and_constraints_default_to_empty(self) -> None:
+        spec = check_spec(goal="g", interface="i", acceptance="a")
+        self.assertEqual(spec.scope, "")
+        self.assertEqual(spec.constraints, "")
+
+    def test_spec_is_frozen_dataclass(self) -> None:
+        spec = check_spec(goal="g", interface="i", acceptance="a")
+        with self.assertRaises(Exception):
+            spec.goal = "changed"  # type: ignore[misc]
+
+    def test_missing_tuple_ignores_present_fields(self) -> None:
+        spec = check_spec(goal="g", interface="i", acceptance="")
+        self.assertEqual(spec.missing, ("acceptance",))
+        self.assertNotIn("goal", spec.missing)
+
+    def test_acceptance_command_case_insensitive(self) -> None:
+        spec = check_spec(
+            goal="Add search",
+            interface="GET /search",
+            acceptance="Run PYTEST -q",
+        )
+        self.assertTrue(acceptance_command_present(spec, ("pytest",)))
+
+    def test_acceptance_command_absent_returns_false(self) -> None:
+        spec = check_spec(
+            goal="Add search",
+            interface="GET /search",
+            acceptance="test the feature",
+        )
+        self.assertFalse(
+            acceptance_command_present(spec, ("go test", "npm test"))
+        )
+
+    def test_not_ready_spec_acceptance_command_false(self) -> None:
+        spec = check_spec(goal="g", interface="", acceptance="pytest passes")
+        self.assertFalse(acceptance_command_present(spec, ("pytest",)))
+
+    def test_multiple_commands_any_match(self) -> None:
+        spec = check_spec(
+            goal="Add search",
+            interface="GET /search",
+            acceptance="npm test passes",
+        )
+        self.assertTrue(
+            acceptance_command_present(
+                spec,
+                ("python3 -m unittest", "npm test", "go test"),
+            )
+        )
+
+    def test_ready_to_prompt_matches_is_ready(self) -> None:
+        ready = check_spec(goal="g", interface="i", acceptance="a")
+        not_ready = check_spec(goal="g", interface="", acceptance="a")
+        self.assertTrue(ready_to_prompt(ready))
+        self.assertFalse(ready_to_prompt(not_ready))
+
+    def test_spec_missing_init_false(self) -> None:
+        spec = check_spec(goal="g", interface="i", acceptance="a")
+        self.assertEqual(spec.missing, ())
+        self.assertIsInstance(spec.missing, tuple)
+
+    def test_scope_preserved_when_provided(self) -> None:
+        spec = Spec(
+            goal="g",
+            interface="i",
+            acceptance="a",
+            scope="phase-1",
+            constraints="no external API",
+        )
+        self.assertEqual(spec.scope, "phase-1")
+        self.assertEqual(spec.constraints, "no external API")
+        self.assertTrue(ready_to_prompt(spec))
 
 
 if __name__ == "__main__":

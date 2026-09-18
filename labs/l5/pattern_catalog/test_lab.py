@@ -61,14 +61,56 @@ class PatternCatalogTest(unittest.TestCase):
         self.assertFalse(ready_pattern(1))  # type: ignore[arg-type]
 
     def test_entry_missing_verification_is_not_ready(self) -> None:
-        PatternEntry(
+        entry = PatternEntry(
             name="incomplete",
             inputs=("request",),
             outputs=("plan",),
             safety_checks=("block_on_rule",),
             verification=(),
         )
+        # Direct catalog lookup fails closed; entry-level readiness is
+        # demonstrated via the catalog's non-empty contract checks.
         self.assertFalse(ready_pattern("incomplete"))
+        self.assertEqual(entry.verification, ())
+
+    def test_catalog_keys_match_entry_names(self) -> None:
+        for name, entry in PATTERN_CATALOG.items():
+            self.assertEqual(name, entry.name)
+
+    def test_catalog_entries_non_empty_contract(self) -> None:
+        for name, entry in PATTERN_CATALOG.items():
+            self.assertTrue(entry.inputs, name)
+            self.assertTrue(entry.outputs, name)
+            self.assertTrue(entry.safety_checks, name)
+            self.assertTrue(entry.verification, name)
+
+    def test_ready_pattern_accepts_whitespace_name_false(self) -> None:
+        self.assertFalse(ready_pattern(" \t "))
+
+    def test_ready_pattern_name_with_extra_chars(self) -> None:
+        self.assertFalse(ready_pattern("verifiable-action "))
+        self.assertFalse(ready_pattern(" verifiable-action"))
+
+    def test_safe_tool_routing_ready(self) -> None:
+        self.assertTrue(ready_pattern("safe-tool-routing"))
+
+    def test_pattern_entry_defaults_are_empty(self) -> None:
+        entry = PatternEntry(name="empty", inputs=(), outputs=(), safety_checks=(), verification=())
+        self.assertEqual(entry.inputs, ())
+        self.assertEqual(entry.outputs, ())
+        self.assertEqual(entry.safety_checks, ())
+        self.assertEqual(entry.verification, ())
+
+    def test_catalog_size_is_two(self) -> None:
+        self.assertEqual(len(PATTERN_CATALOG), 2)
+
+    def test_verifiable_action_outputs_include_stop_reason(self) -> None:
+        entry = PATTERN_CATALOG["verifiable-action"]
+        self.assertIn("stop_reason", entry.outputs)
+
+    def test_safe_tool_routing_safety_checks_include_confirmation(self) -> None:
+        entry = PATTERN_CATALOG["safe-tool-routing"]
+        self.assertIn("confirmation_check", entry.safety_checks)
 
 
 if __name__ == "__main__":

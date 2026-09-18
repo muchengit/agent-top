@@ -4,6 +4,7 @@ import unittest
 
 from .agent_top_labs_l4_cost_and_stability_guardrails import (
     BudgetPolicy,
+    GuardrailDecision,
     RuntimeAction,
     RuntimeState,
     decide_guardrail,
@@ -125,3 +126,86 @@ class CostAndStabilityGuardrailsTest(unittest.TestCase):
         )
         self.assertEqual(response["message"], "返回简短的带来源回答")
         self.assertEqual(response["request_id"], "req-中文")
+
+    def test_tool_call_boundary_equal_degrades(self) -> None:
+        policy = BudgetPolicy(5, 3, 2, 1000, 1000)
+        state = RuntimeState(1, 3, 0, 100, 100, 100)
+        decision = decide_guardrail(state, policy)
+        self.assertEqual(decision.action, RuntimeAction.DEGRADE)
+
+    def test_retry_boundary_equal_blocks(self) -> None:
+        policy = BudgetPolicy(5, 3, 2, 1000, 1000)
+        state = RuntimeState(1, 1, 2, 100, 100, 100)
+        decision = decide_guardrail(state, policy)
+        self.assertEqual(decision.action, RuntimeAction.BLOCK)
+
+    def test_step_boundary_just_below_is_continue(self) -> None:
+        policy = BudgetPolicy(5, 3, 2, 1000, 1000)
+        state = RuntimeState(4, 1, 0, 100, 100, 100)
+        decision = decide_guardrail(state, policy)
+        self.assertEqual(decision.action, RuntimeAction.CONTINUE)
+
+    def test_tokens_exceeded_only_degrades(self) -> None:
+        policy = BudgetPolicy(5, 3, 2, 1000, 100)
+        state = RuntimeState(1, 1, 0, 100, 100, 50)
+        decision = decide_guardrail(state, policy)
+        self.assertEqual(decision.action, RuntimeAction.DEGRADE)
+        self.assertIn("token_budget_exhausted", decision.reasons)
+
+    def test_negative_values_never_exhaust(self) -> None:
+        policy = BudgetPolicy(5, 3, 2, 1000, 1000)
+        state = RuntimeState(-1, -1, -1, -1, -1, -1)
+        decision = decide_guardrail(state, policy)
+        self.assertEqual(decision.action, RuntimeAction.CONTINUE)
+
+    def test_all_budgets_exhausted_reasons_order(self) -> None:
+        policy = BudgetPolicy(1, 1, 1, 100, 100)
+        state = RuntimeState(1, 1, 1, 100, 61, 40)
+        decision = decide_guardrail(state, policy)
+        self.assertEqual(decision.action, RuntimeAction.BLOCK)
+        self.assertEqual(
+            decision.reasons,
+            (
+                "step_budget_exhausted",
+                "tool_call_budget_exhausted",
+                "retry_budget_exhausted",
+                "latency_budget_exhausted",
+                "token_budget_exhausted",
+            ),
+        )
+
+    def test_degrade_response_has_all_keys(self) -> None:
+        decision = decide_guardrail(
+            RuntimeState(1, 3, 0, 100, 100, 100),
+            BudgetPolicy(5, 3, 2, 1000, 1000),
+        )
+        response = degraded_response(
+            decision,
+            fallback_summary="summary",
+            request_id="req-3",
+        )
+        self.assertEqual(
+            set(response),
+            {"request_id", "status", "reasons", "message", "trace_required"},
+        )
+
+    def test_block_response_has_no_trace_required(self) -> None:
+        decision = GuardrailDecision(RuntimeAction.BLOCK, ("step_budget_exhausted",))
+        response = degraded_response(
+            decision,
+            fallback_summary="unused",
+            request_id="req-4",
+        )
+        self.assertEqual(response["status"], "blocked")
+        self.assertEqual(response["reasons"], ("step_budget_exhausted",))
+        self.assertNotIn("trace_required", response)
+
+    def test_enum_values(self) -> None:
+        self.assertEqual(RuntimeAction.CONTINUE.value, "continue")
+        self.assertEqual(RuntimeAction.DEGRADE.value, "degrade")
+        self.assertEqual(RuntimeAction.BLOCK.value, "block")
+
+    def test_frozen_policy_rejects_mutation(self) -> None:
+        policy = BudgetPolicy(5, 3, 2, 1000, 1000)
+        with self.assertRaises(Exception):
+            policy.max_steps = 10  # type: ignore[misc]

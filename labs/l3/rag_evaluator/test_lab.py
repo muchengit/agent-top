@@ -68,3 +68,65 @@ class RagEvaluatorTest(unittest.TestCase):
         case = RetrievalCase("pricing", "pricing-v2", (), False)
         with self.assertRaises(Exception):
             case.query = "other"  # type: ignore[misc]
+
+    def test_status_values(self) -> None:
+        self.assertEqual(
+            evaluate_retrieval(
+                RetrievalCase("q", "src", ("src",), False)
+            )["status"],
+            "pass",
+        )
+        self.assertEqual(
+            evaluate_retrieval(
+                RetrievalCase("q", "src", (), True)
+            )["status"],
+            "refuse_ok",
+        )
+        self.assertEqual(
+            evaluate_retrieval(
+                RetrievalCase("q", "src", (), False)
+            )["status"],
+            "fail",
+        )
+
+    def test_case_sensitive_source_match(self) -> None:
+        case = RetrievalCase("q", "Docs", ("docs",), False)
+        self.assertEqual(
+            evaluate_retrieval(case),
+            {"status": "fail", "missing_source": "Docs"},
+        )
+
+    def test_all_retrieved_sources_ignored_except_required(self) -> None:
+        case = RetrievalCase("q", "target", ("other-a", "other-b"), False)
+        self.assertEqual(
+            evaluate_retrieval(case),
+            {"status": "fail", "missing_source": "target"},
+        )
+
+    def test_required_source_among_many_passes(self) -> None:
+        case = RetrievalCase("q", "target", ("a", "target", "b", "c"), True)
+        self.assertEqual(
+            evaluate_retrieval(case),
+            {"status": "pass", "source": "target"},
+        )
+
+    def test_query_irrelevant_to_result(self) -> None:
+        case = RetrievalCase("anything", "target", ("target",), False)
+        self.assertEqual(
+            evaluate_retrieval(case),
+            {"status": "pass", "source": "target"},
+        )
+
+    def test_required_source_is_empty_string(self) -> None:
+        case = RetrievalCase("q", "", ("a",), False)
+        self.assertEqual(
+            evaluate_retrieval(case),
+            {"status": "fail", "missing_source": ""},
+        )
+
+    def test_retrieved_sources_tuple_duplicates(self) -> None:
+        case = RetrievalCase("q", "src", ("src", "src", "src"), False)
+        self.assertEqual(
+            evaluate_retrieval(case),
+            {"status": "pass", "source": "src"},
+        )
