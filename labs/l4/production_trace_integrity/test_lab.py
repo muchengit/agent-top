@@ -142,6 +142,98 @@ class TraceIntegrityTest(unittest.TestCase):
         self.assertEqual(list(groups.keys()), ["trace-1"])
         self.assertEqual(len(groups["trace-1"]), 4)
 
+    def test_missing_required_field_prompt(self) -> None:
+        events = [
+            make_event("e1", "trace-1", 1000, EventType.PROMPT, {}),
+            make_event("e2", "trace-1", 1100, EventType.RESULT, {"content": "y"}),
+        ]
+        report = validate_trace_integrity(events)
+        issues = [i for i in report.issues if i.problem_type == "missing_required_field"]
+        self.assertEqual(len(issues), 1)
+        self.assertEqual(issues[0].event_id, "e1")
+        self.assertIn("content", issues[0].suggestion)
+
+    def test_missing_required_field_decision(self) -> None:
+        events = [
+            make_event("e1", "trace-1", 1000, EventType.PROMPT, {"content": "q"}),
+            make_event("e2", "trace-1", 1100, EventType.DECISION, {}),
+            make_event("e3", "trace-1", 1200, EventType.RESULT, {"content": "y"}),
+        ]
+        report = validate_trace_integrity(events)
+        issues = [i for i in report.issues if i.problem_type == "missing_required_field"]
+        self.assertEqual(len(issues), 1)
+        self.assertIn("choice", issues[0].suggestion)
+
+    def test_multiple_issues_same_trace_collected(self) -> None:
+        events = [
+            make_event("e1", "trace-1", 2000, EventType.PROMPT, {"content": "q"}),
+            make_event("e2", "trace-1", 1900, EventType.TOOL_CALL, {"tool": "t"}),
+        ]
+        report = validate_trace_integrity(events)
+        self.assertEqual(report.broken_traces, 1)
+        problem_types = {issue.problem_type for issue in report.issues}
+        self.assertIn("missing_result_event", problem_types)
+        self.assertIn("out_of_order_timestamp", problem_types)
+        self.assertIn("missing_required_field", problem_types)
+
+    def test_group_by_trace_multiple_ids(self) -> None:
+        events = [
+            make_event("a", "trace-1", 1000, EventType.PROMPT, {"content": "x"}),
+            make_event("b", "trace-2", 1000, EventType.PROMPT, {"content": "y"}),
+            make_event("c", "trace-1", 1100, EventType.RESULT, {"content": "z"}),
+        ]
+        groups = TraceIntegrityValidator().group_by_trace(events)
+        self.assertEqual(set(groups), {"trace-1", "trace-2"})
+        self.assertEqual(len(groups["trace-1"]), 2)
+
+    def test_equal_timestamp_is_not_out_of_order(self) -> None:
+        events = [
+            make_event("e1", "trace-1", 1000, EventType.PROMPT, {"content": "x"}),
+            make_event("e2", "trace-1", 1000, EventType.RESULT, {"content": "y"}),
+        ]
+        report = validate_trace_integrity(events)
+        self.assertNotIn(
+            "out_of_order_timestamp",
+            [i.problem_type for i in report.issues],
+        )
+
+    def test_orphan_events_sorted_by_event_id(self) -> None:
+        events = [
+            make_event("b9", "", 1000, EventType.PROMPT, {"content": "x"}),
+            make_event("a1", "", 1000, EventType.PROMPT, {"content": "y"}),
+        ]
+        report = validate_trace_integrity(events)
+        issues = [i for i in report.issues if i.problem_type == "missing_trace_id"]
+        self.assertEqual([i.event_id for i in issues], ["a1", "b9"])
+
+    def test_prompt_present_anywhere_in_trace_counts(self) -> None:
+        events = [
+            make_event("e1", "trace-1", 1000, EventType.RESULT, {"content": "first"}),
+            make_event("e2", "trace-1", 1100, EventType.PROMPT, {"content": "late"}),
+        ]
+        report = validate_trace_integrity(events)
+        self.assertNotIn(
+            "missing_prompt_event",
+            [i.problem_type for i in report.issues],
+        )
+        self.assertNotIn(
+            "missing_result_event",
+            [i.problem_type for i in report.issues],
+        )
+
+    def test_trace_event_default_payload_is_empty(self) -> None:
+        event = make_event("e1", "trace-1", 1000, EventType.PROMPT)
+        self.assertEqual(event.payload, {})
+
+    def test_issue_dataclass_fields(self) -> None:
+        from .agent_top_labs_l4_production_trace_integrity import TraceIssue
+
+        issue = TraceIssue("trace-1", "e1", "missing_prompt_event", "suggestion")
+        self.assertEqual(issue.trace_id, "trace-1")
+        self.assertEqual(issue.event_id, "e1")
+        self.assertEqual(issue.problem_type, "missing_prompt_event")
+        self.assertEqual(issue.suggestion, "suggestion")
+
 
 if __name__ == "__main__":
     unittest.main()

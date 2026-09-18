@@ -11,6 +11,7 @@ from .agent_top_labs_l5_pattern_eval_gate import (
     OUTCOME_REJECTED,
     RISK_HIGH,
     RISK_LOW,
+    RISK_MEDIUM,
     STATUS_FAIL,
     STATUS_PASS,
     VALIDATION_VALIDATED,
@@ -112,6 +113,96 @@ class PatternEvalGateTest(unittest.TestCase):
         )
         self.assertEqual(result.dimensions[1].name, "evidence")
         self.assertIn("evidence", result.dimensions[1].reason)
+
+    def test_unvalidated_pattern_needs_review_for_reproducibility(self) -> None:
+        entry = dataclasses.replace(VALID_ENTRY, validation_status="draft")
+        result = PatternEvalGate().evaluate(entry)
+        self.assertEqual(result.outcome, OUTCOME_NEEDS_FIX)
+        self.assertEqual(result.dimensions[0].status, "needs_review")
+
+    def test_medium_risk_passes_without_mitigation(self) -> None:
+        entry = dataclasses.replace(VALID_ENTRY, risk_level=RISK_MEDIUM)
+        result = PatternEvalGate().evaluate(entry)
+        self.assertEqual(result.dimensions[2].status, STATUS_PASS)
+        self.assertEqual(result.outcome, OUTCOME_PASSED)
+
+    def test_multiple_unresolved_risks_listed_in_reason(self) -> None:
+        entry = dataclasses.replace(
+            VALID_ENTRY,
+            unresolved_high_risks=("risk_a", "risk_b"),
+        )
+        result = PatternEvalGate().evaluate(entry)
+        self.assertEqual(result.outcome, OUTCOME_REJECTED)
+        self.assertIn("risk_a", result.dimensions[2].reason)
+        self.assertIn("risk_b", result.dimensions[2].reason)
+
+    def test_documentation_pass_restores_outcome(self) -> None:
+        entry = dataclasses.replace(
+            VALID_ENTRY,
+            evidence_types=(),
+            has_documentation=True,
+        )
+        result = PatternEvalGate().evaluate(entry)
+        self.assertEqual(result.outcome, OUTCOME_NEEDS_FIX)
+        self.assertEqual(result.dimensions[3].status, STATUS_PASS)
+
+    def test_rejected_overrides_needs_fix(self) -> None:
+        entry = dataclasses.replace(
+            VALID_ENTRY,
+            evidence_types=(),
+            unresolved_high_risks=("unsandboxed_code_execution",),
+        )
+        result = PatternEvalGate().evaluate(entry)
+        self.assertEqual(result.outcome, OUTCOME_REJECTED)
+
+    def test_whitespace_owner_still_missing(self) -> None:
+        entry = dataclasses.replace(VALID_ENTRY, owner="\t\n")
+        result = PatternEvalGate().evaluate(entry)
+        self.assertEqual(result.dimensions[4].status, STATUS_FAIL)
+
+    def test_empty_evidence_and_documentation_both_fail(self) -> None:
+        entry = dataclasses.replace(
+            VALID_ENTRY,
+            evidence_types=(),
+            has_documentation=False,
+        )
+        result = PatternEvalGate().evaluate(entry)
+        self.assertEqual(result.outcome, OUTCOME_NEEDS_FIX)
+        self.assertEqual(result.dimensions[1].status, STATUS_FAIL)
+        self.assertEqual(result.dimensions[3].status, STATUS_FAIL)
+
+    def test_batch_per_dimension_summary(self) -> None:
+        entries = (
+            VALID_ENTRY,
+            dataclasses.replace(VALID_ENTRY, name="p2", evidence_types=()),
+            dataclasses.replace(
+                VALID_ENTRY,
+                name="p3",
+                risk_level=RISK_HIGH,
+                unresolved_high_risks=(),
+            ),
+        )
+        report = PatternEvalGate().evaluate_batch(entries)
+        evidence_summary = report.per_dimension[1]
+        self.assertEqual(evidence_summary.name, "evidence")
+        self.assertEqual(evidence_summary.passed, 2)
+        self.assertEqual(evidence_summary.failed, 1)
+        safety_summary = report.per_dimension[2]
+        self.assertEqual(safety_summary.needs_review, 1)
+
+    def test_dimension_summary_zero_defaults(self) -> None:
+        report = PatternEvalGate().evaluate_batch(())
+        for summary in report.per_dimension:
+            self.assertEqual(summary.passed, 0)
+            self.assertEqual(summary.failed, 0)
+            self.assertEqual(summary.needs_review, 0)
+
+    def test_status_constants_values(self) -> None:
+        self.assertEqual(STATUS_PASS, "pass")
+        self.assertEqual(STATUS_FAIL, "fail")
+        self.assertEqual(OUTCOME_PASSED, "passed")
+        self.assertEqual(OUTCOME_NEEDS_FIX, "needs_fix")
+        self.assertEqual(OUTCOME_REJECTED, "rejected")
 
 
 if __name__ == "__main__":
