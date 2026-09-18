@@ -80,7 +80,7 @@ validated_date: 2026-09-18
 
 - [ ] 上游 API 变化时，对框架文档（`docs/en/frameworks/`、`docs/en/agent-top-concrete-framework.md`）保持 `sync-required` 标签流程。验收：PR 模板包含该标签的检查项。
 - [ ] 在框架示例 frontmatter 中记录 `tested_against` 与 `validated_date`（如 `examples/model-gateway/`、`examples/mcp-tool-boundary/`）。验收：所有示例 frontmatter 均包含这两个键。
-- [ ] 依据 `docs/en/production/quarterly-maintenance.md` 维护季度维护日历，在过期阈值前 review 框架示例。验收：季度 review 记录落入 `templates/monthly-contributor-report.md` 或维护日志。
+- [x] 依据 `docs/en/production/quarterly-maintenance.md` 维护季度维护日历，在过期阈值前 review 框架示例。验收：季度 review 记录落入 `templates/monthly-contributor-report.md` 或维护日志。
 
 ### 4. Labs 覆盖（可选新增）
 

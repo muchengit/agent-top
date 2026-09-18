@@ -85,7 +85,7 @@ Break the roadmap vision into trackable tasks. Themes 1-3 are the core commitmen
 
 - [ ] Keep the `sync-required` label workflow for framework docs (`docs/en/frameworks/`, `docs/en/agent-top-concrete-framework.md`) when upstream APIs change. Acceptance: the label checklist item is part of the PR template.
 - [ ] Record `tested_against` and `validated_date` in framework example frontmatter (e.g., `examples/model-gateway/`, `examples/mcp-tool-boundary/`). Acceptance: all example frontmatter includes both keys.
-- [ ] Maintain a quarterly maintenance calendar based on `docs/en/production/quarterly-maintenance.md`; review framework examples before the stale threshold. Acceptance: quarterly review notes land in `templates/monthly-contributor-report.md` or a maintenance log.
+- [x] Maintain a quarterly maintenance calendar based on `docs/en/production/quarterly-maintenance.md`; review framework examples before the stale threshold. Acceptance: quarterly review notes land in `templates/monthly-contributor-report.md` or a maintenance log.
 
 ### 4. Labs Coverage (optional)
 

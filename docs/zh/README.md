@@ -158,6 +158,7 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`operations/2026-09-17-project-dispatch-queue.md`](operations/2026-09-17-project-dispatch-queue.md)
 - [`operations/2026-09-17-8小时监督执行日志.md`](operations/2026-09-17-8小时监督执行日志.md)
 - [`operations/2026-09-17-Research与Docs监督快照.md`](operations/2026-09-17-Research与Docs监督快照.md)
+- [`operations/2026-Q3季度维护审查.md`](operations/2026-Q3季度维护审查.md)
 - [`operations/项目调度运行记录模板.md`](operations/项目调度运行记录模板.md)
 
 ## 治理与安全

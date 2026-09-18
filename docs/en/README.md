@@ -170,6 +170,7 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`operations/2026-09-17-project-dispatch-queue.md`](operations/2026-09-17-project-dispatch-queue.md)
 - [`operations/2026-09-17-eight-hour-execution-log.md`](operations/2026-09-17-eight-hour-execution-log.md)
 - [`operations/2026-09-17-research-docs-supervision-snapshot.md`](operations/2026-09-17-research-docs-supervision-snapshot.md)
+- [`operations/2026-Q3-quarterly-maintenance-review.md`](operations/2026-Q3-quarterly-maintenance-review.md)
 - [`operations/project-dispatch-run-template.md`](operations/project-dispatch-run-template.md)
 
 ## Governance and Security
