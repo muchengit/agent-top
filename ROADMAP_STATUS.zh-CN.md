@@ -89,7 +89,7 @@ validated_date: 2026-09-18
 
 ### 5. 社区运营（可选新增）
 
-- [ ] 使用 `templates/monthly-contributor-report.md` 发布月度贡献者报告。验收：报告按月提交到 `docs/en/community/`。
-- [ ] 建立社区实验节奏（如每季度一个实验）：先提案、原型验证，再晋升或归档示例/Lab 候选。验收：`docs/en/community/` 下存在实验记录。
+- [x] 使用 `templates/monthly-contributor-report.md` 发布月度贡献者报告。验收：报告按月提交到 `docs/en/community/`。
+- [x] 建立社区实验节奏（如每季度一个实验）：先提案、原型验证，再晋升或归档示例/Lab 候选。验收：`docs/en/community/` 下存在实验记录。
 
 优先级顺序：先完成主题 1-3；当贡献者带宽允许时，再排期主题 4-5。

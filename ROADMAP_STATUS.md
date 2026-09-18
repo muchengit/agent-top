@@ -94,8 +94,8 @@ Break the roadmap vision into trackable tasks. Themes 1-3 are the core commitmen
 
 ### 5. Community Operations (optional)
 
-- [ ] Publish a monthly contributor report using `templates/monthly-contributor-report.md`. Acceptance: the report is committed to `docs/en/community/` each month.
-- [ ] Adopt a community experiment rhythm (e.g., one experiment per quarter): propose, prototype, then promote or archive example/lab candidates. Acceptance: an experiment log exists under `docs/en/community/`.
+- [x] Publish a monthly contributor report using `templates/monthly-contributor-report.md`. Acceptance: the report is committed to `docs/en/community/` each month.
+- [x] Adopt a community experiment rhythm (e.g., one experiment per quarter): propose, prototype, then promote or archive example/lab candidates. Acceptance: an experiment log exists under `docs/en/community/`.
 
 Priority order: complete themes 1-3 first; schedule themes 4-5 when contributor bandwidth allows.
 

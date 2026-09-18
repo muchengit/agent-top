@@ -28,6 +28,8 @@ Agent-Top is maintained as a bilingual, docs-first open source community.
 - [`glossary.md`](glossary.md)
 - [`maintainer-rotation.md`](maintainer-rotation.md)
 - [`contributor-of-the-month.md`](contributor-of-the-month.md)
+- [`2026-09-contributor-report.md`](2026-09-contributor-report.md)
+- [`experiment-log.md`](experiment-log.md)
 
 ## Role Paths
 
