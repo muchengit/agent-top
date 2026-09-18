@@ -74,10 +74,12 @@ python -m unittest labs.l1.guardrail_helpers.test_lab labs.l1.minimal_react_agen
 | l1 | multi_turn_state | 多轮状态、最近消息窗口、摘要 handoff | `python -m unittest labs.l1.multi_turn_state.test_lab` |
 | l2 | cost_aware_router | 按工具需求、检索需求、确认状态、延迟预算路由 | `python -m unittest labs.l2.cost_aware_router.test_lab` |
 | l2 | single_agent_mcp | 单 Agent + 小型 MCP 风格工具接口 | `python -m unittest labs.l2.single_agent_mcp.test_lab` |
+| l2 | mcp_tool_selection | 确定性的 MCP 工具选择与校验 | `python -m unittest labs.l2.mcp_tool_selection.test_lab` |
 | l3 | rag_evaluator | 带必需来源和 refusal 用例的检索评估 | `python -m unittest labs.l3.rag_evaluator.test_lab` |
 | l3 | rag_memory_observability | 检索、记忆、生成、可观测性骨架 | `python -m unittest labs.l3.rag_memory_observability.test_lab` |
 | l3 | multi_agent_supervisor | 从任务 profile 给专业 agent 分配工作 | `python -m unittest labs.l3.multi_agent_supervisor.test_lab` |
 | l3 | multi_round_research_discussion | 多轮研究：规划、选证据、澄清、回答 | `python -m unittest labs.l3.multi_round_research_discussion.test_lab` |
+| l3 | rag_hybrid_search | 确定性的关键词+向量混合检索 | `python -m unittest labs.l3.rag_hybrid_search.test_lab` |
 | l4 | regression_gate | 安全、trace 完整性、rollback、成本的发布门禁 | `python -m unittest labs.l4.regression_gate.test_lab` |
 | l4 | cost_and_stability_guardrails | 成本、延迟、重试、降级的运行时 guardrails | `python -m unittest labs.l4.cost_and_stability_guardrails.test_lab` |
 | l4 | production_postmortem | 带根因和行动项的结构化 postmortem | `python -m unittest labs.l4.production_postmortem.test_lab` |

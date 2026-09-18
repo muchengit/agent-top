@@ -78,10 +78,12 @@ python -m unittest labs.l1.guardrail_helpers.test_lab labs.l1.minimal_react_agen
 | l1 | multi_turn_state | Multi-turn state, recent-message windows, summary handoff | `python -m unittest labs.l1.multi_turn_state.test_lab` |
 | l2 | cost_aware_router | Route by tool need, retrieval need, confirmation, latency budget | `python -m unittest labs.l2.cost_aware_router.test_lab` |
 | l2 | single_agent_mcp | Single agent with a small MCP-style tool interface | `python -m unittest labs.l2.single_agent_mcp.test_lab` |
+| l2 | mcp_tool_selection | Deterministic MCP tool selection and validation | `python -m unittest labs.l2.mcp_tool_selection.test_lab` |
 | l3 | rag_evaluator | Retrieval evaluation with required sources and refusal cases | `python -m unittest labs.l3.rag_evaluator.test_lab` |
 | l3 | rag_memory_observability | Retrieval, memory, generation, observability skeleton | `python -m unittest labs.l3.rag_memory_observability.test_lab` |
 | l3 | multi_agent_supervisor | Assign work to specialized agents from a task profile | `python -m unittest labs.l3.multi_agent_supervisor.test_lab` |
 | l3 | multi_round_research_discussion | Multi-round research: plan, select evidence, clarify, answer | `python -m unittest labs.l3.multi_round_research_discussion.test_lab` |
+| l3 | rag_hybrid_search | Deterministic hybrid keyword-plus-vector retrieval | `python -m unittest labs.l3.rag_hybrid_search.test_lab` |
 | l4 | regression_gate | Release gating for safety, trace completeness, rollback, cost | `python -m unittest labs.l4.regression_gate.test_lab` |
 | l4 | cost_and_stability_guardrails | Runtime guardrails for cost, latency, retries, degradation | `python -m unittest labs.l4.cost_and_stability_guardrails.test_lab` |
 | l4 | production_postmortem | Structured postmortem with root causes and action items | `python -m unittest labs.l4.production_postmortem.test_lab` |
