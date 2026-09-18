@@ -1,3 +1,10 @@
+---
+title: Coding Task Navigation
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "manual review of synthetic task-scoped sessions"
+---
+
 # Coding Task Navigation Exercise
 
 This exercise adapts the task-first navigation pattern seen in mature coding-agent tutorial collections. It teaches learners to start from a concrete request, choose the smallest useful entry point, identify the expected artifact, verify the result, and state a stop condition.

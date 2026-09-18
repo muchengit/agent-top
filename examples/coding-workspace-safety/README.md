@@ -1,3 +1,10 @@
+---
+title: Coding Workspace Safety
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "laboratory trace review on synthetic workspace sessions"
+---
+
 # Coding Workspace Safety Exercise
 
 This exercise gives you fictional coding-Agent changes. No API key, IDE plugin, repository mutation, paid service, or real customer code is needed.

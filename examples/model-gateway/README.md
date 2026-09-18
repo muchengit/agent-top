@@ -1,3 +1,10 @@
+---
+title: Model Gateway Evidence
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "review of synthetic gateway routing and cost events"
+---
+
 # Model Gateway Evidence Exercise
 
 This exercise uses fictional gateway decisions. No API key, gateway, model provider, or local inference server is needed.

@@ -1,3 +1,10 @@
+---
+title: Release Gate Evidence
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "replay of synthetic workflow and release-gate events"
+---
+
 # Release Gate Evidence Exercise
 
 This exercise uses fictional GitHub Actions-style release evidence. No GitHub account, GitHub token, CI runner, API key, or external service is needed.

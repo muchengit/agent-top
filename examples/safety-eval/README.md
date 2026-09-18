@@ -1,3 +1,10 @@
+---
+title: Safety Eval Evidence
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "evaluation battery over synthetic safety scenarios"
+---
+
 # Safety Eval Evidence Exercise
 
 This exercise uses fictional safety tests. No API key, model provider, or security scanner is needed.

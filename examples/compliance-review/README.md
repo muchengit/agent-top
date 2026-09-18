@@ -1,3 +1,10 @@
+---
+title: Compliance Review
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "approval drill over synthetic evidence-gated requests"
+---
+
 # Compliance Review Exercise
 
 This exercise uses fictional compliance-approval decisions. No API key, legal database, or external audit service is needed.

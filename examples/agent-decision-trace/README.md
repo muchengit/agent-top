@@ -1,3 +1,10 @@
+---
+title: Agent Decision Trace
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "laboratory trace review on synthetic tool-call logs"
+---
+
 # Agent Decision Trace Exercise
 
 This exercise gives you fictional tool calls and decision points. No API key, external service, or paid connector is needed.

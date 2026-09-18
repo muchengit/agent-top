@@ -1,3 +1,10 @@
+---
+title: Observability Trace
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "trace-completeness review on synthetic runtime evidence"
+---
+
 # Observability Trace Exercise
 
 This exercise gives you a fictional Agent trace. No API key, observability service, model call, or external dashboard is needed.

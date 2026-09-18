@@ -1,3 +1,10 @@
+---
+title: MCP Tool Boundary
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "review of synthetic MCP server and tool-call evidence"
+---
+
 # MCP Tool Boundary Exercise
 
 This exercise uses fictional MCP tool decisions. No API key, MCP server, browser, vector database, or external connector is needed.

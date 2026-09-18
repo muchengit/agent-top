@@ -1,3 +1,10 @@
+---
+title: Memory Vs Evidence
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "manual review over synthetic memory/evidence event pairs"
+---
+
 # Memory Vs Evidence Exercise
 
 This exercise gives you fictional memory records and current evidence. No API key, vector database, memory service, or external connector is needed.

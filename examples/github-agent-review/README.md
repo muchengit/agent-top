@@ -1,3 +1,10 @@
+---
+title: GitHub Agent Review
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "manual review across synthetic PR and CI traces"
+---
+
 # GitHub Agent Review Exercise
 
 This exercise gives you a fictional pull request review packet. No GitHub account, `gh` CLI, API token, or real repository is needed.

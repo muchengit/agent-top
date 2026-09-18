@@ -1,3 +1,10 @@
+---
+title: Data Source Policy
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "classification drill on synthetic source-policy events"
+---
+
 # Data Source Policy Exercise
 
 This exercise gives you fictional web and document sources for an Agent. No API key, web crawler, vector database, paid connector, or real customer data is needed.

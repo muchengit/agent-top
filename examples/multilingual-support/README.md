@@ -1,3 +1,10 @@
+---
+title: Multilingual Support
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "routing and fallback drill over synthetic language events"
+---
+
 # Multilingual Support Exercise
 
 This exercise uses fictional multilingual customer-service sessions. No API key, translation service, or external connector is needed.

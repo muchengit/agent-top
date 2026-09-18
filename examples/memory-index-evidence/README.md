@@ -1,3 +1,10 @@
+---
+title: Memory And Index Evidence
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "review of synthetic memory and index lifecycle events"
+---
+
 # Memory And Index Evidence Exercise
 
 This exercise uses fictional memory, vector, and search evidence. No API key, vector database, search engine, inference server, or external connector is needed.

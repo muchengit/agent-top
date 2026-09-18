@@ -1,3 +1,10 @@
+---
+title: Agent Eval Regression
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "offline comparison on fixture-graded scenarios"
+---
+
 # Agent Evaluation Regression Exercise
 
 This exercise gives you a fictional prompt regression report. No API key, evaluation service, model call, or external benchmark is needed.

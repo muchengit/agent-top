@@ -1,3 +1,10 @@
+---
+title: RAG Evidence Refusal
+capability_level: Example
+validated_date: 2026-09-18
+tested_against: "manual evaluation over the bundled synthetic retrieval corpus"
+---
+
 # RAG Evidence Refusal Exercise
 
 This exercise gives you fictional retrieved passages. No API key, search service, vector database, or paid connector is needed.
