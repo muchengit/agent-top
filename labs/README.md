@@ -7,6 +7,8 @@ validated_date: 2026-09-16
 
 Executable Labs are the primary hands-on format for Agent-Top. They run locally without API keys and use deterministic tests to make learning verifiable. The repository currently has 23 Labs and 444 tests.
 
+中文版：[`README.zh-CN.md`](README.zh-CN.md)
+
 ## Current Labs
 
 ### L0

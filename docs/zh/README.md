@@ -104,6 +104,7 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 ## Labs 与练习材料
 
 - [`../../labs/README.md`](../../labs/README.md)：Labs 总览（L0-L5 实验）
+- [`../../labs/README.zh-CN.md`](../../labs/README.zh-CN.md)：Labs 总览（中文）
 - [`../../labs/l0/README.md`](../../labs/l0/README.md)：L0 实验
 - [`../../labs/l1/README.md`](../../labs/l1/README.md)：L1 实验
 - [`../../labs/l2/README.md`](../../labs/l2/README.md)：L2 实验
