@@ -391,7 +391,8 @@ def check_search_coverage() -> None:
     if not search_path.exists():
         return
     text = search_path.read_text(encoding="utf-8")
-    entries = {match.group(1).replace("../", "").rstrip("/") for match in re.finditer(r'p: "([^"]+)"', text)}
+    entry_paths = re.findall(r'p: "([^"]+)"', text)
+    entries = {match.replace("../", "").rstrip("/") for match in entry_paths}
     excluded_roots = {".git", "node_modules", ".github"}
     all_md: set[str] = set()
     for path in ROOT.rglob("*.md"):
