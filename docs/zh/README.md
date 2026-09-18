@@ -114,13 +114,22 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 
 - [`../../examples/README.md`](../../examples/README.md)：本地虚构样例与 JSONL 练习
 - [`../../examples/`](../../examples/)：练习样例目录
+- [`../../examples/agent-decision-trace/README.md`](../../examples/agent-decision-trace/README.md)：Agent 决策追踪
+- [`../../examples/agent-eval-regression/README.md`](../../examples/agent-eval-regression/README.md)：Agent 评估回归
+- [`../../examples/coding-task-navigation/README.md`](../../examples/coding-task-navigation/README.md)：编码任务导航
+- [`../../examples/coding-workspace-safety/README.md`](../../examples/coding-workspace-safety/README.md)：编码工作区安全
+- [`../../examples/compliance-review/README.md`](../../examples/compliance-review/README.md)：合规评审与审批证据门
+- [`../../examples/data-source-policy/README.md`](../../examples/data-source-policy/README.md)：数据源策略
+- [`../../examples/github-agent-review/README.md`](../../examples/github-agent-review/README.md)：GitHub Agent 审查
 - [`../../examples/model-gateway/README.md`](../../examples/model-gateway/README.md)：Model gateway evidence
-- [`../../examples/safety-eval/README.md`](../../examples/safety-eval/README.md)：Safety eval evidence
 - [`../../examples/mcp-tool-boundary/README.md`](../../examples/mcp-tool-boundary/README.md)：MCP tool boundary
 - [`../../examples/memory-index-evidence/README.md`](../../examples/memory-index-evidence/README.md)：Memory 与 Index evidence
+- [`../../examples/memory-vs-evidence/README.md`](../../examples/memory-vs-evidence/README.md)：记忆与证据对比
 - [`../../examples/multilingual-support/README.md`](../../examples/multilingual-support/README.md)：多语言路由与回退
-- [`../../examples/compliance-review/README.md`](../../examples/compliance-review/README.md)：合规评审与审批证据门
+- [`../../examples/observability-trace/README.md`](../../examples/observability-trace/README.md)：可观测性 Trace
+- [`../../examples/rag-evidence-refusal/README.md`](../../examples/rag-evidence-refusal/README.md)：RAG 证据拒答
 - [`../../examples/release-gate-evidence/README.md`](../../examples/release-gate-evidence/README.md)：发布门禁证据
+- [`../../examples/safety-eval/README.md`](../../examples/safety-eval/README.md)：Safety eval evidence
 
 ## 生产
 

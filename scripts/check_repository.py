@@ -238,6 +238,35 @@ def check_docs_index_coverage() -> None:
             fail(f"docs/{lang}/README.md does not list: " + ", ".join(missing))
 
 
+def check_docs_index_examples() -> None:
+    """Each docs/{lang}/README.md must link every examples/*/README.md."""
+    examples = {
+        str(path.relative_to(ROOT))
+        for path in (ROOT / "examples").glob("*/README.md")
+    }
+    if not examples:
+        return
+    for lang in ("en", "zh"):
+        index_path = ROOT / "docs" / lang / "README.md"
+        if not index_path.exists():
+            continue
+        text = index_path.read_text(encoding="utf-8")
+        linked: set[str] = set()
+        for match in RELATIVE_LINK_PATTERN.finditer(text):
+            target = match.group(1).strip()
+            if not target or target.startswith(("http://", "https://", "#", "mailto:")):
+                continue
+            cleaned = target.split("#", 1)[0]
+            if not cleaned:
+                continue
+            candidate = (index_path.parent / cleaned).resolve()
+            if candidate.is_relative_to(ROOT):
+                linked.add(str(candidate.relative_to(ROOT)))
+        missing = sorted(examples - linked)
+        if missing:
+            fail(f"docs/{lang}/README.md does not list examples: " + ", ".join(missing))
+
+
 UNITTEST_MODULE_PATTERN = re.compile(
     r"python3? -m unittest\s+(?!discover)([a-zA-Z0-9_.]+)"
 )
@@ -582,6 +611,7 @@ def main() -> None:
     check_bilingual_frontmatter(markdown_paths)
     check_bilingual_pairs(markdown_paths)
     check_docs_index_coverage()
+    check_docs_index_examples()
     check_lab_readmes(markdown_paths)
     check_lab_level_readmes()
     check_executable_labs()
