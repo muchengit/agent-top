@@ -2,7 +2,7 @@
 title: Agent 技能指南
 validated_date: 2026-09-16
 i18n-key: skills-matrix
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # Agent 技能指南
@@ -103,7 +103,64 @@ Agent-Top 更重视后者：框架会变，skill 会继续有用。
 
 模板见：[`../../../templates/Agent技能卡模板.md`](../../../templates/Agent技能卡模板.md)。
 
+## Skill 的结构
+
+一个有用的 Agent skill 有简单的结构：
+
+| 部分 | 要回答的问题 | 示例 |
+| --- | --- | --- |
+| 目的 | 产出什么结果？ | 安全的工具执行 |
+| 触发 | 什么时候用？ | Agent 可以写外部状态 |
+| 输入 | 需要哪些信息？ | 工具 schema、操作者、权限 |
+| 步骤 | 采取什么动作？ | 分类风险、校验参数、执行、审计 |
+| 证据 | 如何证明生效？ | 工具日志、eval、失败工具测试 |
+| 失败模式 | 通常哪里出问题？ | 重复写入、日志泄漏、不安全重试 |
+| 权衡 | 放弃了什么？ | 为安全付出额外延迟 |
+
+## Skill 类别
+
+| 类别 | 衡量什么 | 示例证据 |
+| --- | --- | --- |
+| Concepts | 能否清晰解释稳定的 Agent 概念？ | 教学笔记、术语条目、图表 |
+| Code | 能否实现确定性行为？ | Labs、测试、可运行片段 |
+| Architecture | 能否选对模式？ | 设计文档、权衡分析 |
+| Tools | 能否安全处理工具/MCP 边界？ | 工具契约、权限、日志 |
+| Evaluation | 能否度量质量？ | evals、回归检查、仪表盘 |
+| Safety | 能否防止伤害？ | 护栏、确认、postmortem |
+| Production | 能否运行真实系统？ | 发布门禁、回滚、事故证据 |
+| Contribution | 能否改进生态？ | PR、模式文档、演讲、指南 |
+
+## 建议的证据包
+
+1. **L0-L1 入门包**
+   - 第一次 LLM 调用 Lab。
+   - 最小 ReAct Agent Lab。
+   - 5 题概念 quiz。
+
+2. **L2 可靠 Agent 包**
+   - 带工具边界的单 Agent。
+   - 框架对比笔记。
+   - 成本感知路由 Lab。
+
+3. **L3 系统包**
+   - RAG evaluator Lab。
+   - 多 Agent supervisor Lab。
+   - trace/eval 报告。
+
+4. **L4 生产包**
+   - Regression gate Lab。
+   - 生产 postmortem Lab。
+   - 生产 checklist 完成。
+
+5. **L5 影响力包**
+   - 行业对标与 L5 专家路径。
+   - 自定义模式 Lab。
+   - 模式目录 Lab。
+   - L5 专家证据包。
+   - 开源贡献或设计文章。
+
 ## 示例技能卡
+
 
 - [`工具MCP安全技能卡.md`](工具MCP安全技能卡.md)：L2-L4 工具与 MCP 安全边界。
 
