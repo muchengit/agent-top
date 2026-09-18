@@ -171,6 +171,7 @@ The two prompts share a rule: **the verifier's job is rejection, not politeness*
 - RAG Evaluator Lab: [`../../../labs/l3/rag_evaluator/README.md`](../../../labs/l3/rag_evaluator/README.md)
 - RAG, Memory, and Observability Lab: [`../../../labs/l3/rag_memory_observability/README.md`](../../../labs/l3/rag_memory_observability/README.md)
 - Cost Aware Router Lab: [`../../../labs/l2/cost_aware_router/README.md`](../../../labs/l2/cost_aware_router/README.md)
+- Supervision and Incident Response Lab: [`../../../labs/l5/supervision_incident_response/README.md`](../../../labs/l5/supervision_incident_response/README.md)
 - RAG Evidence Refusal exercise: [`../../../examples/rag-evidence-refusal/README.md`](../../../examples/rag-evidence-refusal/README.md)
 - Observability Trace exercise: [`../../../examples/observability-trace/README.md`](../../../examples/observability-trace/README.md)
 - Memory Index Evidence exercise: [`../../../examples/memory-index-evidence/README.md`](../../../examples/memory-index-evidence/README.md)

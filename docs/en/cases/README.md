@@ -43,3 +43,5 @@ Each case should include:
 | [`pattern-contribution.md`](pattern-contribution.md) | [`../../../labs/l5/pattern_catalog/README.md`](../../../labs/l5/pattern_catalog/README.md) | Pattern contracts, safety boundaries, and verification |
 | [`personal-knowledge-rag.md`](personal-knowledge-rag.md) | [`../../../labs/l3/rag_evaluator/README.md`](../../../labs/l3/rag_evaluator/README.md) | Retrieval evidence and refusal |
 | [`production-regression-gate.md`](production-regression-gate.md) | [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) | Release gates and regression checks |
+| [`multi-agent-collaboration.md`](multi-agent-collaboration.md) | [`../../../labs/l5/supervision_incident_response/README.md`](../../../labs/l5/supervision_incident_response/README.md) | Production supervision and incident response |
+| [`production-regression-gate.md`](production-regression-gate.md) | [`../../../labs/l4/deployment_hygiene/README.md`](../../../labs/l4/deployment_hygiene/README.md) | Deploy hygiene across observability, cost, and gates |

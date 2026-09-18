@@ -179,6 +179,7 @@ The gate is deterministic only if its inputs are pinned. Every gate run happens 
 
 - L4 Regression Gate: [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md)
 - L4 Production Postmortem: [`../../../labs/l4/production_postmortem/README.md`](../../../labs/l4/production_postmortem/README.md)
+- L4 Deployment Hygiene: [`../../../labs/l4/deployment_hygiene/README.md`](../../../labs/l4/deployment_hygiene/README.md)
 
 ## Related Examples
 

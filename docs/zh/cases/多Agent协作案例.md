@@ -170,6 +170,7 @@ Supervisor 系统提示词（摘录）：
 - RAG 评测 Lab：[`../../../labs/l3/rag_evaluator/README.md`](../../../labs/l3/rag_evaluator/README.md)
 - RAG、记忆与可观测性 Lab：[`../../../labs/l3/rag_memory_observability/README.md`](../../../labs/l3/rag_memory_observability/README.md)
 - 成本感知路由器 Lab：[`../../../labs/l2/cost_aware_router/README.md`](../../../labs/l2/cost_aware_router/README.md)
+- 监督与事件响应 Lab：[`../../../labs/l5/supervision_incident_response/README.md`](../../../labs/l5/supervision_incident_response/README.md)
 - RAG 证据拒绝练习：[`../../../examples/rag-evidence-refusal/README.md`](../../../examples/rag-evidence-refusal/README.md)
 - 可观测性链路练习：[`../../../examples/observability-trace/README.md`](../../../examples/observability-trace/README.md)
 - 记忆索引证据练习：[`../../../examples/memory-index-evidence/README.md`](../../../examples/memory-index-evidence/README.md)
