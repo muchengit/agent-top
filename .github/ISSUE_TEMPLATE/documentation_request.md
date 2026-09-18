@@ -1,7 +1,7 @@
 ---
 name: Documentation request
 about: Propose a new tutorial, Lab, glossary entry, or translation task
-labels: [docs]
+labels: [docs-only]
 ---
 
 ## Proposed Content

@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Report a bug in docs, Labs, or scripts
-labels: [bug]
+labels: [maintainer-review]
 ---
 
 ## What happened?
