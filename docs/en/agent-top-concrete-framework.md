@@ -222,3 +222,10 @@ Contributor → Reviewer → Maintainer → Core
 - C1：深度给模式、浅度给框架。
 - C2：教程讲模式深、面试讲广度快。
 - C9：版本锚 + 自动 sync 控成本。
+
+## Related Documents
+
+- L0-L5 tutorials: [`l0-first-llm-call.md`](l0-first-llm-call.md)
+- Agent architecture: [`concepts/agent-system-architecture.md`](concepts/agent-system-architecture.md)
+- Framework map: [`frameworks/framework-map.md`](frameworks/framework-map.md)
+- Production checklist: [`quick-reference/production-checklist.md`](quick-reference/production-checklist.md)
