@@ -238,6 +238,11 @@ def check_docs_index_coverage() -> None:
             fail(f"docs/{lang}/README.md does not list: " + ", ".join(missing))
 
 
+UNITTEST_MODULE_PATTERN = re.compile(
+    r"python3? -m unittest\s+(?!discover)([a-zA-Z0-9_.]+)"
+)
+
+
 def check_lab_readmes(markdown_paths: list[Path]) -> None:
     lab_readmes = [
         path
@@ -248,13 +253,30 @@ def check_lab_readmes(markdown_paths: list[Path]) -> None:
     if not lab_readmes:
         fail("no lab README files found")
     bad: list[str] = []
+    bad_run: list[str] = []
     for path in lab_readmes:
         text = path.read_text(encoding="utf-8")
         missing = [section for section in LAB_README_REQUIRED_SECTIONS if section not in text]
         if missing:
             bad.append(str(path.relative_to(ROOT)) + ": " + ", ".join(missing))
+        run_match = UNITTEST_MODULE_PATTERN.search(text)
+        if not run_match:
+            bad_run.append(
+                str(path.relative_to(ROOT))
+                + ": no `python -m unittest <module>` command in ## Run"
+            )
+            continue
+        module_path = run_match.group(1).replace(".", "/") + ".py"
+        candidate = (ROOT / module_path).resolve()
+        if not candidate.exists():
+            bad_run.append(
+                str(path.relative_to(ROOT))
+                + f": ## Run targets missing test file {module_path}"
+            )
     if bad:
         fail("lab README sections missing: " + "; ".join(bad))
+    if bad_run:
+        fail("lab README run commands invalid: " + "; ".join(bad_run))
 
 
 
