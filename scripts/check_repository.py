@@ -261,19 +261,28 @@ def check_examples_jsonl() -> None:
 
 
 def check_docs_site_links() -> None:
-    index_path = ROOT / "docs-site" / "index.html"
-    text = index_path.read_text(encoding="utf-8")
     broken: list[str] = []
-    for match in re.finditer(r'href="([^"]*)"', text):
-        href = match.group(1).strip()
-        if not href or href.startswith(("http://", "https://", "#", "mailto:")):
-            continue
-        cleaned = href.split("#", 1)[0]
-        if not cleaned:
-            continue
-        candidate = (ROOT / "docs-site" / cleaned).resolve()
-        if not candidate.exists():
-            broken.append(href)
+    for page in ("index.html", "search.html"):
+        path = ROOT / "docs-site" / page
+        text = path.read_text(encoding="utf-8")
+        for match in re.finditer(r'href="([^"]*)"', text):
+            href = match.group(1).strip()
+            if not href or href.startswith(("http://", "https://", "#", "mailto:")):
+                continue
+            cleaned = href.split("#", 1)[0]
+            if not cleaned:
+                continue
+            candidate = (ROOT / "docs-site" / cleaned).resolve()
+            if not candidate.exists():
+                broken.append(f"{page}: {href}")
+        # Validate search ENTRIES `p:` target paths as well
+        for match in re.finditer(r'p: "([^"]+)"', text):
+            target = match.group(1).strip()
+            if target.startswith(("http://", "https://")):
+                continue
+            candidate = (ROOT / "docs-site" / target).resolve()
+            if not candidate.exists():
+                broken.append(f"{page}: p:{target}")
     if broken:
         fail("broken docs-site links: " + json.dumps(broken, ensure_ascii=False))
 
