@@ -180,6 +180,15 @@ The template appears in eval fixtures so refusal quality is measured, not incide
 - **Duplicate notes with different details looked like retrieval success.** Recall metrics said 1.0 while the user's ground truth was contradictory; the eval set now includes conflict cases.
 - **The first citation quality metric was string overlap, which rewarded copy-paste.** The metric switched to "does the claim exist in the cited excerpt," which matches user value.
 
+## Landing Checklist
+
+- [ ] Indexing becomes visible for new or modified files within 5 minutes.
+- [ ] Every source carries `source_id`, `captured_at`, `last_modified`, and a path allowlist.
+- [ ] The eval set includes answer, answer_with_citation, refuse, and conflict cases.
+- [ ] No web-search tool exists, and the Scope Guard has unit tests.
+- [ ] Memory writes only come from `store_preference` and are marked as preferences.
+- [ ] Traces record query, candidate set, verdict, and final answer without raw private text.
+
 ## Discussion / Self-Check Questions
 
 1. When memory and a freshly retrieved note disagree, which one should win and what trace fields make the decision auditable?
