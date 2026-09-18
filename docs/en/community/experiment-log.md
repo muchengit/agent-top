@@ -31,7 +31,7 @@ This log tracks experiment proposals for Agent-Top content. One experiment per q
 | --- | --- | --- | --- | --- |
 | EX-001 | promoted | No repeatable "pattern repetition" check | `labs/l5/pattern_eval_gate/` | Promote: gate now covers repetition scoring |
 | EX-002 | promoted | Single-language pattern demos only | `labs/l5/multilingual_pattern_lab/` | Promote: five-language parity verified by smoke |
-| EX-003 | in-progress | Supervision documented, not executable | `labs/l5/supervision_incident_response/` | TBD after second reproduction |
+| EX-003 | promoted | Supervision documented, not executable | `labs/l5/supervision_incident_response/` | Promote: deterministic incident response tests now executable |
 
 ## Repeating Protocol
 
