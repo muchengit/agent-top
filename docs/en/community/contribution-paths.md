@@ -53,6 +53,14 @@ Maintain framework maps, CI, templates, and release hygiene.
 
 Submit evidence packages for L5 contributions: original patterns, architecture review, eval/trace/risk/release evidence, external influence artifacts, and mentoring/review proof. Use [`good-first-L5-candidates.md`](good-first-L5-candidates.md) for candidate L5 packages when preparing an issue or PR.
 
+Good L5 evidence contribution:
+
+- Package pattern, governance, and influence claims with the [`L5 expert evidence template`](../../../templates/l5-expert-evidence-template.md).
+- Split claims into artifacts reviewers can check: a Lab, eval, trace, risk packet, design review, or issue/PR thread.
+- Include failure modes, non-goals, rejected alternatives, and a residual-risk note.
+- Mark the labels needed: `good-first-L5`, `original-pattern`, `external-impact`, `eval-evidence`, `safety-review`, `release-governance`, or `sig-candidate`.
+- Include one mentoring or review signal proving the contributor raises the quality of other contributors.
+
 Maintenance contribution:
 
 - Keeps CI green.
