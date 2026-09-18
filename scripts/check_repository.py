@@ -278,6 +278,39 @@ def check_docs_site_links() -> None:
         fail("broken docs-site links: " + json.dumps(broken, ensure_ascii=False))
 
 
+def check_docs_topic_dirs() -> None:
+    en_root = ROOT / "docs" / "en"
+    zh_root = ROOT / "docs" / "zh"
+    if not en_root.is_dir() or not zh_root.is_dir():
+        fail("docs/en or docs/zh missing")
+    en_topics = {p.name for p in en_root.iterdir() if p.is_dir()}
+    zh_topics = {p.name for p in zh_root.iterdir() if p.is_dir()}
+    for missing in sorted(en_topics - zh_topics):
+        print(f"WARN: topic dir in docs/en but not docs/zh: {missing}")
+    for missing in sorted(zh_topics - en_topics):
+        print(f"WARN: topic dir in docs/zh but not docs/en: {missing}")
+
+
+def check_lab_level_readmes() -> None:
+    missing_levels: list[str] = []
+    bad: list[str] = []
+    for level_dir in sorted((ROOT / "labs").glob("l*")):
+        if not level_dir.is_dir():
+            continue
+        readme = level_dir / "README.md"
+        if not readme.exists():
+            missing_levels.append(level_dir.name)
+            continue
+        text = readme.read_text(encoding="utf-8")
+        missing = [section for section in LAB_README_REQUIRED_SECTIONS if section not in text]
+        if missing:
+            bad.append(f"{level_dir.name}: " + ", ".join(missing))
+    if missing_levels:
+        fail("lab level README missing: " + ", ".join(missing_levels))
+    if bad:
+        fail("lab level README sections missing: " + "; ".join(bad))
+
+
 def main() -> None:
     check_required_paths()
     markdown_paths = iter_markdown()
@@ -287,7 +320,9 @@ def main() -> None:
     check_bilingual_frontmatter(markdown_paths)
     check_bilingual_pairs(markdown_paths)
     check_lab_readmes(markdown_paths)
+    check_lab_level_readmes()
     check_executable_labs()
+    check_docs_topic_dirs()
     check_examples_jsonl()
     check_docs_site_links()
     print(f"Repository checks passed: {len(markdown_paths)} Markdown files checked.")
