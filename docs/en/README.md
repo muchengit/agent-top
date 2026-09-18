@@ -80,6 +80,9 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`../../templates/technical-talk-outline-template.md`](../../templates/technical-talk-outline-template.md)
 - [`../../templates/eval-trace-replay-template.md`](../../templates/eval-trace-replay-template.md)
 - [`../../templates/observability-trace-template.md`](../../templates/observability-trace-template.md)
+- [`../../templates/lab-template.md`](../../templates/lab-template.md)
+- [`../../templates/postmortem-template.md`](../../templates/postmortem-template.md)
+- [`../../templates/agent-design-template.md`](../../templates/agent-design-template.md)
 
 ## Case Studies
 

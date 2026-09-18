@@ -67,6 +67,8 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`../../templates/technical-talk-outline-template.zh-CN.md`](../../templates/technical-talk-outline-template.zh-CN.md)
 - [`../../templates/可回放Eval和Trace模板.md`](../../templates/可回放Eval和Trace模板.md)
 - [`../../templates/可观测性Trace模板.md`](../../templates/可观测性Trace模板.md)
+- [`../../templates/复盘模板.md`](../../templates/复盘模板.md)
+- [`../../templates/Agent设计模板.md`](../../templates/Agent设计模板.md)
 
 ## 案例研究
 
