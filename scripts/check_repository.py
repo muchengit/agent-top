@@ -410,6 +410,39 @@ def check_search_coverage() -> None:
         fail("search.html missing entries: " + ", ".join(missing))
 
 
+NAV_TOPIC_DIRS = (
+    "cases",
+    "community",
+    "concepts",
+    "frameworks",
+    "governance",
+    "interviews",
+    "operations",
+    "portfolio",
+    "production",
+    "quick-reference",
+    "skills",
+    "tutorials",
+    "vibe-coding",
+)
+
+
+def check_nav_topic_coverage() -> None:
+    """Every docs topic directory must be represented in docs-site/index.html."""
+    index_path = ROOT / "docs-site" / "index.html"
+    if not index_path.exists():
+        fail("docs-site/index.html missing")
+    text = index_path.read_text(encoding="utf-8")
+    for topic in NAV_TOPIC_DIRS:
+        en_dir = ROOT / "docs" / "en" / topic
+        if not en_dir.is_dir():
+            continue
+        en_prefix = f"../docs/en/{topic}/"
+        zh_prefix = f"../docs/zh/{topic}/"
+        if en_prefix not in text and zh_prefix not in text:
+            fail(f"docs-site/index.html has no links for docs/{topic}/")
+
+
 def main() -> None:
     check_required_paths()
     markdown_paths = iter_markdown()
@@ -428,6 +461,7 @@ def main() -> None:
     check_docs_site_links()
     check_template_pairs()
     check_search_coverage()
+    check_nav_topic_coverage()
     print(f"Repository checks passed: {len(markdown_paths)} Markdown files checked.")
 
 
