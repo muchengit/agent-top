@@ -9,6 +9,10 @@ Goal: decide which tool calls an Agent may execute, which need clarification, an
 - [`tool-calls.jsonl`](tool-calls.jsonl): fictional tool-call scenarios.
 - [`decision-log.template.jsonl`](decision-log.template.jsonl): start your own trace here.
 
+## JSONL Shape
+
+Each line in `tool-calls.jsonl` is one JSON object: `id`, `tool`, `args`, and `evidence`. `decision-log.template.jsonl` lines start with the same `id` and blank `decision`, `risk`, `reason`, and `required_evidence` fields for you to fill in.
+
 ## Steps
 
 1. Read one scenario at a time from `tool-calls.jsonl`.
@@ -30,6 +34,10 @@ Goal: decide which tool calls an Agent may execute, which need clarification, an
 | refund_large_order | block | Money movement needs permission and human approval. |
 | update_status_ticket | allow | Small write with idempotent update and audit fields. |
 | summarize_docs_no_source | clarify | Needs citation or explicit source before factual claims. |
+
+## Reuse
+
+Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.
 
 ## Learning Outcomes
 

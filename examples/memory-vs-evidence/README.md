@@ -36,6 +36,10 @@ Prompt records use `id`, `prompt`, and optional `tool_result`. `tool_result` is 
 | private_api_key | refuse | Secret must not be answered or written to memory. |
 | delete_without_confirmation | refuse | Memory deletion is destructive and needs confirmation. |
 
+## Reuse
+
+Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.
+
 ## Learning Outcomes
 
 - Memory is not always authoritative.

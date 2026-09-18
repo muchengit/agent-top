@@ -29,6 +29,10 @@ Common fields: `event`, `trace_id`, `commit_sha`, `workflow_run_id`, `action_ref
 | Cache hit lacks cache key | tooling | request_evidence |
 | Rollback target is missing | release | rollback |
 
+## Reuse
+
+Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.
+
 ## Learning Outcomes
 
 - Release evidence should point to exact commit and workflow-run evidence, not branch names.

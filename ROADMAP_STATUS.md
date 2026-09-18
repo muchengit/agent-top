@@ -1,6 +1,6 @@
 ---
 title: Roadmap Status
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 ---
 
 # Roadmap Status
@@ -51,6 +51,18 @@ validated_date: 2026-09-16
 | Review coverage | >= 2 backups per active module |
 | Tutorial coverage | L0-L5 EN and ZH present |
 | Lab test coverage | 41 deterministic Lab tests pass locally |
+
+## Recent Improvements
+
+| Area | Status | Evidence |
+| --- | --- | --- |
+| README directory tree | Done | Streamlined tree in `README.md` and `README.zh-CN.md` |
+| Lab level entry READMEs | Done | `labs/README.md` and `labs/l0/README.md` through `labs/l5/README.md` |
+| Docs index cross-references | Done | `docs/en/README.md` and `docs/zh/README.md` now link Labs and Examples indexes |
+| CI link-and-artifact-integrity job | Done | `link-and-artifact-integrity` job in `.github/workflows/ci.yml` |
+| Repository checks | Done | `check_docs_topic_dirs`, `check_lab_level_readmes`, `check_example_dirs_readmes`, and `check_readme_mentions_lab_levels` in `scripts/check_repository.py` |
+| Contribution Quality Gates | Done | `Quality Gates` section in `CONTRIBUTING.md` and `CONTRIBUTING.zh-CN.md` |
+| Docs site Labs entry | Done | Labs navigation entries in `docs-site/index.html` |
 
 ## Next Priority
 

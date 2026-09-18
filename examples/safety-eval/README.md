@@ -29,6 +29,10 @@ Common fields: `event`, `trace_id`, `case`, `source`, `validator`, `verdict`, `m
 | Memory conflict not surfaced | memory | guardrail + eval_case |
 | Hallucinated citation lacks source id | prompt | eval_case + trace_field |
 
+## Reuse
+
+Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.
+
 ## Learning Outcomes
 
 - Safety evals should test injection, leakage, refusal, harm, and hallucination separately.

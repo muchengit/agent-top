@@ -1,6 +1,6 @@
 ---
 title: 路线状态
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 ---
 
 # 路线状态
@@ -46,6 +46,18 @@ validated_date: 2026-09-16
 | 框架示例保鲜 | 过期阈值前 review |
 | 审查覆盖 | 每个活跃模块 >= 2 个备份 |
 | Lab 测试覆盖 | 41 个确定性 Lab 测试本地通过 |
+
+## 近期改进
+
+| 模块 | 状态 | 证据 |
+| --- | --- | --- |
+| README 目录树 | Done | `README.md` 和 `README.zh-CN.md` 中的精简目录树 |
+| Lab 层入口 README | Done | `labs/README.md` 和 `labs/l0/README.md` 到 `labs/l5/README.md` |
+| 文档索引交叉引用 | Done | `docs/en/README.md` 和 `docs/zh/README.md` 现已链接 Labs 与 Examples 索引 |
+| CI link-and-artifact-integrity job | Done | `.github/workflows/ci.yml` 中的 `link-and-artifact-integrity` job |
+| 仓库检查 | Done | `scripts/check_repository.py` 中的 `check_docs_topic_dirs`、`check_lab_level_readmes`、`check_example_dirs_readmes` 和 `check_readme_mentions_lab_levels` |
+| 贡献 Quality Gates | Done | `CONTRIBUTING.md` 和 `CONTRIBUTING.zh-CN.md` 中的 `Quality Gates` 章节 |
+| 文档站点 Labs 入口 | Done | `docs-site/index.html` 中的 Labs 导航条目 |
 
 ## 下一步优先级
 

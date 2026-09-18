@@ -9,6 +9,10 @@ Goal: review the PR in a safe Agent order: status first, diff second, risk third
 - [`pr-context.jsonl`](pr-context.jsonl): fictional PR, issue, checks, and diff metadata.
 - [`review-template.jsonl`](review-template.jsonl): start your review notes here.
 
+## JSONL Shape
+
+Each line is one JSON object: `pr-context.jsonl` records `pr_id`, `issue`, `ci`, `diff_scope`, `tests`, and `risk`; `review-template.jsonl` starts with `pr_id` and blank `decision`, `order`, `risk`, and `comment`.
+
 ## Steps
 
 1. Read the PR context.
@@ -27,6 +31,10 @@ Goal: review the PR in a safe Agent order: status first, diff second, risk third
 | pr_1 | needs_more_evidence | CI is still running, so diff review cannot decide safety yet. |
 | pr_2 | request_changes | The PR changes auth handling without linking the issue that requested the change. |
 | pr_3 | approve | Checks pass, diff is small, tests cover the bug, and the issue scope matches. |
+
+## Reuse
+
+Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.
 
 ## Learning Outcomes
 

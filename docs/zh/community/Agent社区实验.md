@@ -1,6 +1,6 @@
 ---
 i18n-key: community-agent-community-lab
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 validated_date: 2026-09-16
 ---
 
@@ -44,3 +44,14 @@ Agent Community Lab 是轻量共学形式，把一个教程、Lab 或架构主�
 - 使用 `lab` 标记可运行 Lab。
 - 使用 `translation-needed` 或 `sync-required` 标记双语缺口。
 
+## Recommended Cadence
+
+建议节奏：双周发布教程，月度面试练习，双周论文或文章讨论，季度路线图或生产回顾。详见英文原文 [`agent-community-lab.md`](../../en/community/agent-community-lab.md) 的 Recommended Cadence 章节。
+
+## Session Notes Output
+
+结束时发布简短记录：主题、一页总结、可运行命令或相关 Lab、后续 issue 或 PR、是否需要更新文档。详见英文原文的 Session Notes Output 章节。
+
+## Health Checks
+
+好的 Agent Community Lab 应保持范围小、产出一个具体 artifact、保持 pattern-first、避免框架 churn，并给下一位贡献者留下清晰任务。详见英文原文的 Health Checks 章节。

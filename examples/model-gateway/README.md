@@ -8,6 +8,10 @@ Goal: decide whether model routing evidence is complete enough for release, roll
 
 - [`gateway-decisions.jsonl`](gateway-decisions.jsonl): fictional model gateway decisions.
 
+## JSONL Shape
+
+Each line is one JSON object with a stable `event`, `trace_id`, `route`, `provider_model`, `fallback_used`, `retry_count`, `budget_decision`, `latency_ms`, `throughput_tokens_per_s`, `status`, and `decision`. Optional fields such as `rate_limit_reason` appear only when relevant.
+
 ## Steps
 
 1. Read each decision event.
@@ -24,6 +28,10 @@ Goal: decide whether model routing evidence is complete enough for release, roll
 | Fallback used without fallback provider | runtime | trace_field + rollback |
 | Budget decision is `block` but retry continued | budget | postmortem + rollback |
 | Runtime timeout lacks latency evidence | runtime | trace_field |
+
+## Reuse
+
+Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.
 
 ## Learning Outcomes
 

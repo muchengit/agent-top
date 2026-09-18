@@ -10,6 +10,10 @@ Goal: decide which sources should be crawled, parsed, stored, retrieved, cited, 
 - [`prompts.jsonl`](prompts.jsonl): fictional user requests.
 - [`decisions.template.jsonl`](decisions.template.jsonl): start your own decision log here.
 
+## JSONL Shape
+
+Each line is one JSON object: `sources.jsonl` records `id`, `type`, `fresh`, `permission`, `content`, and `risk`; `prompts.jsonl` records `id` and `prompt`; `decisions.template.jsonl` starts with `id` and blank `action`, `reason`, `risk`, and `follow_up`.
+
 ## Steps
 
 1. Read one prompt and source.
@@ -31,6 +35,10 @@ Goal: decide which sources should be crawled, parsed, stored, retrieved, cited, 
 | user_private_page | block | Private page access requires explicit authorization and must not be stored by default. |
 | prompt_injection_page | block | Page content tries to change Agent behavior and should not become instruction. |
 | stale_api_doc | retrieve | Stale source may be retrieved but must not be used as current policy. |
+
+## Reuse
+
+Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.
 
 ## Learning Outcomes
 

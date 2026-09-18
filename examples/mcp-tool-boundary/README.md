@@ -29,6 +29,10 @@ Common fields: `event`, `trace_id`, `server_id`, `tool_name`, `input_schema_vers
 | Tool output failed schema validation | tool | schema_fix |
 | Browser write action lacks visible context | guardrail | clarify |
 
+## Reuse
+
+Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.
+
 ## Learning Outcomes
 
 - MCP servers expose tools; they do not make those tools safe by default.

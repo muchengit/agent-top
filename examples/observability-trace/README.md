@@ -9,6 +9,11 @@ Goal: complete the trace, identify missing evidence, route the failure to an own
 - [`trace-events.jsonl`](trace-events.jsonl): a partial trace.
 - [`release-gates.jsonl`](release-gates.jsonl): CI-first release evidence and gate decisions.
 - [`runtime-evidence.jsonl`](runtime-evidence.jsonl): lint, profiling, dependency lock, workflow provenance, and error-group evidence.
+- [`trace-template.jsonl`](trace-template.jsonl): start your trace-completion log here.
+
+## JSONL Shape
+
+Each line is one JSON object with a stable `finding` field plus the blank fields you fill in: `status`, `missing_fields`, `owner`, and `next_action`.
 
 ## Steps
 
@@ -34,6 +39,10 @@ Goal: complete the trace, identify missing evidence, route the failure to an own
 | Error group lacks fingerprint | runtime | trace_field + incident routing |
 | Profile hotspot lacks release SHA | runtime | trace_field + cost owner |
 | Lockfile lacks tool version | release | trace_field + rollback rule |
+
+## Reuse
+
+Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.
 
 ## Learning Outcomes
 

@@ -32,6 +32,10 @@ Goal: decide whether an Agent can answer, must cite, or must refuse because evid
 | unsupported_security_claim | refuse | No retrieved source supports the claim. |
 | supported_return_window | answer_with_citation | Two fresh sources agree. |
 
+## Reuse
+
+Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.
+
 ## Learning Outcomes
 
 - Evidence sufficiency.

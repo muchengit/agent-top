@@ -27,6 +27,8 @@ Agent-Top examples are fictional, local, and do not require API keys, external s
 2. Fill in the answer template.
 3. Compare your decisions with the answer key.
 4. Change one rule, such as requiring citations for all factual claims, and record what changes.
+5. To reuse an exercise, copy its `*.template.jsonl` file, fill it in, and re-read it as a decision log.
+6. To verify that every JSONL file under `examples/` is legal JSON, run `python scripts/check_repository.py` from the repository root (the `check_examples_jsonl` step also runs in CI).
 
 ## JSONL Conventions
 

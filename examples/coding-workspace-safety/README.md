@@ -9,6 +9,10 @@ Goal: decide which changes should be applied directly, which require a patch rev
 - [`changes.jsonl`](changes.jsonl): fictional Agent changes.
 - [`decisions.template.jsonl`](decisions.template.jsonl): start your own decision log here.
 
+## JSONL Shape
+
+Each line is one JSON object: `changes.jsonl` records `id`, `change`, `risk`, `current_state`, `expected_patch`, and `verification`; `decisions.template.jsonl` starts with the same `id` and blank `decision`, `verification`, `reason`, and `follow_up`.
+
 ## Steps
 
 1. Read one change.
@@ -29,6 +33,10 @@ Goal: decide which changes should be applied directly, which require a patch rev
 | rewrite_migration | block | Migration dry-run and rollback plan | Database migrations are destructive without approval. |
 | direct_prod_config | block | Config diff and change approval | Direct production config changes bypass review and rollback. |
 | flaky_retry_loop | rollback | Retry count and latency assertions | Retry loop can hide failures and inflate cost. |
+
+## Reuse
+
+Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.
 
 ## Learning Outcomes
 

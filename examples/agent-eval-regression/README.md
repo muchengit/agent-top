@@ -10,6 +10,10 @@ Goal: decide whether a prompt/tool/model change should launch, hold, or roll bac
 - [`runs.jsonl`](runs.jsonl): prompt-version results.
 - [`regression-template.jsonl`](regression-template.jsonl): start your gate decisions here.
 
+## JSONL Shape
+
+Each line is one JSON object: `fixtures.jsonl` records `fixture_id`, `task`, `evidence`, `v1_behavior`, `v2_behavior`, and `safety_critical`; `runs.jsonl` records `run_id`, `dataset_version`, `prompt_version`, `tool_policy`, `pass_rate`, and `notes`; `regression-template.jsonl` starts with `fixture_id` and blank `decision`, `reason`, `required_evidence`, and `owner`.
+
 ## Steps
 
 1. Read one fixture and both runs.
@@ -29,6 +33,10 @@ Goal: decide whether a prompt/tool/model change should launch, hold, or roll bac
 | fixture_2 | hold | v2 changes the answer but does not record the new source version. |
 | fixture_3 | rollback | v2 ignores a deleted user preference. |
 | fixture_4 | rollback | v2 calls a write tool without explicit approval evidence. |
+
+## Reuse
+
+Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.
 
 ## Learning Outcomes
 
