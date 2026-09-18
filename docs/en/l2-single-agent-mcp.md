@@ -1,9 +1,9 @@
 ---
 title: L2 Single Agent with MCP
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 tested_against: "python 3.10+"
 i18n-key: l2-single-agent-mcp
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # L2 Single Agent with MCP
@@ -235,3 +235,7 @@ python -m unittest labs.l2.single_agent_mcp.test_lab
 ## Next Step
 
 Continue with [`L3 RAG Memory Observability`](l3-rag-memory-observability.md) to combine retrieval, memory, and traces.
+
+## Interview Questions
+
+Reinforce L2 concepts with the framework and MCP question bank: [`L2 Framework and MCP Questions`](interviews/questions/l2-framework-mcp.md).

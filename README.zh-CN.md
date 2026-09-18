@@ -1,5 +1,7 @@
 # Agent-Top
 
+CI 状态见 [`.github/workflows/ci.yml`](.github/workflows/ci.yml)。
+
 Agent-Top 是一个面向 LLM Agent 开发的开源学习框架。
 
 它帮助学习者和工程师从第一次 LLM 调用，逐步成长到可生产落地的多 Agent 系统建设者。

@@ -1,8 +1,8 @@
 ---
 title: L2 Framework and MCP Questions
-validated_date: 2026-09-17
+validated_date: 2026-09-18
 i18n-key: interviews-questions-l2-framework-mcp
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # L2 Framework and MCP Questions
@@ -253,3 +253,7 @@ For L2, acceptable evidence is:
 - A framework selection note that maps measured system needs to a concrete choice.
 - An MCP server with a health probe, structured error codes, and a full round-trip trace.
 - A single-Agent reliability report covering stop reasons, retries, and guardrail metrics.
+
+## Related Tutorials
+
+Study the matching tutorial before or after this question bank: [`L2 Single Agent with MCP`](../../l2-single-agent-mcp.md).

@@ -1,8 +1,8 @@
 ---
 title: L3 System Design Questions
-validated_date: 2026-09-17
+validated_date: 2026-09-18
 i18n-key: interviews-questions-l3-system-design
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # L3 System Design Questions
@@ -208,3 +208,7 @@ For L3, acceptable evidence is:
 - A multi-agent design doc with component boundaries, error isolation, and cost/latency budget.
 - An eval report with recall@k, answer support, and refusal correctness on a versioned golden set.
 - A post-incident replay showing root cause and the regression test that prevents recurrence.
+
+## Related Tutorials
+
+Study the matching tutorial before or after this question bank: [`L3 RAG Memory Observability`](../../l3-rag-memory-observability.md).

@@ -1,9 +1,9 @@
 ---
 title: L5 Custom Patterns
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 tested_against: "python 3.10+"
 i18n-key: l5-custom-patterns
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # L5 Custom Patterns
@@ -219,3 +219,7 @@ A strong L5 artifact is usually at least a level 3 pattern.
 - [`portfolio/personal-agent-portfolio.md`](portfolio/personal-agent-portfolio.md)
 - [`portfolio/open-source-impact-guide.md`](portfolio/open-source-impact-guide.md)
 - [`agent-top-concrete-framework.md`](agent-top-concrete-framework.md)
+
+## Interview Questions
+
+Reinforce L5 concepts with the pattern question bank: [`L5 Pattern Questions`](interviews/questions/l5-patterns.md).

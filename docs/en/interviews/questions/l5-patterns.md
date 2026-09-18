@@ -1,8 +1,8 @@
 ---
 title: L5 Pattern Questions
-validated_date: 2026-09-17
+validated_date: 2026-09-18
 i18n-key: interviews-questions-l5-patterns
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # L5 Pattern Questions
@@ -210,3 +210,7 @@ For L5, acceptable evidence is:
 - An open-source PR, paper, or talk that others can verify.
 - A vertical-domain eval report showing regulatory and edge-case coverage.
 - A standard or framework contribution with versioning and migration guide.
+
+## Related Tutorials
+
+Study the matching tutorial before or after this question bank: [`L5 Custom Patterns`](../../l5-custom-patterns.md).

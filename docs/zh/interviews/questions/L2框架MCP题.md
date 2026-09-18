@@ -1,8 +1,8 @@
 ---
 title: L2 框架和 MCP 题
-validated_date: 2026-09-17
+validated_date: 2026-09-18
 i18n-key: interviews-questions-l2-framework-mcp
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # L2 框架和 MCP 题
@@ -253,3 +253,7 @@ L2 可接受的证据：
 - 一份把实测系统需求映射到具体选型的框架选择说明。
 - 一个带健康探针、结构化错误码、完整回环 trace 的 MCP server。
 - 一份覆盖停止原因、重试和 guardrail 指标的单 Agent 可靠性报告。
+
+## 相关教程
+
+做题前后学习对应教程：[`L2 带 MCP 的可靠单 Agent`](../../L2可靠单Agent与MCP.md)。

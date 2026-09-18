@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import unittest
 
 from .agent_top_labs_l1_minimal_react_agent import add_tool, run_react_agent

@@ -1,8 +1,8 @@
 ---
 title: L0 Baseline Questions
-validated_date: 2026-09-17
+validated_date: 2026-09-18
 i18n-key: interviews-questions-l0-basics
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # L0 Baseline Questions
@@ -234,3 +234,7 @@ For L0, acceptable evidence is:
 - A short prompt rewrite with before/after notes.
 - A one-page explanation of context limits and trade-offs.
 - A tiny trace showing input, context, tool result, and final response.
+
+## Related Tutorials
+
+Study the matching tutorial before or after this question bank: [`L0 First LLM Call`](../../l0-first-llm-call.md).

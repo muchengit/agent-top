@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import unittest
 
 from .agent_top_labs_l1_guardrail_helpers import (

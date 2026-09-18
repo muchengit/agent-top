@@ -1,9 +1,9 @@
 ---
 title: L1 Minimal ReAct Agent
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 tested_against: "python 3.10+"
 i18n-key: l1-minimal-react-agent
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # L1 Minimal ReAct Agent
@@ -222,3 +222,7 @@ python -m unittest labs.l1.minimal_react_agent.test_lab
 ## Next Step
 
 Continue with [`L2 Single Agent with MCP`](l2-single-agent-mcp.md) to add a clearer tool boundary.
+
+## Interview Questions
+
+Reinforce L1 concepts with the component question bank: [`L1 Component Questions`](interviews/questions/l1-components.md).

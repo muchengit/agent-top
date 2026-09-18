@@ -1,9 +1,9 @@
 ---
 title: L3 RAG Memory Observability
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 tested_against: "python 3.10+"
 i18n-key: l3-rag-memory-observability
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # L3 RAG Memory Observability
@@ -192,3 +192,7 @@ python -m unittest labs.l3.rag_memory_observability.test_lab
 ## Next Step
 
 Continue with [`L4 Production`](l4-production.md) for evals, guardrails, rollback, and postmortem thinking.
+
+## Interview Questions
+
+Reinforce L3 concepts with the system design question bank: [`L3 System Design Questions`](interviews/questions/l3-system-design.md).

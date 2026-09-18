@@ -1,8 +1,8 @@
 ---
 title: L4 Production Agent Systems
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 i18n-key: l4-production
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # L4 Production Agent Systems
@@ -321,3 +321,7 @@ A good L4 portfolio project shows at least level 3.
 - [`../../templates/postmortem-template.md`](../../templates/postmortem-template.md)
 - [`../../labs/l4/production_postmortem/README.md`](../../labs/l4/production_postmortem/README.md)
 - [`../../labs/l4/cost_and_stability_guardrails/README.md`](../../labs/l4/cost_and_stability_guardrails/README.md)
+
+## Interview Questions
+
+Reinforce L4 concepts with the production question bank: [`L4 Production Questions`](interviews/questions/l4-production.md).

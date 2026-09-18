@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import unittest
 
 from .agent_top_labs_l3_rag_memory_observability import (

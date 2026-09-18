@@ -1,9 +1,9 @@
 ---
 title: L0 First LLM Call
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 tested_against: "python 3.10+"
 i18n-key: l0-first-llm-call
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # L0 First LLM Call
@@ -221,3 +221,7 @@ Read the Lab README: [`../../labs/l0/first_llm_call/README.md`](../../labs/l0/fi
 ## Next Step
 
 Continue with [`L1 Minimal ReAct Agent`](l1-minimal-react-agent.md) to build a tiny Agent loop without a framework.
+
+## Interview Questions
+
+Reinforce L0 concepts with the baseline question bank: [`L0 Baseline Questions`](interviews/questions/l0-basics.md).

@@ -1,9 +1,9 @@
 ---
 title: L1 最小 ReAct Agent
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 tested_against: "python 3.10+"
 i18n-key: l1-minimal-react-agent
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # L1 最小 ReAct Agent
@@ -222,3 +222,7 @@ python -m unittest labs.l1.minimal_react_agent.test_lab
 ## 下一步
 
 继续 [`L2 带 MCP 的可靠单 Agent`](L2可靠单Agent与MCP.md)，添加更清晰的工具边界。
+
+## 相关面试题
+
+用同级组件题库巩固 L1 概念：[`L1 组件题`](interviews/questions/L1组件题.md)。

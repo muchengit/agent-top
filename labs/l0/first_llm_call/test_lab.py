@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import unittest
 
 from .agent_top_labs_l0_first_llm_call import first_llm_call

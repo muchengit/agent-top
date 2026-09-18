@@ -1,8 +1,8 @@
 ---
 title: L4 Production Questions
-validated_date: 2026-09-17
+validated_date: 2026-09-18
 i18n-key: interviews-questions-l4-production
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # L4 Production Questions
@@ -211,3 +211,7 @@ For L4, acceptable evidence is:
 - An incident postmortem with impact, timeline, root cause, and verified actions.
 - A production runbook covering rollback, degraded modes, and on-call procedures.
 - A cost report showing per-task cost, latency, and quality trade-off decisions.
+
+## Related Tutorials
+
+Study the matching tutorial before or after this question bank: [`L4 Production`](../../l4-production.md).

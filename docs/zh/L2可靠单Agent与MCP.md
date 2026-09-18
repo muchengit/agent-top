@@ -1,9 +1,9 @@
 ---
 title: L2 带 MCP 的可靠单 Agent
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 tested_against: "python 3.10+"
 i18n-key: l2-single-agent-mcp
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # L2 带 MCP 的可靠单 Agent
@@ -235,3 +235,7 @@ python -m unittest labs.l2.single_agent_mcp.test_lab
 ## 下一步
 
 继续 [`L3 RAG、记忆与可观测`](L3RAG记忆与可观测.md)，组合检索、记忆和 trace。
+
+## 相关面试题
+
+用同级框架和 MCP 题库巩固 L2 概念：[`L2 框架和 MCP 题`](interviews/questions/L2框架MCP题.md)。

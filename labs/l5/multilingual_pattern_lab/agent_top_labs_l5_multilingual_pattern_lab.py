@@ -1,5 +1,7 @@
 """Shared constants for the multilingual L5 pattern lab."""
 
+from __future__ import annotations
+
 SAFETY_RULE = "delete_all"
 READY_REASON = "ready_for_execution"
 BLOCKED_REASON = "blocked_by_safety_rule"

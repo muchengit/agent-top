@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import unittest
 
 from .agent_top_labs_l2_cost_aware_router import RequestProfile, Route, route_request

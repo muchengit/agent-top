@@ -1,9 +1,9 @@
 ---
 title: L0 第一次 LLM 调用
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 tested_against: "python 3.10+"
 i18n-key: l0-first-llm-call
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # L0 第一次 LLM 调用
@@ -221,3 +221,7 @@ python -m unittest labs.l0.first_llm_call.test_lab
 ## 下一步
 
 继续 [`L1 最小 ReAct Agent`](L1最小ReActAgent.md)，不使用框架构建一个小型 Agent 循环。
+
+## 相关面试题
+
+用同级入门题库巩固 L0 概念：[`L0 入门题`](interviews/questions/L0入门.md)。

@@ -1,8 +1,8 @@
 ---
 title: L1 Component Questions
-validated_date: 2026-09-17
+validated_date: 2026-09-18
 i18n-key: interviews-questions-l1-components
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # L1 Component Questions
@@ -254,3 +254,7 @@ For L1, acceptable evidence is:
 - A working ReAct loop with a measured step budget and stop reasons.
 - A tool schema with typed inputs, output validation, and distinguishable empty results.
 - A memory design that separates short-term state from long-term profile facts.
+
+## Related Tutorials
+
+Study the matching tutorial before or after this question bank: [`L1 Minimal ReAct Agent`](../../l1-minimal-react-agent.md).

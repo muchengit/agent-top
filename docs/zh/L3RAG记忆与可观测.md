@@ -1,9 +1,9 @@
 ---
 title: L3 RAG、记忆与可观测
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 tested_against: "python 3.10+"
 i18n-key: l3-rag-memory-observability
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # L3 RAG、记忆与可观测
@@ -192,3 +192,7 @@ python -m unittest labs.l3.rag_memory_observability.test_lab
 ## 下一步
 
 继续 [`L4 Production`](L4生产化.md)，进入 evals、guardrails、rollback 和 postmortem。
+
+## 相关面试题
+
+用同级系统设计题库巩固 L3 概念：[`L3 系统设计题`](interviews/questions/L3系统设计题.md)。
