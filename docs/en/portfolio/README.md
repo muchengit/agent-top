@@ -13,6 +13,7 @@ Portfolio projects should prove that you can build, test, and explain Agent syst
 
 - [`projects.md`](projects.md): full portfolio project tracks.
 - [`personal-agent-portfolio.md`](personal-agent-portfolio.md): turn Agent projects into portfolio artifacts.
+- [`open-source-impact-guide.md`](open-source-impact-guide.md): grow external impact through open-source work.
 
 ## Four Project Gradients
 
