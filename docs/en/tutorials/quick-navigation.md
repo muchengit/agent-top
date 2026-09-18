@@ -1,8 +1,8 @@
 ---
 title: Quick Navigation
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 i18n-key: tutorials-quick-navigation
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # Quick Navigation Cards
@@ -31,6 +31,7 @@ Use this page when you already know what you want to accomplish. Pick one task, 
 | Prepare a production gate | [`../l4-production.md`](../l4-production.md) -> [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) | A release checklist covering safety, trace, rollback, cost, and latency |
 | Assess deployment hygiene | [`../l4-production.md`](../l4-production.md) -> [`../../../labs/l4/deployment_hygiene/README.md`](../../../labs/l4/deployment_hygiene/README.md) | A deploy/defer/block assessment with reasons and rollback targets |
 | Supervise a multi-agent fleet | [`../l5-custom-patterns.md`](../l5-custom-patterns.md) -> [`../../../labs/l5/supervision_incident_response/README.md`](../../../labs/l5/supervision_incident_response/README.md) | A supervision report with continue/escalate/pause/rollback decision and action items |
+| Try the Vibe Coding workflow | [`../vibe-coding/README.md`](../vibe-coding/README.md) | A one-sentence spec, a reviewed diff, and a green acceptance check for a small Lab or example change |
 | Prepare an L5 expert evidence bundle | [`../l5-custom-patterns.md`](../l5-custom-patterns.md) -> [`industry-benchmark-and-l5-expert-path.md`](industry-benchmark-and-l5-expert-path.md) -> [`../../../templates/l5-expert-evidence-template.md`](../../../templates/l5-expert-evidence-template.md) | An L5 evidence bundle with pattern contract, governance notes, rubric scores, and external influence evidence |
 
 ## Navigation by Role

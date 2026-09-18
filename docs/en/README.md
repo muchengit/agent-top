@@ -74,6 +74,15 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`../zh/skills/Agent技能指南.md`](../zh/skills/Agent技能指南.md)
 - [`../../templates/agent-skill-card-template.md`](../../templates/agent-skill-card-template.md)
 
+## Vibe Coding
+
+- [`vibe-coding/README.md`](vibe-coding/README.md)
+- [`vibe-coding/what-is-vibe-coding.md`](vibe-coding/what-is-vibe-coding.md)
+- [`vibe-coding/spec-first-workflow.md`](vibe-coding/spec-first-workflow.md)
+- [`vibe-coding/run-and-verify.md`](vibe-coding/run-and-verify.md)
+- [`vibe-coding/common-pitfalls.md`](vibe-coding/common-pitfalls.md)
+- [`../zh/vibe-coding/README.md`](../zh/vibe-coding/README.md)
+
 ## Templates
 
 - [`../../templates/paper-reading-session-template.md`](../../templates/paper-reading-session-template.md)

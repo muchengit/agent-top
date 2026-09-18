@@ -134,6 +134,7 @@ python -m ruff check .
 - Templates: [`templates`](templates)
 - Documentation index: [`docs/en/README.md`](docs/en/README.md)
 - Agent skills guide: [`docs/en/skills/README.md`](docs/en/skills/README.md)
+- Vibe Coding guide: [`docs/en/vibe-coding/README.md`](docs/en/vibe-coding/README.md)
 - Governance: [`GOVERNANCE.md`](GOVERNANCE.md)
 - Style guide: [`STYLE.md`](STYLE.md)
 - Contributing: [`CONTRIBUTING.md`](CONTRIBUTING.md)

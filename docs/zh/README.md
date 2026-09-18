@@ -61,6 +61,14 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`skills/工具MCP安全技能卡.md`](skills/工具MCP安全技能卡.md)
 - [`../../templates/Agent技能卡模板.md`](../../templates/Agent技能卡模板.md)
 
+## Vibe Coding
+
+- [`vibe-coding/README.md`](vibe-coding/README.md)：Vibe Coding 指南
+- [`vibe-coding/什么是VibeCoding.md`](vibe-coding/什么是VibeCoding.md)
+- [`vibe-coding/规范先行工作流.md`](vibe-coding/规范先行工作流.md)
+- [`vibe-coding/运行与校验.md`](vibe-coding/运行与校验.md)
+- [`vibe-coding/常见踩坑.md`](vibe-coding/常见踩坑.md)
+
 ## 模板
 
 - [`../../templates/paper-reading-session-template.zh-CN.md`](../../templates/paper-reading-session-template.zh-CN.md)
