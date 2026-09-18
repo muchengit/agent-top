@@ -491,6 +491,7 @@ def check_example_dirs_readmes() -> None:
         return
     missing: list[str] = []
     missing_shape: list[str] = []
+    index_missing: list[str] = []
     for example_dir in sorted(examples_root.iterdir()):
         if not example_dir.is_dir():
             continue
@@ -504,6 +505,26 @@ def check_example_dirs_readmes() -> None:
         print(f"WARN: example dir missing README.md: {name}")
     if missing_shape:
         fail("example READMEs missing ## JSONL Shape: " + ", ".join(missing_shape))
+    index_path = examples_root / "README.md"
+    if index_path.exists():
+        index_text = index_path.read_text(encoding="utf-8")
+        linked_dirs = {
+            match.group(1).split("/")[0]
+            for match in RELATIVE_LINK_PATTERN.finditer(index_text)
+            if match.group(1).endswith("/README.md")
+            and "/" in match.group(1)
+        }
+        example_dirs = {
+            path.name
+            for path in examples_root.iterdir()
+            if path.is_dir()
+        }
+        index_missing = sorted(example_dirs - linked_dirs)
+    if index_missing:
+        fail(
+            "examples/README.md does not list: "
+            + ", ".join(index_missing)
+        )
 
 
 def expand_lab_level_ranges(text: str) -> list[str]:
