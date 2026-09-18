@@ -58,6 +58,7 @@ validated_date: 2026-09-18
 | 仓库检查 | Done | `scripts/check_repository.py` 中的 `check_docs_topic_dirs`、`check_lab_level_readmes`、`check_example_dirs_readmes` 和 `check_readme_mentions_lab_levels` |
 | 贡献 Quality Gates | Done | `CONTRIBUTING.md` 和 `CONTRIBUTING.zh-CN.md` 中的 `Quality Gates` 章节 |
 | 文档站点 Labs 入口 | Done | `docs-site/index.html` 中的 Labs 导航条目 |
+| 模板双语覆盖 | Done | 全部 22 对模板均有 EN/CN 镜像；`docs-site/search.html` 覆盖全部 289 个 markdown 文件 |
 
 ## 下一步优先级
 
