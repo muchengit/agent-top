@@ -5,7 +5,7 @@ validated_date: 2026-09-16
 
 # Labs
 
-Executable Labs are the primary hands-on format for Agent-Top. They run locally without API keys and use deterministic tests to make learning verifiable. The repository currently has 18 Labs and 46 tests.
+Executable Labs are the primary hands-on format for Agent-Top. They run locally without API keys and use deterministic tests to make learning verifiable. The repository currently has 19 Labs and 92 tests.
 
 ## Current Labs
 
@@ -39,6 +39,7 @@ Executable Labs are the primary hands-on format for Agent-Top. They run locally 
 - [`l4/regression_gate`](l4/regression_gate/README.md): release gating for safety, trace, rollback, and cost.
 - [`l4/cost_and_stability_guardrails`](l4/cost_and_stability_guardrails/README.md): runtime cost, latency, retry, and degradation guardrails.
 - [`l4/production_trace_integrity`](l4/production_trace_integrity/README.md): deterministic trace integrity validation for production observability.
+- [`l4/deployment_hygiene`](l4/deployment_hygiene/README.md): combined observability, cost, and release gate deploy decision.
 
 ### L5
 

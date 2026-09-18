@@ -85,9 +85,13 @@ python -m unittest labs.l1.guardrail_helpers.test_lab labs.l1.minimal_react_agen
 | l4 | regression_gate | Release gating for safety, trace completeness, rollback, cost | `python -m unittest labs.l4.regression_gate.test_lab` |
 | l4 | cost_and_stability_guardrails | Runtime guardrails for cost, latency, retries, degradation | `python -m unittest labs.l4.cost_and_stability_guardrails.test_lab` |
 | l4 | production_postmortem | Structured postmortem with root causes and action items | `python -m unittest labs.l4.production_postmortem.test_lab` |
+| l4 | production_trace_integrity | Deterministic trace integrity validation for production observability | `python -m unittest labs.l4.production_trace_integrity.test_lab` |
+| l4 | deployment_hygiene | Combined observability, cost, and release gate deploy decision | `python -m unittest labs.l4.deployment_hygiene.test_lab` |
 | l5 | custom_pattern_lab | Abstract a reusable pattern with stable contracts | `python -m unittest labs.l5.custom_pattern_lab.test_lab` |
 | l5 | pattern_catalog | Define reusable patterns with safety checks and verification | `python -m unittest labs.l5.pattern_catalog.test_lab` |
 | l5 | multilingual_pattern_lab | One pattern in Python, Node.js, Rust, Go, TypeScript | `python -m unittest labs.l5.multilingual_pattern_lab.test_lab` |
+| l5 | pattern_eval_gate | Deterministic gate for patterns entering the catalog | `python -m unittest labs.l5.pattern_eval_gate.test_lab` |
+| l5 | supervision_incident_response | Deterministic production supervision and incident response | `python -m unittest labs.l5.supervision_incident_response.test_lab` |
 
 ## Levels at a Glance
 

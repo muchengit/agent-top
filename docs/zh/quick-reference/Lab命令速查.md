@@ -81,9 +81,13 @@ python -m unittest labs.l1.guardrail_helpers.test_lab labs.l1.minimal_react_agen
 | l4 | regression_gate | 安全、trace 完整性、rollback、成本的发布门禁 | `python -m unittest labs.l4.regression_gate.test_lab` |
 | l4 | cost_and_stability_guardrails | 成本、延迟、重试、降级的运行时 guardrails | `python -m unittest labs.l4.cost_and_stability_guardrails.test_lab` |
 | l4 | production_postmortem | 带根因和行动项的结构化 postmortem | `python -m unittest labs.l4.production_postmortem.test_lab` |
+| l4 | production_trace_integrity | 面向生产可观测性的确定性 trace 完整性校验 | `python -m unittest labs.l4.production_trace_integrity.test_lab` |
+| l4 | deployment_hygiene | 可观测性、成本与发布门禁合并的部署决策 | `python -m unittest labs.l4.deployment_hygiene.test_lab` |
 | l5 | custom_pattern_lab | 抽象带稳定契约的可复用模式 | `python -m unittest labs.l5.custom_pattern_lab.test_lab` |
 | l5 | pattern_catalog | 定义带安全检查与验证的可复用模式 | `python -m unittest labs.l5.pattern_catalog.test_lab` |
 | l5 | multilingual_pattern_lab | 一个模式用 Python、Node.js、Rust、Go、TypeScript 实现 | `python -m unittest labs.l5.multilingual_pattern_lab.test_lab` |
+| l5 | pattern_eval_gate | 模式进入目录前的确定性门禁 | `python -m unittest labs.l5.pattern_eval_gate.test_lab` |
+| l5 | supervision_incident_response | 多 Agent 生产监督与事件响应的确定性决策 | `python -m unittest labs.l5.supervision_incident_response.test_lab` |
 
 ## 各层一览
 
