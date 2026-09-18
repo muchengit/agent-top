@@ -201,3 +201,4 @@ Ship / canary / block / rollback
 - 评估清单：[`评估清单.md`](评估清单.md)
 - 生产清单：[`../quick-reference/生产清单.md`](../quick-reference/生产清单.md)
 - 回归门禁 Lab：[`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md)
+- 部署卫生 Lab：[`../../../labs/l4/deployment_hygiene/README.md`](../../../labs/l4/deployment_hygiene/README.md)

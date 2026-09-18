@@ -201,3 +201,4 @@ Ship / canary / block / rollback
 - Eval checklist: [`evals-checklist.md`](evals-checklist.md)
 - Production checklist: [`../quick-reference/production-checklist.md`](../quick-reference/production-checklist.md)
 - Regression gate Lab: [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md)
+- Deployment hygiene Lab: [`../../../labs/l4/deployment_hygiene/README.md`](../../../labs/l4/deployment_hygiene/README.md)

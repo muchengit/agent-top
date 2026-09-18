@@ -177,4 +177,5 @@ Evals 是发布门禁，必须像代码一样被拥有。
 - Tool boundary 示例：[`../../../examples/mcp-tool-boundary/README.md`](../../../examples/mcp-tool-boundary/README.md)
 - 可观测性示例：[`../../../examples/observability-trace/README.md`](../../../examples/observability-trace/README.md)
 - Regression gate Lab：[`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md)
+- 监督与事件响应 Lab：[`../../../labs/l5/supervision_incident_response/README.md`](../../../labs/l5/supervision_incident_response/README.md)
 - Postmortem 模板：[`../../../templates/postmortem-template.md`](../../../templates/postmortem-template.md)
