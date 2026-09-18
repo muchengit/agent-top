@@ -362,6 +362,48 @@ def check_readme_mentions_lab_levels() -> None:
         fail("READMEs must mention lab level READMEs: " + "; ".join(missing))
 
 
+
+
+def check_template_pairs() -> None:
+    """Every template listed in templates/README.md must exist as an EN/CN pair."""
+    readme = ROOT / "templates" / "README.md"
+    if not readme.exists():
+        return
+    text = readme.read_text(encoding="utf-8")
+    pairs = re.findall(r"\[`([^`]+)`\]\([^)]*\) \(EN\) ↔ \[`([^`]+)`\]\([^)]*\) \(CN\)", text)
+    bad: list[str] = []
+    for en_name, zh_name in pairs:
+        en_path = ROOT / "templates" / en_name
+        zh_path = ROOT / "templates" / zh_name
+        if not en_path.exists():
+            bad.append(f"missing EN {en_name}")
+        if not zh_path.exists():
+            bad.append(f"missing CN {zh_name}")
+    if bad:
+        fail("template pair mismatch: " + "; ".join(bad))
+
+
+
+
+def check_search_coverage() -> None:
+    """Every repository Markdown file must be reachable from docs-site/search.html."""
+    search_path = ROOT / "docs-site" / "search.html"
+    if not search_path.exists():
+        return
+    text = search_path.read_text(encoding="utf-8")
+    entries = {match.group(1).replace("../", "").rstrip("/") for match in re.finditer(r'p: "([^"]+)"', text)}
+    excluded_roots = {".git", "node_modules", ".github"}
+    all_md: set[str] = set()
+    for path in ROOT.rglob("*.md"):
+        parts = path.relative_to(ROOT).parts
+        if parts and parts[0] in excluded_roots:
+            continue
+        all_md.add(str(path.relative_to(ROOT)))
+    missing = sorted(all_md - entries)
+    if missing:
+        fail("search.html missing entries: " + ", ".join(missing))
+
+
 def main() -> None:
     check_required_paths()
     markdown_paths = iter_markdown()
@@ -378,6 +420,8 @@ def main() -> None:
     check_docs_topic_dirs()
     check_examples_jsonl()
     check_docs_site_links()
+    check_template_pairs()
+    check_search_coverage()
     print(f"Repository checks passed: {len(markdown_paths)} Markdown files checked.")
 
 
