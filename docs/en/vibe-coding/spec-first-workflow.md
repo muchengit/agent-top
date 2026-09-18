@@ -48,3 +48,6 @@ Strong prompt:
 
 - Open-ended research ("explore what patterns exist") — do this outside the change loop.
 - Architecture decisions with no objective check — write a design note instead of a prompt.
+## Template
+
+Use the printable form: [`Vibe Coding Spec Template`](../../../templates/vibe-coding-spec-template.md) (中文镜像：[`VibeCoding规范模板.md`](../../../templates/VibeCoding规范模板.md)).

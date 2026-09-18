@@ -28,3 +28,12 @@ Vibe Coding（氛围式编程）是一种 AI 辅助工作流：开发者用自�
 ## 一句话规则
 
 如果你不能用一句话说清目标、接口和验收检查，那你还不是在提示——你还在探索。探索没有错，但那还不是 vibe coding，而是调研。
+## 动手 Lab
+
+- [`labs/l5/vibe_coding_spec`](../../../labs/l5/vibe_coding_spec/README.zh-CN.md)：一个把"一句话规则"编码为检查的确定性 Lab。运行：
+
+```bash
+python3 -m unittest labs.l5.vibe_coding_spec.test_lab
+```
+
+- 可打印规范表单：[`Vibe Coding 规范模板`](../../../templates/VibeCoding规范模板.md)（英文源：[`vibe-coding-spec-template.md`](../../../templates/vibe-coding-spec-template.md)）。

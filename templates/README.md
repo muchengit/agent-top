@@ -5,11 +5,11 @@ validated_date: 2026-09-18
 
 # Templates
 
-Templates define the standard structure for Agent-Top contributions. This index covers all 44 template files in `templates/` (45 files including this `README.md`, which is only the index).
+Templates define the standard structure for Agent-Top contributions. This index covers all 46 template files in `templates/` (47 files including this `README.md`, which is only the index).
 
 ## Templates
 
-### Bilingual Pairs (22 pairs / 44 files)
+### Bilingual Pairs (23 pairs / 46 files)
 
 Each pair contains an English source and its Chinese mirror of the same artefact; both sides must stay in sync.
 
@@ -35,6 +35,7 @@ Each pair contains an English source and its Chinese mirror of the same artefact
 - **Community Lab notes** — [`community-lab-template.md`](community-lab-template.md) (EN) ↔ [`社区Lab笔记模板.md`](社区Lab笔记模板.md) (CN)
 - **Monthly contributor report** — [`monthly-contributor-report.md`](monthly-contributor-report.md) (EN) ↔ [`月度贡献者报告.md`](月度贡献者报告.md) (CN)
 - **Contribution checklist** — [`contribution-checklist.md`](contribution-checklist.md) (EN) ↔ [`贡献检查清单.md`](贡献检查清单.md) (CN)
+- **Vibe Coding spec** — [`vibe-coding-spec-template.md`](vibe-coding-spec-template.md) (EN) ↔ [`VibeCoding规范模板.md`](VibeCoding规范模板.md) (CN)
 
 ## When to Use Each
 
@@ -55,6 +56,7 @@ Each pair contains an English source and its Chinese mirror of the same artefact
 - **Main agent rework log**: rejection reason, evidence, required fixes, rework SLA, and re-review outcome (EN/CN pair).
 - **Project dispatch plan**: main-agent dispatch queue with employee assignments, expected files, gates, and merge decision.
 - **Contribution checklist**: pre-PR verification for docs, Labs, Examples, translation, and safety.
+- **Vibe Coding spec**: one-page intent/scope/acceptance form to fill before prompting an AI assistant.
 - **L5 expert evidence**: packaged expert-level evidence for pattern quality, governance, influence, rubric scores, and final decision (EN/CN pair).
 - **Eval and trace replay**: replay commands, expected stdout, required artifacts, and exit criteria for eval/trace evidence (EN/CN pair).
 - **Observability trace**: request, evidence, tool calls, guardrails, memory, runtime cost, and incident follow-up for replayable Agent behavior (EN/CN pair).
