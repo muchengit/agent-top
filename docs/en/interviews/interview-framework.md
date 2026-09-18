@@ -163,6 +163,8 @@ Weight:
 - 15% contribution evidence.
 - 10% mentorship or standard-setting.
 
+At L5, candidates should also show spec-first drafting: a one-sentence goal/interface/acceptance spec before prompting, verified by the [Vibe Coding workflow](../vibe-coding/README.md) and its [`vibe_coding_spec` Lab](../../../labs/l5/vibe_coding_spec/README.md).
+
 ## Answer Framework
 
 See [`interview-answer-framework.md`](interview-answer-framework.md) for candidate-facing response structure and examples.

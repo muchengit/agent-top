@@ -154,6 +154,7 @@ Before sharing a pattern, run these checks:
 - It includes rollback or safe degradation.
 - It includes verification, not only generation.
 - It can be maintained by a contributor who did not write it.
+- Its one-sentence spec (goal, interface, acceptance) passes the [`vibe_coding_spec` readiness check](../../labs/l5/vibe_coding_spec/README.md).
 
 ### Step 7: Prepare an Open-Source Contribution
 
@@ -214,6 +215,8 @@ A strong L5 artifact is usually at least a level 3 pattern.
 ## Related Assets
 
 - [`../../labs/l5/custom_pattern_lab/README.md`](../../labs/l5/custom_pattern_lab/README.md)
+- [`../../labs/l5/vibe_coding_spec/README.md`](../../labs/l5/vibe_coding_spec/README.md)
+- [`vibe-coding/README.md`](vibe-coding/README.md)
 - [`../../templates/article-template.md`](../../templates/article-template.md)
 - [`../../templates/lab-template.md`](../../templates/lab-template.md)
 - [`portfolio/personal-agent-portfolio.md`](portfolio/personal-agent-portfolio.md)

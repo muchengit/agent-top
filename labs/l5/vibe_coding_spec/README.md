@@ -2,6 +2,8 @@
 title: Vibe Coding Spec Lab
 capability_level: L5
 validated_date: 2026-09-18
+i18n-key: l5-vibe-coding-spec
+last-synced: 2026-09-18
 tested_against: "python 3.10+"
 ---
 
@@ -16,6 +18,10 @@ Practice turning a vague idea into a prompt-ready spec. The Lab encodes the Vibe
 - Read the [Vibe Coding guide](../../../docs/en/vibe-coding/README.md).
 - Python 3.10+.
 
+## Template
+
+Use the printable form: [`Vibe Coding Spec Template`](../../../templates/vibe-coding-spec-template.md) (中文镜像：[`VibeCoding规范模板.md`](../../../templates/VibeCoding规范模板.md)).
+
 ## Run
 
 ```bash
@@ -25,7 +31,7 @@ python3 -m unittest labs.l5.vibe_coding_spec.test_lab
 Expected output:
 
 ```text
-Ran 5 tests
+Ran 12 tests
 OK
 ```
 

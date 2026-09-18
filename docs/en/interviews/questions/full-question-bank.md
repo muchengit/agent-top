@@ -277,6 +277,7 @@ Propose an original Agent pattern worth contributing to Agent-Top. Include contr
 - Evals and traces: deterministic tests where possible, golden cases, negative cases, latency/cost baselines, and replayable trace fields.
 - Adoption story: when to use it, when not to use it, migration from existing code, deprecation policy, and maintainer burden.
 - Evidence: Lab, PR, talk, article, design review, external adoption, or measurable improvement.
+- Spec-first drafting: state goal, interface, and acceptance in one sentence before prompting, using the [Vibe Coding workflow](../../vibe-coding/README.md).
 
 ### Deep Follow-Ups
 

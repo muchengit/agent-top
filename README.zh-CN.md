@@ -136,7 +136,7 @@ python -m ruff check .
 - 内容模板：[`templates`](templates)
 - 中文文档索引：[`docs/zh/README.md`](docs/zh/README.md)
 - Agent 技能指南：[`docs/zh/skills/Agent技能指南.md`](docs/zh/skills/Agent技能指南.md)
-- Vibe Coding 指南：[`docs/zh/vibe-coding/README.md`](docs/zh/vibe-coding/README.md)
+- Vibe Coding 指南：[`docs/zh/vibe-coding/README.md`](docs/zh/vibe-coding/README.md)，含 [`labs/l5/vibe_coding_spec/README.zh-CN.md`](labs/l5/vibe_coding_spec/README.zh-CN.md) 与 [`templates/VibeCoding规范模板.md`](templates/VibeCoding规范模板.md)
 - 治理规范：[`GOVERNANCE.zh-CN.md`](GOVERNANCE.zh-CN.md)
 - 贡献指南：[`CONTRIBUTING.zh-CN.md`](CONTRIBUTING.zh-CN.md)
 - 风格规范：[`STYLE.zh-CN.md`](STYLE.zh-CN.md)

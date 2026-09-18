@@ -22,6 +22,7 @@ What does this PR change?
 - [ ] I ran `python -m ruff check .`
 - [ ] I ran `python -m unittest discover -s labs -p "test_*.py"` when changing Labs
 - [ ] I updated version anchors when changing framework-sensitive content
+- [ ] I wrote a one-sentence spec (goal, interface, acceptance) before prompting for new Labs or examples
 - [ ] I avoided duplicating code between prose and Labs
 - [ ] I added or updated eval evidence when changing Agent behavior
 - [ ] I documented rollback behavior for production or safety changes

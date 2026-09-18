@@ -22,6 +22,8 @@ Create original patterns, reusable catalogs, and multilingual pattern implementa
 - [`pattern_catalog`](pattern_catalog/README.md): reusable pattern catalog with readiness checks.
 - [`multilingual_pattern_lab`](multilingual_pattern_lab/README.md): one pattern translated across Python, Node.js, Rust, Go, and TypeScript.
 - [`pattern_eval_gate`](pattern_eval_gate/README.md): deterministic gate for patterns entering the catalog.
+- [`supervision_incident_response`](supervision_incident_response/README.md): deterministic production supervision and incident response for multi-agent fleets.
+- [`vibe_coding_spec`](vibe_coding_spec/README.md): deterministic prompt-readiness check for the Vibe Coding spec-first workflow.
 
 ## Run
 
@@ -42,4 +44,3 @@ For the multilingual Lab, follow its `README.md` smoke commands per language.
 1. What evidence proves a custom pattern is reusable and safe?
 2. When is a pattern ready to enter the catalog?
 3. How do you keep multilingual implementations in parity?
-

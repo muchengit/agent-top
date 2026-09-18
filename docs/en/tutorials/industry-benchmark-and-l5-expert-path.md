@@ -62,6 +62,8 @@ Minimum evidence for L5 readiness:
 5. One external or adoptable artifact: accepted PR, issue thread, talk/workshop, article, template, checklist, or maintained Lab.
 6. One mentoring or review contribution showing the learner can raise the quality bar for another contributor.
 
+Follow the [Vibe Coding workflow](../vibe-coding/README.md) when drafting any original pattern: state goal, interface, and acceptance in one sentence before prompting, and confirm readiness with [`../../../labs/l5/vibe_coding_spec/README.md`](../../../labs/l5/vibe_coding_spec/README.md).
+
 ## L5 Rubric
 
 Score each dimension 0-4. A strong L5 claim should score at least 3 on pattern quality, evidence, and one influence dimension.

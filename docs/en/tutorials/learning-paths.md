@@ -87,7 +87,8 @@ Exit evidence:
 4. Run [`../../../labs/l5/pattern_catalog/README.md`](../../../labs/l5/pattern_catalog/README.md).
 5. Run [`../../../labs/l5/multilingual_pattern_lab/README.md`](../../../labs/l5/multilingual_pattern_lab/README.md).
 6. Draft one reusable pattern with safety and verification.
-7. Read [`industry-benchmark-and-l5-expert-path.md`](industry-benchmark-and-l5-expert-path.md) and package the work with [`../../../templates/l5-expert-evidence-template.md`](../../../templates/l5-expert-evidence-template.md).
+7. Run [`../../../labs/l5/vibe_coding_spec/README.md`](../../../labs/l5/vibe_coding_spec/README.md) and use the [`../../../templates/vibe-coding-spec-template.md`](../../../templates/vibe-coding-spec-template.md) to state goal, interface, and acceptance in one sentence before prompting.
+8. Read [`industry-benchmark-and-l5-expert-path.md`](industry-benchmark-and-l5-expert-path.md) and package the work with [`../../../templates/l5-expert-evidence-template.md`](../../../templates/l5-expert-evidence-template.md).
 
 Exit evidence:
 
@@ -163,7 +164,7 @@ higher-cost model only when the task needs planning.
 | Intermediate | `l2-single-agent-mcp` | `single_agent_mcp`, `guardrail_helpers`, `cost_aware_router` | allowlist, confirmation rule, routing decision |
 | System | `l3-rag-memory-observability`, `multi-round-research-discussion` | `rag_evaluator`, `multi_round_research_discussion`, `multi_agent_supervisor` | retrieval eval, refusal case, route assignment |
 | Production | `l4-production`, `evals-checklist`, `safety-checklist` | `production_postmortem`, `regression_gate` | release gate, postmortem, rollback plan |
-| Expert | `l5-custom-patterns`, `agent-system-architecture` | `custom_pattern_lab`, `pattern_catalog`, `multilingual_pattern_lab` | pattern spec, deterministic Lab, L5 bundle |
+| Expert | `l5-custom-patterns`, `agent-system-architecture`, `vibe-coding` | `custom_pattern_lab`, `pattern_catalog`, `multilingual_pattern_lab`, `vibe_coding_spec` | pattern spec, deterministic Lab, one-sentence prompt spec, L5 bundle |
 
 ## Mentor Notes
 

@@ -60,6 +60,7 @@ Good L5 evidence contribution:
 - Include failure modes, non-goals, rejected alternatives, and a residual-risk note.
 - Mark the labels needed: `good-first-L5`, `original-pattern`, `external-impact`, `eval-evidence`, `safety-review`, `release-governance`, or `sig-candidate`.
 - Include one mentoring or review signal proving the contributor raises the quality of other contributors.
+- Start original patterns with a one-sentence spec (goal, interface, acceptance) from the [Vibe Coding workflow](../vibe-coding/README.md).
 
 Maintenance contribution:
 

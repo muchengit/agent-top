@@ -88,6 +88,7 @@ Outcome:
 - Use `lab` for runnable Lab changes.
 - Use `translation-needed` or `sync-required` for bilingual gaps.
 - Avoid asking the same person to be author and reviewer in the same session unless the contribution is very small.
+- For AI-assisted contributions, write a one-sentence spec (goal, interface, acceptance) before prompting and confirm the [Vibe Coding readiness check](../../../labs/l5/vibe_coding_spec/README.md).
 
 ## Session Notes Output
 
@@ -112,3 +113,4 @@ A good Agent Community Lab session should:
 - Stay pattern-first.
 - Avoid framework churn unless the pattern is stable.
 - Leave the next contributor with a clear task.
+- Require the one-sentence spec before AI-drafted output enters review.

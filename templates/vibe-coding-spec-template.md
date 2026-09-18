@@ -1,5 +1,7 @@
 ---
 title: Vibe Coding Spec Template
+i18n-key: vibe-coding-spec-template
+last-synced: 2026-09-18
 validated_date: 2026-09-18
 ---
 
@@ -9,7 +11,7 @@ Fill this in before writing a prompt. If a field is empty, you are still explori
 
 ## Goal
 
-What must be true after the change?
+What must be true after the change? State it in one sentence.
 
 ## Scope
 
@@ -24,7 +26,7 @@ What must be true after the change?
 
 ## Acceptance
 
-The exact check that must pass (command or test):
+The exact check that must pass — the same command a reviewer would run:
 
 ```bash
 # e.g. python3 -m unittest labs.lX.lab_name.test_lab
@@ -35,6 +37,8 @@ The exact check that must pass (command or test):
 What must not break:
 
 ## Refine Notes
+
+Paste the actual error and failing input, not "it does not work".
 
 - Round 1 failure:
 - Round 1 fix:

@@ -30,7 +30,7 @@ validated_date: 2026-09-18
 | 案例研究 | Done | `docs/en/cases/` |
 | 速查表 | Done | `docs/en/quick-reference/` |
 | Agent 技能体系 | Done | `docs/en/skills/README.md`、`docs/zh/skills/Agent技能指南.md`、`templates/agent-skill-card-template.md` |
-| Vibe Coding | Done | `docs/en/vibe-coding/README.md` 与 `docs/zh/vibe-coding/README.md`，含规范先行、运行校验与常见踩坑指南 |
+| Vibe Coding | Done | `docs/en/vibe-coding/README.md` 与 `docs/zh/vibe-coding/README.md`，含规范先行、运行校验与常见踩坑指南，以及 `labs/l5/vibe_coding_spec` Lab 与双语规范模板 |
 | 双语文档结构 | Done | `docs/en/` + `docs/zh/` |
 | 社区治理 | Done | `GOVERNANCE.md`, `CONTRIBUTING.md`, `CONTRIBUTING.zh-CN.md`, `docs/en/community/` |
 | GitHub 标签配置 | Done | `.github/labels.yml` |

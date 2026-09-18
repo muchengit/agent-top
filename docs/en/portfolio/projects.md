@@ -133,6 +133,7 @@ Design a reusable pattern or mini framework with stable inputs, outputs, safety 
 - Version anchors.
 - Failure mode documentation.
 - Maintenance notes.
+- One-sentence prompt spec written before drafting (goal, interface, acceptance) via the [Vibe Coding workflow](../vibe-coding/README.md).
 
 ### Key Decisions
 

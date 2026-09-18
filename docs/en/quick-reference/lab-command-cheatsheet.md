@@ -50,16 +50,23 @@ python -m unittest labs.l1.minimal_react_agent.test_lab
 python -m unittest labs.l1.multi_turn_state.test_lab
 python -m unittest labs.l2.cost_aware_router.test_lab
 python -m unittest labs.l2.single_agent_mcp.test_lab
+python -m unittest labs.l2.mcp_tool_selection.test_lab
 python -m unittest labs.l3.rag_evaluator.test_lab
 python -m unittest labs.l3.rag_memory_observability.test_lab
 python -m unittest labs.l3.multi_agent_supervisor.test_lab
 python -m unittest labs.l3.multi_round_research_discussion.test_lab
+python -m unittest labs.l3.rag_hybrid_search.test_lab
 python -m unittest labs.l4.regression_gate.test_lab
 python -m unittest labs.l4.cost_and_stability_guardrails.test_lab
 python -m unittest labs.l4.production_postmortem.test_lab
+python -m unittest labs.l4.production_trace_integrity.test_lab
+python -m unittest labs.l4.deployment_hygiene.test_lab
 python -m unittest labs.l5.custom_pattern_lab.test_lab
 python -m unittest labs.l5.pattern_catalog.test_lab
 python -m unittest labs.l5.multilingual_pattern_lab.test_lab
+python -m unittest labs.l5.pattern_eval_gate.test_lab
+python -m unittest labs.l5.supervision_incident_response.test_lab
+python -m unittest labs.l5.vibe_coding_spec.test_lab
 ```
 
 Run labs from the same level together in one process:
@@ -94,6 +101,7 @@ python -m unittest labs.l1.guardrail_helpers.test_lab labs.l1.minimal_react_agen
 | l5 | multilingual_pattern_lab | One pattern in Python, Node.js, Rust, Go, TypeScript | `python -m unittest labs.l5.multilingual_pattern_lab.test_lab` |
 | l5 | pattern_eval_gate | Deterministic gate for patterns entering the catalog | `python -m unittest labs.l5.pattern_eval_gate.test_lab` |
 | l5 | supervision_incident_response | Deterministic production supervision and incident response | `python -m unittest labs.l5.supervision_incident_response.test_lab` |
+| l5 | vibe_coding_spec | Deterministic prompt-readiness check for the Vibe Coding spec-first workflow | `python -m unittest labs.l5.vibe_coding_spec.test_lab` |
 
 ## Levels at a Glance
 

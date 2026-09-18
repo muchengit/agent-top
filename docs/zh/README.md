@@ -68,6 +68,8 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`vibe-coding/规范先行工作流.md`](vibe-coding/规范先行工作流.md)
 - [`vibe-coding/运行与校验.md`](vibe-coding/运行与校验.md)
 - [`vibe-coding/常见踩坑.md`](vibe-coding/常见踩坑.md)
+- 动手 Lab：[`../../labs/l5/vibe_coding_spec/README.zh-CN.md`](../../labs/l5/vibe_coding_spec/README.zh-CN.md)
+- 规范模板：[`../../templates/VibeCoding规范模板.md`](../../templates/VibeCoding规范模板.md)
 
 ## 模板
 
@@ -78,6 +80,7 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`../../templates/复盘模板.md`](../../templates/复盘模板.md)
 - [`../../templates/Agent设计模板.md`](../../templates/Agent设计模板.md)
 - [`../../templates/Lab模板.md`](../../templates/Lab模板.md)
+- [`../../templates/VibeCoding规范模板.md`](../../templates/VibeCoding规范模板.md)
 
 ## 案例研究
 

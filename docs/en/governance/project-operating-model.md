@@ -120,6 +120,8 @@ Main agent review notes:
 
 Tasks without expected files or acceptance criteria go back to the employee for revision.
 
+When drafting a task with an AI assistant, use the [Vibe Coding workflow](../vibe-coding/README.md): collapse goal, interface, and acceptance into one sentence before prompting, and confirm readiness with the [`vibe_coding_spec` Lab](../../../labs/l5/vibe_coding_spec/README.md).
+
 ## Quality Gates
 
 Before the main agent approves work, each employee output passes its lane-specific gate.
@@ -133,6 +135,7 @@ Before the main agent approves work, each employee output passes its lane-specif
 | Interview | Rubric present, answer includes trade-offs and failure modes |
 | Open source | Contribution plan is reviewable without private context |
 | Safety | Guardrail classification, destructive-action handling, rollback note |
+| Vibe Coding tasks | One-sentence spec with goal/interface/acceptance, readiness check green before prompting |
 
 ## Long-Run Cadence
 

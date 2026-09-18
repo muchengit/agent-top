@@ -28,6 +28,7 @@ Use this before opening a PR.
 
 - [ ] New Labs have code and deterministic tests.
 - [ ] New Labs include Goal, Prerequisites, Run, Common Pitfalls, and Self-Check.
+- [ ] AI-assisted Lab or example drafts start from a one-sentence spec (goal, interface, acceptance) and pass the [`vibe_coding_spec` readiness check](../labs/l5/vibe_coding_spec/README.md).
 - [ ] Example JSONL files are valid.
 - [ ] Example exercises do not require API keys or external services.
 - [ ] Lab README lists expected output or verification.

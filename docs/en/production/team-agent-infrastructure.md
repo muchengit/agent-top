@@ -178,4 +178,5 @@ If any of these is missing, the team is not ready to run many Agents in producti
 - Observability example: [`../../../examples/observability-trace/README.md`](../../../examples/observability-trace/README.md)
 - Regression gate Lab: [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md)
 - Supervision and incident response Lab: [`../../../labs/l5/supervision_incident_response/README.md`](../../../labs/l5/supervision_incident_response/README.md)
+- Vibe Coding spec Lab: [`../../../labs/l5/vibe_coding_spec/README.md`](../../../labs/l5/vibe_coding_spec/README.md)
 - Postmortem template: [`../../../templates/postmortem-template.md`](../../../templates/postmortem-template.md)

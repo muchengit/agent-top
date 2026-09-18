@@ -106,6 +106,7 @@ Deliverables:
 
 - Original pattern case studies
 - Open-source PR guide
+- Vibe Coding spec workflow with a deterministic readiness Lab and bilingual template
 - Tech talk / paper reading templates
 - Team Agent infrastructure design guide
 
@@ -174,4 +175,3 @@ Bilingual strategy:
 3. Complete the L0 first API demo Lab
 4. Complete the L1 minimal ReAct Agent Lab
 5. Establish version anchors and CI checks
-

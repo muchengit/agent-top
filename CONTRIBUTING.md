@@ -45,6 +45,8 @@ Every article or Lab should include:
 
 Use Markdown and executable Labs as the primary content format. For concrete Labs, keep code and tests in the same Lab directory and document the run command in the README.
 
+For AI-assisted contributions, follow the [Vibe Coding workflow](docs/en/vibe-coding/README.md): write a one-sentence spec with goal, interface, and acceptance before prompting, and confirm the readiness check with [`labs/l5/vibe_coding_spec`](labs/l5/vibe_coding_spec/README.md).
+
 ## Bilingual Workflow
 
 - English is the primary source unless explicitly marked otherwise.

@@ -2,6 +2,8 @@
 title: Vibe Coding 规范 Lab
 capability_level: L5
 validated_date: 2026-09-18
+i18n-key: l5-vibe-coding-spec
+last-synced: 2026-09-18
 tested_against: "python 3.10+"
 ---
 
@@ -16,6 +18,10 @@ tested_against: "python 3.10+"
 - 阅读 [Vibe Coding 指南](../../../docs/zh/vibe-coding/README.md)。
 - Python 3.10+。
 
+## 模板
+
+使用可打印的表单：[`Vibe Coding 规范模板`](../../../templates/VibeCoding规范模板.md)（英文源：[`vibe-coding-spec-template.md`](../../../templates/vibe-coding-spec-template.md)）。
+
 ## 运行
 
 ```bash
@@ -25,7 +31,7 @@ python3 -m unittest labs.l5.vibe_coding_spec.test_lab
 预期输出：
 
 ```text
-Ran 5 tests
+Ran 12 tests
 OK
 ```
 

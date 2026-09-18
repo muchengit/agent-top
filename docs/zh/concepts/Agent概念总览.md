@@ -70,10 +70,11 @@ Agent 是使用 LLM、工具、记忆、规划和控制循环完成任务的系�
 7. 加入生产控制。
 8. 提炼可复用模式。
 
+用 AI 助手起草以上任意步骤时，使用 [Vibe Coding 工作流](../vibe-coding/README.md)：提示前用一句话写清目标、接口与验收，再用 [`vibe_coding_spec` Lab](../../../labs/l5/vibe_coding_spec/README.md) 确认就绪。
+
 ## 与相邻文档的关系
 
 - [`多轮研究讨论.md`](多轮研究讨论.md)：把单轮 ReAct 循环扩展为多轮、多 Agent 研究讨论。
 - [`Agent系统架构.md`](Agent系统架构.md)：把概念落实到组件、边界与部署形态。
 - [`ReAct模式.md`](ReAct模式.md)：理解最小控制循环。
 - [`RAG记忆MCP数据流.md`](RAG记忆MCP数据流.md)：理解检索、记忆与工具协议如何串联。
-

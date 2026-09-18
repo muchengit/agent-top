@@ -88,6 +88,7 @@ Agent Community Lab 是轻量共学形式，把一个教程、Lab 或架构主�
 - 可运行 Lab 改动用 `lab`。
 - 双语缺口用 `translation-needed` 或 `sync-required`。
 - 除非贡献很小，否则避免同一人同时当作者和 reviewer。
+- AI 辅助贡献请先写一句话规范（目标、接口、验收），并用 [Vibe Coding 就绪检查](../../../labs/l5/vibe_coding_spec/README.zh-CN.md) 确认。
 
 ## Session Notes Output
 
@@ -112,3 +113,4 @@ Agent Community Lab 是轻量共学形式，把一个教程、Lab 或架构主�
 - 保持 pattern-first。
 - 除非模式稳定，否则避免框架 churn。
 - 给下一位贡献者留下清晰任务。
+- AI 起草的输出进入 review 前，必须有一句话规范。

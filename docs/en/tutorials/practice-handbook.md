@@ -31,6 +31,7 @@ Use this handbook to turn learning materials into portfolio evidence.
 | L3 | RAG evidence refusal | [`../../../labs/l3/rag_evaluator/README.md`](../../../labs/l3/rag_evaluator/README.md) |
 | L4 | Agent decision trace plus design review | [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) |
 | L5 | Any exercise plus pattern writeup | [`../../../labs/l5/custom_pattern_lab/README.md`](../../../labs/l5/custom_pattern_lab/README.md) |
+| Vibe Coding | One-sentence spec plus a green readiness check | [`../../../labs/l5/vibe_coding_spec/README.md`](../../../labs/l5/vibe_coding_spec/README.md) |
 
 ## Evidence Format
 

@@ -45,6 +45,7 @@ When you read an external Agent tutorial, ask:
 | Production supervision and incident response | [`../concepts/multi-agent-scheduling.md`](../concepts/multi-agent-scheduling.md) | [`../../labs/l5/supervision_incident_response/README.md`](../../../labs/l5/supervision_incident_response/README.md) | Run a rollback or escalate decision |
 | Deployment hygiene | [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md) | [`../../labs/l4/deployment_hygiene/README.md`](../../../labs/l4/deployment_hygiene/README.md) | Produce a deploy/defer/block assessment |
 | Pattern contribution | [`../concepts/agent-system-architecture.md`](../concepts/agent-system-architecture.md) | [`../../labs/l5/pattern_catalog/README.md`](../../../labs/l5/pattern_catalog/README.md) | Draft a reusable pattern |
+| Vibe Coding workflow | [`../vibe-coding/README.md`](../vibe-coding/README.md) | [`../../labs/l5/vibe_coding_spec/README.md`](../../../labs/l5/vibe_coding_spec/README.md) | Write a one-sentence spec and pass the readiness check |
 
 ## Suggested Learning Path from External Tutorials
 

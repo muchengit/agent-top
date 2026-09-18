@@ -45,6 +45,8 @@ python -m ruff check .
 
 默认内容形态为 Markdown + 可执行 Lab。具体 Lab 的代码和测试应放在同一 Lab 目录，并在 README 中写明运行命令。
 
+对于 AI 辅助贡献，请遵循 [Vibe Coding 工作流](docs/zh/vibe-coding/README.md)：提示前先用一句话写明目标、接口和验收，并用 [`labs/l5/vibe_coding_spec`](labs/l5/vibe_coding_spec/README.zh-CN.md) 确认就绪检查通过。
+
 ## 双语流程
 
 - 英文默认作为主源，除非明确标注例外。

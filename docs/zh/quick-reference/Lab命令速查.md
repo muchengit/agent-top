@@ -47,16 +47,23 @@ python -m unittest labs.l1.minimal_react_agent.test_lab
 python -m unittest labs.l1.multi_turn_state.test_lab
 python -m unittest labs.l2.cost_aware_router.test_lab
 python -m unittest labs.l2.single_agent_mcp.test_lab
+python -m unittest labs.l2.mcp_tool_selection.test_lab
 python -m unittest labs.l3.rag_evaluator.test_lab
 python -m unittest labs.l3.rag_memory_observability.test_lab
 python -m unittest labs.l3.multi_agent_supervisor.test_lab
 python -m unittest labs.l3.multi_round_research_discussion.test_lab
+python -m unittest labs.l3.rag_hybrid_search.test_lab
 python -m unittest labs.l4.regression_gate.test_lab
 python -m unittest labs.l4.cost_and_stability_guardrails.test_lab
 python -m unittest labs.l4.production_postmortem.test_lab
+python -m unittest labs.l4.production_trace_integrity.test_lab
+python -m unittest labs.l4.deployment_hygiene.test_lab
 python -m unittest labs.l5.custom_pattern_lab.test_lab
 python -m unittest labs.l5.pattern_catalog.test_lab
 python -m unittest labs.l5.multilingual_pattern_lab.test_lab
+python -m unittest labs.l5.pattern_eval_gate.test_lab
+python -m unittest labs.l5.supervision_incident_response.test_lab
+python -m unittest labs.l5.vibe_coding_spec.test_lab
 ```
 
 在同一个进程里运行同一层的多个 lab：
@@ -91,6 +98,7 @@ python -m unittest labs.l1.guardrail_helpers.test_lab labs.l1.minimal_react_agen
 | l5 | multilingual_pattern_lab | 一个模式用 Python、Node.js、Rust、Go、TypeScript 实现 | `python -m unittest labs.l5.multilingual_pattern_lab.test_lab` |
 | l5 | pattern_eval_gate | 模式进入目录前的确定性门禁 | `python -m unittest labs.l5.pattern_eval_gate.test_lab` |
 | l5 | supervision_incident_response | 多 Agent 生产监督与事件响应的确定性决策 | `python -m unittest labs.l5.supervision_incident_response.test_lab` |
+| l5 | vibe_coding_spec | Vibe Coding 规范先行工作流的确定性提示就绪检查 | `python -m unittest labs.l5.vibe_coding_spec.test_lab` |
 
 ## 各层一览
 

@@ -239,6 +239,12 @@ to avoid. Terms are grouped as Foundation, Production, and Decision terms.
 - **Why it matters**: It keeps knowledge transferable between projects.
 - **Common misuse**: Confusing a framework API with a pattern.
 
+### Vibe Coding
+
+- **Definition**: An AI-assisted workflow where you express intent in natural language, let a model draft, then review and run in a fast loop, with goal, interface, and acceptance stated before prompting.
+- **Why it matters**: It removes typing friction without removing engineering judgment or the acceptance bar.
+- **Common misuse**: Treating "vibe" as permission to skip specs, evals, or deterministic checks.
+
 ### Framework boundary
 
 - **Definition**: Framework-specific API details that should stay isolated in Labs.

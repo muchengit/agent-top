@@ -77,3 +77,5 @@ Good memory is scoped, stale-checked, privacy-aware, and easy to audit.
 6. Add observability and evals.
 7. Add production controls.
 8. Extract a reusable pattern.
+
+When drafting any of these steps with an AI assistant, use the [Vibe Coding workflow](../vibe-coding/README.md): write a one-sentence spec (goal, interface, acceptance) before prompting, then confirm readiness with the [`vibe_coding_spec` Lab](../../../labs/l5/vibe_coding_spec/README.md).

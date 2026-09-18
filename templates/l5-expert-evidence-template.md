@@ -17,6 +17,7 @@ validated_date: 2026-09-17
 - Problem:
 - Inputs:
 - Outputs:
+- One-sentence spec (goal, interface, acceptance) before prompting:
 - Failure modes:
 - Safety checks:
 - Verification:

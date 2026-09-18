@@ -109,3 +109,4 @@ Use this page to prepare candidate-facing answers for Agent interviews.
 - [`../portfolio/personal-agent-portfolio.md`](../portfolio/personal-agent-portfolio.md)
 - [`../concepts/design-review-checklist.md`](../concepts/design-review-checklist.md)
 - [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md)
+- [`../vibe-coding/README.md`](../vibe-coding/README.md)

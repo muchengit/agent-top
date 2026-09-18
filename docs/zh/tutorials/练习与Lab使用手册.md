@@ -31,6 +31,7 @@ last-synced: 2026-09-17
 | L3 | RAG evidence refusal | [`../../../labs/l3/rag_evaluator/README.md`](../../../labs/l3/rag_evaluator/README.md) |
 | L4 | Agent decision trace + design review | [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) |
 | L5 | 任意 exercise + pattern writeup | [`../../../labs/l5/custom_pattern_lab/README.md`](../../../labs/l5/custom_pattern_lab/README.md) |
+| Vibe Coding | 一句规范 + 一次通过的就绪检查 | [`../../../labs/l5/vibe_coding_spec/README.md`](../../../labs/l5/vibe_coding_spec/README.md) |
 
 ## 证据格式
 

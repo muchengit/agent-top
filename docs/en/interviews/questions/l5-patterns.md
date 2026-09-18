@@ -213,4 +213,4 @@ For L5, acceptable evidence is:
 
 ## Related Tutorials
 
-Study the matching tutorial before or after this question bank: [`L5 Custom Patterns`](../../l5-custom-patterns.md).
+Study the matching tutorials before or after this question bank: [`L5 Custom Patterns`](../../l5-custom-patterns.md) and the [Vibe Coding guide](../../vibe-coding/README.md) for spec-first drafting.

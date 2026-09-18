@@ -32,6 +32,7 @@ This log tracks experiment proposals for Agent-Top content. One experiment per q
 | EX-001 | promoted | No repeatable "pattern repetition" check | `labs/l5/pattern_eval_gate/` | Promote: gate now covers repetition scoring |
 | EX-002 | promoted | Single-language pattern demos only | `labs/l5/multilingual_pattern_lab/` | Promote: five-language parity verified by smoke |
 | EX-003 | promoted | Supervision documented, not executable | `labs/l5/supervision_incident_response/` | Promote: deterministic incident response tests now executable |
+| EX-004 | promoted | Vibe Coding was guidance only, not testable | `labs/l5/vibe_coding_spec/` | Promote: prompt-readiness check is now a deterministic Lab |
 
 ## Repeating Protocol
 

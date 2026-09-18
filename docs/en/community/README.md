@@ -15,6 +15,7 @@ Agent-Top is maintained as a bilingual, docs-first open source community.
 - Writing or translating docs: [`contribution-paths.md`](contribution-paths.md)
 - Translating EN to ZH: [`translation-workflow.md`](translation-workflow.md)
 - Running labs: [`../../quick-reference/lab-command-cheatsheet.md`](../quick-reference/lab-command-cheatsheet.md)
+- AI-assisted contributions: [`../vibe-coding/README.md`](../vibe-coding/README.md)
 
 ## Core Links
 
@@ -31,6 +32,7 @@ Agent-Top is maintained as a bilingual, docs-first open source community.
 - [`2026-09-contributor-report.md`](2026-09-contributor-report.md)
 - [`experiment-log.md`](experiment-log.md)
 - [`good-first-L5-candidates.md`](good-first-L5-candidates.md)
+- [`../vibe-coding/README.md`](../vibe-coding/README.md): Vibe Coding workflow with a deterministic readiness Lab
 
 ## Role Paths
 

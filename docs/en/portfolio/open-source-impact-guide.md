@@ -64,6 +64,7 @@ Before opening a PR:
 - Separate stable concepts from framework-specific code.
 - Include negative examples or non-usage cases.
 - Explain what happens when the pattern fails.
+- For AI-assisted drafting, write a one-sentence spec (goal, interface, acceptance) first via the [Vibe Coding workflow](../vibe-coding/README.md).
 
 ## External Evidence
 

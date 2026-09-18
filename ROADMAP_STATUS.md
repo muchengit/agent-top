@@ -31,7 +31,7 @@ validated_date: 2026-09-18
 | Case studies | Done | `docs/en/cases/` and `docs/zh/cases/`, including enterprise tool, collaboration, RAG, regression, and pattern-contribution cases |
 | Quick references | Done | `docs/en/quick-reference/`, including Chinese index |
 | Agent skills | Done | `docs/en/skills/README.md`, `docs/zh/skills/Agent技能指南.md`, `templates/agent-skill-card-template.md` |
-| Vibe Coding | Done | `docs/en/vibe-coding/README.md` and `docs/zh/vibe-coding/README.md` plus spec-first workflow, run-and-verify, and common-pitfalls guides |
+| Vibe Coding | Done | `docs/en/vibe-coding/README.md` and `docs/zh/vibe-coding/README.md` plus spec-first workflow, run-and-verify, and common-pitfalls guides, the `labs/l5/vibe_coding_spec` Lab, and the bilingual spec template |
 | Community governance | Done | `GOVERNANCE.md`, `CONTRIBUTING.md`, `CONTRIBUTING.zh-CN.md`, `docs/en/community/` |
 | Bilingual metadata | Done | frontmatter key and sync checks in `scripts/check_repository.py` |
 | Community operations | Done | rhythm, labels, maintainer rotation, translation workflow |

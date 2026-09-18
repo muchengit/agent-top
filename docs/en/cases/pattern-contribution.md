@@ -171,6 +171,7 @@ The contribution succeeded because the team tracked behavior, not just opinion:
 - L5 Pattern Catalog: [`../../../labs/l5/pattern_catalog/README.md`](../../../labs/l5/pattern_catalog/README.md)
 - L5 Custom Pattern: [`../../../labs/l5/custom_pattern_lab/README.md`](../../../labs/l5/custom_pattern_lab/README.md)
 - L5 Multilingual Pattern: [`../../../labs/l5/multilingual_pattern_lab/README.md`](../../../labs/l5/multilingual_pattern_lab/README.md)
+- L5 Vibe Coding Spec: [`../../../labs/l5/vibe_coding_spec/README.md`](../../../labs/l5/vibe_coding_spec/README.md)
 
 ## Related Examples
 

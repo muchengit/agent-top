@@ -81,6 +81,8 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`vibe-coding/spec-first-workflow.md`](vibe-coding/spec-first-workflow.md)
 - [`vibe-coding/run-and-verify.md`](vibe-coding/run-and-verify.md)
 - [`vibe-coding/common-pitfalls.md`](vibe-coding/common-pitfalls.md)
+- Hands-on Lab: [`../../labs/l5/vibe_coding_spec/README.md`](../../labs/l5/vibe_coding_spec/README.md)
+- Spec template: [`../../templates/vibe-coding-spec-template.md`](../../templates/vibe-coding-spec-template.md)
 - [`../zh/vibe-coding/README.md`](../zh/vibe-coding/README.md)
 
 ## Templates
@@ -92,6 +94,7 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`../../templates/lab-template.md`](../../templates/lab-template.md)
 - [`../../templates/postmortem-template.md`](../../templates/postmortem-template.md)
 - [`../../templates/agent-design-template.md`](../../templates/agent-design-template.md)
+- [`../../templates/vibe-coding-spec-template.md`](../../templates/vibe-coding-spec-template.md)
 
 ## Case Studies
 

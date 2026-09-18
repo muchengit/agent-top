@@ -1,5 +1,7 @@
 ---
 title: Vibe Coding 规范模板
+i18n-key: vibe-coding-spec-template
+last-synced: 2026-09-18
 validated_date: 2026-09-18
 ---
 
@@ -9,7 +11,7 @@ validated_date: 2026-09-18
 
 ## 目标
 
-变更后必须成立的事实是什么？
+变更后必须成立的事实是什么？用一句话说清楚。
 
 ## 范围
 
@@ -24,7 +26,7 @@ validated_date: 2026-09-18
 
 ## 验收
 
-必须通过的精确检查（命令或测试）：
+必须通过的精确检查——评审者会跑的同一命令：
 
 ```bash
 # 例如 python3 -m unittest labs.lX.lab_name.test_lab
@@ -35,6 +37,8 @@ validated_date: 2026-09-18
 绝不能破坏什么：
 
 ## 打磨记录
+
+贴出真实错误和失败输入，而不是"它不工作"。
 
 - 第 1 轮失败：
 - 第 1 轮修复：

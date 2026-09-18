@@ -225,7 +225,7 @@ Checklist:
 | Production postmortem | [`../../labs/l4/production_postmortem/README.md`](../../../labs/l4/production_postmortem/README.md) |
 | Cost and stability guardrails | [`../../labs/l4/cost_and_stability_guardrails/README.md`](../../../labs/l4/cost_and_stability_guardrails/README.md) |
 | Cost and stability operations | [`../l4-production.md`](../l4-production.md), [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md) |
-| Original patterns | [`../l5-custom-patterns.md`](../l5-custom-patterns.md), [`../../labs/l5/pattern_catalog/README.md`](../../../labs/l5/pattern_catalog/README.md) |
+| Original patterns | [`../l5-custom-patterns.md`](../l5-custom-patterns.md), [`../../labs/l5/pattern_catalog/README.md`](../../../labs/l5/pattern_catalog/README.md), [`../../labs/l5/vibe_coding_spec/README.md`](../../../labs/l5/vibe_coding_spec/README.md) |
 | Coding Agent workspace safety | [`../concepts/implementation-guide.md`](../concepts/implementation-guide.md), [`../production/safety-checklist.md`](../production/safety-checklist.md) |
 | Coding Agent eval design | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) |
 | Data-source ingestion safety | [`../concepts/rag-memory-mcp-flow.md`](../concepts/rag-memory-mcp-flow.md), [`../../examples/data-source-policy/README.md`](../../../examples/data-source-policy/README.md) |

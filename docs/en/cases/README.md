@@ -45,3 +45,4 @@ Each case should include:
 | [`production-regression-gate.md`](production-regression-gate.md) | [`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) | Release gates and regression checks |
 | [`multi-agent-collaboration.md`](multi-agent-collaboration.md) | [`../../../labs/l5/supervision_incident_response/README.md`](../../../labs/l5/supervision_incident_response/README.md) | Production supervision and incident response |
 | [`production-regression-gate.md`](production-regression-gate.md) | [`../../../labs/l4/deployment_hygiene/README.md`](../../../labs/l4/deployment_hygiene/README.md) | Deploy hygiene across observability, cost, and gates |
+| [`pattern-contribution.md`](pattern-contribution.md) | [`../../../labs/l5/vibe_coding_spec/README.md`](../../../labs/l5/vibe_coding_spec/README.md) | Spec-first readiness before prompting an AI assistant |

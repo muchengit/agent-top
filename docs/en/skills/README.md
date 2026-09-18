@@ -133,6 +133,7 @@ Use the matrix below as a map, not as a grade. Move forward when you can produce
    - Industry benchmark and L5 expert path.
    - Custom pattern Lab.
    - Pattern catalog Lab.
+   - Vibe Coding spec Lab with the one-sentence prompt spec template.
    - L5 expert evidence bundle.
    - Open-source contribution or design article.
 

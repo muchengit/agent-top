@@ -178,4 +178,5 @@ Evals 是发布门禁，必须像代码一样被拥有。
 - 可观测性示例：[`../../../examples/observability-trace/README.md`](../../../examples/observability-trace/README.md)
 - Regression gate Lab：[`../../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md)
 - 监督与事件响应 Lab：[`../../../labs/l5/supervision_incident_response/README.md`](../../../labs/l5/supervision_incident_response/README.md)
+- Vibe Coding 规范 Lab：[`../../../labs/l5/vibe_coding_spec/README.md`](../../../labs/l5/vibe_coding_spec/README.md)
 - Postmortem 模板：[`../../../templates/postmortem-template.md`](../../../templates/postmortem-template.md)
