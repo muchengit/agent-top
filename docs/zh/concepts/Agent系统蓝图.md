@@ -1,8 +1,8 @@
 ---
 title: Agent 系统蓝图
-validated_date: 2026-09-17
+validated_date: 2026-09-18
 i18n-key: concepts-agent-system-blueprint
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # Agent 系统蓝图
