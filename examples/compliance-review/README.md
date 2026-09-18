@@ -37,6 +37,11 @@ Each line is one JSON object with a stable `event`, `trace_id`, `request_id`, `p
 | Approval without audit record | audit | block + backfill audit |
 | Evidence seen does not match decision | audit | block + postmortem |
 
+## Extended Exercises
+
+1. Design a follow-up approval trace that exercises the same evidence-gated pattern against a different policy. Compare it with the [compliance-review reference material](../../docs/en/governance/project-operating-model.md).
+2. Swap the approver role model and list the three decisions that would change.
+
 ## Reuse
 
 Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root. To practice a different policy, change one approval rule, redo the answers, and compare outcomes.

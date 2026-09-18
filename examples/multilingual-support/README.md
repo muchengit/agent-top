@@ -37,6 +37,11 @@ Each line is one JSON object with a stable `event`, `trace_id`, `locale`, `detec
 | Memory write in a different scope than the read | memory | align scope + re-verify |
 | Cross-language duplicate without conflict resolution | memory | dedupe + reconcile |
 
+## Extended Exercises
+
+1. Design a follow-up trace that routes the same request family through a different language pipeline. Compare it with the [multilingual-support reference material](../../labs/l5/multilingual_pattern_lab/README.md).
+2. Swap the fallback language policy for a stricter one and list the three decisions that would change.
+
 ## Reuse
 
 Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root. To practice a different policy, change one routing rule, redo the answers, and compare outcomes.
