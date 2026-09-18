@@ -11,6 +11,10 @@ What does this PR change?
 - [ ] Maintenance
 - [ ] Governance
 
+## Docs Sync
+
+- [ ] I kept en/zh mirrors in sync (same `i18n-key`) and updated `last-synced` when changing docs
+
 ## Checklist
 
 - [ ] I ran `python scripts/check_repository.py`

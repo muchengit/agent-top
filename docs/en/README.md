@@ -1,8 +1,8 @@
 ---
 title: Documentation Index
-validated_date: 2026-09-17
+validated_date: 2026-09-18
 i18n-key: readme
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # Documentation Index
@@ -101,8 +101,15 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`quick-reference/lab-command-cheatsheet.md`](quick-reference/lab-command-cheatsheet.md)
 - [`quick-reference/production-checklist.md`](quick-reference/production-checklist.md)
 
-## Examples
+## Labs and Examples
 
+- [`../../labs/README.md`](../../labs/README.md)
+- [`../../labs/l0/README.md`](../../labs/l0/README.md)
+- [`../../labs/l1/README.md`](../../labs/l1/README.md)
+- [`../../labs/l2/README.md`](../../labs/l2/README.md)
+- [`../../labs/l3/README.md`](../../labs/l3/README.md)
+- [`../../labs/l4/README.md`](../../labs/l4/README.md)
+- [`../../labs/l5/README.md`](../../labs/l5/README.md)
 - [`../../examples/README.md`](../../examples/README.md)
 - [`../../examples/model-gateway/README.md`](../../examples/model-gateway/README.md)
 - [`../../examples/safety-eval/README.md`](../../examples/safety-eval/README.md)

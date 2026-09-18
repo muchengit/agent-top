@@ -1,8 +1,8 @@
 ---
 title: Documentation Index
-validated_date: 2026-09-17
+validated_date: 2026-09-18
 i18n-key: readme
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # 文档索引
@@ -87,9 +87,18 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`quick-reference/Lab命令速查.md`](quick-reference/Lab命令速查.md)
 - [`quick-reference/生产清单.md`](quick-reference/生产清单.md)
 
-## 练习材料
+## Labs 与练习材料
+
+- [`../../labs/README.md`](../../labs/README.md)：Labs 总览（L0-L5 实验）
+- [`../../labs/l0/README.md`](../../labs/l0/README.md)：L0 实验
+- [`../../labs/l1/README.md`](../../labs/l1/README.md)：L1 实验
+- [`../../labs/l2/README.md`](../../labs/l2/README.md)：L2 实验
+- [`../../labs/l3/README.md`](../../labs/l3/README.md)：L3 实验
+- [`../../labs/l4/README.md`](../../labs/l4/README.md)：L4 实验
+- [`../../labs/l5/README.md`](../../labs/l5/README.md)：L5 实验
 
 - [`../../examples/README.md`](../../examples/README.md)：本地虚构样例与 JSONL 练习
+- [`../../examples/`](../../examples/)：练习样例目录
 - [`../../examples/model-gateway/README.md`](../../examples/model-gateway/README.md)：Model gateway evidence
 - [`../../examples/safety-eval/README.md`](../../examples/safety-eval/README.md)：Safety eval evidence
 - [`../../examples/mcp-tool-boundary/README.md`](../../examples/mcp-tool-boundary/README.md)：MCP tool boundary

@@ -311,6 +311,48 @@ def check_lab_level_readmes() -> None:
         fail("lab level README sections missing: " + "; ".join(bad))
 
 
+def check_example_dirs_readmes() -> None:
+    examples_root = ROOT / "examples"
+    if not examples_root.is_dir():
+        return
+    missing: list[str] = []
+    for example_dir in sorted(examples_root.iterdir()):
+        if not example_dir.is_dir():
+            continue
+        if not (example_dir / "README.md").exists():
+            missing.append(example_dir.name)
+    for name in missing:
+        print(f"WARN: example dir missing README.md: {name}")
+
+
+def expand_lab_level_ranges(text: str) -> list[str]:
+    """Expand explicit lab level ranges (e.g. `labs/l0`-`labs/l5`) into
+    individual `labs/l{level}` substrings for loose matching."""
+    found: list[str] = []
+    for start, end in re.findall(r"labs/l(\d)`-`labs/l(\d)", text):
+        for level in range(int(start), int(end) + 1):
+            found.append(f"labs/l{level}")
+    return found
+
+
+def check_readme_mentions_lab_levels() -> None:
+    expected = set(f"labs/l{level}" for level in range(6))
+    missing: list[str] = []
+    for readme_name in ("README.md", "README.zh-CN.md"):
+        readme_path = ROOT / readme_name
+        if not readme_path.exists():
+            missing.append(f"{readme_name}: file missing")
+            continue
+        text = readme_path.read_text(encoding="utf-8")
+        mentioned = set(expand_lab_level_ranges(text))
+        mentioned.update(re.findall(r"labs/l\d", text))
+        for substring in sorted(expected - mentioned):
+            if substring not in text:
+                missing.append(f"{readme_name}: no mention of {substring}")
+    if missing:
+        fail("READMEs must mention lab level READMEs: " + "; ".join(missing))
+
+
 def main() -> None:
     check_required_paths()
     markdown_paths = iter_markdown()
@@ -322,6 +364,8 @@ def main() -> None:
     check_lab_readmes(markdown_paths)
     check_lab_level_readmes()
     check_executable_labs()
+    check_example_dirs_readmes()
+    check_readme_mentions_lab_levels()
     check_docs_topic_dirs()
     check_examples_jsonl()
     check_docs_site_links()

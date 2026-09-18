@@ -18,9 +18,9 @@
 - `translation-needed`
 - `sync-required`
 
-## 本地检查
+## 质量门槛
 
-提交 PR 前运行：
+每次提交 PR 前必须通过以下检查：
 
 ```bash
 python scripts/check_repository.py
@@ -28,6 +28,8 @@ python -m unittest discover -s labs -p "test_*.py"
 python -m compileall -q labs scripts
 python -m ruff check .
 ```
+
+文档改动需保持 en/zh 双语文档同步：`docs/zh` 下的中文翻译应与英文源保留相同 `i18n-key`，源文档变更时同步更新 `last-synced` 元数据。如果 PR 更新了英文文档，应在同一 PR 内更新或标注对应的中文镜像，避免双语内容失步。
 
 ## 内容规范
 

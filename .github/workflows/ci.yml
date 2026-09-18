@@ -55,3 +55,79 @@ jobs:
             find .ruff_cache -type f -delete
             find . -depth -type d -name ".ruff_cache" -empty -prune -exec rmdir {} \;
           fi
+  link-and-artifact-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run repository checks
+        run: python scripts/check_repository.py
+
+      - name: Verify example directories have README and non-empty JSONL
+        run: |
+          python - <<'EOF'
+          import sys
+          from pathlib import Path
+
+          root = Path(".").resolve()
+          problems = []
+          for example_dir in sorted((root / "examples").iterdir()):
+              if not example_dir.is_dir():
+                  continue
+              if not (example_dir / "README.md").is_file():
+                  problems.append(f"{example_dir.relative_to(root)}: missing README.md")
+              jsonl_paths = sorted(example_dir.glob("*.jsonl"))
+              if not jsonl_paths:
+                  problems.append(f"{example_dir.relative_to(root)}: no JSONL files")
+              for jsonl_path in jsonl_paths:
+                  if not jsonl_path.read_text(encoding="utf-8").strip():
+                      problems.append(f"{jsonl_path.relative_to(root)}: empty JSONL file")
+          if problems:
+              print("ERROR: " + "; ".join(problems))
+              sys.exit(1)
+          print(f"Verified {len([d for d in (root / 'examples').iterdir() if d.is_dir()])} example directories: README present and JSONL non-empty.")
+          EOF
+
+      - name: Verify docs/en and docs/zh markdown parity
+        run: |
+          python - <<'EOF'
+          import sys
+          from pathlib import Path
+
+          root = Path(".").resolve()
+          en_count = len(list((root / "docs" / "en").rglob("*.md")))
+          zh_count = len(list((root / "docs" / "zh").rglob("*.md")))
+          diff = abs(en_count - zh_count)
+          print(f"docs/en .md files: {en_count}, docs/zh .md files: {zh_count}, difference: {diff}")
+          if diff > 5:
+              print("ERROR: docs/en and docs/zh .md file count difference exceeds 5")
+              sys.exit(1)
+          EOF
+
+      - name: Verify READMEs mention lab level READMEs
+        run: |
+          python - <<'EOF'
+          import re
+          import sys
+          from pathlib import Path
+
+          root = Path(".").resolve()
+          expected = [f"labs/l{level}" for level in range(6)]
+          for readme_name in ("README.md", "README.zh-CN.md"):
+              path = root / readme_name
+              text = path.read_text(encoding="utf-8")
+              mentioned = set(re.findall(r"labs/l\d", text))
+              for start, end in re.findall(r"labs/l(\d)`-`labs/l(\d)", text):
+                  mentioned.update(f"labs/l{level}" for level in range(int(start), int(end) + 1))
+              missing = [substr for substr in expected if substr not in mentioned]
+              if missing:
+                  print(f"ERROR: {readme_name} does not mention {', '.join(missing)}")
+                  sys.exit(1)
+              print(f"{readme_name} mentions labs/l0..labs/l5 READMEs.")
+          EOF

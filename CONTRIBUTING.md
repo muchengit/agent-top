@@ -18,9 +18,9 @@ Start with one of these labels:
 - `translation-needed`
 - `sync-required`
 
-## Local Checks
+## Quality Gates
 
-Run the repository checker before opening a pull request:
+Every contribution must pass the following before opening a pull request:
 
 ```bash
 python scripts/check_repository.py
@@ -28,6 +28,8 @@ python -m unittest discover -s labs -p "test_*.py"
 python -m compileall -q labs scripts
 python -m ruff check .
 ```
+
+Documentation changes must keep the en/zh mirrors in sync: Chinese translations under `docs/zh` keep the same `i18n-key` as the English source, and `last-synced` metadata is updated whenever the source changes. If a PR updates English documentation, update or flag the Chinese mirror in the same PR instead of leaving the mirrors out of sync.
 
 ## Documentation Standards
 

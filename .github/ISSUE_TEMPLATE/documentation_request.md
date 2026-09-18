@@ -14,6 +14,12 @@ labels: [docs]
 
 ## Dependencies
 
+## Validation
+
+- [ ] I ran `python scripts/check_repository.py`
+- [ ] I ran `python -m ruff check .` when adding executable content
+- [ ] I checked en/zh sync impact (`i18n-key`, `last-synced`)
+
 ## Acceptance Criteria
 
 - [ ] Goal is clear
