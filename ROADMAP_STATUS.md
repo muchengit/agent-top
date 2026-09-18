@@ -14,7 +14,7 @@ validated_date: 2026-09-18
 | Concepts | Done | `docs/en/concepts/`, including architecture, MCP, multi-agent scheduling, long-term memory, hallucination, plan decisions, deep-dive sources, and the implementation guide |
 | Framework map | Done | `docs/en/frameworks/framework-map.md` |
 | Executable Labs | Done | `labs/l0` through `labs/l5`, including supplementary labs |
-| Task-first onboarding | Done | `docs/en/tutorials/quick-navigation.md`, `docs/zh/tutorials/快速导航卡.md`, `examples/README.md`, `examples/agent-decision-trace/`, `examples/rag-evidence-refusal/`, `examples/memory-vs-evidence/`, `examples/coding-workspace-safety/`, `examples/data-source-policy/`, `examples/coding-task-navigation/`, `examples/agent-eval-regression/`, `examples/github-agent-review/`, `examples/observability-trace/`, and `examples/model-gateway/`, `examples/safety-eval/`, `examples/mcp-tool-boundary/`, `examples/memory-index-evidence/`, `examples/release-gate-evidence/`, including runtime, gateway, safety, tool-boundary, index, and release-gate evidence |
+| Task-first onboarding | Done | `docs/en/tutorials/quick-navigation.md`, `docs/zh/tutorials/快速导航卡.md`, `examples/README.md`, `examples/agent-decision-trace/`, `examples/rag-evidence-refusal/`, `examples/memory-vs-evidence/`, `examples/coding-workspace-safety/`, `examples/data-source-policy/`, `examples/coding-task-navigation/`, `examples/agent-eval-regression/`, `examples/github-agent-review/`, `examples/observability-trace/`, and `examples/model-gateway/`, `examples/safety-eval/`, `examples/mcp-tool-boundary/`, `examples/memory-index-evidence/`, `examples/release-gate-evidence/`, `examples/multilingual-support/`, `examples/compliance-review/`, including runtime, gateway, safety, tool-boundary, index, release-gate, multilingual-routing, and evidence-gated-approval evidence |
 | Design review assets | Done | `docs/en/concepts/design-review-workshop.md` and `docs/en/concepts/agent-system-blueprint.md` plus Chinese mirrors |
 | Practice handbook | Done | `docs/en/tutorials/practice-handbook.md` plus Chinese mirror |
 | Contribution assets | Done | Case study templates, contribution checklist, and enhanced PR template |
@@ -50,7 +50,7 @@ validated_date: 2026-09-18
 | Framework example freshness | reviewed before stale threshold |
 | Review coverage | >= 2 backups per active module |
 | Tutorial coverage | L0-L5 EN and ZH present |
-| Lab test coverage | 41 deterministic Lab tests pass locally |
+| Lab test coverage | 92 deterministic Lab tests pass locally |
 
 ## Recent Improvements
 

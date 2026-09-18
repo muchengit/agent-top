@@ -14,7 +14,7 @@ validated_date: 2026-09-18
 | 概念 | Done | `docs/en/concepts/`, 包括架构、MCP、多 Agent 调度、长期记忆、模型幻觉、Plan 决策、核心概念深挖来源和核心 Agent 实施手册 |
 | 框架地图 | Done | `docs/en/frameworks/framework-map.md` |
 | 可执行 Lab | Done | `labs/l0` 到 `labs/l5`，包括补充 Lab |
-| 任务优先入口 | Done | `docs/en/tutorials/quick-navigation.md`、`docs/zh/tutorials/快速导航卡.md`、`examples/README.md`、`examples/agent-decision-trace/`、`examples/rag-evidence-refusal/`、`examples/memory-vs-evidence/`、`examples/coding-workspace-safety/`、`examples/data-source-policy/`、`examples/coding-task-navigation/`、`examples/agent-eval-regression/`、`examples/github-agent-review/` 和 `examples/observability-trace/`, `examples/model-gateway/`, `examples/safety-eval/`, `examples/mcp-tool-boundary/`, `examples/memory-index-evidence/`, `examples/release-gate-evidence/`, 包括 runtime、gateway、safety、tool-boundary、index、release-gate evidence |
+| 任务优先入口 | Done | `docs/en/tutorials/quick-navigation.md`、`docs/zh/tutorials/快速导航卡.md`、`examples/README.md`、`examples/agent-decision-trace/`、`examples/rag-evidence-refusal/`、`examples/memory-vs-evidence/`、`examples/coding-workspace-safety/`、`examples/data-source-policy/`、`examples/coding-task-navigation/`、`examples/agent-eval-regression/`、`examples/github-agent-review/` 和 `examples/observability-trace/`, `examples/model-gateway/`, `examples/safety-eval/`, `examples/mcp-tool-boundary/`, `examples/memory-index-evidence/`, `examples/release-gate-evidence/`、`examples/multilingual-support/`、`examples/compliance-review/`, 包括 runtime、gateway、safety、tool-boundary、index、release-gate、多语言路由、基于证据的审批 evidence |
 | 设计审查资产 | Done | `docs/en/concepts/design-review-workshop.md`、`docs/en/concepts/agent-system-blueprint.md` 及中文镜像 |
 | 练习手册 | Done | `docs/en/tutorials/practice-handbook.md` 及中文镜像 |
 | 贡献资产 | Done | 案例研究模板、贡献自查清单和增强 PR 模板 |
@@ -45,7 +45,7 @@ validated_date: 2026-09-18
 | 双语同步 | <= 14 天 |
 | 框架示例保鲜 | 过期阈值前 review |
 | 审查覆盖 | 每个活跃模块 >= 2 个备份 |
-| Lab 测试覆盖 | 41 个确定性 Lab 测试本地通过 |
+| Lab 测试覆盖 | 92 个确定性 Lab 测试本地通过 |
 
 ## 近期改进
 
