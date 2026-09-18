@@ -1,4 +1,5 @@
 ---
+title: Agent 社区实验
 i18n-key: community-agent-community-lab
 last-synced: 2026-09-18
 validated_date: 2026-09-18
