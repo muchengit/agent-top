@@ -42,6 +42,8 @@ When you read an external Agent tutorial, ask:
 | Evaluation and observability | [`../production/evals-checklist.md`](../production/evals-checklist.md) | [`../../labs/l4/regression_gate/README.md`](../../../labs/l4/regression_gate/README.md) | Build release gate |
 | Safety guardrails | [`../production/safety-checklist.md`](../production/safety-checklist.md) | [`../../labs/l1/guardrail_helpers/README.md`](../../../labs/l1/guardrail_helpers/README.md) | Classify tool risk |
 | Postmortem and incident response | [`../production/quarterly-maintenance.md`](../production/quarterly-maintenance.md) | [`../../labs/l4/production_postmortem/README.md`](../../../labs/l4/production_postmortem/README.md) | Write action items |
+| Production supervision and incident response | [`../concepts/multi-agent-scheduling.md`](../concepts/multi-agent-scheduling.md) | [`../../labs/l5/supervision_incident_response/README.md`](../../../labs/l5/supervision_incident_response/README.md) | Run a rollback or escalate decision |
+| Deployment hygiene | [`../production/cost-stability-operations.md`](../production/cost-stability-operations.md) | [`../../labs/l4/deployment_hygiene/README.md`](../../../labs/l4/deployment_hygiene/README.md) | Produce a deploy/defer/block assessment |
 | Pattern contribution | [`../concepts/agent-system-architecture.md`](../concepts/agent-system-architecture.md) | [`../../labs/l5/pattern_catalog/README.md`](../../../labs/l5/pattern_catalog/README.md) | Draft a reusable pattern |
 
 ## Suggested Learning Path from External Tutorials
