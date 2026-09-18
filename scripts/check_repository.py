@@ -340,6 +340,54 @@ def check_examples_jsonl() -> None:
                 fail(f"{path.relative_to(ROOT)}:{number} is not valid JSONL: {exc}")
 
 
+ANSWER_KEY_ID_SPECS: dict[str, tuple[str, str, str]] = {
+    "agent-decision-trace": ("ID", "tool-calls.jsonl", "id"),
+    "agent-eval-regression": ("Fixture", "fixtures.jsonl", "fixture_id"),
+    "coding-task-navigation": ("Request ID", "requests.jsonl", "request_id"),
+    "coding-workspace-safety": ("ID", "changes.jsonl", "id"),
+    "data-source-policy": ("ID", "sources.jsonl", "id"),
+    "github-agent-review": ("PR", "pr-context.jsonl", "pr_id"),
+    "memory-vs-evidence": ("Prompt ID", "prompts.jsonl", "id"),
+    "rag-evidence-refusal": ("Prompt ID", "prompts.jsonl", "id"),
+}
+
+
+def check_example_answer_keys() -> None:
+    """Answer Key IDs in example READMEs must match data file IDs."""
+    bad: list[str] = []
+    for name, (column, data_file, id_field) in ANSWER_KEY_ID_SPECS.items():
+        example_dir = ROOT / "examples" / name
+        readme = example_dir / "README.md"
+        if not readme.exists():
+            continue
+        text = readme.read_text(encoding="utf-8")
+        match = re.search(r"## Answer Key\n\n((?:\|.*\|\n)+)", text)
+        if not match:
+            bad.append(f"{name}: no Answer Key table")
+            continue
+        key_ids = {
+            cells[0].strip()
+            for line in match.group(1).strip().splitlines()
+            if (cells := [cell.strip() for cell in line.strip().strip("|").split("|")])
+            and cells[0] != column
+            and not cells[0].startswith("---")
+        }
+        data_path = example_dir / data_file
+        data_ids = {
+            json.loads(line)[id_field]
+            for line in data_path.read_text(encoding="utf-8").splitlines()
+            if line.strip() and id_field in json.loads(line)
+        }
+        missing = sorted(data_ids - key_ids)
+        extra = sorted(key_ids - data_ids)
+        if missing or extra:
+            bad.append(
+                f"{name}: Answer Key missing {missing}, extra {extra}"
+            )
+    if bad:
+        fail("example Answer Key mismatch: " + "; ".join(bad))
+
+
 def check_docs_site_links() -> None:
     broken: list[str] = []
     for page in ("index.html", "search.html"):
@@ -541,6 +589,7 @@ def main() -> None:
     check_readme_mentions_lab_levels()
     check_docs_topic_dirs()
     check_examples_jsonl()
+    check_example_answer_keys()
     check_docs_site_links()
     check_template_pairs()
     check_search_coverage()
