@@ -1,6 +1,7 @@
 ---
 i18n-key: agent-top-concrete-framework
 last-synced: 2026-09-16
+validated_date: 2026-09-16
 ---
 
 # Agent-Top 具体框架（Concrete Framework）
