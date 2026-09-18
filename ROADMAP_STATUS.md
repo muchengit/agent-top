@@ -90,7 +90,7 @@ Break the roadmap vision into trackable tasks. Themes 1-3 are the core commitmen
 ### 4. Labs Coverage (optional)
 
 - [ ] Add an L4 lab on real-world deployment hygiene (observability + cost + release gate). Acceptance: a README-linked lab with 2+ deterministic tests lands under `labs/l4/`.
-- [ ] Add an L5 lab on multi-agent production supervision and incident response. Acceptance: the lab is bilingual and included in `labs/README.md` and the CI lab tests.
+- [x] Add an L5 lab on multi-agent production supervision and incident response. Acceptance: the lab is bilingual and included in `labs/README.md` and the CI lab tests.
 
 ### 5. Community Operations (optional)
 
