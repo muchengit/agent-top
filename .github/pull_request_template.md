@@ -14,6 +14,7 @@ What does this PR change?
 ## Docs Sync
 
 - [ ] I kept en/zh mirrors in sync (same `i18n-key`) and updated `last-synced` when changing docs
+- [ ] I marked framework/API changes with `sync-required` and `breaking-change` labels as appropriate
 
 ## Checklist
 
