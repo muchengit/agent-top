@@ -21,6 +21,7 @@ Create original patterns, reusable catalogs, and multilingual pattern implementa
 - [`custom_pattern_lab`](custom_pattern_lab/README.md): reusable custom pattern with safety and verification.
 - [`pattern_catalog`](pattern_catalog/README.md): reusable pattern catalog with readiness checks.
 - [`multilingual_pattern_lab`](multilingual_pattern_lab/README.md): one pattern translated across Python, Node.js, Rust, Go, and TypeScript.
+- [`pattern_eval_gate`](pattern_eval_gate/README.md): deterministic gate for patterns entering the catalog.
 
 ## Run
 

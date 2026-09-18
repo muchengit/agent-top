@@ -66,7 +66,38 @@ validated_date: 2026-09-18
 
 ## Next Priority
 
-Continue improving coverage with more real-world examples, maintain bilingual SLA, and keep framework examples fresh through `sync-required` when APIs change.
+Break the roadmap vision into trackable tasks. Themes 1-3 are the core commitments; themes 4-5 are additive and optional.
+
+### 1. Real-World Examples
+
+- [ ] Add a multilingual customer-service scenario under `examples/` (e.g., `examples/multilingual-support/`) covering language routing, cross-language memory, and refusal fallback. Acceptance: README plus runnable trace/evidence, and `check_example_dirs_readmes` passes.
+- [ ] Add a compliance-review scenario (e.g., `examples/compliance-review/`) demonstrating evidence-gated approval decisions and audit logging. Acceptance: follows the existing example template in `examples/README.md`.
+- [ ] Add "extended exercises" prompts to each existing example directory (e.g., `examples/rag-evidence-refusal/`, `examples/model-gateway/`). Acceptance: every example README lists 2-3 follow-up exercises linked to the relevant tutorials or labs.
+- [ ] Refresh the `examples/README.md` index and the Open-Source Pattern Matrix rows when new examples land. Acceptance: new entries are cross-linked from both EN and ZH index files.
+
+### 2. Bilingual SLA
+
+- [ ] Create new docs as EN/ZH pairs from day one; flag PRs that add a single-language doc. Acceptance: bilingual checks in `scripts/check_repository.py` pass in CI.
+- [ ] Refresh the `last-synced` frontmatter on both mirrors whenever one side changes. Acceptance: no EN/ZH pair drifts beyond the 14-day health target.
+- [ ] Run `scripts/check_repository.py` on every PR and quarterly, fixing dead links and missing mirrors before merge. Acceptance: the `check_repository.py` CI job stays green.
+
+### 3. Framework Freshness
+
+- [ ] Keep the `sync-required` label workflow for framework docs (`docs/en/frameworks/`, `docs/en/agent-top-concrete-framework.md`) when upstream APIs change. Acceptance: the label checklist item is part of the PR template.
+- [ ] Record `tested_against` and `validated_date` in framework example frontmatter (e.g., `examples/model-gateway/`, `examples/mcp-tool-boundary/`). Acceptance: all example frontmatter includes both keys.
+- [ ] Maintain a quarterly maintenance calendar based on `docs/en/production/quarterly-maintenance.md`; review framework examples before the stale threshold. Acceptance: quarterly review notes land in `templates/monthly-contributor-report.md` or a maintenance log.
+
+### 4. Labs Coverage (optional)
+
+- [ ] Add an L4 lab on real-world deployment hygiene (observability + cost + release gate). Acceptance: a README-linked lab with 2+ deterministic tests lands under `labs/l4/`.
+- [ ] Add an L5 lab on multi-agent production supervision and incident response. Acceptance: the lab is bilingual and included in `labs/README.md` and the CI lab tests.
+
+### 5. Community Operations (optional)
+
+- [ ] Publish a monthly contributor report using `templates/monthly-contributor-report.md`. Acceptance: the report is committed to `docs/en/community/` each month.
+- [ ] Adopt a community experiment rhythm (e.g., one experiment per quarter): propose, prototype, then promote or archive example/lab candidates. Acceptance: an experiment log exists under `docs/en/community/`.
+
+Priority order: complete themes 1-3 first; schedule themes 4-5 when contributor bandwidth allows.
 
 ## Completion Notes
 

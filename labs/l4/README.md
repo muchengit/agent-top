@@ -21,6 +21,7 @@ Productionize Agent systems with evaluation, safety, deployment, cost, and postm
 - [`production_postmortem`](production_postmortem/README.md): executable production postmortem structure, coverage checks, and action-item closure.
 - [`regression_gate`](regression_gate/README.md): release gating for safety, trace, rollback, and cost.
 - [`cost_and_stability_guardrails`](cost_and_stability_guardrails/README.md): runtime cost, latency, retry, and degradation guardrails.
+- [`production_trace_integrity`](production_trace_integrity/README.md): deterministic trace integrity validation for production observability.
 
 ## Run
 

@@ -38,12 +38,14 @@ Executable Labs are the primary hands-on format for Agent-Top. They run locally 
 - [`l4/production_postmortem`](l4/production_postmortem/README.md): executable production postmortem structure, coverage checks, and action-item closure.
 - [`l4/regression_gate`](l4/regression_gate/README.md): release gating for safety, trace, rollback, and cost.
 - [`l4/cost_and_stability_guardrails`](l4/cost_and_stability_guardrails/README.md): runtime cost, latency, retry, and degradation guardrails.
+- [`l4/production_trace_integrity`](l4/production_trace_integrity/README.md): deterministic trace integrity validation for production observability.
 
 ### L5
 
 - [`l5/custom_pattern_lab`](l5/custom_pattern_lab/README.md): reusable custom pattern with safety and verification.
 - [`l5/pattern_catalog`](l5/pattern_catalog/README.md): reusable pattern catalog with readiness checks.
 - [`l5/multilingual_pattern_lab`](l5/multilingual_pattern_lab/README.md): one pattern translated across Python, Node.js, Rust, Go, and TypeScript.
+- [`l5/pattern_eval_gate`](l5/pattern_eval_gate/README.md): deterministic gate for patterns entering the catalog.
 
 ## Run All Tests
 

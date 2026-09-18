@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Agent-Top Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; max-width: 880px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+    h1 { margin-bottom: 0.25em; }
+    h2 { border-bottom: 1px solid #e1e4e8; padding-bottom: 0.3em; margin-top: 2em; }
+    a { color: #0969da; }
+    code { background: #f6f8fa; padding: 2px 5px; border-radius: 4px; }
+    ul { margin-top: 0.5em; }
+    li { margin-bottom: 0.3em; }
+    input { padding: 8px 10px; font-size: 1em; width: 60%; max-width: 480px; border: 1px solid #d0d7de; border-radius: 6px; }
+    button { padding: 8px 12px; margin-left: 6px; font-size: 0.9em; border: 1px solid #d0d7de; border-radius: 6px; background: #f6f8fa; cursor: pointer; }
+    button.active { background: #0969da; color: #fff; border-color: #0969da; }
+    #results li { margin-bottom: 0.6em; }
+    .tag { display: inline-block; font-size: 0.75em; padding: 1px 6px; border-radius: 10px; margin-left: 6px; color: #57606a; background: #f6f8fa; border: 1px solid #e1e4e8; }
+  </style>
+</head>
+<body>
+  <h1>Agent-Top Search</h1>
+  <p>Search the repository index across docs, labs, examples, and templates.</p>
+  <p><a href="index.html">Home</a> · <a href="health.html">Repository Health</a> · <a href="labs.html">Labs</a></p>
+
+  <input id="q" type="search" placeholder="Search titles, paths, or categories…" autocomplete="off" />
+  <button data-cat="all" class="active">All</button>
+  <button data-cat="Docs">Docs</button>
+  <button data-cat="Labs">Labs</button>
+  <button data-cat="Examples">Examples</button>
+  <button data-cat="Templates">Templates</button>
+
+  <p id="count"></p>
+  <ul id="results"></ul>
+
+  <script>
+    const ENTRIES = [
+      { t: "English Documentation Index", p: "../docs/en/README.md", c: "Docs", l: "en" },
+      { t: "Agent-Top Concrete Framework", p: "../docs/en/agent-top-concrete-framework.md", c: "Docs", l: "en" },
+      { t: "L0: First LLM Call", p: "../docs/en/l0-first-llm-call.md", c: "Docs", l: "en" },
+      { t: "L1: Minimal React Agent", p: "../docs/en/l1-minimal-react-agent.md", c: "Docs", l: "en" },
+      { t: "L2: Single Agent + MCP", p: "../docs/en/l2-single-agent-mcp.md", c: "Docs", l: "en" },
+      { t: "L3: RAG, Memory, Observability", p: "../docs/en/l3-rag-memory-observability.md", c: "Docs", l: "en" },
+      { t: "L4: Production", p: "../docs/en/l4-production.md", c: "Docs", l: "en" },
+      { t: "L5: Custom Patterns", p: "../docs/en/l5-custom-patterns.md", c: "Docs", l: "en" },
+      { t: "Concept Overview", p: "../docs/en/concepts/overview.md", c: "Docs", l: "en" },
+      { t: "Agent System Architecture", p: "../docs/en/concepts/agent-system-architecture.md", c: "Docs", l: "en" },
+      { t: "ReAct Pattern", p: "../docs/en/concepts/react-pattern.md", c: "Docs", l: "en" },
+      { t: "Model Context Protocol (MCP)", p: "../docs/en/concepts/mcp.md", c: "Docs", l: "en" },
+      { t: "Agent Design Review Checklist", p: "../docs/en/concepts/design-review-checklist.md", c: "Docs", l: "en" },
+      { t: "Practice Handbook", p: "../docs/en/tutorials/practice-handbook.md", c: "Docs", l: "en" },
+      { t: "Quick Navigation", p: "../docs/en/tutorials/quick-navigation.md", c: "Docs", l: "en" },
+      { t: "Learning Paths", p: "../docs/en/tutorials/learning-paths.md", c: "Docs", l: "en" },
+      { t: "Evaluation & Regression Playbook", p: "../docs/en/production/evals-playbook.md", c: "Docs", l: "en" },
+      { t: "Observability & Trace Contract", p: "../docs/en/production/observability-trace-contract.md", c: "Docs", l: "en" },
+      { t: "Cost & Stability Operations", p: "../docs/en/production/cost-stability-operations.md", c: "Docs", l: "en" },
+      { t: "Interview Answer Framework", p: "../docs/en/interviews/interview-answer-framework.md", c: "Docs", l: "en" },
+      { t: "Interview Question Bank Overview", p: "../docs/en/interviews/questions/question-bank-overview.md", c: "Docs", l: "en" },
+      { t: "Customer Support Multi-Agent (Case)", p: "../docs/en/cases/customer-support-multi-agent.md", c: "Docs", l: "en" },
+      { t: "Personal Knowledge RAG (Case)", p: "../docs/en/cases/personal-knowledge-rag.md", c: "Docs", l: "en" },
+      { t: "English Community Index", p: "../docs/en/community/README.md", c: "Docs", l: "en" },
+      { t: "中文文档索引", p: "../docs/zh/文档索引.md", c: "Docs", l: "zh" },
+      { t: "Agent-Top 具体框架", p: "../docs/zh/Agent-Top具体框架.md", c: "Docs", l: "zh" },
+      { t: "L0 第一次 LLM 调用", p: "../docs/zh/L0第一次LLM调用.md", c: "Docs", l: "zh" },
+      { t: "L1 最小 ReAct Agent", p: "../docs/zh/L1最小ReActAgent.md", c: "Docs", l: "zh" },
+      { t: "L2 可靠单 Agent 与 MCP", p: "../docs/zh/L2可靠单Agent与MCP.md", c: "Docs", l: "zh" },
+      { t: "L3 RAG 记忆与可观测", p: "../docs/zh/L3RAG记忆与可观测.md", c: "Docs", l: "zh" },
+      { t: "L4 生产化", p: "../docs/zh/L4生产化.md", c: "Docs", l: "zh" },
+      { t: "L5 原创模式", p: "../docs/zh/L5原创模式.md", c: "Docs", l: "zh" },
+      { t: "Agent 概念总览", p: "../docs/zh/concepts/Agent概念总览.md", c: "Docs", l: "zh" },
+      { t: "Agent 系统架构", p: "../docs/zh/concepts/Agent系统架构.md", c: "Docs", l: "zh" },
+      { t: "ReAct 模式", p: "../docs/zh/concepts/ReAct模式.md", c: "Docs", l: "zh" },
+      { t: "练习与 Lab 使用手册", p: "../docs/zh/tutorials/练习与Lab使用手册.md", c: "Docs", l: "zh" },
+      { t: "开源模式矩阵", p: "../docs/zh/tutorials/开源模式矩阵.md", c: "Docs", l: "zh" },
+      { t: "评估与回归 Playbook", p: "../docs/zh/production/评估与回归Playbook.md", c: "Docs", l: "zh" },
+      { t: "可观测性与 Trace 契约", p: "../docs/zh/production/可观测性与Trace契约.md", c: "Docs", l: "zh" },
+      { t: "Agent 面试答案范例", p: "../docs/zh/interviews/面试答案范例.md", c: "Docs", l: "zh" },
+      { t: "面试题总览", p: "../docs/zh/interviews/questions/面试题总览.md", c: "Docs", l: "zh" },
+      { t: "个人知识库 RAG 案例", p: "../docs/zh/cases/个人知识库RAG案例.md", c: "Docs", l: "zh" },
+      { t: "Agent 社区实验", p: "../docs/zh/community/Agent社区实验.md", c: "Docs", l: "zh" },
+      { t: "翻译工作流", p: "../docs/zh/community/翻译流程.md", c: "Docs", l: "zh" },
+      { t: "Labs Index", p: "../labs/README.md", c: "Labs", l: "en" },
+      { t: "Lab 0: First LLM Call", p: "../labs/l0/README.md", c: "Labs", l: "en" },
+      { t: "Lab 1: Minimal React Agent", p: "../labs/l1/README.md", c: "Labs", l: "en" },
+      { t: "Lab 2: Single Agent + MCP", p: "../labs/l2/single_agent_mcp/README.md", c: "Labs", l: "en" },
+      { t: "Lab 3: RAG, Memory, Observability", p: "../labs/l3/rag_memory_observability/README.md", c: "Labs", l: "en" },
+      { t: "Lab 4: Regression Gate", p: "../labs/l4/regression_gate/README.md", c: "Labs", l: "en" },
+      { t: "Lab 5: Custom Patterns", p: "../labs/l5/README.md", c: "Labs", l: "en" },
+      { t: "Lab 5: Custom Pattern Lab", p: "../labs/l5/custom_pattern_lab/README.md", c: "Labs", l: "en" },
+      { t: "Examples Overview", p: "../examples/README.md", c: "Examples", l: "en" },
+      { t: "Agent Decision Trace", p: "../examples/agent-decision-trace/README.md", c: "Examples", l: "en" },
+      { t: "Agent Eval Regression", p: "../examples/agent-eval-regression/README.md", c: "Examples", l: "en" },
+      { t: "Coding Task Navigation", p: "../examples/coding-task-navigation/README.md", c: "Examples", l: "en" },
+      { t: "MCP Tool Boundary", p: "../examples/mcp-tool-boundary/README.md", c: "Examples", l: "en" },
+      { t: "Model Gateway", p: "../examples/model-gateway/README.md", c: "Examples", l: "en" },
+      { t: "Observability Trace", p: "../examples/observability-trace/README.md", c: "Examples", l: "en" },
+      { t: "Safety Eval", p: "../examples/safety-eval/README.md", c: "Examples", l: "en" },
+      { t: "Templates Overview", p: "../templates/README.md", c: "Templates", l: "en" },
+      { t: "Agent Skill Card Template", p: "../templates/agent-skill-card-template.md", c: "Templates", l: "en" },
+      { t: "Agent Design Template", p: "../templates/agent-design-template.md", c: "Templates", l: "en" },
+      { t: "Lab Template", p: "../templates/lab-template.md", c: "Templates", l: "en" },
+      { t: "Design Review Workshop Template", p: "../templates/design-review-workshop-template.md", c: "Templates", l: "en" },
+      { t: "Interview Question Template", p: "../templates/interview-question-template.md", c: "Templates", l: "en" },
+      { t: "Eval Report Template", p: "../templates/eval-report-template.md", c: "Templates", l: "en" },
+      { t: "Observability Trace Template", p: "../templates/observability-trace-template.md", c: "Templates", l: "en" },
+    ];
+
+    let activeCat = "all";
+    const input = document.getElementById("q");
+    const results = document.getElementById("results");
+    const count = document.getElementById("count");
+
+    function render() {
+      const query = input.value.trim().toLowerCase();
+      const matched = ENTRIES.filter(function (e) {
+        const inCat = activeCat === "all" || e.c === activeCat;
+        if (!inCat) return false;
+        if (!query) return true;
+        const hay = (e.t + " " + e.p + " " + e.c + " " + e.l).toLowerCase();
+        return query.split(/\s+/).every(function (part) { return hay.indexOf(part) !== -1; });
+      });
+      count.textContent = matched.length + " of " + ENTRIES.length + " entries";
+      results.innerHTML = "";
+      matched.forEach(function (e) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = e.p;
+        a.textContent = e.t;
+        const tag = document.createElement("span");
+        tag.className = "tag";
+        tag.textContent = e.c + " · " + e.l;
+        li.appendChild(a);
+        li.appendChild(tag);
+        results.appendChild(li);
+      });
+    }
+
+    document.querySelectorAll("button").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        document.querySelectorAll("button").forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        activeCat = btn.dataset.cat;
+        render();
+      });
+    });
+
+    input.addEventListener("input", render);
+    render();
+  </script>
+</body>
+</html>

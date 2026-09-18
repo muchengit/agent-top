@@ -61,4 +61,35 @@ validated_date: 2026-09-18
 
 ## 下一步优先级
 
-继续增加真实案例，维持双语 SLA，并在 API 变化时通过 `sync-required` 保持框架示例新鲜。
+将路线愿景拆解为可追踪的任务。主题 1-3 为核心承诺；主题 4-5 为可选新增。
+
+### 1. 真实世界案例扩充
+
+- [ ] 在 `examples/` 下新增多语言客服场景（如 `examples/multilingual-support/`），覆盖语言路由、跨语言记忆与拒答降级。验收：包含 README 与可运行的 trace/evidence，且 `check_example_dirs_readmes` 通过。
+- [ ] 新增合规审查场景（如 `examples/compliance-review/`），演示基于证据的审批决策与审计日志。验收：遵循 `examples/README.md` 中的既有示例模板。
+- [ ] 为既有示例目录（如 `examples/rag-evidence-refusal/`、`examples/model-gateway/`）补充“扩展练习”提示。验收：每个示例 README 列出 2-3 个关联教程或 Lab 的延伸练习。
+- [ ] 新示例落地后同步刷新 `examples/README.md` 索引与开源模式矩阵相关行。验收：EN/ZH 两份索引文件均有交叉引用。
+
+### 2. 双语 SLA 维持
+
+- [ ] 新文档从创建之日起即为 EN/ZH 成对提交；标记只添加单语文的 PR。验收：CI 中 `scripts/check_repository.py` 的双语检查通过。
+- [ ] 任一侧修改时同步刷新两侧镜像的 `last-synced` frontmatter。验收：无任何 EN/ZH 成对文档漂移超过 14 天健康目标。
+- [ ] 每个 PR 与每季度运行 `scripts/check_repository.py`，合并前修复死链与缺失镜像。验收：`check_repository.py` 的 CI job 保持绿色。
+
+### 3. 框架示例保鲜
+
+- [ ] 上游 API 变化时，对框架文档（`docs/en/frameworks/`、`docs/en/agent-top-concrete-framework.md`）保持 `sync-required` 标签流程。验收：PR 模板包含该标签的检查项。
+- [ ] 在框架示例 frontmatter 中记录 `tested_against` 与 `validated_date`（如 `examples/model-gateway/`、`examples/mcp-tool-boundary/`）。验收：所有示例 frontmatter 均包含这两个键。
+- [ ] 依据 `docs/en/production/quarterly-maintenance.md` 维护季度维护日历，在过期阈值前 review 框架示例。验收：季度 review 记录落入 `templates/monthly-contributor-report.md` 或维护日志。
+
+### 4. Labs 覆盖（可选新增）
+
+- [ ] 新增 L4 实战 Lab：真实部署卫生（可观测性 + 成本 + 发布门禁）。验收：`labs/l4/` 下新增带 README 链接的 Lab，含 2+ 个确定性测试。
+- [ ] 新增 L5 实战 Lab：多 Agent 生产监督与故障响应。验收：Lab 双语呈现，并纳入 `labs/README.md` 与 CI Lab 测试。
+
+### 5. 社区运营（可选新增）
+
+- [ ] 使用 `templates/monthly-contributor-report.md` 发布月度贡献者报告。验收：报告按月提交到 `docs/en/community/`。
+- [ ] 建立社区实验节奏（如每季度一个实验）：先提案、原型验证，再晋升或归档示例/Lab 候选。验收：`docs/en/community/` 下存在实验记录。
+
+优先级顺序：先完成主题 1-3；当贡献者带宽允许时，再排期主题 4-5。
