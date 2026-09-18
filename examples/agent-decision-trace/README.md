@@ -35,6 +35,11 @@ Each line in `tool-calls.jsonl` is one JSON object: `id`, `tool`, `args`, and `e
 | update_status_ticket | allow | Small write with idempotent update and audit fields. |
 | summarize_docs_no_source | clarify | Needs citation or explicit source before factual claims. |
 
+## Extended Exercises
+
+1. Design a follow-up trace that exercises the same pattern against the [guardrail reference material](../../labs/l1/guardrail_helpers/README.md).
+2. Swap the target scenario for a different domain and list the three decisions that would change.
+
 ## Reuse
 
 Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.

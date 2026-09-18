@@ -65,10 +65,10 @@ validated_date: 2026-09-18
 
 ### 1. 真实世界案例扩充
 
-- [ ] 在 `examples/` 下新增多语言客服场景（如 `examples/multilingual-support/`），覆盖语言路由、跨语言记忆与拒答降级。验收：包含 README 与可运行的 trace/evidence，且 `check_example_dirs_readmes` 通过。
-- [ ] 新增合规审查场景（如 `examples/compliance-review/`），演示基于证据的审批决策与审计日志。验收：遵循 `examples/README.md` 中的既有示例模板。
-- [ ] 为既有示例目录（如 `examples/rag-evidence-refusal/`、`examples/model-gateway/`）补充“扩展练习”提示。验收：每个示例 README 列出 2-3 个关联教程或 Lab 的延伸练习。
-- [ ] 新示例落地后同步刷新 `examples/README.md` 索引与开源模式矩阵相关行。验收：EN/ZH 两份索引文件均有交叉引用。
+- [x] 在 `examples/` 下新增多语言客服场景（如 `examples/multilingual-support/`），覆盖语言路由、跨语言记忆与拒答降级。验收：包含 README 与可运行的 trace/evidence，且 `check_example_dirs_readmes` 通过。
+- [x] 新增合规审查场景（如 `examples/compliance-review/`），演示基于证据的审批决策与审计日志。验收：遵循 `examples/README.md` 中的既有示例模板。
+- [x] 为既有示例目录（如 `examples/rag-evidence-refusal/`、`examples/model-gateway/`）补充“扩展练习”提示。验收：每个示例 README 列出 2-3 个关联教程或 Lab 的延伸练习。
+- [x] 新示例落地后同步刷新 `examples/README.md` 索引与开源模式矩阵相关行。验收：EN/ZH 两份索引文件均有交叉引用。
 
 ### 2. 双语 SLA 维持
 

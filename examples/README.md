@@ -20,6 +20,12 @@ Agent-Top examples are fictional, local, and do not require API keys, external s
 | MCP Tool Boundary | [`mcp-tool-boundary/README.md`](mcp-tool-boundary/README.md) | MCP server evidence, graph checkpoints, typed tool output, permission scope, and result status |
 | Memory And Index Evidence | [`memory-index-evidence/README.md`](memory-index-evidence/README.md) | Memory lifecycle, vector collection boundaries, search evidence, and serving deployment evidence |
 | Release Gate Evidence | [`release-gate-evidence/README.md`](release-gate-evidence/README.md) | Workflow run evidence, checkout/setup version pinning, artifact/cache decisions, and release-gate replayability |
+| Multilingual Support | [`multilingual-support/README.md`](multilingual-support/README.md) | Language routing, cross-language memory scope, unsupported-language fallback and refusal |
+| Compliance Review | [`compliance-review/README.md`](compliance-review/README.md) | Evidence-gated approvals, approver roles, audit trails, and blocking conditions |
+
+## Extended Exercises
+
+Each exercise README now includes an `## Extended Exercises` section with 2-3 follow-up prompts linked to the relevant tutorials or Labs. Pick one prompt, change the policy, and record what changes in your decision log.
 
 ## How To Use These Exercises
 

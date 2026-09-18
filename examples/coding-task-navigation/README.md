@@ -33,6 +33,11 @@ Each line is one JSON object: `task-entries.jsonl` records `entry_id`, `task`, `
 | request_2 | memory_vs_evidence | `examples/memory-vs-evidence/README.md`, `docs/en/concepts/long-term-memory.md`, and `docs/en/concepts/rag-memory-mcp-flow.md` |
 | request_3 | patch_review_safety | `examples/coding-workspace-safety/README.md`, `docs/en/concepts/implementation-guide.md`, and `templates/postmortem-template.md` |
 
+## Extended Exercises
+
+1. Design a follow-up trace that exercises the same pattern against the [nav reference material](../../docs/en/tutorials/quick-navigation.md).
+2. Swap the target scenario for a different domain and list the three decisions that would change.
+
 ## Reuse
 
 Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.

@@ -29,6 +29,11 @@ Each line is one JSON object with a stable `event`, `trace_id`, `route`, `provid
 | Budget decision is `block` but retry continued | budget | postmortem + rollback |
 | Runtime timeout lacks latency evidence | runtime | trace_field |
 
+## Extended Exercises
+
+1. Design a follow-up trace that exercises the same pattern against the [cost reference material](../../docs/en/production/cost-stability-operations.md).
+2. Swap the target scenario for a different domain and list the three decisions that would change.
+
 ## Reuse
 
 Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.

@@ -70,10 +70,10 @@ Break the roadmap vision into trackable tasks. Themes 1-3 are the core commitmen
 
 ### 1. Real-World Examples
 
-- [ ] Add a multilingual customer-service scenario under `examples/` (e.g., `examples/multilingual-support/`) covering language routing, cross-language memory, and refusal fallback. Acceptance: README plus runnable trace/evidence, and `check_example_dirs_readmes` passes.
-- [ ] Add a compliance-review scenario (e.g., `examples/compliance-review/`) demonstrating evidence-gated approval decisions and audit logging. Acceptance: follows the existing example template in `examples/README.md`.
-- [ ] Add "extended exercises" prompts to each existing example directory (e.g., `examples/rag-evidence-refusal/`, `examples/model-gateway/`). Acceptance: every example README lists 2-3 follow-up exercises linked to the relevant tutorials or labs.
-- [ ] Refresh the `examples/README.md` index and the Open-Source Pattern Matrix rows when new examples land. Acceptance: new entries are cross-linked from both EN and ZH index files.
+- [x] Add a multilingual customer-service scenario under `examples/` (e.g., `examples/multilingual-support/`) covering language routing, cross-language memory, and refusal fallback. Acceptance: README plus runnable trace/evidence, and `check_example_dirs_readmes` passes.
+- [x] Add a compliance-review scenario (e.g., `examples/compliance-review/`) demonstrating evidence-gated approval decisions and audit logging. Acceptance: follows the existing example template in `examples/README.md`.
+- [x] Add "extended exercises" prompts to each existing example directory (e.g., `examples/rag-evidence-refusal/`, `examples/model-gateway/`). Acceptance: every example README lists 2-3 follow-up exercises linked to the relevant tutorials or labs.
+- [x] Refresh the `examples/README.md` index and the Open-Source Pattern Matrix rows when new examples land. Acceptance: new entries are cross-linked from both EN and ZH index files.
 
 ### 2. Bilingual SLA
 

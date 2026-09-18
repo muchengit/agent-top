@@ -1,0 +1,4 @@
+{"event": "routing.request", "trace_id": "trace_3001", "locale": "zh-CN", "detected_language": "zh", "confidence": 0.97, "supported": true, "memory_scope": "user_3001", "decision": "route", "next_action": "route_zh"}
+{"event": "routing.request", "trace_id": "trace_3002", "locale": "fr-FR", "detected_language": "fr", "confidence": 0.55, "supported": true, "memory_scope": "user_3002", "decision": "clarify", "next_action": "fallback_en", "fallback_language": "en"}
+{"event": "routing.request", "trace_id": "trace_3003", "locale": "xx-XX", "detected_language": "unknown", "confidence": 0.31, "supported": false, "memory_scope": "user_3003", "decision": "refuse", "next_action": "escalate", "refusal_reason": "unsupported_language"}
+{"event": "routing.request", "trace_id": "trace_3004", "locale": "es-ES", "detected_language": "es", "confidence": 0.92, "supported": true, "memory_scope": "user_3004", "decision": "route", "next_action": "route_es"}

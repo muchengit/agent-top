@@ -29,6 +29,11 @@ Common fields: `event`, `trace_id`, `commit_sha`, `workflow_run_id`, `action_ref
 | Cache hit lacks cache key | tooling | request_evidence |
 | Rollback target is missing | release | rollback |
 
+## Extended Exercises
+
+1. Design a follow-up trace that exercises the same pattern against the [gate2 reference material](../../labs/l4/regression_gate/README.md).
+2. Swap the target scenario for a different domain and list the three decisions that would change.
+
 ## Reuse
 
 Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.

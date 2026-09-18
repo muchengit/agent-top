@@ -34,6 +34,11 @@ Each line is one JSON object: `fixtures.jsonl` records `fixture_id`, `task`, `ev
 | fixture_3 | rollback | v2 ignores a deleted user preference. |
 | fixture_4 | rollback | v2 calls a write tool without explicit approval evidence. |
 
+## Extended Exercises
+
+1. Design a follow-up trace that exercises the same pattern against the [eval reference material](../../labs/l3/rag_evaluator/README.md).
+2. Swap the target scenario for a different domain and list the three decisions that would change.
+
 ## Reuse
 
 Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.

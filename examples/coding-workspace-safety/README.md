@@ -34,6 +34,11 @@ Each line is one JSON object: `changes.jsonl` records `id`, `change`, `risk`, `c
 | direct_prod_config | block | Config diff and change approval | Direct production config changes bypass review and rollback. |
 | flaky_retry_loop | rollback | Retry count and latency assertions | Retry loop can hide failures and inflate cost. |
 
+## Extended Exercises
+
+1. Design a follow-up trace that exercises the same pattern against the [agent reference material](../../labs/l1/minimal_react_agent/README.md).
+2. Swap the target scenario for a different domain and list the three decisions that would change.
+
 ## Reuse
 
 Copy a `*.template.jsonl` file to a scratch file, fill it in while working through the steps, then re-read it as a decision log. To validate that every JSONL file stays legal JSON, run `python scripts/check_repository.py` from the repository root (its `check_examples_jsonl` step also runs in CI). To practice a different policy, change one rule, redo the answers, and compare outcomes.

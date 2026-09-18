@@ -1,0 +1,5 @@
+{"event": "memory.read", "trace_id": "trace_3001", "locale": "zh-CN", "memory_scope": "user_3001", "language_tag": "zh", "decision": "ok", "next_action": "use_context"}
+{"event": "memory.write", "trace_id": "trace_3001", "locale": "zh-CN", "memory_scope": "user_3001", "language_tag": "zh", "decision": "ok", "next_action": "store"}
+{"event": "memory.read", "trace_id": "trace_3005", "locale": "en-US", "memory_scope": "user_3005", "language_tag": "en", "decision": "ok", "next_action": "use_context"}
+{"event": "memory.write", "trace_id": "trace_3005", "locale": "en-US", "memory_scope": "user_3005", "language_tag": "zh", "decision": "warn", "next_action": "align_scope"}
+{"event": "memory.duplicate", "trace_id": "trace_3005", "locale": "en-US", "memory_scope": "user_3005", "language_tag": "zh", "decision": "block", "next_action": "reconcile"}

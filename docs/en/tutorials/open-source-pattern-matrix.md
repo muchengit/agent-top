@@ -2,7 +2,7 @@
 title: Open-Source Pattern Matrix
 validated_date: 2026-09-17
 i18n-key: tutorials-open-source-pattern-matrix
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # Open-Source Pattern Matrix
@@ -76,6 +76,8 @@ This matrix distills Agent-Top's open-source inspiration into reusable patterns.
 | Workflow evidence | Distributed Agent activity cannot be traced | Record workflow/activity id, input event id, retry attempt, dead-letter state, owner, and terminal decision across services | [`../concepts/multi-agent-scheduling.md`](../concepts/multi-agent-scheduling.md), [`../production/observability-trace-contract.md`](../production/observability-trace-contract.md) | Vendor workflow runtime internals |
 | Artifact evidence | Release proof is only a directory name | Record artifact name, artifact SHA, upload/download owner, provenance, and decision linkage | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../../examples/release-gate-evidence/README.md`](../../../examples/release-gate-evidence/README.md) | Artifact platform API details |
 | Cache evidence | Cached results hide release risk | Record cache key, hit/miss, invalidation owner, cache version, and release risk decision | [`../production/evals-playbook.md`](../production/evals-playbook.md), [`../../../examples/release-gate-evidence/README.md`](../../../examples/release-gate-evidence/README.md) | Cache provider configuration |
+| Multilingual routing evidence | Language routing and fallback are quiet | Record detected language, confidence, supported set, memory scope, fallback, and refusal decision per request | [`../l5-custom-patterns.md`](../l5-custom-patterns.md), [`../../../examples/multilingual-support/README.md`](../../../examples/multilingual-support/README.md) | Translation API internals |
+| Evidence-gated approvals | Approvals run on trust instead of proof | Require evidence completeness, policy, approver role, and audit trail before approve/block/release | [`../governance/project-operating-model.md`](../governance/project-operating-model.md), [`../../../examples/compliance-review/README.md`](../../../examples/compliance-review/README.md) | Company-specific sign-off forms |
 
 ## Decision Rules
 
