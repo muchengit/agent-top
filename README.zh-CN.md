@@ -118,7 +118,7 @@ agent-top/
 - 开源模式矩阵：[`docs/en/tutorials/open-source-pattern-matrix.md`](docs/en/tutorials/open-source-pattern-matrix.md)
 - 可执行 Lab：[`labs`](labs)
 - 内容模板：[`templates`](templates)
-- 中文文档索引：[`docs/zh/文档索引.md`](docs/zh/文档索引.md)
+- 中文文档索引：[`docs/zh/README.md`](docs/zh/README.md)
 - Agent 技能指南：[`docs/zh/skills/Agent技能指南.md`](docs/zh/skills/Agent技能指南.md)
 - 治理规范：[`GOVERNANCE.zh-CN.md`](GOVERNANCE.zh-CN.md)
 - 贡献指南：[`CONTRIBUTING.zh-CN.md`](CONTRIBUTING.zh-CN.md)
