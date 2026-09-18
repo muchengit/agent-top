@@ -179,8 +179,13 @@ def check_bilingual_frontmatter(markdown_paths: list[Path]) -> None:
         if len(rel_parts) < 3 or not is_bilingual:
             continue
         meta = parse_frontmatter(path)
-        if "i18n-key" not in meta or "last-synced" not in meta:
-            bad.append(str(path.relative_to(ROOT)))
+        missing = [
+            key
+            for key in ("title", "i18n-key", "last-synced", "validated_date")
+            if key not in meta or not meta[key]
+        ]
+        if missing:
+            bad.append(str(path.relative_to(ROOT)) + ": " + ", ".join(missing))
     if bad:
         fail("bilingual frontmatter missing: " + ", ".join(bad))
 
