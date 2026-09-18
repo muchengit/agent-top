@@ -2,7 +2,7 @@
 title: Multi-Round Research and Discussion Flow
 validated_date: 2026-09-16
 i18n-key: concepts-multi-round-research-discussion
-last-synced: 2026-09-16
+last-synced: 2026-09-17
 ---
 
 # Multi-Round Research and Discussion Flow

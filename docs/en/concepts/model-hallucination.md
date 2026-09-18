@@ -2,7 +2,7 @@
 title: Model Hallucination
 validated_date: 2026-09-17
 i18n-key: concepts-model-hallucination
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # Model Hallucination

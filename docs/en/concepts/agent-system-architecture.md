@@ -2,7 +2,7 @@
 title: Agent System Architecture
 validated_date: 2026-09-16
 i18n-key: concepts-agent-system-architecture
-last-synced: 2026-09-16
+last-synced: 2026-09-17
 ---
 
 # Agent System Architecture

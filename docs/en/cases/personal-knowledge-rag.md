@@ -2,7 +2,7 @@
 title: Personal Knowledge Base RAG Case
 validated_date: 2026-09-17
 i18n-key: cases-personal-knowledge-rag
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # Personal Knowledge Base RAG Case

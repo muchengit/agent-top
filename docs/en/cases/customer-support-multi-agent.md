@@ -2,7 +2,7 @@
 title: Customer Support Multi-Agent Case
 validated_date: 2026-09-17
 i18n-key: cases-customer-support-multi-agent
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # Customer Support Multi-Agent Case
