@@ -5,11 +5,11 @@ validated_date: 2026-09-18
 
 # Templates
 
-Templates define the standard structure for Agent-Top contributions. This index covers all 34 template files in `templates/` (35 files including this `README.md`, which is only the index).
+Templates define the standard structure for Agent-Top contributions. This index covers all 44 template files in `templates/` (45 files including this `README.md`, which is only the index).
 
 ## Templates
 
-### Bilingual Pairs (12 pairs / 24 files)
+### Bilingual Pairs (22 pairs / 44 files)
 
 Each pair contains an English source and its Chinese mirror of the same artefact; both sides must stay in sync.
 
@@ -25,24 +25,16 @@ Each pair contains an English source and its Chinese mirror of the same artefact
 - **Observability trace** — [`observability-trace-template.md`](observability-trace-template.md) (EN) ↔ [`可观测性Trace模板.md`](可观测性Trace模板.md) (CN)
 - **Eval and trace replay** — [`eval-trace-replay-template.md`](eval-trace-replay-template.md) (EN) ↔ [`可回放Eval和Trace模板.md`](可回放Eval和Trace模板.md) (CN)
 - **Agent skill card** — [`agent-skill-card-template.md`](agent-skill-card-template.md) (EN) ↔ [`Agent技能卡模板.md`](Agent技能卡模板.md) (CN)
-
-### English-Only Templates (9 files)
-
-Single-language templates with no Chinese mirror yet; localized versions should be added as a new pair per the sync rules below.
-
-- [`article-template.md`](article-template.md)
-- [`lab-template.md`](lab-template.md)
-- [`interview-question-template.md`](interview-question-template.md)
-- [`postmortem-template.md`](postmortem-template.md)
-- [`eval-report-template.md`](eval-report-template.md)
-- [`agent-design-template.md`](agent-design-template.md)
-- [`project-dispatch-plan.md`](project-dispatch-plan.md)
-- [`community-lab-template.md`](community-lab-template.md)
-- [`monthly-contributor-report.md`](monthly-contributor-report.md)
-
-### English-Only Guide (1 file)
-
-- [`contribution-checklist.md`](contribution-checklist.md) — pre-PR verification checklist (no Chinese mirror yet).
+- **Article template** — [`article-template.md`](article-template.md) (EN) ↔ [`文章模板.md`](文章模板.md) (CN)
+- **Lab template** — [`lab-template.md`](lab-template.md) (EN) ↔ [`Lab模板.md`](Lab模板.md) (CN)
+- **Interview question** — [`interview-question-template.md`](interview-question-template.md) (EN) ↔ [`面试题模板.md`](面试题模板.md) (CN)
+- **Postmortem** — [`postmortem-template.md`](postmortem-template.md) (EN) ↔ [`复盘模板.md`](复盘模板.md) (CN)
+- **Eval report** — [`eval-report-template.md`](eval-report-template.md) (EN) ↔ [`评估报告模板.md`](评估报告模板.md) (CN)
+- **Agent design** — [`agent-design-template.md`](agent-design-template.md) (EN) ↔ [`Agent设计模板.md`](Agent设计模板.md) (CN)
+- **Project dispatch plan** — [`project-dispatch-plan.md`](project-dispatch-plan.md) (EN) ↔ [`项目调度计划.md`](项目调度计划.md) (CN)
+- **Community Lab notes** — [`community-lab-template.md`](community-lab-template.md) (EN) ↔ [`社区Lab笔记模板.md`](社区Lab笔记模板.md) (CN)
+- **Monthly contributor report** — [`monthly-contributor-report.md`](monthly-contributor-report.md) (EN) ↔ [`月度贡献者报告.md`](月度贡献者报告.md) (CN)
+- **Contribution checklist** — [`contribution-checklist.md`](contribution-checklist.md) (EN) ↔ [`贡献检查清单.md`](贡献检查清单.md) (CN)
 
 ## When to Use Each
 
