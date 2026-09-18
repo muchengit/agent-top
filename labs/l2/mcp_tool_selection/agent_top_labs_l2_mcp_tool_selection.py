@@ -57,8 +57,18 @@ class ArgSpec:
             raise ValueError(f"argument too long: {self.name}")
 
     def is_positive_int(self, value: object) -> bool:
-        """Return whether *value* is a positive integer."""
-        return isinstance(value, int) and not isinstance(value, bool) and value > 0
+        """Return whether *value* is a positive integer, or its canonical string form."""
+        if isinstance(value, bool):
+            return False
+        if isinstance(value, int):
+            return value > 0
+        if isinstance(value, str):
+            try:
+                parsed = int(value)
+            except ValueError:
+                return False
+            return parsed > 0 and str(parsed) == value
+        return False
 
 
 @dataclass(frozen=True)

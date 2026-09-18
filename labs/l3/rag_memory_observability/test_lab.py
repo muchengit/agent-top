@@ -67,3 +67,61 @@ class RagMemoryObservabilityTest(unittest.TestCase):
     def test_chinese_retrieval(self) -> None:
         store = InMemoryStore(["检索系统返回中文上下文", "MCP exposes tools"])
         self.assertEqual(store.retrieve("中文"), ["检索系统返回中文上下文"])
+
+    def test_partial_match_is_not_retrieved(self) -> None:
+        store = InMemoryStore(["machine learning", "machine shop"])
+        self.assertEqual(store.retrieve("machine learn"), ["machine learning"])
+
+    def test_multiple_matches_respect_order(self) -> None:
+        store = InMemoryStore(["first doc", "second doc", "third doc"])
+        self.assertEqual(store.retrieve("doc", top_k=10), ["first doc", "second doc", "third doc"])
+
+    def test_retrieve_top_k_negative_returns_empty(self) -> None:
+        store = InMemoryStore(["doc one"])
+        self.assertEqual(store.retrieve("doc", top_k=-1), [])
+
+    def test_memory_recent_zero_returns_all(self) -> None:
+        memory = SessionMemory()
+        memory.remember("hello")
+        self.assertEqual(memory.recent(0), ["hello"])
+
+    def test_memory_recent_negative_returns_empty(self) -> None:
+        memory = SessionMemory()
+        memory.remember("hello")
+        self.assertEqual(memory.recent(-3), [])
+
+    def test_answer_with_trace_multiple_hits(self) -> None:
+        store = InMemoryStore(["RAG a", "RAG b"])
+        memory = SessionMemory()
+        answer, _ = answer_with_trace("RAG", store, memory)
+        self.assertEqual(answer, "RAG a | RAG b")
+
+    def test_trace_memory_records_recent_turn_count(self) -> None:
+        store = InMemoryStore([])
+        memory = SessionMemory()
+        memory.remember("previous")
+        _, traces = answer_with_trace("current", store, memory)
+        memory_trace = dict(traces[1].data)
+        self.assertEqual(memory_trace["recent_turns"], "2")
+
+    def test_memory_remembers_every_query(self) -> None:
+        store = InMemoryStore([])
+        memory = SessionMemory()
+        answer_with_trace("q1", store, memory)
+        answer_with_trace("q2", store, memory)
+        self.assertEqual(memory.turns, ["q1", "q2"])
+
+    def test_trace_is_mutable_dataclass(self) -> None:
+        store = InMemoryStore([])
+        memory = SessionMemory()
+        _, traces = answer_with_trace("q", store, memory)
+        traces[0].event = "changed"
+        self.assertEqual(traces[0].event, "changed")
+
+    def test_store_documents_accessible_directly(self) -> None:
+        store = InMemoryStore(["a", "b"])
+        self.assertEqual(store.documents, ["a", "b"])
+
+    def test_retrieve_case_insensitive_chinese(self) -> None:
+        store = InMemoryStore(["RAG 检索", "AGENT 编排"])
+        self.assertEqual(store.retrieve("rag"), ["RAG 检索"])
