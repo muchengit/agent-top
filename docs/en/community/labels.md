@@ -2,7 +2,7 @@
 title: GitHub Labels
 validated_date: 2026-09-16
 i18n-key: community-labels
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # GitHub Labels
@@ -23,6 +23,13 @@ Labels help contributors find the right task and help maintainers route reviews 
 | `lab` | Runnable Lab content. | Code, tests, README for Labs | Reviewer plus test evidence |
 | `interview` | Interview question or rubric content. | Questions, answer keys, scoring rubrics | Content reviewer |
 | `production` | Production, safety, eval, or postmortem content. | Release gates, incidents, rollback, observability | Maintainer or production reviewer |
+| `eval-evidence` | Eval results or regression evidence for Agent behavior. | Eval sets, scoring, regression gates | Content reviewer |
+| `original-pattern` | New pattern or framework contribution. | L5 pattern catalog, case studies | Maintainer |
+| `good-first-L5` | Beginner-friendly L5 path task. | Original-pattern support tasks | Reviewer |
+| `external-impact` | External influence evidence. | PRs, papers, talks, cases, tools | Maintainer |
+| `safety-review` | Safety-critical change requiring review. | Guardrails, tool risk, refusal behavior | Maintainer or safety reviewer |
+| `release-governance` | Release gating or governance change. | Release gates, rollback policy | Maintainer |
+| `sig-candidate` | Candidate for a special interest group. | Community topic grouping | Community lead |
 
 ## Usage Rules
 
