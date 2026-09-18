@@ -19,6 +19,7 @@ Build end-to-end systems with RAG, memory, observability, and multi-agent flows.
 ## Labs in This Level
 
 - [`rag_memory_observability`](rag_memory_observability/README.md): RAG, memory, and observability skeleton.
+- [`rag_hybrid_search`](rag_hybrid_search/README.md): deterministic hybrid keyword-plus-vector retrieval.
 - [`rag_evaluator`](rag_evaluator/README.md): deterministic retrieval evaluation.
 - [`multi_round_research_discussion`](multi_round_research_discussion/README.md): multi-round evidence planning and discussion convergence.
 - [`multi_agent_supervisor`](multi_agent_supervisor/README.md): deterministic multi-agent routing.

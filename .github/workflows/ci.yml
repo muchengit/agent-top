@@ -69,6 +69,9 @@ jobs:
       - name: Run repository checks
         run: python scripts/check_repository.py
 
+      - name: Run examples smoke checks
+        run: python scripts/smoke_examples.py
+
       - name: Verify example directories have README and non-empty JSONL
         run: |
           python - <<'EOF'

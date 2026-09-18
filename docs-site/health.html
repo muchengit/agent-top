@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Repository Health — Agent-Top</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; max-width: 880px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+    h1 { margin-bottom: 0.25em; }
+    h2 { border-bottom: 1px solid #e1e4e8; padding-bottom: 0.3em; margin-top: 2em; }
+    h3 { margin-bottom: 0.5em; color: #57606a; font-size: 1em; text-transform: uppercase; letter-spacing: 0.05em; }
+    a { color: #0969da; }
+    code { background: #f6f8fa; padding: 2px 5px; border-radius: 4px; }
+    ul { margin-top: 0.5em; }
+    li { margin-bottom: 0.3em; }
+  </style>
+</head>
+<body>
+  <h1>Repository Health</h1>
+  <p>Health checklist for the Agent-Top repository: quality gates, bilingual documentation sync, and CI workflows.</p>
+  <p><a href="index.html">Home</a> · <a href="labs.html">Labs</a></p>
+
+  <h2>Quality Gates</h2>
+  <p>Run the four quality-gate commands locally before opening a pull request:</p>
+  <ul>
+    <li><a href="../scripts/check_repository.py">python scripts/check_repository.py</a> — repository structure, links, bilingual metadata, labs, examples, and docs-site links</li>
+    <li><a href="../labs">python -m unittest discover -s labs -p "test_*.py"</a> — all lab tests</li>
+    <li><a href="../pyproject.toml">python3 -m ruff check .</a> — lint the whole repository</li>
+    <li><a href="../labs">python3 -m compileall -q labs scripts</a> — byte-compile every Python file under labs and scripts</li>
+  </ul>
+
+  <h2>Bilingual Reconciliation</h2>
+  <p><code>docs/en</code> is the primary source; <code>docs/zh</code> stays in sync through explicit frontmatter metadata. See <a href="../docs/en/community/translation-workflow.md">Translation Workflow</a> and <a href="../docs/zh/community/翻译流程.md">翻译工作流</a>.</p>
+  <ul>
+    <li><a href="../docs/en">i18n-key parity</a> — every page under <code>docs/en</code> and <code>docs/zh</code> carries a byte-identical <code>i18n-key</code>; the repository check fails when an EN key has no ZH pair.</li>
+    <li><a href="../docs/zh">last-synced principle</a> — <code>last-synced</code> records when the ZH page last matched the accepted EN source; it is updated by the translator or language reviewer, never by the source author alone.</li>
+  </ul>
+
+  <h2>CI Workflows</h2>
+  <p>GitHub Actions config: <a href="../.github/workflows/ci.yml">.github/workflows/ci.yml</a>.</p>
+  <h3>docs-quality</h3>
+  <ul>
+    <li>Runs <a href="../scripts/check_repository.py">python scripts/check_repository.py</a> on Python 3.11</li>
+    <li>Runs <a href="../labs">python -m unittest discover -s labs -p "test_*.py"</a> and <a href="../pyproject.toml">python3 -m ruff check .</a></li>
+    <li>Runs <a href="../labs">python3 -m compileall -q labs scripts</a> and <a href="../scripts/smoke_multilingual_labs.py">python scripts/smoke_multilingual_labs.py</a></li>
+  </ul>
+  <h3>link-and-artifact-integrity</h3>
+  <ul>
+    <li>Re-runs <a href="../scripts/check_repository.py">python scripts/check_repository.py</a></li>
+    <li>Verifies every <a href="../examples">examples/</a> directory has a README and non-empty JSONL</li>
+    <li>Checks <a href="../docs/en">docs/en</a> vs <a href="../docs/zh">docs/zh</a> Markdown count parity (difference ≤ 5)</li>
+    <li>Confirms <a href="../README.md">README.md</a> and <a href="../README.zh-CN.md">README.zh-CN.md</a> mention labs/l0..labs/l5</li>
+  </ul>
+
+  <p><a href="index.html">Home</a> · <a href="labs.html">Labs</a></p>
+</body>
+</html>

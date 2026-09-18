@@ -20,6 +20,7 @@ Build a reliable single Agent with a framework-style tool boundary and MCP-style
 
 - [`single_agent_mcp`](single_agent_mcp/README.md): single Agent with MCP-style tool boundary and guardrails.
 - [`cost_aware_router`](cost_aware_router/README.md): cost and latency-aware routing.
+- [`mcp_tool_selection`](mcp_tool_selection/README.md): deterministic MCP tool selection and validation.
 
 ## Run
 
@@ -38,4 +39,3 @@ python -m unittest discover -s labs/l2 -p "test_*.py"
 1. What does an MCP-style tool boundary protect?
 2. Which signals should a cost-aware router balance?
 3. Why are version anchors important for framework-dependent Labs?
-

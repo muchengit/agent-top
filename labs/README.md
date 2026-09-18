@@ -23,10 +23,12 @@ Executable Labs are the primary hands-on format for Agent-Top. They run locally 
 
 - [`l2/single_agent_mcp`](l2/single_agent_mcp/README.md): single Agent with MCP-style tool boundary and guardrails.
 - [`l2/cost_aware_router`](l2/cost_aware_router/README.md): cost and latency-aware routing.
+- [`l2/mcp_tool_selection`](l2/mcp_tool_selection/README.md): deterministic MCP tool selection and validation.
 
 ### L3
 
 - [`l3/rag_memory_observability`](l3/rag_memory_observability/README.md): RAG, memory, and observability skeleton.
+- [`l3/rag_hybrid_search`](l3/rag_hybrid_search/README.md): deterministic hybrid keyword-plus-vector retrieval.
 - [`l3/rag_evaluator`](l3/rag_evaluator/README.md): deterministic retrieval evaluation.
 - [`l3/multi_round_research_discussion`](l3/multi_round_research_discussion/README.md): multi-round evidence planning and discussion convergence.
 - [`l3/multi_agent_supervisor`](l3/multi_agent_supervisor/README.md): deterministic multi-agent routing.
