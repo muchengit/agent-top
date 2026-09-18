@@ -17,6 +17,10 @@ Goal: decide whether an Agent can answer, must cite, or must refuse because evid
 - [`prompts.jsonl`](prompts.jsonl): fictional user questions.
 - [`answers.template.jsonl`](answers.template.jsonl): start your own answer log here.
 
+## JSONL Shape
+
+Each line is one JSON object: `sources.jsonl` records `id`, `text`, `fresh`, and `date`; `prompts.jsonl` records `id` and `prompt`; `answers.template.jsonl` starts with `id` and blank `decision`, `source_ids`, `reason`, and `follow_up`.
+
 ## Steps
 
 1. Read one prompt.

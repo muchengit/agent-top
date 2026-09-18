@@ -405,13 +405,20 @@ def check_example_dirs_readmes() -> None:
     if not examples_root.is_dir():
         return
     missing: list[str] = []
+    missing_shape: list[str] = []
     for example_dir in sorted(examples_root.iterdir()):
         if not example_dir.is_dir():
             continue
-        if not (example_dir / "README.md").exists():
+        readme = example_dir / "README.md"
+        if not readme.exists():
             missing.append(example_dir.name)
+            continue
+        if "## JSONL Shape" not in readme.read_text(encoding="utf-8"):
+            missing_shape.append(example_dir.name)
     for name in missing:
         print(f"WARN: example dir missing README.md: {name}")
+    if missing_shape:
+        fail("example READMEs missing ## JSONL Shape: " + ", ".join(missing_shape))
 
 
 def expand_lab_level_ranges(text: str) -> list[str]:
