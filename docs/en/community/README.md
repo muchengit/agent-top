@@ -2,7 +2,7 @@
 title: Community Guide Index
 validated_date: 2026-09-16
 i18n-key: community-readme
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # Community Guide
@@ -30,6 +30,7 @@ Agent-Top is maintained as a bilingual, docs-first open source community.
 - [`contributor-of-the-month.md`](contributor-of-the-month.md)
 - [`2026-09-contributor-report.md`](2026-09-contributor-report.md)
 - [`experiment-log.md`](experiment-log.md)
+- [`good-first-L5-candidates.md`](good-first-L5-candidates.md)
 
 ## Role Paths
 
