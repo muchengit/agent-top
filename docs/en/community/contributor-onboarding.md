@@ -1,8 +1,8 @@
 ---
 title: Contributor Onboarding
-validated_date: 2026-09-17
+validated_date: 2026-09-18
 i18n-key: community-contributor-onboarding
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 ---
 
 # Contributor Onboarding
@@ -60,6 +60,17 @@ python -m ruff check .
 ```
 
 The first command is the community gate: broken links, stale `validated_date`, unpaired bilingual keys, and merge-conflict markers all fail it.
+
+## Vibe Coding Here
+
+You can use an AI assistant to draft a contribution, but the acceptance bar stays the same:
+
+1. Write the spec first: goal, scope, interface, acceptance. Use the [`Vibe Coding Spec Template`](../../../templates/vibe-coding-spec-template.md).
+2. Review the diff before running anything; reject scope creep.
+3. Run the checks above; the fix is not done until they are green.
+4. Keep the evidence: paste the acceptance command output in the PR.
+
+The [`Vibe Coding guide`](../vibe-coding/README.md) explains the workflow in depth, and the [`vibe coding spec Lab`](../../../labs/l5/vibe_coding_spec/README.md) makes the one-sentence rule testable.
 
 ## PR Checklist
 
