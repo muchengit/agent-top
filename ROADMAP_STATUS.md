@@ -51,7 +51,7 @@ validated_date: 2026-09-18
 | Framework example freshness | reviewed before stale threshold |
 | Review coverage | >= 2 backups per active module |
 | Tutorial coverage | L0-L5 EN and ZH present |
-| Lab test coverage | 97 deterministic Lab tests pass locally |
+| Lab test coverage | 280 deterministic Lab tests pass locally |
 
 ## Recent Improvements
 
@@ -64,7 +64,7 @@ validated_date: 2026-09-18
 | Repository checks | Done | `check_docs_topic_dirs`, `check_lab_level_readmes`, `check_example_dirs_readmes`, and `check_readme_mentions_lab_levels` in `scripts/check_repository.py` |
 | Contribution Quality Gates | Done | `Quality Gates` section in `CONTRIBUTING.md` and `CONTRIBUTING.zh-CN.md` |
 | Docs site Labs entry | Done | Labs navigation entries in `docs-site/index.html` |
-| Template bilingual coverage | Done | All 22 template pairs now have EN/CN mirrors; `docs-site/search.html` covers all 289 markdown files |
+| Template bilingual coverage | Done | All 23 template pairs now have EN/CN mirrors; `docs-site/search.html` covers all 303 markdown files |
 
 ## Next Priority
 

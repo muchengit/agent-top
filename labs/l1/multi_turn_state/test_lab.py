@@ -94,7 +94,10 @@ class MultiTurnStateTest(unittest.TestCase):
         state.add(TurnMessage("tool", "t1"))
         state.add(TurnMessage("user", "u2"))
         context = state.build_prompt_context()
-        self.assertEqual(context, ["summary_of_1_older_messages", "assistant: a1", "tool: t1", "user: u2"])
+        self.assertEqual(
+            context,
+            ["summary_of_1_older_messages", "assistant: a1", "tool: t1", "user: u2"],
+        )
 
     def test_unicode_content_preserved(self) -> None:
         state = MultiTurnState(summary_limit=1)
