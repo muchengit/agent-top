@@ -207,6 +207,37 @@ def check_bilingual_pairs(markdown_paths: list[Path]) -> None:
         fail("unpaired bilingual keys: " + ", ".join(missing))
 
 
+def check_docs_index_coverage() -> None:
+    """Each docs/{lang}/README.md must link every docs/{lang} Markdown file."""
+    for lang in ("en", "zh"):
+        index_path = ROOT / "docs" / lang / "README.md"
+        if not index_path.exists():
+            fail(f"docs/{lang}/README.md missing")
+        text = index_path.read_text(encoding="utf-8")
+        linked = set()
+        for match in RELATIVE_LINK_PATTERN.finditer(text):
+            target = match.group(1).strip()
+            if not target or target.startswith(("http://", "https://", "#", "mailto:")):
+                continue
+            cleaned = target.split("#", 1)[0]
+            if not cleaned:
+                continue
+            candidate = (index_path.parent / cleaned).resolve()
+            try:
+                candidate.relative_to(ROOT)
+            except ValueError:
+                continue
+            linked.add(str(candidate.relative_to(ROOT)))
+        all_docs = {
+            str(path.relative_to(ROOT))
+            for path in (ROOT / "docs" / lang).rglob("*.md")
+            if path != index_path
+        }
+        missing = sorted(all_docs - linked)
+        if missing:
+            fail(f"docs/{lang}/README.md does not list: " + ", ".join(missing))
+
+
 def check_lab_readmes(markdown_paths: list[Path]) -> None:
     lab_readmes = [
         path
@@ -451,6 +482,7 @@ def main() -> None:
     check_relative_links(markdown_paths)
     check_bilingual_frontmatter(markdown_paths)
     check_bilingual_pairs(markdown_paths)
+    check_docs_index_coverage()
     check_lab_readmes(markdown_paths)
     check_lab_level_readmes()
     check_executable_labs()

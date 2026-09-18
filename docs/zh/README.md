@@ -169,6 +169,8 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 - [`community/月度贡献者.md`](community/月度贡献者.md)
 - [`community/L5专家候选任务.md`](community/L5专家候选任务.md)
 - [`community/社区实验主持脚本.md`](community/社区实验主持脚本.md)
+- [`community/2026-09月度贡献者报告.md`](community/2026-09月度贡献者报告.md)
+- [`community/实验日志.md`](community/实验日志.md)
 
 ## 运营
 

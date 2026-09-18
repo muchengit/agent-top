@@ -180,6 +180,8 @@ Agent-Top docs are organized by learning level, stable concepts, framework maps,
 - [`community/maintainer-rotation.md`](community/maintainer-rotation.md)
 - [`community/contributor-of-the-month.md`](community/contributor-of-the-month.md)
 - [`community/good-first-L5-candidates.md`](community/good-first-L5-candidates.md)
+- [`community/2026-09-contributor-report.md`](community/2026-09-contributor-report.md)
+- [`community/experiment-log.md`](community/experiment-log.md)
 
 ## Operations
 
