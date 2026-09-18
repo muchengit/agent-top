@@ -5,7 +5,7 @@ validated_date: 2026-09-16
 
 # Labs
 
-Executable Labs are the primary hands-on format for Agent-Top. They run locally without API keys and use deterministic tests to make learning verifiable. The repository currently has 23 Labs and 280 tests.
+Executable Labs are the primary hands-on format for Agent-Top. They run locally without API keys and use deterministic tests to make learning verifiable. The repository currently has 23 Labs and 387 tests.
 
 ## Current Labs
 

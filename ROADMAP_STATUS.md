@@ -51,7 +51,7 @@ validated_date: 2026-09-18
 | Framework example freshness | reviewed before stale threshold |
 | Review coverage | >= 2 backups per active module |
 | Tutorial coverage | L0-L5 EN and ZH present |
-| Lab test coverage | 280 deterministic Lab tests pass locally |
+| Lab test coverage | 387 deterministic Lab tests pass locally |
 
 ## Recent Improvements
 

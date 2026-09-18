@@ -262,9 +262,22 @@ def is_concrete_lab_readme(parts: tuple[str, ...]) -> bool:
     return len(parts) == 4 and parts[0] == "labs" and parts[1].startswith("l")
 
 
+MIN_LAB_TESTS = 6
+
+
+def count_test_methods(path: Path) -> int:
+    """Count ``def test_*`` methods in a lab test module."""
+    return sum(
+        1
+        for line in path.read_text(encoding="utf-8").splitlines()
+        if line.lstrip().startswith("def test_")
+    )
+
+
 def check_executable_labs() -> None:
     labs_root = ROOT / "labs"
     bad: list[str] = []
+    thin: list[str] = []
     for level_dir in sorted(labs_root.glob("l*")):
         if not level_dir.is_dir():
             continue
@@ -275,8 +288,17 @@ def check_executable_labs() -> None:
             tests = list(lab_dir.glob("test_*.py"))
             if not code or not tests:
                 bad.append(str(lab_dir.relative_to(ROOT)))
+                continue
+            test_count = sum(count_test_methods(path) for path in tests)
+            if test_count < MIN_LAB_TESTS:
+                thin.append(f"{lab_dir.relative_to(ROOT)} ({test_count} tests)")
     if bad:
         fail("labs missing executable code or tests: " + ", ".join(bad))
+    if thin:
+        fail(
+            f"labs below {MIN_LAB_TESTS} tests: "
+            + ", ".join(thin)
+        )
 
 
 def check_examples_jsonl() -> None:
