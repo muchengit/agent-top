@@ -329,6 +329,7 @@ def check_executable_labs() -> None:
     labs_root = ROOT / "labs"
     bad: list[str] = []
     thin: list[str] = []
+    missing_zh: list[str] = []
     for level_dir in sorted(labs_root.glob("l*")):
         if not level_dir.is_dir():
             continue
@@ -337,8 +338,13 @@ def check_executable_labs() -> None:
                 continue
             code = list(lab_dir.glob("agent_top_labs_*.py"))
             tests = list(lab_dir.glob("test_*.py"))
+            if not (lab_dir / "README.md").exists():
+                bad.append(str(lab_dir.relative_to(ROOT)) + ": missing README.md")
+                continue
+            if not (lab_dir / "README.zh-CN.md").exists():
+                missing_zh.append(str(lab_dir.relative_to(ROOT)))
             if not code or not tests:
-                bad.append(str(lab_dir.relative_to(ROOT)))
+                bad.append(str(lab_dir.relative_to(ROOT)) + ": missing code or tests")
                 continue
             test_count = sum(count_test_methods(path) for path in tests)
             if test_count < MIN_LAB_TESTS:
@@ -350,6 +356,8 @@ def check_executable_labs() -> None:
             f"labs below {MIN_LAB_TESTS} tests: "
             + ", ".join(thin)
         )
+    if missing_zh:
+        fail("labs missing Chinese README mirror: " + ", ".join(missing_zh))
 
 
 def check_examples_jsonl() -> None:
