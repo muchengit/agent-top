@@ -174,6 +174,22 @@ ReAct 循环应在以下情况停止：
 - 每一步都把原始用户请求保留在上下文中。
 - 工具结果在重新进入 prompt 前截断或摘要。
 
+```python
+# 最小生产护栏：停止条件与预算
+def run_loop(user_request, tools, *, max_steps=8, max_tokens=4000, deadline=None):
+    history = []
+    for step in range(max_steps):
+        if elapsed(deadline): return escalate("deadline exceeded")
+        thought = reason(user_request, history, tokens_left=max_tokens)
+        if thought.is_answer(): return finalize(thought)
+        action = validate_schema(thought.action, tools)
+        if not action.valid: return clarify(history)
+        if not authorize(action): return deny(action)
+        observation = execute(action, timeout=30)
+        history.append((action, observation))
+    return escalate("step limit reached")
+```
+
 ## 一个完整的最小示例：小型工具集
 
 一个带三个工具——search、read、answer——的最小生产循环，展示各部件如何组合。
