@@ -1,6 +1,7 @@
 ---
+title: Search Supplements from Agent Tutorials
 i18n-key: tutorials-search-supplements
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 validated_date: 2026-09-16
 ---
 

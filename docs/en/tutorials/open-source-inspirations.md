@@ -1,6 +1,7 @@
 ---
+title: Open-Source Inspirations Directory
 i18n-key: tutorials-open-source-inspirations
-last-synced: 2026-09-17
+last-synced: 2026-09-18
 validated_date: 2026-09-17
 ---
 

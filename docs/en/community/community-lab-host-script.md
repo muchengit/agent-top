@@ -2,7 +2,7 @@
 title: Community Lab Host Script
 validated_date: 2026-09-16
 i18n-key: community-community-lab-host-script
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # Community Lab Host Script

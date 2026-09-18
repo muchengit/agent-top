@@ -1,4 +1,5 @@
 ---
+title: Agent 术语表
 i18n-key: quick-reference-agent-glossary
 last-synced: 2026-09-17
 validated_date: 2026-09-17

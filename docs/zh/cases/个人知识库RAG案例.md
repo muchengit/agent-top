@@ -1,4 +1,5 @@
 ---
+title: 个人知识库 RAG 案例
 i18n-key: cases-personal-knowledge-rag
 last-synced: 2026-09-18
 validated_date: 2026-09-18

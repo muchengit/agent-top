@@ -2,7 +2,7 @@
 title: Agent Skills Guide
 validated_date: 2026-09-16
 i18n-key: skills-matrix
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # Agent Skills Guide
