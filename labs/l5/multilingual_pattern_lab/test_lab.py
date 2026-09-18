@@ -20,7 +20,10 @@ class MultilingualPatternLabTest(unittest.TestCase):
     def test_python_plan_steps_carry_tool_and_rollback_hint(self) -> None:
         stop_reason, steps = run_python_pattern("update profile")
         self.assertEqual(stop_reason, READY_REASON)
-        self.assertEqual([tool for _, tool, _ in steps], ["validator", "tool_gateway", "eval_probe"])
+        self.assertEqual(
+            [tool for _, tool, _ in steps],
+            ["validator", "tool_gateway", "eval_probe"],
+        )
         self.assertEqual(
             [hint for _, _, hint in steps],
             ["remove unclear fields", "restore previous state", "disable path"],

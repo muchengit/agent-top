@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from .agent_top_labs_l5_custom_pattern_lab import PatternResult, PlanStep, VerifiableActionPattern
+from .agent_top_labs_l5_custom_pattern_lab import PlanStep, VerifiableActionPattern
 
 
 class CustomPatternLabTest(unittest.TestCase):
@@ -37,7 +37,8 @@ class CustomPatternLabTest(unittest.TestCase):
 
     def test_safety_rule_matching_substring_of_word_blocks(self) -> None:
         pattern = VerifiableActionPattern(("delete_all",))
-        self.assertTrue(pattern.plan("undo delete_all entries").stop_reason == "blocked_by_safety_rule")
+        result = pattern.plan("undo delete_all entries")
+        self.assertEqual(result.stop_reason, "blocked_by_safety_rule")
 
     def test_safety_rule_matches_chinese_translation(self) -> None:
         pattern = VerifiableActionPattern(("删除全部",))

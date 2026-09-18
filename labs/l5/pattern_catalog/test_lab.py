@@ -61,7 +61,7 @@ class PatternCatalogTest(unittest.TestCase):
         self.assertFalse(ready_pattern(1))  # type: ignore[arg-type]
 
     def test_entry_missing_verification_is_not_ready(self) -> None:
-        incomplete = PatternEntry(
+        PatternEntry(
             name="incomplete",
             inputs=("request",),
             outputs=("plan",),
