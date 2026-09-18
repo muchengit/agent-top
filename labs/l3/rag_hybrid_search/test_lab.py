@@ -10,6 +10,8 @@ from .agent_top_labs_l3_rag_hybrid_search import (
     HybridSearch,
     Retriever,
     Score,
+    _character_bigrams,
+    tokenize,
 )
 
 
@@ -97,3 +99,63 @@ class HybridSearchTest(unittest.TestCase):
         score = Score("id-1", 1.0, 2.0, 3.0)
         with self.assertRaises(AttributeError):
             score.doc_id = "id-2"  # type: ignore[misc]
+
+    def test_tokenize_lowercases_and_splits(self) -> None:
+        self.assertEqual(tokenize("Hello, World! 123"), ["hello", "world", "123"])
+
+    def test_tokenize_empty_string(self) -> None:
+        self.assertEqual(tokenize("   !!! "), [])
+
+    def test_tokenize_chinese_characters_dropped(self) -> None:
+        self.assertEqual(tokenize("检索 RAG 记忆"), ["rag"])
+
+    def test_character_bigrams(self) -> None:
+        self.assertEqual(_character_bigrams("ab cd"), {"ab", "cd"})
+
+    def test_character_bigrams_short_text(self) -> None:
+        self.assertEqual(_character_bigrams("a"), set())
+
+    def test_vector_score_identical_text(self) -> None:
+        search = make_search()
+        scores = search.vector_score("data pipelines")
+        self.assertEqual(scores["doc-2"], 1.0)
+
+    def test_vector_score_no_overlap(self) -> None:
+        search = make_search()
+        scores = search.vector_score("xyz")
+        self.assertAlmostEqual(scores["doc-1"], 0.0, places=6)
+
+    def test_custom_weights_change_fused_order(self) -> None:
+        search = make_search()
+        lexical_heavy = HybridSearch(
+            search.retriever, lexical_weight=0.9, vector_weight=0.1
+        )
+        results = lexical_heavy.search("data pipelines", top_k=3, method=FusionMethod.WEIGHTED_SUM)
+        self.assertEqual(results[0].doc_id, "doc-2")
+
+    def test_rrf_order_differs_from_weighted_sum(self) -> None:
+        search = make_search()
+        ws = search.search("semantic", top_k=6, method=FusionMethod.WEIGHTED_SUM)
+        rrf = search.search("semantic", top_k=6, method=FusionMethod.RRF)
+        self.assertNotEqual(ws, rrf)
+
+    def test_retriever_lexical_score_empty_query_zero(self) -> None:
+        search = make_search()
+        scores = search.retriever.lexical_score("")
+        for doc in search.retriever.documents:
+            self.assertEqual(scores[doc.id], 0.0)
+
+    def test_search_top_k_exceeds_docs(self) -> None:
+        search = make_search()
+        results = search.search("data", top_k=100)
+        self.assertEqual(len(results), 6)
+
+    def test_search_zero_top_k(self) -> None:
+        search = make_search()
+        results = search.search("data", top_k=0)
+        self.assertEqual(results, [])
+
+    def test_empty_document_set(self) -> None:
+        retriever = Retriever([])
+        search = HybridSearch(retriever)
+        self.assertEqual(search.search("anything"), [])

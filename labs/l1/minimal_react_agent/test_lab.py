@@ -101,5 +101,10 @@ class MinimalReactAgentTest(unittest.TestCase):
         self.assertFalse(is_numeric_goal("   "))
 
     def test_is_numeric_goal_rejects_nan_and_infinity(self) -> None:
-        self.assertTrue(is_numeric_goal("nan"))
-        self.assertTrue(is_numeric_goal("inf"))
+        self.assertFalse(is_numeric_goal("nan"))
+        self.assertFalse(is_numeric_goal("inf"))
+        self.assertFalse(is_numeric_goal("-inf"))
+
+    def test_is_numeric_goal_accepts_finite_decimals(self) -> None:
+        self.assertTrue(is_numeric_goal("0.5"))
+        self.assertTrue(is_numeric_goal("-1e3"))

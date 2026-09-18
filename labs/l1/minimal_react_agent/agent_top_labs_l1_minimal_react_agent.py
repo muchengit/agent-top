@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass, field
 from typing import Callable
 
@@ -20,12 +21,12 @@ def add_tool(expression: str) -> str:
 
 
 def is_numeric_goal(goal: str) -> bool:
-    """Accept integers, decimals, and signed numbers for tool goals."""
+    """Accept finite integers, decimals, and signed numbers for tool goals."""
     try:
-        float(goal)
+        value = float(goal)
     except ValueError:
         return False
-    return True
+    return math.isfinite(value)
 
 
 def plan_next_action(goal: str, observations: list[str]) -> tuple[str, str] | None:
