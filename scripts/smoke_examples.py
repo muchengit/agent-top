@@ -75,28 +75,24 @@ def check_jsonl_file(path: Path, report: Report) -> None:
 
 def check_template_fields(example_dir: Path, report: Report) -> None:
     jsonl_paths = iter_jsonl_files(example_dir)
-    templates = [path for path in jsonl_paths if "*template*.jsonl" in path.name]
+    templates = [
+        path
+        for path in jsonl_paths
+        if ".template." in path.name or "-template." in path.name
+    ]
     if not templates:
         return
-    template_fields = object_fields(read_objects(templates[0])[0])
-    checked = 0
-    for path in jsonl_paths:
-        if path in templates:
+    for path in templates:
+        objects = read_objects(path)
+        if not objects:
+            report.record_error(f"{relative(path)} has no JSON objects")
             continue
-        checked += 1
-        for number, obj in enumerate(read_objects(path), 1):
-            fields = object_fields(obj)
-            if fields == template_fields:
-                continue
-            missing = sorted(template_fields - fields)
-            extra = sorted(fields - template_fields)
-            detail = f"{relative(path)}:{number} fields differ from {relative(templates[0])}"
-            if missing:
-                detail += f"; missing {missing}"
-            if extra:
-                detail += f"; extra {extra}"
-            report.record_warning(detail)
-    if checked:
+        template_fields = object_fields(objects[0])
+        inconsistent = any(object_fields(obj) != template_fields for obj in objects[1:])
+        if inconsistent:
+            report.record_warning(
+                f"{relative(path)} template objects have inconsistent fields"
+            )
         report.passed += 1
 
 
