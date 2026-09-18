@@ -1,6 +1,6 @@
 ---
 title: Personal Knowledge Base RAG Case
-validated_date: 2026-09-17
+validated_date: 2026-09-18
 i18n-key: cases-personal-knowledge-rag
 last-synced: 2026-09-18
 ---

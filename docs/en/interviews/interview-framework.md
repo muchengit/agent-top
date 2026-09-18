@@ -1,8 +1,8 @@
 ---
 title: Interview Framework
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 i18n-key: interviews-interview-framework
-last-synced: 2026-09-16
+last-synced: 2026-09-18
 ---
 
 # Interview Framework

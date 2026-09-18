@@ -1,6 +1,6 @@
 ---
 title: Production Regression Gate Case
-validated_date: 2026-09-17
+validated_date: 2026-09-18
 i18n-key: cases-production-regression-gate
 last-synced: 2026-09-18
 ---

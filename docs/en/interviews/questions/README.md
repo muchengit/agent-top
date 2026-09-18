@@ -1,6 +1,6 @@
 ---
 title: Interview Questions Index
-validated_date: 2026-09-16
+validated_date: 2026-09-18
 i18n-key: interviews-questions-readme
 last-synced: 2026-09-18
 ---
