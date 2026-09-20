@@ -207,6 +207,26 @@ def check_bilingual_pairs(markdown_paths: list[Path]) -> None:
         fail("unpaired bilingual keys: " + ", ".join(missing))
 
 
+def check_root_doc_cross_links() -> None:
+    """Root-level bilingual pairs must link each version to its counterpart."""
+    bad: list[str] = []
+    for en_path in sorted(ROOT.glob("*.md")):
+        if en_path.name.endswith(".zh-CN.md"):
+            continue
+        zh_path = ROOT / f"{en_path.stem}.zh-CN.md"
+        if not zh_path.exists():
+            continue
+        for path, counterpart in ((en_path, zh_path.name), (zh_path, en_path.name)):
+            targets = {
+                match.group(1).strip()
+                for match in RELATIVE_LINK_PATTERN.finditer(path.read_text(encoding="utf-8"))
+            }
+            if counterpart not in targets:
+                bad.append(f"{path.name}: no link to {counterpart}")
+    if bad:
+        fail("root doc bilingual cross-link missing: " + "; ".join(bad))
+
+
 def check_docs_index_coverage() -> None:
     """Each docs/{lang}/README.md must link every docs/{lang} Markdown file."""
     for lang in ("en", "zh"):
@@ -467,6 +487,7 @@ def check_docs_topic_dirs() -> None:
 
 def check_lab_level_readmes() -> None:
     missing_levels: list[str] = []
+    missing_zh: list[str] = []
     bad: list[str] = []
     for level_dir in sorted((ROOT / "labs").glob("l*")):
         if not level_dir.is_dir():
@@ -475,14 +496,50 @@ def check_lab_level_readmes() -> None:
         if not readme.exists():
             missing_levels.append(level_dir.name)
             continue
+        if not (level_dir / "README.zh-CN.md").exists():
+            missing_zh.append(level_dir.name)
         text = readme.read_text(encoding="utf-8")
         missing = [section for section in LAB_README_REQUIRED_SECTIONS if section not in text]
         if missing:
             bad.append(f"{level_dir.name}: " + ", ".join(missing))
     if missing_levels:
         fail("lab level README missing: " + ", ".join(missing_levels))
+    if missing_zh:
+        fail("lab level README missing Chinese mirror: " + ", ".join(missing_zh))
     if bad:
         fail("lab level README sections missing: " + "; ".join(bad))
+
+
+def concrete_lab_dirs(level_dir: Path) -> set[str]:
+    """Executable lab directories inside one `labs/l*` level directory."""
+    return {
+        path.name
+        for path in level_dir.iterdir()
+        if path.is_dir() and path.name != "__pycache__"
+    }
+
+
+def check_lab_level_index_coverage() -> None:
+    """Each lab level index must link every executable lab in that level."""
+    missing: list[str] = []
+    for level_dir in sorted((ROOT / "labs").glob("l*")):
+        if not level_dir.is_dir():
+            continue
+        for index_name in ("README.md", "README.zh-CN.md"):
+            index_path = level_dir / index_name
+            if not index_path.exists():
+                continue
+            text = index_path.read_text(encoding="utf-8")
+            linked = {
+                match.group(1).split("/")[0]
+                for match in RELATIVE_LINK_PATTERN.finditer(text)
+                if "/" in match.group(1)
+                and match.group(1).endswith(("/README.md", "/README.zh-CN.md"))
+            }
+            for name in sorted(concrete_lab_dirs(level_dir) - linked):
+                missing.append(f"{index_path.relative_to(ROOT)}: {name}")
+    if missing:
+        fail("lab level index does not list: " + ", ".join(missing))
 
 
 def check_example_dirs_readmes() -> None:
@@ -578,6 +635,31 @@ def check_template_pairs() -> None:
 
 
 
+SEARCH_ENTRY_PATTERN = re.compile(
+    r'^\s*\{ t: "[^"]+", p: "[^"]+", c: "[^"]+", l: "(?:en|zh)" \},\s*$'
+)
+
+
+def check_search_entries_shape() -> None:
+    """Every search entry must stay a single-line object literal with exactly one
+    trailing comma, so the ENTRIES array keeps parsing as valid JavaScript."""
+    search_path = ROOT / "docs-site" / "search.html"
+    if not search_path.exists():
+        return
+    bad: list[str] = []
+    for line in search_path.read_text(encoding="utf-8").splitlines():
+        if not line.lstrip().startswith("{ t: "):
+            continue
+        if not SEARCH_ENTRY_PATTERN.match(line):
+            bad.append(line.strip())
+    if bad:
+        fail(
+            "docs-site/search.html has malformed ENTRIES lines "
+            "(single line, exactly one trailing comma): "
+            + " | ".join(bad)
+        )
+
+
 def check_search_coverage() -> None:
     """Every repository Markdown file must be reachable from docs-site/search.html."""
     search_path = ROOT / "docs-site" / "search.html"
@@ -639,10 +721,12 @@ def main() -> None:
     check_relative_links(markdown_paths)
     check_bilingual_frontmatter(markdown_paths)
     check_bilingual_pairs(markdown_paths)
+    check_root_doc_cross_links()
     check_docs_index_coverage()
     check_docs_index_examples()
     check_lab_readmes(markdown_paths)
     check_lab_level_readmes()
+    check_lab_level_index_coverage()
     check_executable_labs()
     check_example_dirs_readmes()
     check_readme_mentions_lab_levels()
@@ -651,6 +735,7 @@ def main() -> None:
     check_example_answer_keys()
     check_docs_site_links()
     check_template_pairs()
+    check_search_entries_shape()
     check_search_coverage()
     check_nav_topic_coverage()
     print(f"Repository checks passed: {len(markdown_paths)} Markdown files checked.")

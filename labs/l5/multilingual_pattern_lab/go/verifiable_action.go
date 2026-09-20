@@ -1,5 +1,7 @@
 package main
 
+import "strings"
+
 const (
 	safetyRule       = "delete_all"
 	readyReason      = "ready_for_execution"
@@ -30,24 +32,11 @@ func readyPlan() PatternResult {
 
 func plan(request string, safetyRules []string) PatternResult {
 	for _, rule := range safetyRules {
-		if contains(request, rule) {
+		if strings.Contains(request, rule) {
 			return PatternResult{StopReason: blockedReason}
 		}
 	}
 	return readyPlan()
-}
-
-func contains(value, needle string) bool {
-	return len(value) >= len(needle) && (len(value) == len(needle) || indexOf(value, needle) >= 0)
-}
-
-func indexOf(value, needle string) int {
-	for i := 0; i+len(needle) <= len(value); i++ {
-		if value[i:i+len(needle)] == needle {
-			return i
-		}
-	}
-	return -1
 }
 
 func main() {

@@ -10,7 +10,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LAB = ROOT / "labs" / "l5" / "multilingual_pattern_lab"
-RUST_BINARY = ROOT / ".codex" / "tmp" / "rust_verifiable_action"
+# Build artifacts go to dist/ (gitignored), not a tool configuration directory.
+RUST_BINARY = ROOT / "dist" / "smoke" / "rust_verifiable_action"
 
 
 def run(name: str, command: list[str], cwd: Path = ROOT) -> None:
@@ -30,6 +31,15 @@ def run_if_available(
     run(name, command, cwd)
 
 
+def compile_and_run(name: str, compiler: str, build_command: list[str]) -> None:
+    """Compile a native target, then execute it so its own asserts are verified."""
+    if shutil.which(compiler) is None:
+        print(f"skip: {name} ({compiler} not installed)")
+        return
+    run(f"{name} build", build_command)
+    run(name, [build_command[-1]])
+
+
 def main() -> int:
     python_command = [sys.executable, "-m", "unittest", "labs.l5.multilingual_pattern_lab.test_lab"]
     run("python", python_command)
@@ -40,7 +50,7 @@ def main() -> int:
     RUST_BINARY.parent.mkdir(parents=True, exist_ok=True)
     rust_command = ["rustc", "--edition", "2021"]
     rust_command.extend([str(LAB / "rust" / "verifiable_action.rs"), "-o", str(RUST_BINARY)])
-    run_if_available("rustc", "rustc", rust_command)
+    compile_and_run("rust", "rustc", rust_command)
 
     go_command = ["go", "test", "./...", "-run", "Verifiable"]
     run_if_available("go", "go", go_command, LAB / "go")
