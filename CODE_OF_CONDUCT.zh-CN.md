@@ -1,5 +1,8 @@
 # 行为准则
 
+
+英文版：[`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)
+
 ## 目的
 
 Agent-Top 欢迎清晰、善意、建设性的协作。
