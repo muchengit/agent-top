@@ -1,5 +1,8 @@
 # Agent-Top 风格规范
 
+
+英文版：[`STYLE.md`](STYLE.md)
+
 Agent-Top 使用模式优先、中英双语、文档 + Lab 的工作流。保持改动小、可审查、可运行。
 
 ## 内容原则

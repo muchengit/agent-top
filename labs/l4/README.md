@@ -6,6 +6,9 @@ validated_date: 2026-09-18
 
 # L4 Labs
 
+
+中文版：[`README.zh-CN.md`](README.zh-CN.md)
+
 ## Goal
 
 Productionize Agent systems with evaluation, safety, deployment, cost, and postmortems.
@@ -22,6 +25,7 @@ Productionize Agent systems with evaluation, safety, deployment, cost, and postm
 - [`regression_gate`](regression_gate/README.md): release gating for safety, trace, rollback, and cost.
 - [`cost_and_stability_guardrails`](cost_and_stability_guardrails/README.md): runtime cost, latency, retry, and degradation guardrails.
 - [`production_trace_integrity`](production_trace_integrity/README.md): deterministic trace integrity validation for production observability.
+- [`deployment_hygiene`](deployment_hygiene/README.md): combined observability, cost, and release gate deploy decision.
 
 ## Run
 

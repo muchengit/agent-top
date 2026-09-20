@@ -6,6 +6,9 @@ validated_date: 2026-09-18
 
 # L2 Labs
 
+
+中文版：[`README.zh-CN.md`](README.zh-CN.md)
+
 ## Goal
 
 Build a reliable single Agent with a framework-style tool boundary and MCP-style integration, plus cost- and latency-aware routing.

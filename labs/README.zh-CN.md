@@ -7,6 +7,9 @@ last-synced: 2026-09-19
 
 # Labs
 
+
+英文版：[`README.md`](README.md)
+
 可执行 Labs 是 Agent-Top 的主要动手学习形式。它们在本地运行、无需 API key，并通过确定性测试保证学习可验证。本仓库现有 23 个 Lab、444 个测试。
 
 ## 当前 Labs

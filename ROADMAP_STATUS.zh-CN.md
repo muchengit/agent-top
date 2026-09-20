@@ -5,6 +5,9 @@ validated_date: 2026-09-18
 
 # 路线状态
 
+
+英文版：[`ROADMAP_STATUS.md`](ROADMAP_STATUS.md)
+
 ## 当前状态
 
 | 模块 | 状态 | 证据 |

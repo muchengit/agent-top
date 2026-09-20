@@ -6,6 +6,9 @@ validated_date: 2026-09-18
 
 # L0 Labs
 
+
+中文版：[`README.zh-CN.md`](README.zh-CN.md)
+
 ## Goal
 
 Run the first LLM call and learn the basic request/response shape, prompt, system prompt, and context-window concepts without requiring an API key.

@@ -6,6 +6,9 @@ validated_date: 2026-09-18
 
 # L5 Labs
 
+
+中文版：[`README.zh-CN.md`](README.zh-CN.md)
+
 ## Goal
 
 Create original patterns, reusable catalogs, and multilingual pattern implementations with safety and verification evidence.

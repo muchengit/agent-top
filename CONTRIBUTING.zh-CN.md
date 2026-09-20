@@ -1,5 +1,8 @@
 # Agent-Top 贡献指南
 
+
+英文版：[`CONTRIBUTING.md`](CONTRIBUTING.md)
+
 感谢帮助完善 Agent-Top。本仓库偏好清晰、小而可审查的贡献。
 
 ## 贡献路径

@@ -1,5 +1,8 @@
 # Agent-Top 治理
 
+
+英文版：[`GOVERNANCE.md`](GOVERNANCE.md)
+
 Agent-Top 是一个开放的、模式优先的学习框架。
 
 ## 角色

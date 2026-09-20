@@ -5,6 +5,9 @@ validated_date: 2026-09-18
 
 # Roadmap Status
 
+
+中文版：[`ROADMAP_STATUS.zh-CN.md`](ROADMAP_STATUS.zh-CN.md)
+
 ## Current State
 
 | Area | Status | Evidence |

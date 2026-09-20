@@ -1,5 +1,8 @@
 # Contributing to Agent-Top
 
+
+中文版：[`CONTRIBUTING.zh-CN.md`](CONTRIBUTING.zh-CN.md)
+
 Thanks for helping improve Agent-Top. This repository prefers clear, small, reviewable contributions.
 
 ## Contribution Paths

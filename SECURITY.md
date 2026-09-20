@@ -1,5 +1,8 @@
 # Security Policy
 
+
+中文版：[`SECURITY.zh-CN.md`](SECURITY.zh-CN.md)
+
 Agent-Top is a learning repository. Do not commit real secrets, tokens, production datasets, private traces, or customer data.
 
 ## Reporting Vulnerabilities

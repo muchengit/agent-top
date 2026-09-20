@@ -1,5 +1,8 @@
 # Agent-Top Roadmap
 
+
+中文版：[`agent-top-roadmap.zh-CN.md`](agent-top-roadmap.zh-CN.md)
+
 The Agent-Top roadmap defines the high-level learning path, release cadence, and community-building direction. For concrete execution details, see [`docs/en/agent-top-concrete-framework.md`](docs/en/agent-top-concrete-framework.md).
 
 ## Goals

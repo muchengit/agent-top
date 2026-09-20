@@ -6,6 +6,9 @@ validated_date: 2026-09-18
 
 # L3 Labs
 
+
+中文版：[`README.zh-CN.md`](README.zh-CN.md)
+
 ## Goal
 
 Build end-to-end systems with RAG, memory, observability, and multi-agent flows.

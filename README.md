@@ -1,5 +1,8 @@
 # Agent-Top
 
+
+中文版：[`README.zh-CN.md`](README.zh-CN.md)
+
 CI 状态见 [`.github/workflows/ci.yml`](.github/workflows/ci.yml)。
 
 Agent-Top is an open-source learning framework for LLM Agent development.

@@ -1,5 +1,8 @@
 # 安全策略
 
+
+英文版：[`SECURITY.md`](SECURITY.md)
+
 Agent-Top 是学习仓库。不要提交真实密钥、token、生产数据集、私密 trace 或客户数据。
 
 ## 漏洞报告

@@ -1,5 +1,8 @@
 # Agent-Top Style Guide
 
+
+中文版：[`STYLE.zh-CN.md`](STYLE.zh-CN.md)
+
 Agent-Top uses a pattern-first, bilingual, docs-and-Labs workflow. Keep changes small, reviewable, and runnable.
 
 ## Content Principles

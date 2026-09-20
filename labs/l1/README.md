@@ -6,6 +6,9 @@ validated_date: 2026-09-18
 
 # L1 Labs
 
+
+中文版：[`README.zh-CN.md`](README.zh-CN.md)
+
 ## Goal
 
 Understand and implement the core Agent components: tool use, guardrails, and multi-turn state, without a framework.

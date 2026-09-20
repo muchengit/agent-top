@@ -1,5 +1,8 @@
 # Agent-Top Governance
 
+
+中文版：[`GOVERNANCE.zh-CN.md`](GOVERNANCE.zh-CN.md)
+
 Agent-Top is maintained as an open, pattern-first learning framework.
 
 ## Roles
