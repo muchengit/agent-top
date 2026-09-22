@@ -45,7 +45,7 @@ jobs:
 
       - name: Create GitHub Release
         env:
-          GH_TOKEN: *** secrets.GITHUB_TOKEN }}
+          GH_TOKEN: "*** secrets.GITHUB_TOKEN }}"
         run: |
           if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
             TAG="${INPUT_VERSION}"
