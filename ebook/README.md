@@ -42,4 +42,11 @@ python -m pip install weasyprint
 
 ## Content Policy
 
-The ebook follows the L0-L5 learning path from the repository docs. It preserves code blocks, tables, checklists, and local source-path references where useful for practice workflows.
+The ebook is built from the repository Markdown sources. Each language edition includes:
+
+- repository governance documents at the top level
+- the full `docs/<lang>` documentation set for that language
+- `labs/`, `examples/`, and `templates/` Markdown files
+- the localized intro and appendix for that language
+
+It preserves code blocks, tables, checklists, and local source-path references where useful for practice workflows.

@@ -46,38 +46,66 @@ class Book:
 
 
 
-EN_SECTIONS: tuple[Section, ...] = (
-    Section("How to Use This Book", ROOT / "ebook/en/how-to-use.md"),
-    Section("Learning Overview", ROOT / "docs/en/agent-top-concrete-framework.md"),
-    Section("Quick Navigation", ROOT / "docs/en/tutorials/quick-navigation.md"),
-    Section("L0: First LLM Call", ROOT / "docs/en/l0-first-llm-call.md"),
-    Section("L1: Minimal ReAct Agent", ROOT / "docs/en/l1-minimal-react-agent.md"),
-    Section("L2: Reliable Single Agent and MCP", ROOT / "docs/en/l2-single-agent-mcp.md"),
-    Section("L3: RAG, Memory, Observability", ROOT / "docs/en/l3-rag-memory-observability.md"),
-    Section("L4: Production", ROOT / "docs/en/l4-production.md"),
-    Section("L5: Custom Patterns", ROOT / "docs/en/l5-custom-patterns.md"),
-    Section("Core Concepts", ROOT / "docs/en/concepts/overview.md"),
-    Section("Practice Handbook", ROOT / "docs/en/tutorials/practice-handbook.md"),
-    Section("Labs", ROOT / "labs/README.md"),
-    Section("Examples", ROOT / "examples/README.md"),
-    Section("Templates and Governance", ROOT / "ebook/en/appendix.md"),
+ROOT_DOCUMENTS: tuple[str, ...] = (
+    "README.md",
+    "README.zh-CN.md",
+    "CONTRIBUTING.md",
+    "CONTRIBUTING.zh-CN.md",
+    "CODE_OF_CONDUCT.md",
+    "CODE_OF_CONDUCT.zh-CN.md",
+    "GOVERNANCE.md",
+    "GOVERNANCE.zh-CN.md",
+    "ROADMAP_STATUS.md",
+    "ROADMAP_STATUS.zh-CN.md",
+    "SECURITY.md",
+    "SECURITY.zh-CN.md",
+    "STYLE.md",
+    "STYLE.zh-CN.md",
+    "agent-top-roadmap.md",
+    "agent-top-roadmap.zh-CN.md",
+    "ebook-packaging-research.md",
 )
-ZH_SECTIONS: tuple[Section, ...] = (
-    Section("如何使用这本书", ROOT / "ebook/zh/how-to-use.md"),
-    Section("学习总览", ROOT / "docs/zh/Agent-Top具体框架.md"),
-    Section("快速导航", ROOT / "docs/zh/tutorials/快速导航卡.md"),
-    Section("L0：第一次 LLM 调用", ROOT / "docs/zh/L0第一次LLM调用.md"),
-    Section("L1：最小 ReAct Agent", ROOT / "docs/zh/L1最小ReActAgent.md"),
-    Section("L2：可靠单 Agent 与 MCP", ROOT / "docs/zh/L2可靠单Agent与MCP.md"),
-    Section("L3：RAG、记忆与可观测性", ROOT / "docs/zh/L3RAG记忆与可观测.md"),
-    Section("L4：生产化", ROOT / "docs/zh/L4生产化.md"),
-    Section("L5：原创模式", ROOT / "docs/zh/L5原创模式.md"),
-    Section("核心概念", ROOT / "docs/zh/concepts/Agent概念总览.md"),
-    Section("练习与 Lab 手册", ROOT / "docs/zh/tutorials/练习与Lab使用手册.md"),
-    Section("Labs", ROOT / "labs/README.zh-CN.md"),
-    Section("Examples", ROOT / "examples/README.md"),
-    Section("模板与治理", ROOT / "ebook/zh/appendix.md"),
-)
+
+def _section_title(path: Path) -> str:
+    rel = path.relative_to(ROOT).as_posix()
+    stem = path.stem
+    return stem if path.parent == ROOT else rel
+
+
+def _sorted_md_files(root: Path) -> tuple[Path, ...]:
+    return tuple(
+        sorted((p for p in root.rglob("*.md") if p.is_file()), key=lambda p: p.relative_to(ROOT).as_posix())
+    )
+
+
+def _docs_sections(lang: str) -> tuple[Section, ...]:
+    docs_root = ROOT / "docs" / lang
+    if not docs_root.exists():
+        return ()
+    return tuple(Section(_section_title(path), path) for path in _sorted_md_files(docs_root))
+
+
+def _shared_sections() -> tuple[Section, ...]:
+    sections: list[Section] = []
+    for name in ROOT_DOCUMENTS:
+        path = ROOT / name
+        if path.exists():
+            sections.append(Section(name, path))
+    for root_name in ("labs", "examples", "templates"):
+        root_dir = ROOT / root_name
+        if root_dir.exists():
+            for path in _sorted_md_files(root_dir):
+                sections.append(Section(_section_title(path), path))
+    return tuple(sections)
+
+
+def _book_sections(lang: str, intro: Path, appendix: Path) -> tuple[Section, ...]:
+    sections: list[Section] = []
+    sections.append(Section("How to Use This Book", intro))
+    sections.extend(_docs_sections(lang))
+    sections.extend(_shared_sections())
+    sections.append(Section("Appendix", appendix))
+    return tuple(sections)
 
 EN_BOOK = Book(
     lang="en",
@@ -86,7 +114,7 @@ EN_BOOK = Book(
     description="A practice-first guide for building, evaluating, and operating LLM agents using Agent-Top.",
     slug="agent-top-practical-guide-en",
     cover="#0f766e",
-    sections=EN_SECTIONS,
+    sections=_book_sections("en", ROOT / "ebook/en/how-to-use.md", ROOT / "ebook/en/appendix.md"),
 )
 ZH_BOOK = Book(
     lang="zh",
@@ -95,7 +123,7 @@ ZH_BOOK = Book(
     description="面向工程师的 Agent-Top 实践指南，覆盖 L0-L5 学习路径、Lab、评测、生产化和开源贡献。",
     slug="agent-top-practical-guide-zh",
     cover="#2563eb",
-    sections=ZH_SECTIONS,
+    sections=_book_sections("zh", ROOT / "ebook/zh/how-to-use.md", ROOT / "ebook/zh/appendix.md"),
 )
 
 
