@@ -30,14 +30,25 @@ jobs:
       - name: Install JavaScript dev dependencies
         run: npm ci
 
+      - name: Install PDF renderer
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wkhtmltopdf
+
       - name: Run docs checks
         run: python scripts/check_repository.py
 
       - name: Run tests
         run: python -m unittest discover -s labs -p "test_*.py"
 
+      - name: Run ebook build tests
+        run: python -m unittest discover -s tests -p "test_*.py"
+
+      - name: Build ebook artifacts
+        run: python3 ebook/build_ebook.py
+
       - name: Compile Python code
-        run: python -m compileall -q labs scripts
+        run: python -m compileall -q labs scripts ebook
 
       - name: Run Ruff
         run: python -m ruff check .
