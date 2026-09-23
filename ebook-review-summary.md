@@ -47,7 +47,15 @@ Multi-round review of the Agent-Top ebook packaging and content before release.
 
 Not published.
 
-Current uncommitted review fixes:
+Current branch status:
 
-- `docs/zh/README.md`
-- `ebook/build_ebook.py`
+- `main` is synced with `origin/main`.
+- Latest local commit: `04a6bb7`.
+- Working tree is clean.
+
+## Pre-Release Checklist
+
+- [ ] Confirm CI release workflow can install `wkhtmltopdf` and `weasyprint`.
+- [ ] Confirm GitHub Actions release run creates real PDF assets.
+- [ ] Confirm release notes wording for `v0.1.1`.
+- [ ] Publish tag and GitHub Release when ready.
