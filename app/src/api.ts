@@ -80,6 +80,7 @@ export type SearchFilter = {
 
 export function searchAppData(data: AppData, query: string, filter: SearchFilter = {}): SearchResult[] {
   const q = query.trim().toLowerCase()
+  if (!q) return []
   const matches: SearchResult[] = []
   const kindFilter = filter.kind ?? 'all'
   const languageFilter = filter.language ?? 'all'
