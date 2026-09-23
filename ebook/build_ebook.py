@@ -340,12 +340,29 @@ def _group_key(section: Section) -> str:
     return "Repository Docs"
 
 
+def _title_suffix(section: Section) -> str:
+    name = section.source.name
+    if name.endswith(".zh-CN.md"):
+        return "ZH"
+    if name.startswith("zh-") or name.endswith(".zh.md"):
+        return "ZH"
+    if name.startswith("en-") or name.endswith(".en.md"):
+        return "EN"
+    return ""
+
+
 def _display_title(section: Section, group: str) -> str:
     rel = section.source.relative_to(ROOT).as_posix()
     title = section.title
     if rel.startswith("ebook/"):
         return "How to Use This Book" if "how-to-use" in rel else "Appendix"
     if rel.startswith(f"{group}/"):
+        text = read_markdown(section.source)
+        for line in text.splitlines():
+            if line.startswith("# "):
+                heading = line[2:].strip()
+                suffix = _title_suffix(section)
+                return f"{heading} ({suffix})" if suffix else heading
         return rel[len(group):].lstrip("/")
     return title
 

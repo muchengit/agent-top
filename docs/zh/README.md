@@ -1,5 +1,5 @@
 ---
-title: Documentation Index
+title: 文档索引
 validated_date: 2026-09-18
 i18n-key: readme
 last-synced: 2026-09-18
@@ -55,13 +55,13 @@ Agent-Top 文档按学习等级、稳定概念、框架地图、生产实践、�
 
 - [`frameworks/框架地图.md`](frameworks/框架地图.md)
 
-## Skills
+## 技能
 
 - [`skills/Agent技能指南.md`](skills/Agent技能指南.md)
 - [`skills/工具MCP安全技能卡.md`](skills/工具MCP安全技能卡.md)
 - [`../../templates/Agent技能卡模板.md`](../../templates/Agent技能卡模板.md)
 
-## Vibe Coding
+## Vibe Coding 指南
 
 - [`vibe-coding/README.md`](vibe-coding/README.md)：Vibe Coding 指南
 - [`vibe-coding/什么是VibeCoding.md`](vibe-coding/什么是VibeCoding.md)
