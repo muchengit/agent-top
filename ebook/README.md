@@ -49,4 +49,15 @@ The ebook is built from the repository Markdown sources. Each language edition i
 - `labs/`, `examples/`, and `templates/` Markdown files
 - the localized intro and appendix for that language
 
+The generated books are grouped into a clearer hierarchy:
+
+- `Introduction`
+- `docs/en`
+- `docs/zh`
+- `labs`
+- `examples`
+- `templates`
+- `Repository Docs`
+- `Appendix`
+
 It preserves code blocks, tables, checklists, and local source-path references where useful for practice workflows.

@@ -326,9 +326,38 @@ def write(path: Path, content: str) -> None:
     path.write_text(content, encoding="utf-8")
 
 
+def _group_key(section: Section) -> str:
+    rel = section.source.relative_to(ROOT).as_posix()
+    parts = rel.split("/")
+    if rel.startswith("ebook/"):
+        return "Introduction" if "how-to-use" in rel else "Appendix"
+    if rel.startswith("docs/") and len(parts) >= 4:
+        return "/".join(parts[:3])
+    if rel.startswith("docs/"):
+        return f"docs/{parts[1]}"
+    if parts[0] in {"labs", "examples", "templates"}:
+        return parts[0]
+    return "Repository Docs"
+
+
+def _display_title(section: Section, group: str) -> str:
+    rel = section.source.relative_to(ROOT).as_posix()
+    title = section.title
+    if rel.startswith("ebook/"):
+        return "How to Use This Book" if "how-to-use" in rel else "Appendix"
+    if rel.startswith(f"{group}/"):
+        return rel[len(group):].lstrip("/")
+    return title
+
+
 def build_source(book: Book) -> tuple[str, list[dict[str, str]]]:
     generated_at = date.today().isoformat()
     toc: list[dict[str, str]] = []
+    groups: dict[str, list[Section]] = {}
+    for section in book.sections:
+        group = _group_key(section)
+        groups.setdefault(group, []).append(section)
+    group_order = sorted(groups, key=lambda name: ("Introduction", "docs/en", "docs/zh", "labs", "examples", "templates", "Repository Docs", "Appendix").index(name) if name in ("Introduction", "docs/en", "docs/zh", "labs", "examples", "templates", "Repository Docs", "Appendix") else 99)
     pieces: list[str] = [
         "# How to Use This Book" if book.lang == "en" else "# 如何使用这本书",
         "This book is generated from the Agent-Top repository Markdown sources.",
@@ -339,23 +368,38 @@ def build_source(book: Book) -> tuple[str, list[dict[str, str]]]:
         "",
     ]
     pieces.append("<div class=\"toc\">")
-    for index, section in enumerate(book.sections, 1):
-        slug = f"chapter-{index:02d}"
-        title = section.title
-        toc.append({"id": slug, "title": title})
-        pieces.extend([f'<h2 id="{slug}">{html.escape(title)}</h2>', f"Source: `{section.source.relative_to(ROOT)}`", ""])
-        markdown = read_markdown(section.source)
-        if markdown.lstrip().startswith("# "):
-            lines = markdown.splitlines()
-            markdown = "\n".join(lines[1:]).lstrip()
-        pieces.append(render_markdown(markdown))
-        pieces.append("")
+    index = 0
+    for group in group_order:
+        group_slug = slugify(group, prefix="group")
+        toc.append({"id": group_slug, "title": group, "children": []})
+        pieces.append(f'<h2 id="{group_slug}">{html.escape(group)}</h2>')
+        for section in groups[group]:
+            index += 1
+            chapter_slug = f"chapter-{index:03d}"
+            title = _display_title(section, group)
+            toc[-1]["children"].append({"id": chapter_slug, "title": title})
+            pieces.extend([f'<h3 id="{chapter_slug}">{html.escape(title)}</h3>', f"Source: `{section.source.relative_to(ROOT)}`", ""])
+            markdown = read_markdown(section.source)
+            if markdown.lstrip().startswith("# "):
+                lines = markdown.splitlines()
+                markdown = "\n".join(lines[1:]).lstrip()
+            pieces.append(render_markdown(markdown))
+            pieces.append("")
     pieces.append("</div>")
     return "\n".join(pieces), toc
 
 
 def toc_html(toc: list[dict[str, str]]) -> str:
-    rows = [f'<li><a href="#{escape(item["id"])}">{inline_html(item["title"])}</a></li>' for item in toc]
+    rows: list[str] = []
+    for item in toc:
+        rows.append(f'<li><a href="#{escape(item["id"])}">{inline_html(item["title"])}</a>')
+        children = item.get("children", [])
+        if children:
+            rows.append("<ul>")
+            for child in children:
+                rows.append(f'<li><a href="#{escape(child["id"])}">{inline_html(child["title"])}</a></li>')
+            rows.append("</ul>")
+        rows.append("</li>")
     return "<ol>\n" + "\n".join(rows) + "\n</ol>"
 
 
