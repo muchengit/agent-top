@@ -62,28 +62,54 @@ export async function loadAppData(): Promise<AppData> {
   return { courses, lessons, labs, searchIndex }
 }
 
-export function searchAppData(data: AppData, query: string): Array<{ kind: string; title: string; path: string; summary: string }> {
+export type SearchKind = 'Course' | 'Lesson' | 'Lab' | 'Search'
+
+export type SearchResult = {
+  kind: SearchKind
+  title: string
+  path: string
+  summary: string
+  language?: string
+  level?: number | null
+}
+
+export type SearchFilter = {
+  kind?: 'all' | SearchKind
+  language?: 'all' | 'en' | 'zh'
+}
+
+export function searchAppData(data: AppData, query: string, filter: SearchFilter = {}): SearchResult[] {
   const q = query.trim().toLowerCase()
-  if (!q) return []
-  const matches: Array<{ kind: string; title: string; path: string; summary: string }> = []
+  const matches: SearchResult[] = []
+  const kindFilter = filter.kind ?? 'all'
+  const languageFilter = filter.language ?? 'all'
+  const includeKind = (kind: SearchKind) => kindFilter === 'all' || kindFilter === kind
+  const includeLanguage = (language?: string) => languageFilter === 'all' || language === languageFilter
+
   for (const item of data.courses) {
+    if (!includeKind('Course')) continue
     if ([item.title, item.summary, item.sourcePath].some((text) => text.toLowerCase().includes(q))) {
-      matches.push({ kind: 'Course', title: item.title, path: item.sourcePath, summary: item.summary })
+      matches.push({ kind: 'Course', title: item.title, path: item.sourcePath, summary: item.summary, level: item.level })
     }
   }
   for (const item of data.lessons) {
+    if (!includeKind('Lesson')) continue
+    if (!includeLanguage(item.language)) continue
     if ([item.title, item.summary, item.sourcePath].some((text) => text.toLowerCase().includes(q))) {
-      matches.push({ kind: 'Lesson', title: item.title, path: item.sourcePath, summary: item.summary })
+      matches.push({ kind: 'Lesson', title: item.title, path: item.sourcePath, summary: item.summary, language: item.language, level: item.level })
     }
   }
   for (const item of data.labs) {
+    if (!includeKind('Lab')) continue
     if ([item.title, item.objective, item.sourcePath].some((text) => text.toLowerCase().includes(q))) {
-      matches.push({ kind: 'Lab', title: item.title, path: item.sourcePath, summary: item.objective })
+      matches.push({ kind: 'Lab', title: item.title, path: item.sourcePath, summary: item.objective, level: item.level })
     }
   }
   for (const item of data.searchIndex) {
+    if (!includeKind('Search')) continue
+    if (!includeLanguage(item.language)) continue
     if ([item.title, item.summary, item.sourcePath].some((text) => text.toLowerCase().includes(q))) {
-      matches.push({ kind: 'Search', title: item.title, path: item.sourcePath, summary: item.summary })
+      matches.push({ kind: 'Search', title: item.title, path: item.sourcePath, summary: item.summary, language: item.language })
     }
   }
   return matches.slice(0, 50)
