@@ -29,7 +29,7 @@ jobs:
       - name: Install PDF renderer
         run: |
           sudo apt-get update
-          sudo apt-get install -y wkhtmltopdf
+          sudo apt-get install -y wkhtmltopdf weasyprint
 
       - name: Build ebook artifacts
         run: python3 ebook/build_ebook.py
